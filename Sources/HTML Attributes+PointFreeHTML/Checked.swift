@@ -1,0 +1,38 @@
+///
+/// Checked.swift
+/// swift-html
+///
+/// Created by Coen ten Thije Boonkkamp on 04/04/2025.
+///
+
+import Foundation
+import PointFreeHTML
+import HTML_Attributes
+
+extension HTML {
+    
+    /// Adds the checked attribute to the element
+    package var checked: _HTMLAttributes<Self> {
+        self.attribute(Checked.attribute)
+    }
+    
+    /// Conditionally adds the checked attribute to the element
+    @HTMLBuilder
+    package func checked(_ value: Checked?) -> some HTML {
+        if value == true {
+            self.attribute(Checked.attribute)
+        } else {
+            self
+        }
+    }
+    
+    /// Conditionally adds the checked attribute to the element
+    @HTMLBuilder
+    package func checked(_ value: Bool?) -> some HTML {
+        if value == true {
+            self.attribute(Checked.attribute)
+        } else {
+            self
+        }
+    }
+}

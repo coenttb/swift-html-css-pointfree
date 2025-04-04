@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "92FF6512-BA55-43F0-A319-BF7B9F790F16",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HTML Elements+PointFreeHTML Tests",
+        "name" : "HTML Elements+PointFreeHTML Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
