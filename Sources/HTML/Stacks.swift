@@ -3,7 +3,7 @@ import Foundation
 import PointFreeHTML
 import CSS
 import HTML_Attributes
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import HTML_CSS
 
 public struct HStack<Content: HTML>: HTML {
@@ -41,7 +41,7 @@ public struct VStack<Content: HTML>: HTML {
     let content: Content
     
     public init(
-        alignment: CSS.AlignItems = .stretch,
+        alignment: CSS.AlignItems = .center,
         spacing: CSS.Length? = nil,
         @HTMLBuilder content: () -> Content
     ) {
@@ -62,34 +62,10 @@ public struct VStack<Content: HTML>: HTML {
     }
 }
 
-//public struct HorizontalAlignment: Sendable {
-//    public var rawValue: String
-//    public init(rawValue: String) {
-//        self.rawValue = rawValue
-//    }
-//    public static let center = Self(rawValue: "center")
-//    public static let leading = Self(rawValue: "start")
-//    public static let stretch = Self(rawValue: "stretch")
-//    public static let trailing = Self(rawValue: "end")
-//}
-
-//public struct VerticalAlignment: RawRepresentable, Sendable {
-//    public var rawValue: String
-//    public init(rawValue: String) {
-//        self.rawValue = rawValue
-//    }
-//    public static let bottom = Self(rawValue: "end")
-//    public static let center = Self(rawValue: "center")
-//    public static let firstTextBaseline = Self(rawValue: "first baseline")
-//    public static let lastTextBaseline = Self(rawValue: "last baseline")
-//    public static let stretch = Self(rawValue: "stretch")
-//    public static let top = Self(rawValue: "start")
-//}
-
 public struct Spacer: HTML {
     public init() {}
     public var body: some HTML {
-        tag("swift-html-spacer").flexGrow(.initial)
+        tag("swift-html-spacer").flexGrow(1)
     }
 }
 

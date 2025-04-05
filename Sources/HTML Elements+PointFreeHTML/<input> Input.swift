@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import HTML_Elements
 
-extension Input: HTML {
+extension Input: @retroactive HTML {
     /// Renders the Input element as HTML.
     ///
     /// This implementation creates an HTML `<input>` element with the appropriate attributes

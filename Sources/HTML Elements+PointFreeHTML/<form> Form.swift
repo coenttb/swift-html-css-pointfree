@@ -6,10 +6,10 @@
 //
 
 import Foundation
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import HTML_Elements
 
-extension HTML_Elements.Form: PointFreeHTML.HTML where HTML: PointFreeHTML.HTML {
+extension HTML_Elements.Form: @retroactive PointFreeHTML.HTML where HTML: PointFreeHTML.HTML {
     /// Renders the Form element as HTML.
     ///
     /// This implementation creates an HTML `<form>` element with the configured attributes

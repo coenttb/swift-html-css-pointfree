@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import PointFreeHTML
 import InlineSnapshotTesting
 
@@ -43,11 +43,25 @@ struct AcceptTests {
         assertInlineSnapshot(
             of: input()
                 .attribute("type", "file")
-                .accept("application/pdf", "application/msword"),
+                .accept("application/pdf,.pdf, application/msword"),
             as: .html
         ) {
             """
-            <input accept="application/pdf, application/msword" type="file">
+            <input accept="application/pdf,.pdf, application/msword" type="file">
+            """
+        }
+    }
+    
+    @Test("Input with MIME types renders correctly")
+    func inputWithMimeTypesRendersCorrectly2() {
+        assertInlineSnapshot(
+            of: input()
+                .attribute("type", "file")
+                .accept(.pdf, .msword),
+            as: .html
+        ) {
+            """
+            <input accept="application/pdf,.pdf, application/msword" type="file">
             """
         }
     }

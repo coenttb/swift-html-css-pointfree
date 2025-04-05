@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import HTML_Elements
 
 extension Image: PointFreeHTML.HTML {

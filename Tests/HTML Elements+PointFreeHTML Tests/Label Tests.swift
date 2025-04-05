@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-import HTML_Elements_HTML
+import HTML_Elements_PointFreeHTML
 import InlineSnapshotTesting
 
 @Suite(

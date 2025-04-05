@@ -1,6 +1,6 @@
 import Foundation
 import Testing
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import PointFreeHTML
 import InlineSnapshotTesting
 

@@ -8,10 +8,10 @@
 ///
 
 import Foundation
-import HTML_Attributes_HTML
+import HTML_Attributes_PointFreeHTML
 import HTML_Elements
 
-extension Label: PointFreeHTML.HTML where HTML: PointFreeHTML.HTML {
+extension Label: @retroactive PointFreeHTML.HTML where HTML: PointFreeHTML.HTML {
     /// Renders the Label element as HTML.
     ///
     /// This implementation creates an HTML `<label>` element with the appropriate attributes
