@@ -19,8 +19,8 @@ extension HTML {
     /// Sets the itemscope attribute using an Itemscope enum value
     @discardableResult
     public func itemscope(
-        _ attribute: Itemscope
+        _ attribute: Itemscope?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Itemscope.attribute, attribute.description)
+        self.attribute(Itemscope.attribute)
     }
 }

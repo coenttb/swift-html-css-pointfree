@@ -16,7 +16,7 @@ extension Target.Dependency {
 }
 
 extension Target.Dependency {
-    static var htmlDomainModel: Self { .product(name: "HTML Domain Model", package: "swift-html") }
+    static var htmlTypes: Self { .product(name: "HTML Types", package: "swift-html") }
     static var css: Self { .product(name: "CSS", package: "swift-css") }
     static var htmlCss: Self { .product(name: "HTML+CSS", package: "swift-html-css") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
@@ -69,7 +69,7 @@ let package = Package(
         .target(
             name: .htmlAttributesPointFreeHTML,
             dependencies: [
-                .htmlDomainModel,
+                .htmlTypes,
                 .pointFreeHTML
             ]
         ),
@@ -85,7 +85,7 @@ let package = Package(
         .target(
             name: .htmlElementsPointFreeHTML,
             dependencies: [
-                .htmlDomainModel,
+                .htmlTypes,
                 .htmlAttributesPointFreeHTML,
                 .pointFreeHTML
             ]

@@ -18,10 +18,10 @@ extension HTML {
         self.attribute(Crossorigin.attribute, value?.description)
     }
     
-    @discardableResult
-    package func crossorigin(
-        _ policy: Crossorigin.Policy
-    ) -> _HTMLAttributes<Self> {
-        self.crossorigin(Crossorigin(policy))
-    }
+//    @discardableResult
+//    package func crossorigin(
+//        _ policy: CrosPolicy
+//    ) -> _HTMLAttributes<Self> {
+//        self.crossorigin(Crossorigin(policy))
+//    }
 }

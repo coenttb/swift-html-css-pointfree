@@ -13,10 +13,10 @@ extension HTML {
     
     /// Sets the value attribute on an element
     @discardableResult
-    package func value(
-        _ value: Value?
+    package func value<Element: CustomStringConvertible>(
+        _ value: Value<Element>?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Value.attribute, value?.description)
+        self.attribute(Value<Element>.attribute, value?.description)
     }
     
     /// Sets the value attribute with a string value
@@ -26,7 +26,7 @@ extension HTML {
         _ value: (some CustomStringConvertible)?
     ) -> some HTML {
         if let description = value?.description {
-            self.value(Value(description))
+            self.value(Value(value: description))
         } else {
             self
         }
@@ -38,6 +38,6 @@ extension HTML {
     package func value(
         _ value: String?
     ) -> some HTML {
-        self.attribute(Value.attribute, value.map { Value.init($0).description })
+        self.attribute(Value<String>.attribute, value.map { Value.init(value: $0).description })
     }
 }
