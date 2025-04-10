@@ -10,20 +10,12 @@ import PointFreeHTML
 import HTMLAttributeTypes
 
 extension HTML {
-    /// Sets the nonce attribute with a nonce value
-    @discardableResult
-    public func nonce(
-        _ value: String
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Nonce.attribute, value)
-    }
-    
     /// Sets the nonce attribute using a Nonce struct
     @discardableResult
     public func nonce(
-        _ attribute: Nonce
+        _ attribute: Nonce?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Nonce.attribute, attribute.description)
+        self.attribute(Nonce.attribute, attribute?.description)
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import HTMLElementTypes
 
 extension wbr {
     public func callAsFunction() -> some HTML {

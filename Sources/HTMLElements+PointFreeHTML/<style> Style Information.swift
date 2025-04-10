@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import HTMLElementTypes
+
+extension style {
+    public func callAsFunction() -> some HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
+            .media(media)
+            .blocking(blocking)
+            .nonce(nonce)
+            .title(title)
+    }
+}

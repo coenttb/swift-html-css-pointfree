@@ -37,9 +37,9 @@ extension HTML {
     /// Sets the title attribute using a Title struct
     @discardableResult
     public func title(
-        _ attribute: Title
+        _ attribute: Title?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Title.attribute, attribute.description)
+        self.attribute(Title.attribute, attribute?.description)
     }
     
     /// Sets an empty title to prevent inheriting from ancestors

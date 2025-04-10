@@ -9,3 +9,18 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
+extension Anchor {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some HTML
+    ) -> some HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .attributionSrc(self.attributionsrc)
+            .download(self.download)
+            .href(self.href)
+            .hreflang(self.hreflang)
+            .ping(self.ping)
+            .referrerPolicy(self.referrerpolicy)
+            .rel(self.rel)
+            .target(self.target)
+    }
+}
