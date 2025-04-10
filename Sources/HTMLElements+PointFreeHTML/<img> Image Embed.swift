@@ -11,7 +11,7 @@ import HTMLElementTypes
 
 extension Image: PointFreeHTML.HTML {
     public var body: some HTML {
-        PointFreeHTML.img()
+        HTMLElement(tag: Self.tag)
             .src(self.src)
             .alt(self.alt)
             .attribute("loading", self.loading?.rawValue)
