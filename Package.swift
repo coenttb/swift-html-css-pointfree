@@ -4,7 +4,6 @@
 import PackageDescription
 
 extension String {
-    static let html: Self = "HTML"
     static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
     static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"
     static let htmlCSS: Self = "HTML+CSS"
@@ -12,7 +11,6 @@ extension String {
 }
 
 extension Target.Dependency {
-    static var html: Self { .target(name: .html) }
     static var htmlCSS: Self { .target(name: .htmlCSS) }
     static var htmlAttributesPointFreeHTML: Self { .target(name: .htmlAttributesPointFreeHTML) }
     static var htmlElementsPointFreeHTML: Self { .target(name: .htmlElementsPointFreeHTML) }
@@ -38,7 +36,7 @@ let package = Package(
         .macCatalyst(.v17),
       ],
     products: [
-        .library(name: .html, targets: [.html]),
+//        .library(name: .html, targets: [.html]),
         .library(name: .htmlCSS, targets: [.htmlCSS]),
         .library(name: .htmlCSSPointFree, targets: [.htmlCSSPointFree]),
         .library(name: .htmlAttributesPointFreeHTML, targets: [.htmlAttributesPointFreeHTML]),
@@ -52,23 +50,6 @@ let package = Package(
         .package(url: "https://github.com/pointfreeco/swift-dependencies.git", branch: "1.9.0"),
     ],
     targets: [
-        .target(
-            name: .html,
-            dependencies: [
-                .pointFreeHTML,
-                .htmlAttributesPointFreeHTML,
-                .htmlElementsPointFreeHTML,
-            ]
-        ),
-        .testTarget(
-            name: .html.tests,
-            dependencies: [
-                .html,
-                .inlineSnapshotTesting,
-                .dependenciesTestSupport,
-                .pointFreeHTML,
-            ]
-        ),
         .target(
             name: .htmlCSSPointFree,
             dependencies: [
