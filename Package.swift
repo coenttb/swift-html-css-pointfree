@@ -8,7 +8,7 @@ extension String {
     static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
     static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"
     static let htmlCSS: Self = "HTML+CSS"
-    static let htmlCSSPointFree: Self = "HTML+CSS+PointFree"
+    static let htmlCSSPointFree: Self = "HTML+CSS+PointFreeHTML"
 }
 
 extension Target.Dependency {

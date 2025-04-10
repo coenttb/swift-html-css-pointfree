@@ -1,7 +1,7 @@
 import OrderedCollections
 import Foundation
 import PointFreeHTML
-import CSS
+import HTML_CSS_PointFreeHTML
 import HTMLAttributeTypes
 import HTMLAttributes_PointFreeHTML
 import HTML_CSS
@@ -13,7 +13,7 @@ public struct HStack<Content: HTML>: HTML {
     
     public init(
         alignment: VerticalAlign = .middle,
-        spacing: CSS.Length? = nil,
+        spacing: CSSPropertyTypes.Length? = nil,
         @HTMLBuilder content: () -> Content
     ) {
         self.alignment = alignment
@@ -22,27 +22,25 @@ public struct HStack<Content: HTML>: HTML {
     }
     
     public var body: some HTML {
-        tag("swift-html-hstack") {
-            content
-        }
+        tag("swift-html-hstack") { content }
         // necessary?
         .alignItems(.stretch)
         .verticalAlign(alignment)
         .display(.flex)
         .flexDirection(.row)
         .maxHeight(.percentage(100))
-        .inlineStyle("column-gap", spacing == 0 ? "0" : "\(spacing ?? 1.rem)")
+        .columnGap(.length(spacing == 0 ? .zero : spacing ?? 1.rem))
     }
 }
 
 public struct VStack<Content: HTML>: HTML {
-    let alignment: CSS.AlignItems
-    let spacing: CSS.Length?
+    let alignment: AlignItems
+    let spacing: CSSPropertyTypes.Length?
     let content: Content
     
     public init(
-        alignment: CSS.AlignItems = .center,
-        spacing: CSS.Length? = nil,
+        alignment: AlignItems = .center,
+        spacing: CSSPropertyTypes.Length? = nil,
         @HTMLBuilder content: () -> Content
     ) {
         self.alignment = alignment
@@ -72,14 +70,14 @@ public struct Spacer: HTML {
 public struct LazyVGrid<Content: HTML>: HTML {
     let columns: OrderedDictionary<MediaQuery?, [Int]>
     let content: Content
-    let horizontalSpacing: CSS.Length?
-    let verticalSpacing: CSS.Length?
+    let horizontalSpacing: CSSPropertyTypes.Length?
+    let verticalSpacing: CSSPropertyTypes.Length?
     
     public init(
         columns: OrderedDictionary<MediaQuery?, [Int]>,
         // TODO: alignment: HorizontalAlignment = .center,
-        horizontalSpacing: CSS.Length? = nil,
-        verticalSpacing: CSS.Length? = nil,
+        horizontalSpacing: CSSPropertyTypes.Length? = nil,
+        verticalSpacing: CSSPropertyTypes.Length? = nil,
         @HTMLBuilder content: () -> Content
     ) {
         self.columns = columns
@@ -91,8 +89,8 @@ public struct LazyVGrid<Content: HTML>: HTML {
     public init(
         columns: [Int],
         // TODO: alignment: HorizontalAlignment = .center,
-        horizontalSpacing: CSS.Length? = nil,
-        verticalSpacing: CSS.Length? = nil,
+        horizontalSpacing: CSSPropertyTypes.Length? = nil,
+        verticalSpacing: CSSPropertyTypes.Length? = nil,
         @HTMLBuilder content: () -> Content
     ) {
         self.columns = [nil: columns]

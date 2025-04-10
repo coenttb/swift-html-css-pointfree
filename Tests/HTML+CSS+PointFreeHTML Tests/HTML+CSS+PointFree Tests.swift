@@ -5,9 +5,9 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
+import HTML_CSS_PointFreeHTML
 import Foundation
 import Testing
-import HTML_CSS_PointFree
 import Dependencies
 import DependenciesTestSupport
 import InlineSnapshotTesting

@@ -10,7 +10,7 @@ import PointFreeHTML
 import HTMLAttributeTypes
 
 extension _HTMLAttributes {
-    public func attribute(
+    package func attribute(
         _ value: String,
         _ condition: @autoclosure () -> Bool?
     ) -> _HTMLAttributes<Content> {
@@ -22,7 +22,7 @@ extension _HTMLAttributes {
         }
     }
     
-    public func attribute(
+    package func attribute(
         _ name: String,
         _ value: (some CustomStringConvertible)? = ""
     ) -> _HTMLAttributes<Content> {
