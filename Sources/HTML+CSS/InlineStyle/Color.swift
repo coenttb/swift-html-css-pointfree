@@ -53,7 +53,8 @@ extension HTML {
 }
 
 extension CSSPropertyTypes.ColorProperty {
-    public enum WithDarkMode: Sendable, Equatable, GlobalConvertible {
+    public enum WithDarkMode: Sendable, Equatable, GlobalConvertible, ColorConvertible {
+        
         case color(CSSPropertyTypes.ColorProperty.WithDarkMode.Color)
         case global(CSSTypeTypes.Global)
         
@@ -70,6 +71,25 @@ extension CSSPropertyTypes.ColorProperty {
                 }
             }
         }
+        
+        public static func color(_ color: CSSTypeTypes.Color) -> CSSPropertyTypes.ColorProperty.WithDarkMode {
+            return .init(color)
+        }
+    }
+}
+
+extension CSSPropertyTypes.ColorProperty.WithDarkMode {
+    public init(_ color: CSSPropertyTypes.ColorProperty){
+        switch color {
+        case .global(let global): self = .global(global)
+        case .color(let color): self = .init(color)
+        }
+    }
+}
+
+extension CSSPropertyTypes.ColorProperty.WithDarkMode {
+    public init(_ color: CSSTypeTypes.Color){
+        self = .color(.init(light: color))
     }
 }
 
