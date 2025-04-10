@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+extension area {
+    public func callAsFunction() -> some HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
+//        NEED TO FIX AREA domain model
+//            .shape(self.shape)
+//            .coords(self.coords)
+            .alt(self.alt)
+            .href(self.href)
+//            .download(download)
+//            .ping(ping)
+//            .referrerpolicy(referrerpolicy)
+            .rel(rel)
+//            .target(target)
+    }
+}

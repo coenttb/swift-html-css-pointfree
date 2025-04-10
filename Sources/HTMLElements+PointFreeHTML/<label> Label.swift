@@ -4,7 +4,7 @@
 /////
 ///// Represents the HTML label element for form controls.
 /////
-///// Created by Claude on 04/04/2025.
+///// Created by Coen ten Thije Boonkkamp on 04/04/2025.
 /////
 //
 

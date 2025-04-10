@@ -4,10 +4,10 @@
 import PackageDescription
 
 extension String {
-    static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
-    static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"
     static let htmlCSS: Self = "HTML+CSS"
     static let htmlCSSPointFree: Self = "HTML+CSS+PointFreeHTML"
+    static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
+    static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"
 }
 
 extension Target.Dependency {
@@ -18,9 +18,9 @@ extension Target.Dependency {
 }
 
 extension Target.Dependency {
-    static var htmlElementTypes: Self { .product(name: "HTMLElementTypes", package: "swift-html-types") }
-    static var htmlAttributeTypes: Self { .product(name: "HTMLAttributeTypes", package: "swift-html-types") }
     static var cssPropertyTypes: Self { .product(name: "CSSPropertyTypes", package: "swift-css-types") }
+    static var htmlAttributeTypes: Self { .product(name: "HTMLAttributeTypes", package: "swift-html-types") }
+    static var htmlElementTypes: Self { .product(name: "HTMLElementTypes", package: "swift-html-types") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
     static var inlineSnapshotTesting: Self { .product(name: "InlineSnapshotTesting", package: "swift-snapshot-testing") }
     static var dependenciesTestSupport: Self { .product(name: "DependenciesTestSupport", package: "swift-dependencies") }
@@ -36,7 +36,6 @@ let package = Package(
         .macCatalyst(.v17),
       ],
     products: [
-//        .library(name: .html, targets: [.html]),
         .library(name: .htmlCSS, targets: [.htmlCSS]),
         .library(name: .htmlCSSPointFree, targets: [.htmlCSSPointFree]),
         .library(name: .htmlAttributesPointFreeHTML, targets: [.htmlAttributesPointFreeHTML]),

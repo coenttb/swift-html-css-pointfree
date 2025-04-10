@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension wbr {
+    public func callAsFunction() -> some HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
+    }
+}
