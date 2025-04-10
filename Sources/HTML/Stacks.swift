@@ -2,8 +2,8 @@ import OrderedCollections
 import Foundation
 import PointFreeHTML
 import CSS
-import HTML_Attributes
-import HTML_Attributes_PointFreeHTML
+import HTMLAttributeTypes
+import HTMLAttributes_PointFreeHTML
 import HTML_CSS
 
 public struct HStack<Content: HTML>: HTML {

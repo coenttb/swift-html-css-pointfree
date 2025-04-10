@@ -46,12 +46,12 @@
       }
     },
     {
-      "identity" : "swift-css",
+      "identity" : "swift-css-types",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/coenttb/swift-css.git",
+      "location" : "https://github.com/coenttb/swift-css-types.git",
       "state" : {
-        "branch" : "mdn-types-properties",
-        "revision" : "3d43a67f6a6546e17e9f79ad701e8b276044c5db"
+        "branch" : "main",
+        "revision" : "fb50c9af5d336e2eb7eff79d61b0359d7647d42b"
       }
     },
     {
@@ -73,21 +73,12 @@
       }
     },
     {
-      "identity" : "swift-html",
+      "identity" : "swift-html-types",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/coenttb/swift-html.git",
-      "state" : {
-        "branch" : "mdn-css-types-properties",
-        "revision" : "b2ac64c6e7ecb699657239a8535ed16d76103700"
-      }
-    },
-    {
-      "identity" : "swift-html-css",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/coenttb/swift-html-css.git",
+      "location" : "https://github.com/coenttb/swift-html-types.git",
       "state" : {
         "branch" : "main",
-        "revision" : "732d3c02d09bffeeffd717d53d11ace2eebb4b55"
+        "revision" : "a8c08040d427fda2324cc6e7526b9ea4ec38adac"
       }
     },
     {
