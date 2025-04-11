@@ -2,6 +2,7 @@ import Foundation
 import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
+import HTMLTestSupport
 
 @Suite(
     "Input Type Attribute Tests",
@@ -34,10 +35,8 @@ struct InputTypeTests {
             as: .html
         ) {
             """
-            <input formtarget="_top" formnovalidate="true" formmethod="post" formenctype="multipart/form-data" formaction="action" src="src" width="200" height="100" alt="alt" type="image" disabled name="test">
+            <input formtarget="_top" formnovalidate formmethod="post" formenctype="multipart/form-data" formaction="action" src="src" width="200" height="100" alt="alt" type="image" disabled name="test">
             """
-//            −<input formtarget formnovalidate="true" formmethod="post" formenctype formaction src="src" width="200" height="100" alt="alt" type="image" disabled name="test">
-//            +<input formtarget="_top" formnovalidate="true" formmethod="post" formenctype="multipart/form-data" formaction="action" src="src" width="200" height="100" alt="alt" type="image" disabled name="test">
         }
     }
     

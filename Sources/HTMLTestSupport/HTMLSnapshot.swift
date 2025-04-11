@@ -10,8 +10,8 @@ import PointFreeHTML
 import Dependencies
 import SnapshotTesting
 
-extension Snapshotting where Value: HTMLDocument, Format == String {
-    static var html: Self {
+extension Snapshotting where Value: PointFreeHTML.HTMLDocument, Format == String {
+    public static var html: Self {
         Snapshotting<String, String>.lines.pullback { value in
             return withDependencies {
                 $0.htmlPrinter = .init(.pretty)
@@ -23,8 +23,9 @@ extension Snapshotting where Value: HTMLDocument, Format == String {
 }
 
 extension Snapshotting where Value: HTML, Format == String {
-    static var html: Self {
+    public static var html: Self {
         Snapshotting<String, String>.lines.pullback { value in
+            
             return withDependencies {
                 $0.htmlPrinter = .init(.pretty)
             } operation: {
@@ -34,15 +35,17 @@ extension Snapshotting where Value: HTML, Format == String {
     }
 }
 
-fileprivate struct Document<MockHTML: HTML>: HTMLDocument {
-    var head: some HTML { HTMLEmpty() }
+public struct HTMLDocument<Body: HTML, Head: HTML>: PointFreeHTML.HTMLDocument {
+    public let head: Head
     
-    let body: MockHTML
+    public let body: Body
     
     public init(
-        @HTMLBuilder body: () -> MockHTML
+        @HTMLBuilder head: () -> Head = { HTMLEmpty() },
+        @HTMLBuilder body: () -> Body
     ) {
         self.body = body()
+        self.head = head()
     }
 }
 

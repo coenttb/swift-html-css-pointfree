@@ -3,6 +3,7 @@ import Testing
 import HTMLAttributes_PointFreeHTML
 import PointFreeHTML
 import InlineSnapshotTesting
+import HTMLTestSupport
 
 @Suite(
     "Accept Attribute Tests",

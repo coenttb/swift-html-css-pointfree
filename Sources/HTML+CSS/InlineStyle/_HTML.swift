@@ -17,7 +17,7 @@ extension HTML {
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        inlineStyle(PropertyElement.property, property?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(PropertyElement.property, property?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
     }
 }
 

@@ -7,14 +7,15 @@
 
 import PointFreeHTML
 import HTMLAttributeTypes
+import HTMLElementTypes
 
 extension HTML {
     
     /// Sets the color attribute on an element
     @discardableResult
     package func color(
-        _ value: Color?
+        _ value: HTMLAttributeTypes.Color?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Color.attribute, value?.description)
+        self.attribute(HTMLAttributeTypes.Color.attribute, value?.description)
     }
 }

@@ -14,6 +14,7 @@ import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
 import InlineSnapshotTesting
+import HTMLTestSupport
 
 @Suite("Color Tests")
 struct ColorTests {

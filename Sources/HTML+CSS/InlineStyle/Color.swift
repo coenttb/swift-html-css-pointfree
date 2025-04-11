@@ -17,7 +17,7 @@ extension HTML {
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        inlineStyle(CSSPropertyTypes.ColorProperty.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(CSSPropertyTypes.ColorProperty.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
     }
 }
 
@@ -29,7 +29,7 @@ extension HTML {
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        inlineStyle(CSSPropertyTypes.ColorProperty.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(CSSPropertyTypes.ColorProperty.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
     }
 }
 
@@ -42,7 +42,7 @@ extension HTML {
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        inlineStyle(
+        self.inlineStyle(
             CSSPropertyTypes.ColorProperty.property,
             CSSPropertyTypes.ColorProperty.WithDarkMode.color(.init(light: light, dark: dark)).description,
             media: mediaQuery,

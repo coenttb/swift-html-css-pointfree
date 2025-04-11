@@ -17,6 +17,6 @@ extension HTML {
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        inlineStyle(accentColor, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(accentColor, media: mediaQuery, pre: pre, pseudo: pseudo)
     }
 }

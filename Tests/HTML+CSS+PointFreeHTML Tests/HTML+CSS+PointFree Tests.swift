@@ -11,19 +11,20 @@ import Testing
 import Dependencies
 import DependenciesTestSupport
 import InlineSnapshotTesting
+import HTMLTestSupport
 
 @Suite(
-    "Tests",
+    "HTML+CSS+PointFreeHTML Tests",
     .snapshots(record: nil)
 )
 struct Tests {
-    @Test("asd")
-    func asd() {
+    @Test("Labeled Input renders correctly")
+    func LabeledInput() {
         assertInlineSnapshot(
-            of: label(for: "test") {
-                input(name: "test", type: .text(.init()))
-            }
-                .color(.red),
+            of: HTMLDocument {
+                label(for: "test") { input.text(name: "test") }
+                    .color(ColorProperty.red)
+            },
             as: .html
         ) {
             """
@@ -36,6 +37,44 @@ struct Tests {
                 </style>
               </head>
               <body><label class="color-dMYaj4" for="test"><input type="text" name="test"></label>
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test("Basic form renders correctly")
+    func basicFormRendersCorrectly2() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div {
+                    h1 { "Type-safe HTML" }
+                      .color(light: .blue, dark: .red)
+                      .fontSize(.px(24))
+                    p { "With type-safe CSS!" }
+                        .marginTop(.px(10))
+                }
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .font-size-t6pNK3{font-size:24px}
+            .color-RBYdU{color:@media (prefers-color-scheme: light) { blue } @media (prefers-color-scheme: dark) { red }}
+            .margin-top-Fqw6a1{margin-top:10px}
+
+                </style>
+              </head>
+              <body>
+            <div>
+              <h1 class="font-size-t6pNK3 color-RBYdU">Type-safe HTML
+              </h1>
+              <p class="margin-top-Fqw6a1">With type-safe CSS!
+              </p>
+            </div>
               </body>
             </html>
             """

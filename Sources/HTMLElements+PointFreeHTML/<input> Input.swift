@@ -55,7 +55,7 @@ extension Input: HTMLVoidElement {
                 .required(email.required)
                 .pattern(email.pattern)
                 .placeholder(email.placeholder)
-                .readonly(email.readonly == true)
+                .readonly(email.readonly)
                 .size(email.size)
         case .file(let file):
             input
