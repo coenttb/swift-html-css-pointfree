@@ -10,6 +10,7 @@ import Foundation
 import PointFreeHTML
 
 extension HTML {
+    @_disfavoredOverload
     @discardableResult
     public func color(
         _ color: CSSPropertyTypes.ColorProperty?,
@@ -95,7 +96,7 @@ extension CSSPropertyTypes.ColorProperty.WithDarkMode {
 
 extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color: CustomStringConvertible {
     public var description: String {
-        "@media (prefers-color-scheme: light) { \(light) } @media (prefers-color-scheme: dark) { \(dark) }"
+        "@media (prefers-color-scheme: light) { color:\(light) } @media (prefers-color-scheme: dark) { color:\(dark) }"
     }
 }
 

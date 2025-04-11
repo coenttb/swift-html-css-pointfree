@@ -16,13 +16,15 @@ import DependenciesTestSupport
 import InlineSnapshotTesting
 import HTMLTestSupport
 
-@Suite("Color Tests")
+let div = HTMLElement(tag: "div")
+
+@Suite(
+    "Color Tests",
+    .snapshots(record: .failed)
+)
 struct ColorTests {
     @Test("Color initializes with standard color")
     func colorInitializesWithStandardColor() {
-        div()
-            .color(.red)
-        
         let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"))
         #expect(color.light.description == "#FF0000")
     }
@@ -121,15 +123,14 @@ struct ColorTests {
     
     @Test("HTML color method with pseudo-class parameter")
     func htmlColorMethodWithPseudoClassParameter() {
-        struct Test: HTMLDocument {
-            var head: some HTML { HTMLEmpty() }
-            var body: some HTML {
-                div()
-                    .color(.hex("FF0000"), pseudo: .hover)
-            }
+
+        let test = HTMLDocument {
+            div
+                .color(.hex("FF0000"), pseudo: .hover)
+            
         }
         
-        let html = String.init(bytes: Test().render(), encoding: .utf8)!
+        let html = String.init(bytes: test.render(), encoding: .utf8)!
         #expect(html.contains(":hover"))
         #expect(html.contains("color:#FF0000"))
         
@@ -156,7 +157,9 @@ struct ColorTests {
     @Test("HTML element renders with named color properly")
     func htmlElementWithNamedColorRendersCorrectly() {
         assertInlineSnapshot(
-            of: div().color(.red),
+            of: HTMLDocument {
+                div.color(.red)
+            },
             as: .html
         ) {
             """
@@ -164,12 +167,12 @@ struct ColorTests {
             <html lang="en">
               <head>
                 <style>
-            .color-dMYaj4{color:red}
+            .color-6IF7f2{color:@media (prefers-color-scheme: light) { color:red } @media (prefers-color-scheme: dark) { color:rgb(204, 0, 0) }}
 
                 </style>
               </head>
               <body>
-            <div class="color-dMYaj4">
+            <div class="color-6IF7f2">
             </div>
               </body>
             </html>
@@ -180,7 +183,10 @@ struct ColorTests {
     @Test("HTML color with ColorProperty renders properly")
     func htmlColorMethodWithColorPropertyWorks() {
         assertInlineSnapshot(
-            of: div().color(CSSPropertyTypes.ColorProperty.color(.hex("FF0000"))),
+            of: HTMLDocument {
+                div
+                    .color(CSSPropertyTypes.ColorProperty.color(.hex("FF0000")))
+            },
             as: .html
         ) {
             """
@@ -204,7 +210,10 @@ struct ColorTests {
     @Test("HTML element with light/dark colors renders properly")
     func htmlElementWithLightDarkColorsAppliesBoth() {
         assertInlineSnapshot(
-            of: div().color(light: .hex("FF0000"), dark: .hex("00FF00")),
+            of: HTMLDocument {
+                div
+                    .color(light: .hex("FF0000"), dark: .hex("00FF00"))
+            },
             as: .html
         ) {
             """
@@ -212,12 +221,12 @@ struct ColorTests {
             <html lang="en">
               <head>
                 <style>
-            .color-af5sv1{color:@media (prefers-color-scheme: light) { #FF0000 } @media (prefers-color-scheme: dark) { #00FF00 }}
+            .color-VaVvc{color:@media (prefers-color-scheme: light) { color:#FF0000 } @media (prefers-color-scheme: dark) { color:#00FF00 }}
 
                 </style>
               </head>
               <body>
-            <div class="color-af5sv1">
+            <div class="color-VaVvc">
             </div>
               </body>
             </html>
@@ -228,7 +237,10 @@ struct ColorTests {
     @Test("HTML color with media query renders properly")
     func htmlColorMethodWithMediaQueryParameter() {
         assertInlineSnapshot(
-            of: div().color(.hex("FF0000"), media: .print),
+            of: HTMLDocument {
+                div
+                    .color(.hex("FF0000"), media: .print)
+            },
             as: .html
         ) {
             """
@@ -237,13 +249,13 @@ struct ColorTests {
               <head>
                 <style>
             @media print{
-              .color-lcCen3{color:#FF0000}
+              .color-We8Du{color:@media (prefers-color-scheme: light) { color:#FF0000 } @media (prefers-color-scheme: dark) { color:rgb(204, 0, 0) }}
             }
 
                 </style>
               </head>
               <body>
-            <div class="color-lcCen3">
+            <div class="color-We8Du">
             </div>
               </body>
             </html>
