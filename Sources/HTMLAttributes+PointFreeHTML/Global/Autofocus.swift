@@ -15,3 +15,11 @@ extension HTML {
     }
 }
 
+extension HTML {
+    @discardableResult
+    public func autofocus(
+        _ value: Autofocus?
+    ) -> some HTML {
+        self.attribute(Autofocus.attribute, value != nil)
+    }
+}

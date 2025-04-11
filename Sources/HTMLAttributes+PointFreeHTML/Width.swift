@@ -7,7 +7,7 @@
 
 import Foundation
 import PointFreeHTML
-import HTMLAttributeTypes
+import HTMLElementTypes
 
 extension HTML {
     

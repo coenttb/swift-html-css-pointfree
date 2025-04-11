@@ -1,0 +1,19 @@
+//
+//  Rows.swift
+//  swift-html-css-pointfree
+//
+//  Created by Coen ten Thije Boonkkamp on 10/04/2025.
+//
+
+import PointFreeHTML
+
+extension HTML {
+    
+    /// Sets the rows attribute on an element
+    @discardableResult
+    package func rows(
+        _ value: Rows?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Rows.attribute, value?.description)
+    }
+}

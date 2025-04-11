@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import HTMLAttributes_PointFreeHTML
+import HTMLElementTypes
+
+extension meta {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some HTML
+    ) -> some HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .charset(self.charset)
+            .content(self.content)
+            .httpEquiv(self.httpEquiv)
+            .media(self.media)
+            .name(self.name)
+    }
+}

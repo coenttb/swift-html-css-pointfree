@@ -15,7 +15,6 @@ extension Input: @retroactive HTML {}
 extension Input: HTMLVoidElement {
     @HTMLBuilder
     public var body: some HTML {
-        
         let input = HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .name(name)
             .disabled(self.disabled)
@@ -74,11 +73,11 @@ extension Input: HTMLVoidElement {
                 .width(image.width)
                 .required(image.required)
                 .src(image.src)
-                .attribute("formaction", image.form.action)
-                .attribute("formenctype", image.form.enctype)
-                .attribute("formmethod", image.form.method)
-                .attribute("formnovalidate", image.form.novalidate == true)
-                .attribute("formtarget", image.form.target)
+                .formAction(image.form.action)
+                .formEncType(image.form.enctype)
+                .formMethod(image.form.method)
+                .formNovalidate(image.form.novalidate)
+                .formTarget(image.form.target)
         case .month(let month):
             input
                 .value(month.value)
@@ -138,11 +137,11 @@ extension Input: HTMLVoidElement {
                 .required(search.required)
         case .submit(let submit):
             input
-            //                .attribute("formaction", submit.formaction)
-            //                .attribute("formenctype", submit.formenctype)
-            //                .attribute("formmethod", submit.formmethod)
-            //                .attribute("formnovalidate", submit.formnovalidate == true)
-            //                .attribute("formtarget", submit.formtarget)
+                .formAction(submit.formaction)
+                .formEncType(submit.formenctype)
+                .formMethod(submit.formmethod)
+                .formNovalidate(submit.formnovalidate)
+                .formTarget(submit.formtarget)
                 .value(submit.value)
                 .required(submit.required)
         case .tel(let tel):

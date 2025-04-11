@@ -1,0 +1,20 @@
+//
+//  CharSet.swift
+//  swift-html-css-pointfree
+//
+//  Created by Coen ten Thije Boonkkamp on 10/04/2025.
+//
+
+import PointFreeHTML
+import HTMLElementTypes
+
+extension HTML {
+    
+    /// Sets the charset attribute on an element
+    @discardableResult
+    package func charset(
+        _ value: CharSet?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute("charset", value?.description)
+    }
+}

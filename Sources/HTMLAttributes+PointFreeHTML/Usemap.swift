@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import PointFreeHTML
+import HTMLElementTypes
+
+extension HTML {
+    
+    /// Sets the usemap attribute on an element
+    @discardableResult
+    package func usemap(
+        _ value: Usemap?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Usemap.attribute, value?.description)
+    }
+}

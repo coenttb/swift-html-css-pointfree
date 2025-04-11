@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import HTMLAttributes_PointFreeHTML
+import HTMLElementTypes
+
+extension param {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some HTML
+    ) -> some HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .name(self.name)
+            .value(self.value)
+    }
+}

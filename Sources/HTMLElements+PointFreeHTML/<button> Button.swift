@@ -6,3 +6,26 @@
 //
 
 import Foundation
+import HTMLAttributes_PointFreeHTML
+import HTMLElementTypes
+
+extension button {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some HTML
+    ) -> some HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .type(self.type)
+            .disabled(self.disabled)
+//            .form(self.form)
+            .name(self.name)
+            .value(self.value)
+            .autofocus(self.autofocus)
+            .formAction(self.formaction)
+            .formEncType(self.formenctype)
+            .formMethod(self.formmethod)
+            .formNovalidate(self.formnovalidate)
+//            .formTarget(self.formtarget)
+            .popovertarget(self.popovertarget)
+            .popovertargetaction(self.popovertargetaction)
+    }
+}

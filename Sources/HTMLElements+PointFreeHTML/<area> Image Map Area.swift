@@ -15,10 +15,10 @@ extension area {
 //            .coords(self.coords)
             .alt(self.alt)
             .href(self.href)
-//            .download(download)
-//            .ping(ping)
-//            .referrerpolicy(referrerpolicy)
+            .download(download)
+            .ping(ping)
+            .referrerPolicy(referrerpolicy)
             .rel(rel)
-//            .target(target)
+            .target(target)
     }
 }

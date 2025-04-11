@@ -19,6 +19,15 @@ extension HTML {
     }
 }
 
+extension HTML {
+    /// Add a target attribute to a form to specify where to display the response
+    @discardableResult
+    package func target(
+        _ value: FormTarget?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(FormTarget.attribute, value?.description)
+    }
+}
 
 extension HTML {
     /// Add a target attribute to a form to specify where to display the response

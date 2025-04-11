@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import HTMLAttributes_PointFreeHTML
+import HTMLElementTypes
+
+extension ol {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some HTML
+    ) -> some HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .reversed(self.reversed)
+            .start(self.start)
+            .type(self.type)
+    }
+}

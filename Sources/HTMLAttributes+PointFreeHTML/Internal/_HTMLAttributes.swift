@@ -9,19 +9,22 @@ import Foundation
 import PointFreeHTML
 import HTMLAttributeTypes
 
-extension _HTMLAttributes {
+extension HTML {
+    @HTMLBuilder
     package func attribute(
         _ value: String,
         _ condition: @autoclosure () -> Bool?
-    ) -> _HTMLAttributes<Content> {
+    ) -> some HTML {
         let conditionResult = condition()
         if conditionResult == true {
-            return self.attribute(value, "")
+            self.attribute(value, "")
         } else {
-            return self.attribute("", String?.none)
+            self.attribute("", String?.none)
         }
     }
-    
+}
+
+extension _HTMLAttributes {
     package func attribute(
         _ name: String,
         _ value: (some CustomStringConvertible)? = ""

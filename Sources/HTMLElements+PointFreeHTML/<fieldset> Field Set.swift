@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import HTMLAttributes_PointFreeHTML
+import HTMLElementTypes
+
+extension fieldset {
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some HTML
+    ) -> some HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .disabled(self.disabled)
+            .form(self.form)
+            .name(self.name)
+    }
+}

@@ -12,8 +12,8 @@ extension HTML {
     /// Sets the form attribute on an object element
     @discardableResult
     package func form(
-        _ value: ObjectForm?
+        _ value: Form.ID?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(ObjectForm.attribute, value?.description)
+        self.attribute("form", value?.description)
     }
 }

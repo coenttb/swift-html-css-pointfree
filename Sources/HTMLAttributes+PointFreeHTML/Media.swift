@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLElementTypes
 
 extension HTML {
     

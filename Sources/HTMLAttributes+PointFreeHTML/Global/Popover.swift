@@ -45,9 +45,9 @@ extension HTML {
     /// Sets the popovertarget attribute using a PopoverTarget struct
     @discardableResult
     public func popovertarget(
-        _ attribute: PopoverTarget
+        _ attribute: PopoverTarget?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(PopoverTarget.attribute, attribute.description)
+        self.attribute(PopoverTarget.attribute, attribute?.description)
     }
 }
 
@@ -55,8 +55,8 @@ extension HTML {
     /// Sets the popovertargetaction attribute with an action
     @discardableResult
     public func popovertargetaction(
-        _ action: PopoverTargetAction
+        _ action: PopoverTargetAction?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(PopoverTargetAction.attribute, action.description)
+        self.attribute(PopoverTargetAction.attribute, action?.description)
     }
 }

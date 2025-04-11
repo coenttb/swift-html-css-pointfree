@@ -12,7 +12,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension Label {
+extension HTMLElementTypes.Label {
     public func callAsFunction(@HTMLBuilder _ content: () -> some HTML) -> some HTML {
         HTMLElement(tag: Self.tag) { content() }
             .for(self.for)
