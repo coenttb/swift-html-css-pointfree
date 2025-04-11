@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -13,7 +14,7 @@ extension HTML {
     @discardableResult
     package func formNovalidate(
         _ value: FormNovalidate?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(FormNovalidate.attribute, value?.description)
+    ) -> some HTML {
+        self.attribute(boolean: value)
     }
 }

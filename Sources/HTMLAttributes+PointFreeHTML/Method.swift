@@ -5,9 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import Foundation
-import HTMLAttributeTypes
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     /// Add a method attribute to specify the HTTP method for form submission

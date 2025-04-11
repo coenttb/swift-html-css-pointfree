@@ -5,9 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 04/04/2025.
 ///
 
-import Foundation
 import PointFreeHTML
-import HTMLElementTypes
+import HTMLAttributeTypes
 
 extension HTML {
     

@@ -20,6 +20,6 @@ extension HTML {
     public func autofocus(
         _ value: Autofocus?
     ) -> some HTML {
-        self.attribute(Autofocus.attribute, value != nil)
+        self.attribute(boolean: value)
     }
 }

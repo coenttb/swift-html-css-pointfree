@@ -5,9 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import Foundation
-import HTMLAttributeTypes
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     /// Add a target attribute to a form to specify where to display the response
@@ -73,13 +72,5 @@ extension HTML {
     @discardableResult
     public func openInTop() -> _HTMLAttributes<Self> {
         self.target(anchor: .top)
-    }
-    
-    /// Target a specific iframe by name
-    @discardableResult
-    public func targetFrame(
-        _ frameName: String
-    ) -> _HTMLAttributes<Self> {
-        self.target(anchor: Target.named(frameName))
     }
 }

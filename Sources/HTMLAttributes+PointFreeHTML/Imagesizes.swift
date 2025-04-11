@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -14,6 +15,6 @@ extension HTML {
     package func sizes(
         _ value: ImageSizes?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(ImageSizes.attribute/*, value?.description*/)
+        self.attribute(ImageSizes.attribute, value?.description)
     }
 }

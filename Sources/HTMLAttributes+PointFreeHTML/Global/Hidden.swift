@@ -15,7 +15,7 @@ extension HTML {
     public func hidden(
         _ hidden: Hidden
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Hidden.attribute, hidden.description)
+        self.attribute(Hidden.attribute)
     }
     
     /// Sets the hidden attribute without a value (equivalent to hidden="")

@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -13,7 +14,9 @@ extension HTML {
     @discardableResult
     package func allowfullscreen(
         _ value: Allowfullscreen?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Allowfullscreen.attribute, value?.description)
+    ) -> some HTML {
+        self.attribute(boolean: value)
     }
 }
+
+

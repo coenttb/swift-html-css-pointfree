@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -13,7 +14,7 @@ extension HTML {
     @discardableResult
     package func `default`(
         _ value: Default?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Default.attribute, value?.description)
+    ) -> some HTML {
+        self.attribute(boolean: value)
     }
 }

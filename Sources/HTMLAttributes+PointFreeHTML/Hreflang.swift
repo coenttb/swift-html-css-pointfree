@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -14,6 +15,6 @@ extension HTML {
     package func hreflang(
         _ value: Hreflang?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Hreflang.attribute/*, value?.description*/)
+        self.attribute(Hreflang.attribute, value?.description)
     }
 }

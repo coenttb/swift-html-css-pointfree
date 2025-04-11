@@ -15,8 +15,8 @@
     {
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "HTML Elements+PointFreeHTML Tests",
-        "name" : "HTML Elements+PointFreeHTML Tests"
+        "identifier" : "HTMLElements+PointFreeHTML Tests",
+        "name" : "HTMLElements+PointFreeHTML Tests"
       }
     }
   ],

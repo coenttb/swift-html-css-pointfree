@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -13,7 +14,7 @@ extension HTML {
     @discardableResult
     package func reversed(
         _ value: Reversed?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Reversed.attribute, value?.description)
+    ) -> some HTML {
+        self.attribute(boolean: value)
     }
 }

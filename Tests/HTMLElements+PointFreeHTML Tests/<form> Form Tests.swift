@@ -1,6 +1,6 @@
 //import Foundation
 //import Testing
-//import HTML_Elements_PointFreeHTML
+//import HTMLElements_PointFreeHTML
 //import InlineSnapshotTesting
 //
 //@Suite(
@@ -48,7 +48,7 @@
 //        ) {
 //            """
 //
-//            <form target="_blank" novalidate method="post" enctype="multipart/form-data" action="https://example.com/register" rel="nofollow" name="registration" autocomplete="off" autocapitalize="words">
+//            <form target="_blank" novalidate method="post" EncType="multipart/form-data" action="https://example.com/register" rel="nofollow" name="registration" autocomplete="off" autocapitalize="words">
 //            </form>
 //            """
 //        }
@@ -125,7 +125,7 @@
 //        ) {
 //            """
 //
-//            <form method="post" enctype="multipart/form-data" action="/upload" name="upload" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation"><input type="file" name="document">
+//            <form method="post" EncType="multipart/form-data" action="/upload" name="upload" accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation"><input type="file" name="document">
 //            </form>
 //            """
 //        }

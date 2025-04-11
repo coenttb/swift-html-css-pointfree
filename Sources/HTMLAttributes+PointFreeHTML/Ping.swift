@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -14,6 +15,6 @@ extension HTML {
     package func ping(
         _ value: Ping?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Ping.attribute/*, value?.description*/)
+        self.attribute(Ping.attribute, value?.description)
     }
 }

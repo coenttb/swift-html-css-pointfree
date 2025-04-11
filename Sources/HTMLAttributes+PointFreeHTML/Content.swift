@@ -6,15 +6,15 @@
 //
 
 import PointFreeHTML
-import HTMLElementTypes
+import HTMLAttributeTypes
 
 extension HTML {
     
     /// Sets the content attribute on an element
     @discardableResult
     package func content(
-        _ value: HTMLElementTypes.Content?
+        _ value: HTMLAttributeTypes.Content?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLElementTypes.Content.attribute, value?.description)
+        self.attribute(HTMLAttributeTypes.Content.attribute, value?.description)
     }
 }

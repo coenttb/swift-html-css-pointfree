@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -14,6 +15,6 @@ extension HTML {
     package func formAction(
         _ value: FormAction?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(FormAction.attribute/*, value?.description*/)
+        self.attribute(FormAction.attribute, value?.description)
     }
 }

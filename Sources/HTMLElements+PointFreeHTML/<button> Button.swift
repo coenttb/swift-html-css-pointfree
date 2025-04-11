@@ -16,7 +16,7 @@ extension button {
         HTMLElement(tag: Self.tag) { content() }
             .type(self.type)
             .disabled(self.disabled)
-//            .form(self.form)
+            .form(self.form)
             .name(self.name)
             .value(self.value)
             .autofocus(self.autofocus)
@@ -24,7 +24,7 @@ extension button {
             .formEncType(self.formenctype)
             .formMethod(self.formmethod)
             .formNovalidate(self.formnovalidate)
-//            .formTarget(self.formtarget)
+            .formTarget(self.formtarget)
             .popovertarget(self.popovertarget)
             .popovertargetaction(self.popovertargetaction)
     }

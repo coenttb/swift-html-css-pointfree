@@ -5,9 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import Foundation
-import HTMLAttributeTypes
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     /// Add an action attribute to specify the URL for form submission

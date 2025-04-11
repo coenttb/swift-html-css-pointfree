@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -14,6 +15,6 @@ extension HTML {
     package func srcset(
         _ value: ImageSrcSet?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(ImageSrcSet.attribute/*, value?.description*/)
+        self.attribute(ImageSrcSet.attribute, value?.description)
     }
 }

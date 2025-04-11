@@ -21,7 +21,7 @@ extension form {
             .name(self.name)
             .rel(self.rel)
             .action(self.action)
-            .enctype(self.enctype)
+            .EncType(self.enctype)
             .method(self.method)
             .novalidate(self.novalidate)
             .target(self.target)

@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -13,7 +14,7 @@ extension HTML {
     @discardableResult
     package func loop(
         _ value: Loop?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Loop.attribute, value?.description)
+    ) -> some HTML {
+        self.attribute(boolean: value)
     }
 }

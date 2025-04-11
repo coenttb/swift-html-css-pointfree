@@ -5,7 +5,6 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import Foundation
 import PointFreeHTML
 import HTMLAttributeTypes
 
@@ -18,10 +17,6 @@ extension HTML {
     /// Conditionally adds the disabled attribute to the element
     @HTMLBuilder
     package func disabled(_ value: Disabled?) -> some HTML {
-        if value == true {
-            self.attribute(Disabled.attribute)
-        } else {
-            self
-        }
+        self.attribute(boolean: value)
     }
 }

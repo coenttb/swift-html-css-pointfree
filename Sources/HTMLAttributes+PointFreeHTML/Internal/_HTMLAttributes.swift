@@ -8,6 +8,7 @@
 import Foundation
 import PointFreeHTML
 import HTMLAttributeTypes
+import HTMLElementTypes
 
 extension HTML {
     @HTMLBuilder
@@ -21,6 +22,13 @@ extension HTML {
         } else {
             self.attribute("", String?.none)
         }
+    }
+    
+    @HTMLBuilder
+    package func attribute<Attribute: BooleanAttribute>(
+        boolean value: Attribute?,
+    ) -> some HTML {
+        self.attribute(Attribute.attribute, value == true)
     }
 }
 

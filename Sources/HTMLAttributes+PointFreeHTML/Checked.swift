@@ -5,7 +5,6 @@
 /// Created by Coen ten Thije Boonkkamp on 04/04/2025.
 ///
 
-import Foundation
 import PointFreeHTML
 import HTMLAttributeTypes
 
@@ -19,20 +18,6 @@ extension HTML {
     /// Conditionally adds the checked attribute to the element
     @HTMLBuilder
     package func checked(_ value: Checked?) -> some HTML {
-        if value == true {
-            self.attribute(Checked.attribute)
-        } else {
-            self
-        }
-    }
-    
-    /// Conditionally adds the checked attribute to the element
-    @HTMLBuilder
-    package func checked(_ value: Bool?) -> some HTML {
-        if value == true {
-            self.attribute(Checked.attribute)
-        } else {
-            self
-        }
+        self.attribute(boolean: value)
     }
 }

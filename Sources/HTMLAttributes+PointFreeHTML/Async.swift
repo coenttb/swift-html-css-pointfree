@@ -6,6 +6,7 @@
 //
 
 import PointFreeHTML
+import HTMLAttributeTypes
 
 extension HTML {
     
@@ -13,7 +14,7 @@ extension HTML {
     @discardableResult
     package func async(
         _ value: Async?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Async.attribute, value?.description)
+    ) -> some HTML {
+        self.attribute(boolean: value)
     }
 }
