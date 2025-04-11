@@ -43,8 +43,8 @@ struct Tests {
         }
     }
     
-    @Test("Basic form renders correctly")
-    func basicFormRendersCorrectly2() {
+    @Test("General")
+    func general1() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 div {
@@ -65,17 +65,19 @@ struct Tests {
               <head>
                 <style>
             .font-size-t6pNK3{font-size:24px}
-            .color-RBYdU{color:@media (prefers-color-scheme: light) { blue } @media (prefers-color-scheme: dark) { red }}
+            .color-lVtzG2{color:@media (prefers-color-scheme: light) { color:blue } @media (prefers-color-scheme: dark) { color:red }}
             .margin-top-Fqw6a1{margin-top:10px}
 
                 </style>
               </head>
               <body>
             <div>
-              <h1 class="font-size-t6pNK3 color-RBYdU">Type-safe HTML
+              <h1 class="font-size-t6pNK3 color-lVtzG2">Type-safe HTML
               </h1>
               <p class="margin-top-Fqw6a1">With type-safe CSS!
               </p>
+              <video autoplay src="/public/video/example.mp4">
+              </video>
             </div>
               </body>
             </html>
