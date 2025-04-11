@@ -53,6 +53,8 @@ struct Tests {
                       .fontSize(.px(24))
                     p { "With type-safe CSS!" }
                         .marginTop(.px(10))
+                    
+                    video(src: "/public/video/example.mp4", autoplay: true) {}
                 }
             },
             as: .html

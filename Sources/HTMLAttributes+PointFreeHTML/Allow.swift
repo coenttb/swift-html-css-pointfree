@@ -7,14 +7,13 @@
 
 import PointFreeHTML
 import HTMLAttributeTypes
-import HTMLElementTypes
 
 extension HTML {
     
     /// Sets the allow attribute on an element
     @discardableResult
     package func allow(
-        _ value: FencedFrame.Allow?
+        _ value: Allow?
     ) -> _HTMLAttributes<Self> {
         self.attribute("allow", value?.description)
     }

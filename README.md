@@ -13,6 +13,7 @@ This package is currently in active development and is subject to changes. Featu
 - **Type-safe HTML and DSL**: Write HTML Elements and HTML Attributes with a SwiftUI-like syntax
 - **Integrated CSS styling**: Apply CSS styles directly to HTML elements with a SwiftUI-like syntax
 - **Comprehensive coverage**: Support for all standard HTML5 Elements and Attributes, and all CSS Properties and Types 
+- **Concurrency Safe**: Full Swift 6 support 
 
 ## Examples
 

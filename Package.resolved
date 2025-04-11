@@ -1,4 +1,5 @@
 {
+  "originHash" : "925fcc0ef8e0d9e82f40ce58b68579ca6970807c903571ac5023ff5756bdc9dc",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -51,7 +52,7 @@
       "location" : "https://github.com/coenttb/swift-css-types.git",
       "state" : {
         "branch" : "main",
-        "revision" : "699ecdb21171f6429f2475e460a609497c6e1219"
+        "revision" : "ee98446fa2fc34a0996fe551e3e732c7910ad3e2"
       }
     },
     {
@@ -78,7 +79,7 @@
       "location" : "https://github.com/coenttb/swift-html-types.git",
       "state" : {
         "branch" : "main",
-        "revision" : "5089a7f2f1903d5f1ee300f9c5275d69a12679c3"
+        "revision" : "7cd4a2b3075b3664cf3efa8fba042978f6f33be6"
       }
     },
     {
@@ -109,5 +110,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

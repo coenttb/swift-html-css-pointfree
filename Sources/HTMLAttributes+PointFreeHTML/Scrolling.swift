@@ -7,10 +7,8 @@
 
 import PointFreeHTML
 import HTMLAttributeTypes
-import HTMLElementTypes
 
-extension HTML {
-    
+extension HTML {    
     /// Sets the scope attribute on an element
     @discardableResult
     package func scrolling(

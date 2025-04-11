@@ -7,7 +7,6 @@
 
 import PointFreeHTML
 import HTMLAttributeTypes
-import HTMLElementTypes
 
 extension HTML {
     /// Sets the name attribute on an element
@@ -24,8 +23,8 @@ extension HTML {
     /// Sets the name attribute on an element
     @discardableResult
     package func name(
-        _ value: Meta.Name?
+        _ value: MetaName?
     ) -> _HTMLAttributes<Self> {
-        self.attribute(Name.attribute, value?.description)
+        self.attribute(MetaName.attribute, value?.description)
     }
 }

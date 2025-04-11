@@ -16,8 +16,6 @@ import DependenciesTestSupport
 import InlineSnapshotTesting
 import HTMLTestSupport
 
-let div = HTMLElement(tag: "div")
-
 @Suite(
     "Color Tests",
     .snapshots(record: .failed)

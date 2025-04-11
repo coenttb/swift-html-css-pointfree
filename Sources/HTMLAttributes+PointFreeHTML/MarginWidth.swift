@@ -7,7 +7,6 @@
 
 import PointFreeHTML
 import HTMLAttributeTypes
-import HTMLElementTypes
 
 extension HTML {
     /// Sets the maxlength attribute on an element
