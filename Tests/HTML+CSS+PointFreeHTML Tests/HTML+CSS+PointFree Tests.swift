@@ -23,7 +23,7 @@ struct Tests {
         assertInlineSnapshot(
             of: HTMLDocument {
                 label(for: "test") { input.text(name: "test") }
-                    .color(ColorProperty.red)
+                    .color(Color.red)
             },
             as: .html
         ) {

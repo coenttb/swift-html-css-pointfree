@@ -25,26 +25,26 @@ let div = HTMLElement(tag: "div")
 struct ColorTests {
     @Test("Color initializes with standard color")
     func colorInitializesWithStandardColor() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"))
         #expect(color.light.description == "#FF0000")
     }
     
     @Test("Color initializes with light and dark colors")
     func colorInitializesWithLightAndDarkColors() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         #expect(color.light.description == "#FF0000")
         #expect(color.dark.description == "#00FF00")
     }
     
     @Test("Color falls back to darker version when dark is omitted")
     func colorFallsBackToDarker() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"))
         #expect(color.dark != color.light)
     }
     
     @Test("Color description includes media queries")
     func colorDescriptionIncludesMediaQueries() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         let description = color.description
         #expect(description.contains("@media (prefers-color-scheme: light)"))
         #expect(description.contains("#FF0000"))
@@ -54,7 +54,7 @@ struct ColorTests {
     
     @Test("Color description includes dark mode even when not explicitly provided")
     func colorDescriptionIncludesDarkModeWhenNotExplicit() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: nil)
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: nil)
         let description = color.description
         #expect(description.contains("@media (prefers-color-scheme: light)"))
         #expect(description.contains("#FF0000"))
@@ -65,7 +65,7 @@ struct ColorTests {
     
     @Test("Map transforms both light and dark colors")
     func mapTransformsBothColors() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         let transformed = color.map { _ in .hex("0000FF") }
         #expect(transformed.light.description == "#0000FF")
         #expect(transformed.dark.description == "#0000FF")
@@ -73,9 +73,9 @@ struct ColorTests {
     
     @Test("FlatMap transforms colors more complexly")
     func flatMapTransformsColorsComplexly() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         let transformed = color.flatMap { _ in
-            CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("0000FF"), dark: .hex("FF00FF"))
+            CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("0000FF"), dark: .hex("FF00FF"))
         }
         #expect(transformed.light.description == "#0000FF")
         #expect(transformed.dark.description == "#FF00FF")
@@ -83,7 +83,7 @@ struct ColorTests {
     
     @Test("AdjustBrightness changes color brightness")
     func adjustBrightnessChangesColorBrightness() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         let brightened = color.adjustBrightness(by: 0.2)
         #expect(brightened.light != color.light)
         #expect(brightened.dark != color.dark)
@@ -91,7 +91,7 @@ struct ColorTests {
     
     @Test("Darker makes colors darker")
     func darkerMakesColorsDarker() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         let darkened = color.darker(by: 0.3)
         #expect(darkened.light != color.light)
         #expect(darkened.dark != color.dark)
@@ -99,7 +99,7 @@ struct ColorTests {
     
     @Test("Lighter makes colors lighter")
     func lighterMakesColorsLighter() {
-        let color = CSSPropertyTypes.ColorProperty.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
+        let color = CSSPropertyTypes.Color.WithDarkMode.Color(light: .hex("FF0000"), dark: .hex("00FF00"))
         let lightened = color.lighter(by: 0.3)
         #expect(lightened.light != color.light)
         #expect(lightened.dark != color.dark)
@@ -107,14 +107,14 @@ struct ColorTests {
     
     @Test("WithDarkMode global type works correctly")
     func withDarkModeGlobalTypeWorksCorrectly() {
-        let global = CSSPropertyTypes.ColorProperty.WithDarkMode.initial
+        let global = CSSPropertyTypes.Color.WithDarkMode.initial
         #expect(global.description == "initial")
     }
     
     @Test("WithDarkMode enum description passes through correct values")
     func withDarkModeEnumDescriptionPassesValues() {
-        let colorCase = CSSPropertyTypes.ColorProperty.WithDarkMode.color(.init(light: .hex("FF0000"), dark: .hex("00FF00")))
-        let globalCase = CSSPropertyTypes.ColorProperty.WithDarkMode.inherit
+        let colorCase = CSSPropertyTypes.Color.WithDarkMode.color(.init(light: .hex("FF0000"), dark: .hex("00FF00")))
+        let globalCase = CSSPropertyTypes.Color.WithDarkMode.inherit
         
         #expect(colorCase.description.contains("@media"))
         #expect(colorCase.description.contains("#FF0000"))
@@ -137,17 +137,17 @@ struct ColorTests {
         
     }
     
-    @Test("ColorProperty adjustBrightness method works for color case")
-    func colorPropertyAdjustBrightnessForColorCase() {
-        let color = CSSPropertyTypes.ColorProperty.color(.hex("FF0000"))
+    @Test("Color adjustBrightness method works for color case")
+    func ColorAdjustBrightnessForColorCase() {
+        let color = CSSPropertyTypes.Color.color(.hex("FF0000"))
         let brightened = color.adjustBrightness(by: 0.2)
         
         #expect(brightened.description != color.description)
     }
     
-    @Test("ColorProperty adjustBrightness method preserves global case")
-    func colorPropertyAdjustBrightnessPreservesGlobalCase() {
-        let global = CSSPropertyTypes.ColorProperty.inherit
+    @Test("Color adjustBrightness method preserves global case")
+    func ColorAdjustBrightnessPreservesGlobalCase() {
+        let global = CSSPropertyTypes.Color.inherit
         let adjusted = global.adjustBrightness(by: 0.2)
         
         #expect(adjusted.description == global.description)
@@ -180,12 +180,12 @@ struct ColorTests {
         }
     }
     
-    @Test("HTML color with ColorProperty renders properly")
-    func htmlColorMethodWithColorPropertyWorks() {
+    @Test("HTML color with Color renders properly")
+    func htmlColorMethodWithColorWorks() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 div
-                    .color(CSSPropertyTypes.ColorProperty.color(.hex("FF0000")))
+                    .color(CSSPropertyTypes.Color.color(.hex("FF0000")))
             },
             as: .html
         ) {

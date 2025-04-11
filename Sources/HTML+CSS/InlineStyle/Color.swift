@@ -13,24 +13,24 @@ extension HTML {
     @_disfavoredOverload
     @discardableResult
     public func color(
-        _ color: CSSPropertyTypes.ColorProperty?,
+        _ color: CSSPropertyTypes.Color?,
         media mediaQuery: MediaQuery? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(CSSPropertyTypes.ColorProperty.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(CSSPropertyTypes.Color.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
     }
 }
 
 extension HTML {
     @discardableResult
     public func color(
-        _ color: CSSPropertyTypes.ColorProperty.WithDarkMode?,
+        _ color: CSSPropertyTypes.Color.WithDarkMode?,
         media mediaQuery: MediaQuery? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(CSSPropertyTypes.ColorProperty.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(CSSPropertyTypes.Color.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
     }
 }
 
@@ -44,8 +44,8 @@ extension HTML {
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
         self.inlineStyle(
-            CSSPropertyTypes.ColorProperty.property,
-            CSSPropertyTypes.ColorProperty.WithDarkMode.color(.init(light: light, dark: dark)).description,
+            CSSPropertyTypes.Color.property,
+            CSSPropertyTypes.Color.WithDarkMode.color(.init(light: light, dark: dark)).description,
             media: mediaQuery,
             pre: pre,
             pseudo: pseudo
@@ -53,10 +53,10 @@ extension HTML {
     }
 }
 
-extension CSSPropertyTypes.ColorProperty {
+extension CSSPropertyTypes.Color {
     public enum WithDarkMode: Sendable, Equatable, GlobalConvertible, ColorConvertible {
         
-        case color(CSSPropertyTypes.ColorProperty.WithDarkMode.Color)
+        case color(CSSPropertyTypes.Color.WithDarkMode.Color)
         case global(CSSTypeTypes.Global)
         
         public struct Color: Sendable, Equatable {
@@ -73,14 +73,14 @@ extension CSSPropertyTypes.ColorProperty {
             }
         }
         
-        public static func color(_ color: CSSTypeTypes.Color) -> CSSPropertyTypes.ColorProperty.WithDarkMode {
+        public static func color(_ color: CSSTypeTypes.Color) -> CSSPropertyTypes.Color.WithDarkMode {
             return .init(color)
         }
     }
 }
 
-extension CSSPropertyTypes.ColorProperty.WithDarkMode {
-    public init(_ color: CSSPropertyTypes.ColorProperty){
+extension CSSPropertyTypes.Color.WithDarkMode {
+    public init(_ color: CSSPropertyTypes.Color){
         switch color {
         case .global(let global): self = .global(global)
         case .color(let color): self = .init(color)
@@ -88,19 +88,20 @@ extension CSSPropertyTypes.ColorProperty.WithDarkMode {
     }
 }
 
-extension CSSPropertyTypes.ColorProperty.WithDarkMode {
+extension CSSPropertyTypes.Color.WithDarkMode {
     public init(_ color: CSSTypeTypes.Color){
         self = .color(.init(light: color))
     }
 }
 
-extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color: CustomStringConvertible {
+extension CSSPropertyTypes.Color.WithDarkMode.Color: CustomStringConvertible {
     public var description: String {
-        "@media (prefers-color-scheme: light) { color:\(light) } @media (prefers-color-scheme: dark) { color:\(dark) }"
+        let attribute = CSSPropertyTypes.Color.property
+        return "@media (prefers-color-scheme: light) { \(attribute):\(light) } @media (prefers-color-scheme: dark) { \(attribute):\(dark) }"
     }
 }
 
-extension CSSPropertyTypes.ColorProperty.WithDarkMode: CustomStringConvertible {
+extension CSSPropertyTypes.Color.WithDarkMode: CustomStringConvertible {
     public var description: String {
         switch self {
         case .color(let color): return color.description
@@ -109,7 +110,7 @@ extension CSSPropertyTypes.ColorProperty.WithDarkMode: CustomStringConvertible {
     }
 }
 
-extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color {
+extension CSSPropertyTypes.Color.WithDarkMode.Color {
     public func map(_ transform: (CSSTypeTypes.Color) -> CSSTypeTypes.Color) -> Self {
         .init(
             light: transform(light),
@@ -117,7 +118,7 @@ extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color {
         )
     }
     
-    public func flatMap(_ transform: (CSSTypeTypes.Color) -> CSSPropertyTypes.ColorProperty.WithDarkMode.Color) -> Self {
+    public func flatMap(_ transform: (CSSTypeTypes.Color) -> CSSPropertyTypes.Color.WithDarkMode.Color) -> Self {
         let lightTransformed = transform(light)
         let darkTransformed = transform(dark)
         
@@ -128,8 +129,8 @@ extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color {
     }
 }
 
-extension ColorProperty {
-    public func adjustBrightness(by percentage: Double) -> ColorProperty {
+extension Color {
+    public func adjustBrightness(by percentage: Double) -> Color {
         switch self {
         case .color(let color): .color(color.adjustBrightness(by: percentage))
         case .global(let global): .global(global)
@@ -137,7 +138,7 @@ extension ColorProperty {
     }
 }
 
-extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color {
+extension CSSPropertyTypes.Color.WithDarkMode.Color {
     public func adjustBrightness(by percentage: Double) -> Self {
         self.map { $0.adjustBrightness(by: percentage) }
     }
@@ -154,9 +155,9 @@ extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color {
 
 
 //
-//extension CSSPropertyTypes.ColorProperty.WithDarkMode.Color {
+//extension CSSPropertyTypes.Color.WithDarkMode.Color {
 //    @available(*, deprecated, renamed: "withDarkColor(_:)")
-//    public func dark(_ color: ColorProperty) -> Self {
+//    public func dark(_ color: Color) -> Self {
 //        withDarkColor(color)
 //    }
 //
