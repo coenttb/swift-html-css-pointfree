@@ -84,4 +84,27 @@ struct Tests {
             """
         }
     }
+    
+    @Test("General2")
+    func general2() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                input.button(name: "name", value: "value", disabled: false, form: nil)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+
+                </style>
+              </head>
+              <body><input value="value" type="button" name="name">
+              </body>
+            </html>
+            """
+        }
+    }
 }
