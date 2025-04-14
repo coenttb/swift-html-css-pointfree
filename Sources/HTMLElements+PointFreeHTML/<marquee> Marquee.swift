@@ -23,7 +23,7 @@ extension marquee {
             .loop(self.loop)
             .attribute("scrollamount", self.scrollamount)
             .attribute("scrolldelay", self.scrolldelay)
-            .attribute("truespeed", self.truespeed)
+            .attribute(boolean: self.truespeed)
             .attribute("vspace", self.vspace)
             .width(self.width)
     }
