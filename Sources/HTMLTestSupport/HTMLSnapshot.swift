@@ -10,7 +10,7 @@ import PointFreeHTML
 import Dependencies
 import SnapshotTesting
 
-extension Snapshotting where Value: PointFreeHTML.HTMLDocument, Format == String {
+extension Snapshotting where Value: PointFreeHTML.HTMLDocumentProtocol, Format == String {
     public static var html: Self {
         Snapshotting<String, String>.lines.pullback { value in
             return withDependencies {
