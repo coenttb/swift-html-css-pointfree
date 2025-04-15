@@ -11,8 +11,7 @@ import HTMLElementTypes
 
 extension hr {
     public func callAsFunction(
-        @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {
-        HTMLElement(tag: Self.tag) { content() }
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
     }
 }
