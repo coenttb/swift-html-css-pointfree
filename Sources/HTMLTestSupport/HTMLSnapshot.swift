@@ -35,17 +35,4 @@ extension Snapshotting where Value: HTML, Format == String {
     }
 }
 
-public struct HTMLDocument<Body: HTML, Head: HTML>: PointFreeHTML.HTMLDocument {
-    public let head: Head
-    
-    public let body: Body
-    
-    public init(
-        @HTMLBuilder head: () -> Head = { HTMLEmpty() },
-        @HTMLBuilder body: () -> Body
-    ) {
-        self.body = body()
-        self.head = head()
-    }
-}
 
