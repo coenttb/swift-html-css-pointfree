@@ -11,6 +11,7 @@ import PointFreeHTML
 
 extension HTML {
     @discardableResult
+    @_disfavoredOverload
     public func border(
         _ border: CSSPropertyTypes.Border?,
         media mediaQuery: MediaQuery? = nil,

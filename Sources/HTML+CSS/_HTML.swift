@@ -8,6 +8,7 @@
 import Foundation
 import PointFreeHTML
 import CSSPropertyTypes
+import CSSAtRuleTypes
 
 extension HTML {
     @discardableResult
@@ -30,5 +31,35 @@ extension HTML {
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
         self.inlineStyle(property, media: mediaQuery, pre: pre, pseudo: pseudo)
+    }
+}
+
+extension HTML {
+    @discardableResult
+    public func inlineStyle<PropertyElement: Property>(
+        _ property: PropertyElement?,
+        media: CSSAtRuleTypes.Media? = nil,
+        pre: String? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(PropertyElement.property, property?.description, media: media.map(MediaQuery.init), pre: pre, pseudo: pseudo)
+    }
+}
+
+extension HTML {
+    @discardableResult
+    public func style<PropertyElement: Property>(
+        _ property: PropertyElement?,
+        media: CSSAtRuleTypes.Media? = nil,
+        pre: String? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(property, media: media, pre: pre, pseudo: pseudo)
+    }
+}
+
+extension MediaQuery {
+    public init(_ media: CSSAtRuleTypes.Media){
+        self = .init(rawValue: media.rawValue)
     }
 }
