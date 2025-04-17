@@ -1,5 +1,5 @@
 {
-  "originHash" : "e27ed4357deb71250b58599867f1dd58c16ad8d9b285644ec3c2ceaf3b317391",
+  "originHash" : "ae32dda252f478670cb30a83b9d59388e008501524ee73cb79f28a556796338b",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -52,7 +52,7 @@
       "location" : "https://github.com/coenttb/swift-css-types.git",
       "state" : {
         "branch" : "main",
-        "revision" : "4d231fb5f27f34e97b0917e65ad8235922c1db39"
+        "revision" : "d2483275738dd46e05873d3c4b469ca9d3afc296"
       }
     },
     {

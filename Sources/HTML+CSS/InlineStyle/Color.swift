@@ -62,12 +62,12 @@ extension HTML {
 }
 
 extension CSSPropertyTypes.Color {
-    public enum WithDarkMode: Sendable, Equatable, GlobalConvertible, ColorConvertible {
+    public enum WithDarkMode: Sendable, Hashable, GlobalConvertible, ColorConvertible {
         
         case darkMode(CSSPropertyTypes.Color.WithDarkMode.Color)
         case global(CSSTypeTypes.Global)
         
-        public struct Color: Sendable, Equatable {
+        public struct Color: Sendable, Hashable {
             public let light: CSSTypeTypes.Color
             public let dark: CSSTypeTypes.Color
             
