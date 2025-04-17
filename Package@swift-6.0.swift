@@ -60,8 +60,8 @@ let package = Package(
                 .htmlCSS,
                 .pointFreeHTML,
                 .cssTypes,
-                .htmlAttributeTypes,
-                .htmlElementTypes,
+                .htmlElementsPointFreeHTML,
+                .htmlAttributesPointFreeHTML,
             ]
         ),
         .testTarget(
