@@ -48,7 +48,7 @@ extension HTML {
 
 extension HTML {
     @discardableResult
-    package func inlineStyle(
+    public func inlineStyle(
         _ property: String,
         _ value: String?,
         media: CSSAtRuleTypes.Media? = nil,
@@ -72,7 +72,7 @@ extension HTML {
 }
 
 extension MediaQuery {
-    public init(_ media: CSSAtRuleTypes.Media){
+    package init(_ media: CSSAtRuleTypes.Media){
         self = .init(rawValue: media.rawValue)
     }
 }
