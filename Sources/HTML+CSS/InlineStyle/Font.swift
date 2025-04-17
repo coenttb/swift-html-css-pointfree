@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSPropertyTypes
+import CSSTypes
 import Foundation
 import PointFreeHTML
 
@@ -13,10 +13,10 @@ extension HTML {
     @discardableResult
     public func font(
         _ font: CSSPropertyTypes.Font?,
-        media mediaQuery: MediaQuery? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(font, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(font, media: media, pre: pre, pseudo: pseudo)
     }
 }

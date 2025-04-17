@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackdropFilter Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackdropFilterTests {
     @Test("HTML element renders with backdrop-filter blur properly")
@@ -165,13 +165,13 @@ struct BackdropFilterTests {
               <head>
                 <style>
             @media print{
-              .backdrop-filter-Du3FN{backdrop-filter:blur(5px)}
+              .backdrop-filter-OLeyF3{backdrop-filter:blur(5px)}
             }
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-Du3FN">
+            <div class="backdrop-filter-OLeyF3">
             </div>
               </body>
             </html>

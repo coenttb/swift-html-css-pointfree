@@ -7,36 +7,36 @@
 
 import Foundation
 import PointFreeHTML
-import CSSPropertyTypes
-import CSSAtRuleTypes
+import CSSTypes
+
+//extension HTML {
+//    @discardableResult
+//    public func inlineStyle<PropertyElement: Property>(
+//        _ property: PropertyElement?,
+//        media: CSSAtRuleTypes.Media? = nil,
+//        pre: String? = nil,
+//        pseudo: Pseudo? = nil
+//    ) -> HTMLInlineStyle<Self> {
+//        self.inlineStyle(PropertyElement.property, property?.description, media: media, pre: pre, pseudo: pseudo)
+//    }
+//}
+//
+//extension HTML {
+//    @discardableResult
+//    public func style<PropertyElement: Property>(
+//        _ property: PropertyElement?,
+//        media: CSSAtRuleTypes.Media? = nil,
+//        pre: String? = nil,
+//        pseudo: Pseudo? = nil
+//    ) -> HTMLInlineStyle<Self> {
+//        self.inlineStyle(property, media: media, pre: pre, pseudo: pseudo)
+//    }
+//}
+
 
 extension HTML {
     @discardableResult
-    public func inlineStyle<PropertyElement: Property>(
-        _ property: PropertyElement?,
-        media mediaQuery: MediaQuery? = nil,
-        pre: String? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(PropertyElement.property, property?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
-    }
-}
-
-extension HTML {
-    @discardableResult
-    public func style<PropertyElement: Property>(
-        _ property: PropertyElement?,
-        media mediaQuery: MediaQuery? = nil,
-        pre: String? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(property, media: mediaQuery, pre: pre, pseudo: pseudo)
-    }
-}
-
-extension HTML {
-    @discardableResult
-    public func inlineStyle<PropertyElement: Property>(
+    public func inlineStyle<PropertyElement: CSSPropertyTypes.Property>(
         _ property: PropertyElement?,
         media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
@@ -48,7 +48,20 @@ extension HTML {
 
 extension HTML {
     @discardableResult
-    public func style<PropertyElement: Property>(
+    package func inlineStyle(
+        _ property: String,
+        _ value: String?,
+        media: CSSAtRuleTypes.Media? = nil,
+        pre: String? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(property, value, media: media.map(MediaQuery.init), pre: pre, pseudo: pseudo)
+    }
+}
+
+extension HTML {
+    @discardableResult
+    public func style<PropertyElement: CSSPropertyTypes.Property>(
         _ property: PropertyElement?,
         media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,

@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "AlignSelf Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct AlignSelfTests {
     @Test("HTML element renders with align-self properly")
@@ -113,13 +113,13 @@ struct AlignSelfTests {
               <head>
                 <style>
             @media print{
-              .align-self-M0cgS{align-self:center}
+              .align-self-pUz0j3{align-self:center}
             }
 
                 </style>
               </head>
               <body>
-            <div class="align-self-M0cgS">
+            <div class="align-self-pUz0j3">
             </div>
               </body>
             </html>

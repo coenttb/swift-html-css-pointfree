@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackgroundClip Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackgroundClipTests {
     @Test("HTML element renders with background-clip border-box properly")
@@ -165,13 +165,13 @@ struct BackgroundClipTests {
               <head>
                 <style>
             @media print{
-              .background-clip-5DhbZ{background-clip:content-box}
+              .background-clip-oeEJE2{background-clip:content-box}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-5DhbZ">
+            <div class="background-clip-oeEJE2">
             </div>
               </body>
             </html>

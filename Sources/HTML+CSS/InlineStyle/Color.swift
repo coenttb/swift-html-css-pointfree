@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSPropertyTypes
+import CSSTypes
 import Foundation
 import PointFreeHTML
 
@@ -14,24 +14,36 @@ extension HTML {
     @discardableResult
     public func color(
         _ color: CSSPropertyTypes.Color?,
-        media mediaQuery: MediaQuery? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(CSSPropertyTypes.Color.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(color, media: media, pre: pre, pseudo: pseudo)
     }
 }
 
 extension HTML {
     @discardableResult
+    @HTMLBuilder
     public func color(
         _ color: CSSPropertyTypes.Color.WithDarkMode?,
-        media mediaQuery: MediaQuery? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(CSSPropertyTypes.Color.property, color?.description, media: mediaQuery, pre: pre, pseudo: pseudo)
+    ) -> some HTML {
+        switch color {
+        case .global:
+            self.inlineStyle(color, media: media, pre: pre, pseudo: pseudo)
+        case let .darkMode(color):
+            self.color(light: color.light, dark: color.dark, media: media, pre: pre, pseudo: pseudo)
+        case .none:
+            self
+        }
     }
+}
+
+extension CSSPropertyTypes.Color.WithDarkMode: CSSPropertyTypes.Property {
+    public static var property: String { CSSPropertyTypes.Color.property }
 }
 
 extension HTML {
@@ -39,30 +51,26 @@ extension HTML {
     public func color(
         light: CSSTypeTypes.Color,
         dark: CSSTypeTypes.Color?,
-        media mediaQuery: MediaQuery? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(
-            CSSPropertyTypes.Color.property,
-            CSSPropertyTypes.Color.WithDarkMode.color(.init(light: light, dark: dark)).description,
-            media: mediaQuery,
-            pre: pre,
-            pseudo: pseudo
-        )
+    ) -> some HTML {
+        self
+            .inlineStyle("color", light.description, media: media, pre: pre, pseudo: pseudo)
+            .inlineStyle("color", dark?.description, media: .prefersColorScheme(.dark) && .print, pre: pre, pseudo: pseudo)
     }
 }
 
 extension CSSPropertyTypes.Color {
     public enum WithDarkMode: Sendable, Equatable, GlobalConvertible, ColorConvertible {
         
-        case color(CSSPropertyTypes.Color.WithDarkMode.Color)
+        case darkMode(CSSPropertyTypes.Color.WithDarkMode.Color)
         case global(CSSTypeTypes.Global)
         
         public struct Color: Sendable, Equatable {
             public let light: CSSTypeTypes.Color
             public let dark: CSSTypeTypes.Color
-                       
+            
             public init(light: CSSTypeTypes.Color, dark: CSSTypeTypes.Color? = nil) {
                 self.light = light
                 if let dark = dark {
@@ -75,6 +83,10 @@ extension CSSPropertyTypes.Color {
         
         public static func color(_ color: CSSTypeTypes.Color) -> CSSPropertyTypes.Color.WithDarkMode {
             return .init(color)
+        }
+        
+        public static func color(_ color: CSSPropertyTypes.Color.WithDarkMode.Color) -> Self {
+            return .darkMode(color)
         }
     }
 }
@@ -90,7 +102,7 @@ extension CSSPropertyTypes.Color.WithDarkMode {
 
 extension CSSPropertyTypes.Color.WithDarkMode {
     public init(_ color: CSSTypeTypes.Color){
-        self = .color(.init(light: color))
+        self = .darkMode(.init(light: color))
     }
 }
 
@@ -104,7 +116,7 @@ extension CSSPropertyTypes.Color.WithDarkMode.Color: CustomStringConvertible {
 extension CSSPropertyTypes.Color.WithDarkMode: CustomStringConvertible {
     public var description: String {
         switch self {
-        case .color(let color): return color.description
+        case .darkMode(let color): return color.description
         case .global(let global): return global.description
         }
     }
@@ -129,8 +141,8 @@ extension CSSPropertyTypes.Color.WithDarkMode.Color {
     }
 }
 
-extension Color {
-    public func adjustBrightness(by percentage: Double) -> Color {
+extension CSSPropertyTypes.Color {
+    public func adjustBrightness(by percentage: Double) -> Self {
         switch self {
         case .color(let color): .color(color.adjustBrightness(by: percentage))
         case .global(let global): .global(global)
@@ -151,98 +163,3 @@ extension CSSPropertyTypes.Color.WithDarkMode.Color {
         self.map { $0.lighter(by: percentage) }
     }
 }
-
-
-
-//
-//extension CSSPropertyTypes.Color.WithDarkMode.Color {
-//    @available(*, deprecated, renamed: "withDarkColor(_:)")
-//    public func dark(_ color: Color) -> Self {
-//        withDarkColor(color)
-//    }
-//
-//    @available(*, deprecated, renamed: "withLightColor(_:)")
-//    public func light(_ color: CSSTypeTypes.Color) -> Self {
-//        withLightColor(.color(color))
-//    }
-//
-//    public func withDarkColor(_ color: CSSTypeTypes.Color) -> Self {
-//        .init(light: self.light, dark: color)
-//    }
-//
-//    public func withLightColor(_ color: CSSTypeTypes.Color) -> Self {
-//        .init(light: color, dark: self.dark)
-//    }
-//}
-//
-//extension HTMLColor {
-//    public static func gray(_ value: UInt8) -> Self {
-//        let lightHex = String(format: "%02X", value)
-//        let darkHex = String(format: "%02X", 255 - value)
-//        return Self(light: .hex(lightHex + lightHex + lightHex))
-//            .withDarkColor(.hex(darkHex + darkHex + darkHex))
-//    }
-//
-//    @_disfavoredOverload
-//    public static func gray(_ value: Double) -> Self {
-//        gray(UInt8(255 * value))
-//    }
-//}
-//
-//extension HTMLColor {
-//    public func opacity(_ opacity: Double) -> HTMLColor {
-//        self.map { $0.opacity(opacity) }
-//    }
-//}
-
-
-
-//extension HTMLColor {
-//    public static func keyword(_ keyword: CSSTypeTypes.Color.Keyword) -> HTMLColor {
-//        return HTMLColor(.keyword(keyword))
-//    }
-//
-//    public static func hex(_ hex: String) -> HTMLColor {
-//        return HTMLColor(.hex(hex))
-//    }
-//
-//    public static func rgb(red: Int, green: Int, blue: Int) -> HTMLColor {
-//        return HTMLColor(.rgb(red: red, green: green, blue: blue))
-//    }
-//
-//    public static func rgba(red: Int, green: Int, blue: Int, alpha: Double) -> HTMLColor {
-//        return HTMLColor(.rgba(red: red, green: green, blue: blue, alpha: alpha))
-//    }
-//
-//    public static func hsl(hue: Int, saturation: Double, lightness: Double) -> HTMLColor {
-//        return HTMLColor(.hsl(hue: hue, saturation: saturation, lightness: lightness))
-//    }
-//
-//    public static func hsla(hue: Int, saturation: Double, lightness: Double, alpha: Double) -> HTMLColor {
-//        return HTMLColor(.hsla(hue: hue, saturation: saturation, lightness: lightness, alpha: alpha))
-//    }
-//
-//    public static func hwb(hue: Int, whiteness: Double, blackness: Double) -> HTMLColor {
-//        return HTMLColor(.hwb(hue: hue, whiteness: whiteness, blackness: blackness))
-//    }
-//
-//    public static func lab(lightness: Double, a: Double, b: Double) -> HTMLColor {
-//        return HTMLColor(.lab(lightness: lightness, a: a, b: b))
-//    }
-//
-//    public static func lch(lightness: Double, chroma: Double, hue: Double) -> HTMLColor {
-//        return HTMLColor(.lch(lightness: lightness, chroma: chroma, hue: hue))
-//    }
-//
-//    public static func system(_ system: CSSTypeTypes.Color.SystemColor) -> HTMLColor {
-//        return HTMLColor(.system(system))
-//    }
-//
-//    public static func global(_ global: CSSTypeTypes.Color.Global) -> HTMLColor {
-//        return HTMLColor(.global(global))
-//    }
-//
-//    public static let currentColor: HTMLColor = HTMLColor(.currentColor)
-//    public static let transparent: HTMLColor = HTMLColor(.transparent)
-//}
-

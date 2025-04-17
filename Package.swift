@@ -21,6 +21,7 @@ extension Target.Dependency {
 
 extension Target.Dependency {
     static var cssPropertyTypes: Self { .product(name: "CSSPropertyTypes", package: "swift-css-types") }
+    static var cssAtRuleTypes: Self { .product(name: "CSSAtRuleTypes", package: "swift-css-types") }
     static var htmlAttributeTypes: Self { .product(name: "HTMLAttributeTypes", package: "swift-html-types") }
     static var htmlElementTypes: Self { .product(name: "HTMLElementTypes", package: "swift-html-types") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
@@ -73,6 +74,7 @@ let package = Package(
             name: .htmlCSS,
             dependencies: [
                 .cssPropertyTypes,
+                .cssAtRuleTypes,
                 .pointFreeHTML,
             ]
         ),
@@ -81,6 +83,7 @@ let package = Package(
             dependencies: [
                 .htmlCSS,
                 .cssPropertyTypes,
+                .cssAtRuleTypes,
                 .pointFreeHTML,
                 .htmlTestSupport,
             ]

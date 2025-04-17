@@ -18,7 +18,7 @@
 //
 //@Suite(
 //    "AnimationDelay Tests",
-//    .snapshots(record: .failed)
+//    .snapshots(record: nil)
 //)
 //struct AnimationDelayTests {
 //    @Test("HTML element renders with animation-delay time value properly")

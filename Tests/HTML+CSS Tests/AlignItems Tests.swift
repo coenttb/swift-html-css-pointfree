@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "AlignItems Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct AlignItemsTests {
     @Test("HTML element renders with align-items properly")
@@ -113,13 +113,13 @@ struct AlignItemsTests {
               <head>
                 <style>
             @media print{
-              .align-items-M0cgS{align-items:center}
+              .align-items-pUz0j3{align-items:center}
             }
 
                 </style>
               </head>
               <body>
-            <div class="align-items-M0cgS">
+            <div class="align-items-pUz0j3">
             </div>
               </body>
             </html>

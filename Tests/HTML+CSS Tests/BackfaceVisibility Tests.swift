@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackfaceVisibility Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackfaceVisibilityTests {
     @Test("HTML element renders with backface-visibility hidden properly")
@@ -113,13 +113,13 @@ struct BackfaceVisibilityTests {
               <head>
                 <style>
             @media print{
-              .backface-visibility-NJdnE3{backface-visibility:hidden}
+              .backface-visibility-G9iVz2{backface-visibility:hidden}
             }
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-NJdnE3">
+            <div class="backface-visibility-G9iVz2">
             </div>
               </body>
             </html>

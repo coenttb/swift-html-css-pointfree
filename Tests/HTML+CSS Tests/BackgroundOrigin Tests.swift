@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackgroundOrigin Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackgroundOriginTests {
     @Test("HTML element renders with background-origin border-box properly")
@@ -139,13 +139,13 @@ struct BackgroundOriginTests {
               <head>
                 <style>
             @media print{
-              .background-origin-5DhbZ{background-origin:content-box}
+              .background-origin-oeEJE2{background-origin:content-box}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-5DhbZ">
+            <div class="background-origin-oeEJE2">
             </div>
               </body>
             </html>

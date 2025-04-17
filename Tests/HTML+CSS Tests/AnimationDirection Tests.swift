@@ -18,7 +18,7 @@
 //
 //@Suite(
 //    "AnimationDirection Tests",
-//    .snapshots(record: .failed)
+//    .snapshots(record: nil)
 //)
 //struct AnimationDirectionTests {
 //    @Test("HTML element renders with animation-direction normal properly")

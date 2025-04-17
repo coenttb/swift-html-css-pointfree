@@ -113,13 +113,13 @@ struct AccentColorTests {
               <head>
                 <style>
             @media print{
-              .accent-color-lcCen3{accent-color:#FF0000}
+              .accent-color-SXYRf2{accent-color:#FF0000}
             }
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-lcCen3">
+            <div class="accent-color-SXYRf2">
             </div>
               </body>
             </html>

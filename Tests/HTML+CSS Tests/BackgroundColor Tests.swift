@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackgroundColor Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackgroundColorTests {
     @Test("HTML element renders with background-color named color properly")
@@ -191,13 +191,13 @@ struct BackgroundColorTests {
               <head>
                 <style>
             @media print{
-              .background-color-qDsyg4{background-color:red}
+              .background-color-Igguo2{background-color:red}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-color-qDsyg4">
+            <div class="background-color-Igguo2">
             </div>
               </body>
             </html>

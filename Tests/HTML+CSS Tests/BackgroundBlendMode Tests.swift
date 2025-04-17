@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackgroundBlendMode Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackgroundBlendModeTests {
     @Test("HTML element renders with background-blend-mode normal properly")
@@ -165,13 +165,13 @@ struct BackgroundBlendModeTests {
               <head>
                 <style>
             @media print{
-              .background-blend-mode-TrNjW3{background-blend-mode:multiply}
+              .background-blend-mode-B2231{background-blend-mode:multiply}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-TrNjW3">
+            <div class="background-blend-mode-B2231">
             </div>
               </body>
             </html>

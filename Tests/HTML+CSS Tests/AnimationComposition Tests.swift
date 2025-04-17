@@ -18,7 +18,7 @@
 //
 //@Suite(
 //    "AnimationComposition Tests",
-//    .snapshots(record: .failed)
+//    .snapshots(record: nil)
 //)
 //struct AnimationCompositionTests {
 //    @Test("HTML element renders with animation-composition replace properly")

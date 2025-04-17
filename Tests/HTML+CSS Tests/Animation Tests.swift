@@ -20,7 +20,7 @@
 //
 //@Suite(
 //    "Animation Tests",
-//    .snapshots(record: .failed)
+//    .snapshots(record: nil)
 //)
 //struct AnimationTests {
 //    @Test("HTML element renders with animation string value properly")

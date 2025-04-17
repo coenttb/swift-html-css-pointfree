@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackgroundImage Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackgroundImageTests {
     @Test("HTML element renders with background-image url properly")
@@ -191,13 +191,13 @@ struct BackgroundImageTests {
               <head>
                 <style>
             @media print{
-              .background-image-2Sf3h3{background-image:url('image.jpg')}
+              .background-image-GyfTO1{background-image:url('image.jpg')}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-image-2Sf3h3">
+            <div class="background-image-GyfTO1">
             </div>
               </body>
             </html>

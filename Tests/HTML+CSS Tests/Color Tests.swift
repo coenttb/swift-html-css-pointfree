@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "Color Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct ColorTests {
     @Test("Color initializes with standard color")
@@ -111,7 +111,9 @@ struct ColorTests {
     
     @Test("WithDarkMode enum description passes through correct values")
     func withDarkModeEnumDescriptionPassesValues() {
-        let colorCase = CSSPropertyTypes.Color.WithDarkMode.color(.init(light: .hex("FF0000"), dark: .hex("00FF00")))
+        let colorCase = CSSPropertyTypes.Color.WithDarkMode.color(
+            .init(light: .hex("FF0000"), dark: .hex("00FF00"))
+        )
         let globalCase = CSSPropertyTypes.Color.WithDarkMode.inherit
         
         #expect(colorCase.description.contains("@media"))
@@ -165,12 +167,15 @@ struct ColorTests {
             <html lang="en">
               <head>
                 <style>
-            .color-6IF7f2{color:@media (prefers-color-scheme: light) { color:red } @media (prefers-color-scheme: dark) { color:rgb(204, 0, 0) }}
+            .color-dMYaj4{color:red}
+            @media (prefers-color-scheme: dark), print{
+              .color-NQmzw2{color:rgb(204, 0, 0)}
+            }
 
                 </style>
               </head>
               <body>
-            <div class="color-6IF7f2">
+            <div class="color-NQmzw2 color-dMYaj4">
             </div>
               </body>
             </html>
@@ -219,12 +224,15 @@ struct ColorTests {
             <html lang="en">
               <head>
                 <style>
-            .color-VaVvc{color:@media (prefers-color-scheme: light) { color:#FF0000 } @media (prefers-color-scheme: dark) { color:#00FF00 }}
+            .color-bQ3ZC1{color:#FF0000}
+            @media (prefers-color-scheme: dark), print{
+              .color-Dh1qJ1{color:#00FF00}
+            }
 
                 </style>
               </head>
               <body>
-            <div class="color-VaVvc">
+            <div class="color-Dh1qJ1 color-bQ3ZC1">
             </div>
               </body>
             </html>
@@ -237,7 +245,7 @@ struct ColorTests {
         assertInlineSnapshot(
             of: HTMLDocument {
                 div
-                    .color(.hex("FF0000"), media: .print)
+                    .color(.blue, media: .print)
             },
             as: .html
         ) {
@@ -246,14 +254,17 @@ struct ColorTests {
             <html lang="en">
               <head>
                 <style>
+            @media (prefers-color-scheme: dark), print{
+              .color-fLsCn3{color:rgb(0, 0, 204)}
+            }
             @media print{
-              .color-We8Du{color:@media (prefers-color-scheme: light) { color:#FF0000 } @media (prefers-color-scheme: dark) { color:rgb(204, 0, 0) }}
+              .color-oD7XM1{color:blue}
             }
 
                 </style>
               </head>
               <body>
-            <div class="color-We8Du">
+            <div class="color-fLsCn3 color-oD7XM1">
             </div>
               </body>
             </html>

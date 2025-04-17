@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSPropertyTypes
+import CSSTypes
 import Foundation
 import PointFreeHTML
 
@@ -13,10 +13,10 @@ extension HTML {
     @discardableResult
     public func paddingInlineEnd(
         _ paddingInlineEnd: CSSPropertyTypes.PaddingInlineEnd?,
-        media mediaQuery: MediaQuery? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(paddingInlineEnd, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(paddingInlineEnd, media: media, pre: pre, pseudo: pseudo)
     }
 }

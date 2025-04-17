@@ -18,14 +18,14 @@ import HTMLTestSupport
 
 @Suite(
     "Appearance Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct AppearanceTests {
     @Test("HTML element renders with appearance properly")
     func htmlElementWithAppearanceRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(.none)
+                div.appearance(Appearance.none)
             },
             as: .html
         ) {
@@ -34,11 +34,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
+            .appearance-Wl0y44{appearance:none}
 
                 </style>
               </head>
               <body>
-            <div>
+            <div class="appearance-Wl0y44">
             </div>
               </body>
             </html>
@@ -102,7 +103,7 @@ struct AppearanceTests {
     func htmlAppearanceWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(.none, media: .print)
+                div.appearance(Appearance.none, media: .print)
             },
             as: .html
         ) {
@@ -111,11 +112,14 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
+            @media print{
+              .appearance-D5ekn{appearance:none}
+            }
 
                 </style>
               </head>
               <body>
-            <div>
+            <div class="appearance-D5ekn">
             </div>
               </body>
             </html>
@@ -127,7 +131,7 @@ struct AppearanceTests {
     func htmlAppearanceWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(.none, pseudo: .hover)
+                div.appearance(Appearance.none, pseudo: .hover)
             },
             as: .html
         ) {
@@ -136,11 +140,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
+            .appearance-8r95N:hover{appearance:none}
 
                 </style>
               </head>
               <body>
-            <div>
+            <div class="appearance-8r95N">
             </div>
               </body>
             </html>
@@ -152,7 +157,7 @@ struct AppearanceTests {
     func htmlAppearanceWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(.none, pre: "my-component")
+                div.appearance(Appearance.none, pre: "my-component")
             },
             as: .html
         ) {
@@ -161,11 +166,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
+            my-component .appearance-V6DAJ3{appearance:none}
 
                 </style>
               </head>
               <body>
-            <div>
+            <div class="appearance-V6DAJ3">
             </div>
               </body>
             </html>

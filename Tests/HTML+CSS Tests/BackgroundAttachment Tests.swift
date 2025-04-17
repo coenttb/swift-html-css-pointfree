@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "BackgroundAttachment Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct BackgroundAttachmentTests {
     @Test("HTML element renders with background-attachment fixed properly")
@@ -139,13 +139,13 @@ struct BackgroundAttachmentTests {
               <head>
                 <style>
             @media print{
-              .background-attachment-JpU5a4{background-attachment:fixed}
+              .background-attachment-ZdgCC3{background-attachment:fixed}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-attachment-JpU5a4">
+            <div class="background-attachment-ZdgCC3">
             </div>
               </body>
             </html>

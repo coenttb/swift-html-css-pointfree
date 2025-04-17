@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "AlignmentBaseline Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct AlignmentBaselineTests {
     @Test("HTML element renders with alignment-baseline properly")
@@ -113,13 +113,13 @@ struct AlignmentBaselineTests {
               <head>
                 <style>
             @media print{
-              .alignment-baseline-8dnwS3{alignment-baseline:middle}
+              .alignment-baseline-XU4H84{alignment-baseline:middle}
             }
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-8dnwS3">
+            <div class="alignment-baseline-XU4H84">
             </div>
               </body>
             </html>

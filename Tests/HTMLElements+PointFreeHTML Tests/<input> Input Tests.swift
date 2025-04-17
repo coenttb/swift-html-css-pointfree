@@ -6,7 +6,7 @@ import HTMLTestSupport
 
 @Suite(
     "Input Type Attribute Tests",
-    .snapshots(record: .failed),
+    .snapshots(record: nil),
 )
 struct InputTypeTests {
     @Test("Fully initialized Input renders correctly")

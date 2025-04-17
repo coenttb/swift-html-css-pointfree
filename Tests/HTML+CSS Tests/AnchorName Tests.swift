@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "AnchorName Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct AnchorNameTests {
     @Test("HTML element renders with anchor-name string value properly")
@@ -113,13 +113,13 @@ struct AnchorNameTests {
               <head>
                 <style>
             @media print{
-              .anchor-name-sl7f34{anchor-name:--section-intro}
+              .anchor-name-KbwKJ1{anchor-name:--section-intro}
             }
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-sl7f34">
+            <div class="anchor-name-KbwKJ1">
             </div>
               </body>
             </html>

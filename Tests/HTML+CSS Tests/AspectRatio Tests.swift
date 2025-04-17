@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "AspectRatio Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct AspectRatioTests {
     @Test("HTML element renders with aspect-ratio properly")
@@ -139,13 +139,13 @@ struct AspectRatioTests {
               <head>
                 <style>
             @media print{
-              .aspect-ratio-dy2pB2{aspect-ratio:16 / 9}
+              .aspect-ratio-WCwgo4{aspect-ratio:16 / 9}
             }
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-dy2pB2">
+            <div class="aspect-ratio-WCwgo4">
             </div>
               </body>
             </html>

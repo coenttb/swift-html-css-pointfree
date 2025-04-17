@@ -5,7 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
-import CSSPropertyTypes
+import CSSTypes
 import Foundation
 import PointFreeHTML
 
@@ -13,10 +13,10 @@ extension HTML {
     @discardableResult
     public func orphans(
         _ orphans: CSSPropertyTypes.Orphans?,
-        media mediaQuery: MediaQuery? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(orphans, media: mediaQuery, pre: pre, pseudo: pseudo)
+        self.inlineStyle(orphans, media: media, pre: pre, pseudo: pseudo)
     }
 }
