@@ -59,7 +59,9 @@ let package = Package(
             dependencies: [
                 .htmlCSS,
                 .pointFreeHTML,
-                .cssTypes
+                .cssTypes,
+                .htmlAttributeTypes,
+                .htmlElementTypes,
             ]
         ),
         .testTarget(
