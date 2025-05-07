@@ -24,6 +24,7 @@ extension HTML {
 
 extension HTML {
     @discardableResult
+    @_disfavoredOverload
     @HTMLBuilder
     public func color(
         _ color: CSSPropertyTypes.Color.WithDarkMode?,

@@ -192,7 +192,7 @@ struct MediaTests {
             of: HTMLDocument {
                 div
                     .backgroundColor(.blue, media: Media.screen && .maxWidth(.px(768)))
-                    .color(.white, media: Media.screen && .maxWidth(.px(768)))
+                    .color(CSSPropertyTypes.Color.WithDarkMode.white, media: Media.screen && .maxWidth(.px(768)))
                     .padding(.px(20), media: Media.screen && .maxWidth(.px(768)))
             },
             as: .html
