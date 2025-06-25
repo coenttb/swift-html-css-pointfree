@@ -20,3 +20,15 @@ extension HTML {
         self.inlineStyle(transform, media: media, pre: pre, pseudo: pseudo)
     }
 }
+
+extension HTML {
+    @discardableResult
+    public func transform(
+        _ transform: String,
+        media: CSSAtRuleTypes.Media? = nil,
+        pre: String? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(Transform.property, transform, media: media, pre: pre, pseudo: pseudo)
+    }
+}
