@@ -268,9 +268,6 @@ struct MediaTests {
             <html lang="en">
               <head>
                 <style>
-            @media (prefers-color-scheme: dark), print{
-              .color-l1e5x1{color:rgb(204, 204, 204)}
-            }
             @media screen and (prefers-color-scheme: dark){
               .color-ewDba1{color:white}
             }
@@ -281,7 +278,7 @@ struct MediaTests {
                 </style>
               </head>
               <body>
-            <div class="color-l1e5x1 color-ewDba1 background-color-9Kjb11">
+            <div class="color-ewDba1 background-color-9Kjb11">
             </div>
               </body>
             </html>

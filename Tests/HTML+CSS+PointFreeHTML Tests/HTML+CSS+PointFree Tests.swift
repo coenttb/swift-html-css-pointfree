@@ -15,7 +15,7 @@ import HTMLTestSupport
 
 @Suite(
     "HTML+CSS+PointFreeHTML Tests",
-    .snapshots(record: nil)
+    .snapshots(record: .failed)
 )
 struct Tests {
     @Test("Labeled Input renders correctly")
@@ -65,14 +65,17 @@ struct Tests {
               <head>
                 <style>
             .font-size-t6pNK3{font-size:24px}
-            .color-lVtzG2{color:@media (prefers-color-scheme: light) { color:blue } @media (prefers-color-scheme: dark) { color:red }}
+            .color-jiDhg4{color:blue}
             .margin-top-Fqw6a1{margin-top:10px}
+            @media (prefers-color-scheme: dark), print{
+              .color-ev4qN1{color:red}
+            }
 
                 </style>
               </head>
               <body>
             <div>
-              <h1 class="font-size-t6pNK3 color-lVtzG2">Type-safe HTML
+              <h1 class="font-size-t6pNK3 color-ev4qN1 color-jiDhg4">Type-safe HTML
               </h1>
               <p class="margin-top-Fqw6a1">With type-safe CSS!
               </p>

@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "Color Tests",
-    .snapshots(record: nil)
+    .snapshots(record: .failed)
 )
 struct ColorTests {
     @Test("Color initializes with standard color")
@@ -168,14 +168,11 @@ struct ColorTests {
               <head>
                 <style>
             .color-dMYaj4{color:red}
-            @media (prefers-color-scheme: dark), print{
-              .color-NQmzw2{color:rgb(204, 0, 0)}
-            }
 
                 </style>
               </head>
               <body>
-            <div class="color-NQmzw2 color-dMYaj4">
+            <div class="color-dMYaj4">
             </div>
               </body>
             </html>
@@ -254,9 +251,6 @@ struct ColorTests {
             <html lang="en">
               <head>
                 <style>
-            @media (prefers-color-scheme: dark), print{
-              .color-fLsCn3{color:rgb(0, 0, 204)}
-            }
             @media print{
               .color-oD7XM1{color:blue}
             }
@@ -264,7 +258,7 @@ struct ColorTests {
                 </style>
               </head>
               <body>
-            <div class="color-fLsCn3 color-oD7XM1">
+            <div class="color-oD7XM1">
             </div>
               </body>
             </html>

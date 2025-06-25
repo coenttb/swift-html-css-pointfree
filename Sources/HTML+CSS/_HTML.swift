@@ -60,17 +60,17 @@ extension HTML {
     }
 }
 
-extension HTML {
-    @discardableResult
-    public func style<PropertyElement: CSSPropertyTypes.Property>(
-        _ property: PropertyElement?,
-        media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(property, media: media, pre: pre, pseudo: pseudo)
-    }
-}
+//extension HTML {
+//    @discardableResult
+//    public func style<PropertyElement: CSSPropertyTypes.Property>(
+//        _ property: PropertyElement?,
+//        media: CSSAtRuleTypes.Media? = nil,
+//        pre: String? = nil,
+//        pseudo: Pseudo? = nil
+//    ) -> HTMLInlineStyle<Self> {
+//        self.inlineStyle(property, media: media, pre: pre, pseudo: pseudo)
+//    }
+//}
 
 extension MediaQuery {
     package init(_ media: CSSAtRuleTypes.Media){
