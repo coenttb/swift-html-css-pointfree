@@ -12,7 +12,7 @@ import PointFreeHTML
 extension HTML {
     @discardableResult
     public func flexShrink(
-        _ flexShrink: CSSPropertyTypes.FlexShrink?,
+        _ flexShrink: CSSPropertyTypes.FlexShrink? = 1,
         media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil

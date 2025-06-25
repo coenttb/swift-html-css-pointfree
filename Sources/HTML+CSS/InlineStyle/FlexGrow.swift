@@ -12,7 +12,7 @@ import PointFreeHTML
 extension HTML {
     @discardableResult
     public func flexGrow(
-        _ flexGrow: CSSPropertyTypes.FlexGrow?,
+        _ flexGrow: CSSPropertyTypes.FlexGrow? = 1,
         media: CSSAtRuleTypes.Media? = nil,
         pre: String? = nil,
         pseudo: Pseudo? = nil
