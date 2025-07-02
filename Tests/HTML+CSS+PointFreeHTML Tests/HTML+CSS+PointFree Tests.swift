@@ -15,7 +15,7 @@ import HTMLTestSupport
 
 @Suite(
     "HTML+CSS+PointFreeHTML Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct Tests {
     @Test("Labeled Input renders correctly")

@@ -24,6 +24,7 @@ extension CSSAtRuleTypes.Media {
 }
 
 extension HTMLInlineStyle {
+    @_disfavoredOverload
     public func inlineStyle(
         _ property: String,
         _ value: String?,

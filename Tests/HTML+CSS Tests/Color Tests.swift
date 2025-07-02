@@ -18,7 +18,7 @@ import HTMLTestSupport
 
 @Suite(
     "Color Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: nil)
 )
 struct ColorTests {
     @Test("Color initializes with standard color")
