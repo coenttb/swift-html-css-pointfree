@@ -22,3 +22,21 @@ extension CSSAtRuleTypes.Media {
     public static let hover = Self(rawValue: "(hover: hover)")
     public static let reducedMotion = Self(rawValue: "(prefers-reduced-motion: reduce)")
 }
+
+extension HTMLInlineStyle {
+    public func inlineStyle(
+        _ property: String,
+        _ value: String?,
+        media mediaQuery: CSSAtRuleTypes.Media? = nil,
+        pre: String? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle {
+        self.inlineStyle(
+            property,
+            value,
+            media: mediaQuery.map(\.rawValue).map(MediaQuery.init(rawValue:)),
+            pre: pre,
+            pseudo: pseudo
+        )
+    }
+}

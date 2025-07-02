@@ -229,7 +229,7 @@ struct ColorTests {
                 </style>
               </head>
               <body>
-            <div class="color-Dh1qJ1 color-bQ3ZC1">
+            <div class="color-bQ3ZC1 color-Dh1qJ1">
             </div>
               </body>
             </html>

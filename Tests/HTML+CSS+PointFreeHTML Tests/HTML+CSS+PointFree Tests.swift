@@ -75,7 +75,7 @@ struct Tests {
               </head>
               <body>
             <div>
-              <h1 class="font-size-t6pNK3 color-ev4qN1 color-jiDhg4">Type-safe HTML
+              <h1 class="font-size-t6pNK3 color-jiDhg4 color-ev4qN1">Type-safe HTML
               </h1>
               <p class="margin-top-Fqw6a1">With type-safe CSS!
               </p>

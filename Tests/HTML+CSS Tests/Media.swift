@@ -214,7 +214,7 @@ struct MediaTests {
                 </style>
               </head>
               <body>
-            <div class="padding-JBzfL color-l1e5x1 color-iseje4 background-color-eGELe4">
+            <div class="padding-JBzfL color-iseje4 color-l1e5x1 background-color-eGELe4">
             </div>
               </body>
             </html>
