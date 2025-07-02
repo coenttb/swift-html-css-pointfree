@@ -7,8 +7,9 @@
 
 import Foundation
 import PointFreeHTML
+import CSSAtRuleTypes
 
-extension MediaQuery {
+extension CSSAtRuleTypes.Media {
     public static let desktop = Self(rawValue: "only screen and (min-width: 832px)")
     public static let mobile = Self(rawValue: "only screen and (max-width: 831px)")
     public static let tablet = Self(rawValue: "only screen and (min-width: 768px) and (max-width: 1024px)")

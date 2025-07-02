@@ -227,7 +227,7 @@ struct MediaTests {
         assertInlineSnapshot(
             of: HTMLDocument {
                 div
-                    .backgroundColor(.blue, media: Media.screen && .minWidth(.px(768)))
+                    .backgroundColor(.blue, media: .screen && .minWidth(.px(768)))
                     .backgroundColor(.red, media: Media.screen && .minWidth(.px(768)))
             },
             as: .html
