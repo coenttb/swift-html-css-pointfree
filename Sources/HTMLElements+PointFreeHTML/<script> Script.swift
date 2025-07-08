@@ -11,9 +11,27 @@ import HTMLElementTypes
 
 extension script {
     public func callAsFunction(
-        @HTMLBuilder _ content: () -> some HTML
+        _ script: () -> String
     ) -> some HTML {
-        HTMLElement(tag: Self.tag) { content() }
+        
+        let script = script()
+        var escaped = ""
+        escaped.unicodeScalars.reserveCapacity(script.unicodeScalars.count)
+        
+        for index in script.unicodeScalars.indices {
+            let scalar = script.unicodeScalars[index]
+            if scalar == "<",
+               script.unicodeScalars[index...].starts(with: "<!--".unicodeScalars)
+                || script.unicodeScalars[index...].starts(with: "<script".unicodeScalars)
+                || script.unicodeScalars[index...].starts(with: "</script".unicodeScalars)
+            {
+                escaped.unicodeScalars.append(contentsOf: #"\x3C"#.unicodeScalars)
+            } else {
+                escaped.unicodeScalars.append(scalar)
+            }
+        }
+        
+        return HTMLElement(tag: Self.tag) { HTMLRaw(escaped) }
             .src(self.src)
             .`async`(self.`async`)
             .`defer`(self.`defer`)
