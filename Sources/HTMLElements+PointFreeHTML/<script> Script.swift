@@ -11,7 +11,7 @@ import HTMLElementTypes
 
 extension script {
     public func callAsFunction(
-        _ script: () -> String
+        _ script: () -> String = { "" }
     ) -> some HTML {
         
         let script = script()
