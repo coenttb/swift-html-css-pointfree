@@ -31,7 +31,10 @@ extension script {
             }
         }
         
-        return HTMLElement(tag: Self.tag) { HTMLRaw(escaped) }
+        return HTMLElement(tag: Self.tag) {
+            if script == "" { HTMLEmpty() }
+            else { HTMLRaw(escaped) }
+        }
             .src(self.src)
             .`async`(self.`async`)
             .`defer`(self.`defer`)
@@ -44,5 +47,26 @@ extension script {
             .crossorigin(self.crossorigin)
             .nonce(self.nonce)
             .attributionSrc(self.attributionsrc)
+    }
+}
+
+extension script: @retroactive HTML {
+    public var body: some HTML {
+        script(
+            src: self.src,
+            async: self.async,
+            defer: self.defer,
+            type: self.type,
+            integrity: self.integrity,
+            referrerpolicy: self.referrerpolicy,
+            nomodule: self.nomodule,
+            fetchpriority: self.fetchpriority,
+            blocking: self.blocking,
+            crossorigin: self.crossorigin,
+            nonce: self.nonce,
+            attributionsrc: self.attributionsrc
+        ) {
+            ""
+        }
     }
 }
