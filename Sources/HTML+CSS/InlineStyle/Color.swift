@@ -58,7 +58,7 @@ extension HTML {
     ) -> some HTML {
         self
             .inlineStyle("color", light.description, media: media, pre: pre, pseudo: pseudo)
-            .inlineStyle("color", dark?.description, media: .prefersColorScheme(.dark) && .print, pre: pre, pseudo: pseudo)
+            .inlineStyle("color", dark?.description, media: .prefersColorScheme(.dark), pre: pre, pseudo: pseudo)
     }
 }
 
