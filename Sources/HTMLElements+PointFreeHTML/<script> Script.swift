@@ -50,28 +50,28 @@ extension script {
     }
 }
 
-//extension script: @retroactive HTML {
-//    public var body: some HTML {
-//        script(
-//            src: self.src,
-//            async: self.async,
-//            defer: self.defer,
-//            type: self.type,
-//            integrity: self.integrity,
-//            referrerpolicy: self.referrerpolicy,
-//            nomodule: self.nomodule,
-//            fetchpriority: self.fetchpriority,
-//            blocking: self.blocking,
-//            crossorigin: self.crossorigin,
-//            nonce: self.nonce,
-//            attributionsrc: self.attributionsrc
-//        ) {
-//            ""
-//        }
-//    }
-//}
+extension script: @retroactive HTML {
+    public var body: some HTML {
+        script(
+            src: self.src,
+            async: self.async,
+            defer: self.defer,
+            type: self.type,
+            integrity: self.integrity,
+            referrerpolicy: self.referrerpolicy,
+            nomodule: self.nomodule,
+            fetchpriority: self.fetchpriority,
+            blocking: self.blocking,
+            crossorigin: self.crossorigin,
+            nonce: self.nonce,
+            attributionsrc: self.attributionsrc
+        ).callAsFunction {
+            ""
+        }
+    }
+}
 
-//@MainActor let s1: some HTML = script(src: nil)
-//@MainActor let s2: some HTML = script(src: .init(""))
+@MainActor let s1: some HTML = script(src: nil)
+@MainActor let s2: some HTML = script(src: .init(""))
 @MainActor let s3: some HTML = script { "" }
 @MainActor let s4: some HTML = script() { "" }
