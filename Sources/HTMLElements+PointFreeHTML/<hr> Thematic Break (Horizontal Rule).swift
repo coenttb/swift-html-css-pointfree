@@ -9,9 +9,11 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension hr {
-    public func callAsFunction(
-    ) -> some HTML {
+
+extension hr: @retroactive HTML {}
+extension hr: HTMLVoidElement {
+    @HTMLBuilder
+    public var body: some HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
     }
 }
