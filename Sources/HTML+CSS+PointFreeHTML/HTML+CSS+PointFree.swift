@@ -6,8 +6,8 @@
 //
 
 @_exported import HTML_CSS
-//@_exported import PointFreeHTML
+@_exported import PointFreeHTML
+//@_exported import HTMLAttributes_PointFreeHTML
 @_exported import CSSTypes
-@_exported import HTMLAttributes_PointFreeHTML
 @_exported import HTMLElements_PointFreeHTML
 
