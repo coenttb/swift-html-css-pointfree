@@ -38,11 +38,3 @@ extension HTML {
         self.attribute(Style.attribute, attribute.description)
     }
 }
-
-extension HTML {
-    static func style(
-        /*@StringBuilder*/ _ value: () -> String
-    ) -> Style {
-        .init(value: value())
-    }
-}
