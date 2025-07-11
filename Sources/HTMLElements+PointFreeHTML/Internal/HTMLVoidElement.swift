@@ -9,7 +9,7 @@ import Foundation
 import PointFreeHTML
 import HTMLElementTypes
 
-public protocol HTMLVoidElement: HTML {}
+public protocol HTMLVoidElement: PointFreeHTML.HTML {}
 
 extension HTMLVoidElement where Self: Element {
     public func callAsFunction() -> HTMLElement<HTMLEmpty> {
