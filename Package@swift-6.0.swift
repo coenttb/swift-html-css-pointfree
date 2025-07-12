@@ -4,7 +4,7 @@
 import PackageDescription
 
 extension String {
-    static let htmlCSS: Self = "HTML+CSS"
+    static let htmlCSS: Self = "CSS+PointFreeHTML"
     static let htmlCSSPointFree: Self = "HTML+CSS+PointFreeHTML"
     static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
     static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"

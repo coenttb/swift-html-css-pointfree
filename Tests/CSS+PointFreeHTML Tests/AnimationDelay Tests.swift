@@ -1,5 +1,5 @@
 ////
-////  AnimationComposition Tests.swift
+////  AnimationDelay Tests.swift
 ////  swift-html
 ////
 ////  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 //
 //import Foundation
 //import Testing
-//import HTML_CSS
+//import CSS_PointFreeHTML
 //import PointFreeHTML
 //import CSSPropertyTypes
 //import CSSTypeTypes
@@ -17,15 +17,15 @@
 //import HTMLTestSupport
 //
 //@Suite(
-//    "AnimationComposition Tests",
+//    "AnimationDelay Tests",
 //    .snapshots(record: nil)
 //)
-//struct AnimationCompositionTests {
-//    @Test("HTML element renders with animation-composition replace properly")
-//    func htmlElementWithAnimationCompositionReplaceRendersCorrectly() {
+//struct AnimationDelayTests {
+//    @Test("HTML element renders with animation-delay time value properly")
+//    func htmlElementWithAnimationDelayTimeRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.replace)
+//                div.animationDelay(.time("2s"))
 //            },
 //            as: .html
 //        ) {
@@ -34,12 +34,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-composition-tKSZv5{animation-composition:replace}
+//            .animation-delay-atnwFz{animation-delay:2s}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-tKSZv5">
+//            <div class="animation-delay-atnwFz">
 //            </div>
 //              </body>
 //            </html>
@@ -47,11 +47,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-composition add value")
-//    func htmlElementWithAnimationCompositionAddRendersCorrectly() {
+//    @Test("HTML element renders with animation-delay milliseconds value")
+//    func htmlElementWithAnimationDelayMillisecondsRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.add)
+//                div.animationDelay(.time("500ms"))
 //            },
 //            as: .html
 //        ) {
@@ -60,12 +60,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-composition-2bfAc4{animation-composition:add}
+//            .animation-delay-DqVdD4{animation-delay:500ms}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-2bfAc4">
+//            <div class="animation-delay-DqVdD4">
 //            </div>
 //              </body>
 //            </html>
@@ -73,11 +73,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-composition accumulate value")
-//    func htmlElementWithAnimationCompositionAccumulateRendersCorrectly() {
+//    @Test("HTML element renders with animation-delay multiple times")
+//    func htmlElementWithAnimationDelayMultipleTimesRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.accumulate)
+//                div.animationDelay(.times(["2s", "4s"]))
 //            },
 //            as: .html
 //        ) {
@@ -86,12 +86,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-composition-N6c9H5{animation-composition:accumulate}
+//            .animation-delay-Fxvhj3{animation-delay:2s, 4s}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-N6c9H5">
+//            <div class="animation-delay-Fxvhj3">
 //            </div>
 //              </body>
 //            </html>
@@ -99,11 +99,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-composition with global value renders properly")
-//    func htmlAnimationCompositionWithGlobalValueRendersCorrectly() {
+//    @Test("HTML animation-delay with global value renders properly")
+//    func htmlAnimationDelayWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.inherit)
+//                div.animationDelay(.inherit)
 //            },
 //            as: .html
 //        ) {
@@ -112,12 +112,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-composition-trEDH1{animation-composition:inherit}
+//            .animation-delay-trEDH1{animation-delay:inherit}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-trEDH1">
+//            <div class="animation-delay-trEDH1">
 //            </div>
 //              </body>
 //            </html>
@@ -125,11 +125,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-composition with media query renders properly")
-//    func htmlAnimationCompositionWithMediaQueryRendersCorrectly() {
+//    @Test("HTML animation-delay with media query renders properly")
+//    func htmlAnimationDelayWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.add, media: .print)
+//                div.animationDelay(.time("1.5s"), media: .print)
 //            },
 //            as: .html
 //        ) {
@@ -139,13 +139,13 @@
 //              <head>
 //                <style>
 //            @media print{
-//              .animation-composition-Cm0lVg{animation-composition:add}
+//              .animation-delay-1C5bE2{animation-delay:1.5s}
 //            }
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-Cm0lVg">
+//            <div class="animation-delay-1C5bE2">
 //            </div>
 //              </body>
 //            </html>
@@ -153,11 +153,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-composition with pseudo-class renders properly")
-//    func htmlAnimationCompositionWithPseudoClassRendersCorrectly() {
+//    @Test("HTML animation-delay with pseudo-class renders properly")
+//    func htmlAnimationDelayWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.replace, pseudo: .hover)
+//                div.animationDelay(.time("0.3s"), pseudo: .hover)
 //            },
 //            as: .html
 //        ) {
@@ -166,12 +166,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-composition-Vt07jl:hover{animation-composition:replace}
+//            .animation-delay-YE9O7d:hover{animation-delay:0.3s}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-Vt07jl">
+//            <div class="animation-delay-YE9O7d">
 //            </div>
 //              </body>
 //            </html>
@@ -179,11 +179,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-composition with prefix renders properly")
-//    func htmlAnimationCompositionWithPrefixRendersCorrectly() {
+//    @Test("HTML animation-delay with prefix renders properly")
+//    func htmlAnimationDelayWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.accumulate, pre: "my-component")
+//                div.animationDelay(.time("1s"), pre: "my-component")
 //            },
 //            as: .html
 //        ) {
@@ -192,12 +192,38 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            my-component .animation-composition-JmjCCd{animation-composition:accumulate}
+//            my-component .animation-delay-KtQeSh{animation-delay:1s}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-composition-JmjCCd">
+//            <div class="animation-delay-KtQeSh">
+//            </div>
+//              </body>
+//            </html>
+//            """
+//        }
+//    }
+//    
+//    @Test("HTML animation-delay with negative time value renders properly")
+//    func htmlAnimationDelayWithNegativeTimeValueRendersCorrectly() {
+//        assertInlineSnapshot(
+//            of: HTMLDocument {
+//                div.animationDelay(.time("-0.5s"))
+//            },
+//            as: .html
+//        ) {
+//            """
+//            <!doctype html>
+//            <html lang="en">
+//              <head>
+//                <style>
+//            .animation-delay-RfDhO3{animation-delay:-0.5s}
+//
+//                </style>
+//              </head>
+//              <body>
+//            <div class="animation-delay-RfDhO3">
 //            </div>
 //              </body>
 //            </html>

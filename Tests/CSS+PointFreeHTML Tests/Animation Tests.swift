@@ -1,5 +1,5 @@
 ////
-////  AnimationDuration Tests.swift
+////  Animation Tests.swift
 ////  swift-html
 ////
 ////  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 //
 //import Foundation
 //import Testing
-//import HTML_CSS
+//import CSS_PointFreeHTML
 //import PointFreeHTML
 //import CSSPropertyTypes
 //import CSSTypeTypes
@@ -16,16 +16,18 @@
 //import InlineSnapshotTesting
 //import HTMLTestSupport
 //
+//"3s ease-in 1s infinite reverse both running slidein"
+//
 //@Suite(
-//    "AnimationDuration Tests",
+//    "Animation Tests",
 //    .snapshots(record: nil)
 //)
-//struct AnimationDurationTests {
-//    @Test("HTML element renders with animation-duration time value properly")
-//    func htmlElementWithAnimationDurationTimeRendersCorrectly() {
+//struct AnimationTests {
+//    @Test("HTML element renders with animation string value properly")
+//    func htmlElementWithAnimationStringRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.time("3s"))
+//                div.animation(.init(.duration(.s(3)), .timingFunction(.easeIn), .duration(.s(3)), .))
 //            },
 //            as: .html
 //        ) {
@@ -34,12 +36,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-duration-jrYNbv{animation-duration:3s}
+//            .animation-RzKmLe{animation:3s ease-in 1s infinite reverse both running slidein}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-jrYNbv">
+//            <div class="animation-RzKmLe">
 //            </div>
 //              </body>
 //            </html>
@@ -47,11 +49,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-duration milliseconds value")
-//    func htmlElementWithAnimationDurationMillisecondsRendersCorrectly() {
+//    @Test("HTML element renders with animation simple value")
+//    func htmlElementWithAnimationSimpleRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.time("200ms"))
+//                div.animation(.string("fadeIn 2s"))
 //            },
 //            as: .html
 //        ) {
@@ -60,12 +62,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-duration-Akt0Gk{animation-duration:200ms}
+//            .animation-WkDfA3{animation:fadeIn 2s}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-Akt0Gk">
+//            <div class="animation-WkDfA3">
 //            </div>
 //              </body>
 //            </html>
@@ -73,11 +75,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-duration multiple times")
-//    func htmlElementWithAnimationDurationMultipleTimesRendersCorrectly() {
+//    @Test("HTML animation with global value renders properly")
+//    func htmlAnimationWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.times(["1s", "2.5s"]))
+//                div.animation(.inherit)
 //            },
 //            as: .html
 //        ) {
@@ -86,12 +88,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-duration-6Nkxph{animation-duration:1s, 2.5s}
+//            .animation-trEDH1{animation:inherit}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-6Nkxph">
+//            <div class="animation-trEDH1">
 //            </div>
 //              </body>
 //            </html>
@@ -99,37 +101,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-duration with global value renders properly")
-//    func htmlAnimationDurationWithGlobalValueRendersCorrectly() {
+//    @Test("HTML animation with media query renders properly")
+//    func htmlAnimationWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.inherit)
-//            },
-//            as: .html
-//        ) {
-//            """
-//            <!doctype html>
-//            <html lang="en">
-//              <head>
-//                <style>
-//            .animation-duration-trEDH1{animation-duration:inherit}
-//
-//                </style>
-//              </head>
-//              <body>
-//            <div class="animation-duration-trEDH1">
-//            </div>
-//              </body>
-//            </html>
-//            """
-//        }
-//    }
-//    
-//    @Test("HTML animation-duration with media query renders properly")
-//    func htmlAnimationDurationWithMediaQueryRendersCorrectly() {
-//        assertInlineSnapshot(
-//            of: HTMLDocument {
-//                div.animationDuration(.time("0.5s"), media: .print)
+//                div.animation(.string("bounce 1s"), media: .print)
 //            },
 //            as: .html
 //        ) {
@@ -139,13 +115,13 @@
 //              <head>
 //                <style>
 //            @media print{
-//              .animation-duration-OYP8Hm{animation-duration:0.5s}
+//              .animation-4k5svo{animation:bounce 1s}
 //            }
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-OYP8Hm">
+//            <div class="animation-4k5svo">
 //            </div>
 //              </body>
 //            </html>
@@ -153,11 +129,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-duration with pseudo-class renders properly")
-//    func htmlAnimationDurationWithPseudoClassRendersCorrectly() {
+//    @Test("HTML animation with pseudo-class renders properly")
+//    func htmlAnimationWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.time("1.5s"), pseudo: .hover)
+//                div.animation(.string("pulse 3s infinite"), pseudo: .hover)
 //            },
 //            as: .html
 //        ) {
@@ -166,12 +142,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-duration-4jOFVl:hover{animation-duration:1.5s}
+//            .animation-pG3fH2:hover{animation:pulse 3s infinite}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-4jOFVl">
+//            <div class="animation-pG3fH2">
 //            </div>
 //              </body>
 //            </html>
@@ -179,11 +155,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-duration with prefix renders properly")
-//    func htmlAnimationDurationWithPrefixRendersCorrectly() {
+//    @Test("HTML animation with prefix renders properly")
+//    func htmlAnimationWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.time("300ms"), pre: "my-component")
+//                div.animation(.string("slide 2s ease-out"), pre: "my-component")
 //            },
 //            as: .html
 //        ) {
@@ -192,12 +168,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            my-component .animation-duration-D4Z2Sg{animation-duration:300ms}
+//            my-component .animation-9LLdQl{animation:slide 2s ease-out}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-D4Z2Sg">
+//            <div class="animation-9LLdQl">
 //            </div>
 //              </body>
 //            </html>
@@ -205,11 +181,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-duration with zero value renders properly")
-//    func htmlAnimationDurationWithZeroValueRendersCorrectly() {
+//    @Test("HTML animation with none value renders properly")
+//    func htmlAnimationWithNoneValueRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDuration(.time("0s"))
+//                div.animation(.none)
 //            },
 //            as: .html
 //        ) {
@@ -218,12 +194,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-duration-z4x9uP{animation-duration:0s}
+//            .animation-3ZLVsZ{animation:none}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-duration-z4x9uP">
+//            <div class="animation-3ZLVsZ">
 //            </div>
 //              </body>
 //            </html>

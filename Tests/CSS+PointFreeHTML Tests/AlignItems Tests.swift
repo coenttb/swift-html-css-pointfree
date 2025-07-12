@@ -1,5 +1,5 @@
 //
-//  AccentColor Tests.swift
+//  AlignItems Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "AccentColor Tests",
+    "AlignItems Tests",
     .snapshots(record: nil)
 )
-struct AccentColorTests {
-    @Test("HTML element renders with accent-color properly")
-    func htmlElementWithAccentColorRendersCorrectly() {
+struct AlignItemsTests {
+    @Test("HTML element renders with align-items properly")
+    func htmlElementWithAlignItemsRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.red))
+                div.alignItems(.center)
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct AccentColorTests {
             <html lang="en">
               <head>
                 <style>
-            .accent-color-dMYaj4{accent-color:red}
+            .align-items-CdPBO2{align-items:center}
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-dMYaj4">
+            <div class="align-items-CdPBO2">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct AccentColorTests {
         }
     }
     
-    @Test("HTML element renders with accent-color using hex color properly")
-    func htmlElementWithAccentColorHexRendersCorrectly() {
+    @Test("HTML element renders with align-items flex-start value")
+    func htmlElementWithAlignItemsFlexStartRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.hex("FF0000")))
+                div.alignItems(.flexStart)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct AccentColorTests {
             <html lang="en">
               <head>
                 <style>
-            .accent-color-bQ3ZC1{accent-color:#FF0000}
+            .align-items-n56cj2{align-items:flex-start}
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-bQ3ZC1">
+            <div class="align-items-n56cj2">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct AccentColorTests {
         }
     }
     
-    @Test("HTML accent-color with global value renders properly")
-    func htmlAccentColorWithGlobalValueRendersCorrectly() {
+    @Test("HTML align-items with global value renders properly")
+    func htmlAlignItemsWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.inherit)
+                div.alignItems(.inherit)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct AccentColorTests {
             <html lang="en">
               <head>
                 <style>
-            .accent-color-trEDH1{accent-color:inherit}
+            .align-items-trEDH1{align-items:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-trEDH1">
+            <div class="align-items-trEDH1">
             </div>
               </body>
             </html>
@@ -99,11 +99,11 @@ struct AccentColorTests {
         }
     }
     
-    @Test("HTML accent-color with media query renders properly")
-    func htmlAccentColorWithMediaQueryRendersCorrectly() {
+    @Test("HTML align-items with media query renders properly")
+    func htmlAlignItemsWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.hex("FF0000")), media: .print)
+                div.alignItems(.center, media: .print)
             },
             as: .html
         ) {
@@ -113,13 +113,13 @@ struct AccentColorTests {
               <head>
                 <style>
             @media print{
-              .accent-color-SXYRf2{accent-color:#FF0000}
+              .align-items-pUz0j3{align-items:center}
             }
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-SXYRf2">
+            <div class="align-items-pUz0j3">
             </div>
               </body>
             </html>
@@ -127,11 +127,11 @@ struct AccentColorTests {
         }
     }
     
-    @Test("HTML accent-color with pseudo-class renders properly")
-    func htmlAccentColorWithPseudoClassRendersCorrectly() {
+    @Test("HTML align-items with pseudo-class renders properly")
+    func htmlAlignItemsWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.hex("FF0000")), pseudo: .hover)
+                div.alignItems(.baseline, pseudo: .hover)
             },
             as: .html
         ) {
@@ -140,12 +140,12 @@ struct AccentColorTests {
             <html lang="en">
               <head>
                 <style>
-            .accent-color-egMjx3:hover{accent-color:#FF0000}
+            .align-items-fCQVh2:hover{align-items:baseline}
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-egMjx3">
+            <div class="align-items-fCQVh2">
             </div>
               </body>
             </html>
@@ -153,11 +153,11 @@ struct AccentColorTests {
         }
     }
     
-    @Test("HTML accent-color with prefix renders properly")
-    func htmlAccentColorWithPrefixRendersCorrectly() {
+    @Test("HTML align-items with prefix renders properly")
+    func htmlAlignItemsWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.hex("FF0000")), pre: "my-component")
+                div.alignItems(.flexEnd, pre: "my-component")
             },
             as: .html
         ) {
@@ -166,12 +166,38 @@ struct AccentColorTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .accent-color-XyDYD1{accent-color:#FF0000}
+            my-component .align-items-dzpgf{align-items:flex-end}
 
                 </style>
               </head>
               <body>
-            <div class="accent-color-XyDYD1">
+            <div class="align-items-dzpgf">
+            </div>
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test("HTML align-items with stretch value renders properly")
+    func htmlAlignItemsWithStretchValueRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.alignItems(.stretch)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .align-items-msN8p3{align-items:stretch}
+
+                </style>
+              </head>
+              <body>
+            <div class="align-items-msN8p3">
             </div>
               </body>
             </html>

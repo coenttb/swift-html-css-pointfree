@@ -1,5 +1,5 @@
 //
-//  AspectRatio Tests.swift
+//  BackfaceVisibility Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "AspectRatio Tests",
+    "BackfaceVisibility Tests",
     .snapshots(record: nil)
 )
-struct AspectRatioTests {
-    @Test("HTML element renders with aspect-ratio properly")
-    func htmlElementWithAspectRatioRendersCorrectly() {
+struct BackfaceVisibilityTests {
+    @Test("HTML element renders with backface-visibility hidden properly")
+    func htmlElementWithBackfaceVisibilityHiddenRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.ratio(16, 9))
+                div.backfaceVisibility(.hidden)
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct AspectRatioTests {
             <html lang="en">
               <head>
                 <style>
-            .aspect-ratio-10XyA2{aspect-ratio:16 / 9}
+            .backface-visibility-PhNC81{backface-visibility:hidden}
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-10XyA2">
+            <div class="backface-visibility-PhNC81">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct AspectRatioTests {
         }
     }
     
-    @Test("HTML element renders with different aspect-ratio value properly")
-    func htmlElementWithDifferentAspectRatioRendersCorrectly() {
+    @Test("HTML element renders with backface-visibility visible properly")
+    func htmlElementWithBackfaceVisibilityVisibleRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.ratio(4, 3))
+                div.backfaceVisibility(.visible)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct AspectRatioTests {
             <html lang="en">
               <head>
                 <style>
-            .aspect-ratio-kDJuQ2{aspect-ratio:4 / 3}
+            .backface-visibility-wd16m4{backface-visibility:visible}
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-kDJuQ2">
+            <div class="backface-visibility-wd16m4">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct AspectRatioTests {
         }
     }
     
-    @Test("HTML element renders with auto aspect-ratio properly")
-    func htmlElementWithAutoAspectRatioRendersCorrectly() {
+    @Test("HTML backface-visibility with global value renders properly")
+    func htmlBackfaceVisibilityWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.auto)
+                div.backfaceVisibility(.inherit)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct AspectRatioTests {
             <html lang="en">
               <head>
                 <style>
-            .aspect-ratio-u7yQf2{aspect-ratio:auto}
+            .backface-visibility-trEDH1{backface-visibility:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-u7yQf2">
+            <div class="backface-visibility-trEDH1">
             </div>
               </body>
             </html>
@@ -99,37 +99,11 @@ struct AspectRatioTests {
         }
     }
     
-    @Test("HTML aspect-ratio with global value renders properly")
-    func htmlAspectRatioWithGlobalValueRendersCorrectly() {
+    @Test("HTML backface-visibility with media query renders properly")
+    func htmlBackfaceVisibilityWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.inherit)
-            },
-            as: .html
-        ) {
-            """
-            <!doctype html>
-            <html lang="en">
-              <head>
-                <style>
-            .aspect-ratio-trEDH1{aspect-ratio:inherit}
-
-                </style>
-              </head>
-              <body>
-            <div class="aspect-ratio-trEDH1">
-            </div>
-              </body>
-            </html>
-            """
-        }
-    }
-    
-    @Test("HTML aspect-ratio with media query renders properly")
-    func htmlAspectRatioWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.aspectRatio(.ratio(16, 9), media: .print)
+                div.backfaceVisibility(.hidden, media: .print)
             },
             as: .html
         ) {
@@ -139,13 +113,13 @@ struct AspectRatioTests {
               <head>
                 <style>
             @media print{
-              .aspect-ratio-WCwgo4{aspect-ratio:16 / 9}
+              .backface-visibility-G9iVz2{backface-visibility:hidden}
             }
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-WCwgo4">
+            <div class="backface-visibility-G9iVz2">
             </div>
               </body>
             </html>
@@ -153,11 +127,11 @@ struct AspectRatioTests {
         }
     }
     
-    @Test("HTML aspect-ratio with pseudo-class renders properly")
-    func htmlAspectRatioWithPseudoClassRendersCorrectly() {
+    @Test("HTML backface-visibility with pseudo-class renders properly")
+    func htmlBackfaceVisibilityWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.ratio(16, 9), pseudo: .hover)
+                div.backfaceVisibility(.hidden, pseudo: .hover)
             },
             as: .html
         ) {
@@ -166,12 +140,12 @@ struct AspectRatioTests {
             <html lang="en">
               <head>
                 <style>
-            .aspect-ratio-eQOer3:hover{aspect-ratio:16 / 9}
+            .backface-visibility-dLjCw:hover{backface-visibility:hidden}
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-eQOer3">
+            <div class="backface-visibility-dLjCw">
             </div>
               </body>
             </html>
@@ -179,11 +153,11 @@ struct AspectRatioTests {
         }
     }
     
-    @Test("HTML aspect-ratio with prefix renders properly")
-    func htmlAspectRatioWithPrefixRendersCorrectly() {
+    @Test("HTML backface-visibility with prefix renders properly")
+    func htmlBackfaceVisibilityWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.ratio(16, 9), pre: "my-component")
+                div.backfaceVisibility(.hidden, pre: "my-component")
             },
             as: .html
         ) {
@@ -192,12 +166,12 @@ struct AspectRatioTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .aspect-ratio-Dmiak4{aspect-ratio:16 / 9}
+            my-component .backface-visibility-iXV9h3{backface-visibility:hidden}
 
                 </style>
               </head>
               <body>
-            <div class="aspect-ratio-Dmiak4">
+            <div class="backface-visibility-iXV9h3">
             </div>
               </body>
             </html>

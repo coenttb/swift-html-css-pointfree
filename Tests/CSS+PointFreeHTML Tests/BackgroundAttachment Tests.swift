@@ -1,5 +1,5 @@
 //
-//  AlignmentBaseline Tests.swift
+//  BackgroundAttachment Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "AlignmentBaseline Tests",
+    "BackgroundAttachment Tests",
     .snapshots(record: nil)
 )
-struct AlignmentBaselineTests {
-    @Test("HTML element renders with alignment-baseline properly")
-    func htmlElementWithAlignmentBaselineRendersCorrectly() {
+struct BackgroundAttachmentTests {
+    @Test("HTML element renders with background-attachment fixed properly")
+    func htmlElementWithBackgroundAttachmentFixedRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.baseline)
+                div.backgroundAttachment(.fixed)
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct AlignmentBaselineTests {
             <html lang="en">
               <head>
                 <style>
-            .alignment-baseline-0Zubr3{alignment-baseline:baseline}
+            .background-attachment-eA7GJ1{background-attachment:fixed}
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-0Zubr3">
+            <div class="background-attachment-eA7GJ1">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct AlignmentBaselineTests {
         }
     }
     
-    @Test("HTML element renders with alignment-baseline text-bottom value")
-    func htmlElementWithAlignmentBaselineTextBottomRendersCorrectly() {
+    @Test("HTML element renders with background-attachment scroll properly")
+    func htmlElementWithBackgroundAttachmentScrollRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.textBottom)
+                div.backgroundAttachment(.scroll)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct AlignmentBaselineTests {
             <html lang="en">
               <head>
                 <style>
-            .alignment-baseline-1AOeT2{alignment-baseline:text-bottom}
+            .background-attachment-omYyh3{background-attachment:scroll}
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-1AOeT2">
+            <div class="background-attachment-omYyh3">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct AlignmentBaselineTests {
         }
     }
     
-    @Test("HTML alignment-baseline with global value renders properly")
-    func htmlAlignmentBaselineWithGlobalValueRendersCorrectly() {
+    @Test("HTML element renders with background-attachment local properly")
+    func htmlElementWithBackgroundAttachmentLocalRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.inherit)
+                div.backgroundAttachment(.local)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct AlignmentBaselineTests {
             <html lang="en">
               <head>
                 <style>
-            .alignment-baseline-trEDH1{alignment-baseline:inherit}
+            .background-attachment-rJE42{background-attachment:local}
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-trEDH1">
+            <div class="background-attachment-rJE42">
             </div>
               </body>
             </html>
@@ -99,11 +99,37 @@ struct AlignmentBaselineTests {
         }
     }
     
-    @Test("HTML alignment-baseline with media query renders properly")
-    func htmlAlignmentBaselineWithMediaQueryRendersCorrectly() {
+    @Test("HTML background-attachment with global value renders properly")
+    func htmlBackgroundAttachmentWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.middle, media: .print)
+                div.backgroundAttachment(.inherit)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .background-attachment-trEDH1{background-attachment:inherit}
+
+                </style>
+              </head>
+              <body>
+            <div class="background-attachment-trEDH1">
+            </div>
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test("HTML background-attachment with media query renders properly")
+    func htmlBackgroundAttachmentWithMediaQueryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.fixed, media: .print)
             },
             as: .html
         ) {
@@ -113,13 +139,13 @@ struct AlignmentBaselineTests {
               <head>
                 <style>
             @media print{
-              .alignment-baseline-XU4H84{alignment-baseline:middle}
+              .background-attachment-ZdgCC3{background-attachment:fixed}
             }
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-XU4H84">
+            <div class="background-attachment-ZdgCC3">
             </div>
               </body>
             </html>
@@ -127,11 +153,11 @@ struct AlignmentBaselineTests {
         }
     }
     
-    @Test("HTML alignment-baseline with pseudo-class renders properly")
-    func htmlAlignmentBaselineWithPseudoClassRendersCorrectly() {
+    @Test("HTML background-attachment with pseudo-class renders properly")
+    func htmlBackgroundAttachmentWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.central, pseudo: .hover)
+                div.backgroundAttachment(.fixed, pseudo: .hover)
             },
             as: .html
         ) {
@@ -140,12 +166,12 @@ struct AlignmentBaselineTests {
             <html lang="en">
               <head>
                 <style>
-            .alignment-baseline-eg5PJ:hover{alignment-baseline:central}
+            .background-attachment-RYXzJ3:hover{background-attachment:fixed}
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-eg5PJ">
+            <div class="background-attachment-RYXzJ3">
             </div>
               </body>
             </html>
@@ -153,11 +179,11 @@ struct AlignmentBaselineTests {
         }
     }
     
-    @Test("HTML alignment-baseline with prefix renders properly")
-    func htmlAlignmentBaselineWithPrefixRendersCorrectly() {
+    @Test("HTML background-attachment with prefix renders properly")
+    func htmlBackgroundAttachmentWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.textTop, pre: "my-component")
+                div.backgroundAttachment(.fixed, pre: "my-component")
             },
             as: .html
         ) {
@@ -166,38 +192,12 @@ struct AlignmentBaselineTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .alignment-baseline-hdTb2{alignment-baseline:text-top}
+            my-component .background-attachment-8bC9G4{background-attachment:fixed}
 
                 </style>
               </head>
               <body>
-            <div class="alignment-baseline-hdTb2">
-            </div>
-              </body>
-            </html>
-            """
-        }
-    }
-    
-    @Test("HTML alignment-baseline with after-edge value renders properly")
-    func htmlAlignmentBaselineWithAfterEdgeValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignmentBaseline(.afterEdge)
-            },
-            as: .html
-        ) {
-            """
-            <!doctype html>
-            <html lang="en">
-              <head>
-                <style>
-            .alignment-baseline-DgkWX2{alignment-baseline:after-edge}
-
-                </style>
-              </head>
-              <body>
-            <div class="alignment-baseline-DgkWX2">
+            <div class="background-attachment-8bC9G4">
             </div>
               </body>
             </html>

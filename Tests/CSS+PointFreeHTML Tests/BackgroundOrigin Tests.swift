@@ -1,5 +1,5 @@
 //
-//  AlignContent Tests.swift
+//  BackgroundOrigin Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "AlignContent Tests",
+    "BackgroundOrigin Tests",
     .snapshots(record: nil)
 )
-struct AlignContentTests {
-    @Test("HTML element renders with align-content properly")
-    func htmlElementWithAlignContentRendersCorrectly() {
+struct BackgroundOriginTests {
+    @Test("HTML element renders with background-origin border-box properly")
+    func htmlElementWithBackgroundOriginBorderBoxRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.center)
+                div.backgroundOrigin(.borderBox)
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct AlignContentTests {
             <html lang="en">
               <head>
                 <style>
-            .align-content-CdPBO2{align-content:center}
+            .background-origin-otfSh{background-origin:border-box}
 
                 </style>
               </head>
               <body>
-            <div class="align-content-CdPBO2">
+            <div class="background-origin-otfSh">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct AlignContentTests {
         }
     }
     
-    @Test("HTML element renders with align-content flex-start value")
-    func htmlElementWithAlignContentFlexStartRendersCorrectly() {
+    @Test("HTML element renders with background-origin padding-box properly")
+    func htmlElementWithBackgroundOriginPaddingBoxRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.flexStart)
+                div.backgroundOrigin(.paddingBox)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct AlignContentTests {
             <html lang="en">
               <head>
                 <style>
-            .align-content-n56cj2{align-content:flex-start}
+            .background-origin-hWz2j2{background-origin:padding-box}
 
                 </style>
               </head>
               <body>
-            <div class="align-content-n56cj2">
+            <div class="background-origin-hWz2j2">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct AlignContentTests {
         }
     }
     
-    @Test("HTML align-content with global value renders properly")
-    func htmlAlignContentWithGlobalValueRendersCorrectly() {
+    @Test("HTML element renders with background-origin content-box properly")
+    func htmlElementWithBackgroundOriginContentBoxRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.inherit)
+                div.backgroundOrigin(.contentBox)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct AlignContentTests {
             <html lang="en">
               <head>
                 <style>
-            .align-content-trEDH1{align-content:inherit}
+            .background-origin-OOyEn1{background-origin:content-box}
 
                 </style>
               </head>
               <body>
-            <div class="align-content-trEDH1">
+            <div class="background-origin-OOyEn1">
             </div>
               </body>
             </html>
@@ -99,11 +99,37 @@ struct AlignContentTests {
         }
     }
     
-    @Test("HTML align-content with media query renders properly")
-    func htmlAlignContentWithMediaQueryRendersCorrectly() {
+    @Test("HTML background-origin with global value renders properly")
+    func htmlBackgroundOriginWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.center, media: .print)
+                div.backgroundOrigin(.inherit)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .background-origin-trEDH1{background-origin:inherit}
+
+                </style>
+              </head>
+              <body>
+            <div class="background-origin-trEDH1">
+            </div>
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test("HTML background-origin with media query renders properly")
+    func htmlBackgroundOriginWithMediaQueryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundOrigin(.contentBox, media: .print)
             },
             as: .html
         ) {
@@ -113,13 +139,13 @@ struct AlignContentTests {
               <head>
                 <style>
             @media print{
-              .align-content-pUz0j3{align-content:center}
+              .background-origin-oeEJE2{background-origin:content-box}
             }
 
                 </style>
               </head>
               <body>
-            <div class="align-content-pUz0j3">
+            <div class="background-origin-oeEJE2">
             </div>
               </body>
             </html>
@@ -127,11 +153,11 @@ struct AlignContentTests {
         }
     }
     
-    @Test("HTML align-content with pseudo-class renders properly")
-    func htmlAlignContentWithPseudoClassRendersCorrectly() {
+    @Test("HTML background-origin with pseudo-class renders properly")
+    func htmlBackgroundOriginWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.spaceAround, pseudo: .hover)
+                div.backgroundOrigin(.contentBox, pseudo: .hover)
             },
             as: .html
         ) {
@@ -140,12 +166,12 @@ struct AlignContentTests {
             <html lang="en">
               <head>
                 <style>
-            .align-content-a0Jun2:hover{align-content:space-around}
+            .background-origin-h7scE1:hover{background-origin:content-box}
 
                 </style>
               </head>
               <body>
-            <div class="align-content-a0Jun2">
+            <div class="background-origin-h7scE1">
             </div>
               </body>
             </html>
@@ -153,11 +179,11 @@ struct AlignContentTests {
         }
     }
     
-    @Test("HTML align-content with prefix renders properly")
-    func htmlAlignContentWithPrefixRendersCorrectly() {
+    @Test("HTML background-origin with prefix renders properly")
+    func htmlBackgroundOriginWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.spaceBetween, pre: "my-component")
+                div.backgroundOrigin(.contentBox, pre: "my-component")
             },
             as: .html
         ) {
@@ -166,38 +192,12 @@ struct AlignContentTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .align-content-KzNip3{align-content:space-between}
+            my-component .background-origin-e7c0Y2{background-origin:content-box}
 
                 </style>
               </head>
               <body>
-            <div class="align-content-KzNip3">
-            </div>
-              </body>
-            </html>
-            """
-        }
-    }
-    
-    @Test("HTML align-content with stretch value renders properly")
-    func htmlAlignContentWithStretchValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignContent(.stretch)
-            },
-            as: .html
-        ) {
-            """
-            <!doctype html>
-            <html lang="en">
-              <head>
-                <style>
-            .align-content-msN8p3{align-content:stretch}
-
-                </style>
-              </head>
-              <body>
-            <div class="align-content-msN8p3">
+            <div class="background-origin-e7c0Y2">
             </div>
               </body>
             </html>

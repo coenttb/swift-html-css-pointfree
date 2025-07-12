@@ -1,5 +1,5 @@
 //
-//  Appearance Tests.swift
+//  AccentColor Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "Appearance Tests",
+    "AccentColor Tests",
     .snapshots(record: nil)
 )
-struct AppearanceTests {
-    @Test("HTML element renders with appearance properly")
-    func htmlElementWithAppearanceRendersCorrectly() {
+struct AccentColorTests {
+    @Test("HTML element renders with accent-color properly")
+    func htmlElementWithAccentColorRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(Appearance.none)
+                div.accentColor(.color(.red))
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
-            .appearance-Wl0y44{appearance:none}
+            .accent-color-dMYaj4{accent-color:red}
 
                 </style>
               </head>
               <body>
-            <div class="appearance-Wl0y44">
+            <div class="accent-color-dMYaj4">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct AppearanceTests {
         }
     }
     
-    @Test("HTML element renders with different appearance value properly")
-    func htmlElementWithDifferentAppearanceRendersCorrectly() {
+    @Test("HTML element renders with accent-color using hex color properly")
+    func htmlElementWithAccentColorHexRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(.auto)
+                div.accentColor(.color(.hex("FF0000")))
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
-            .appearance-u7yQf2{appearance:auto}
+            .accent-color-bQ3ZC1{accent-color:#FF0000}
 
                 </style>
               </head>
               <body>
-            <div class="appearance-u7yQf2">
+            <div class="accent-color-bQ3ZC1">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct AppearanceTests {
         }
     }
     
-    @Test("HTML appearance with global value renders properly")
-    func htmlAppearanceWithGlobalValueRendersCorrectly() {
+    @Test("HTML accent-color with global value renders properly")
+    func htmlAccentColorWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(.inherit)
+                div.accentColor(.inherit)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
-            .appearance-trEDH1{appearance:inherit}
+            .accent-color-trEDH1{accent-color:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="appearance-trEDH1">
+            <div class="accent-color-trEDH1">
             </div>
               </body>
             </html>
@@ -99,11 +99,11 @@ struct AppearanceTests {
         }
     }
     
-    @Test("HTML appearance with media query renders properly")
-    func htmlAppearanceWithMediaQueryRendersCorrectly() {
+    @Test("HTML accent-color with media query renders properly")
+    func htmlAccentColorWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(Appearance.none, media: .print)
+                div.accentColor(.color(.hex("FF0000")), media: .print)
             },
             as: .html
         ) {
@@ -113,13 +113,13 @@ struct AppearanceTests {
               <head>
                 <style>
             @media print{
-              .appearance-D5ekn{appearance:none}
+              .accent-color-SXYRf2{accent-color:#FF0000}
             }
 
                 </style>
               </head>
               <body>
-            <div class="appearance-D5ekn">
+            <div class="accent-color-SXYRf2">
             </div>
               </body>
             </html>
@@ -127,11 +127,11 @@ struct AppearanceTests {
         }
     }
     
-    @Test("HTML appearance with pseudo-class renders properly")
-    func htmlAppearanceWithPseudoClassRendersCorrectly() {
+    @Test("HTML accent-color with pseudo-class renders properly")
+    func htmlAccentColorWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(Appearance.none, pseudo: .hover)
+                div.accentColor(.color(.hex("FF0000")), pseudo: .hover)
             },
             as: .html
         ) {
@@ -140,12 +140,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
-            .appearance-8r95N:hover{appearance:none}
+            .accent-color-egMjx3:hover{accent-color:#FF0000}
 
                 </style>
               </head>
               <body>
-            <div class="appearance-8r95N">
+            <div class="accent-color-egMjx3">
             </div>
               </body>
             </html>
@@ -153,11 +153,11 @@ struct AppearanceTests {
         }
     }
     
-    @Test("HTML appearance with prefix renders properly")
-    func htmlAppearanceWithPrefixRendersCorrectly() {
+    @Test("HTML accent-color with prefix renders properly")
+    func htmlAccentColorWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(Appearance.none, pre: "my-component")
+                div.accentColor(.color(.hex("FF0000")), pre: "my-component")
             },
             as: .html
         ) {
@@ -166,12 +166,12 @@ struct AppearanceTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .appearance-V6DAJ3{appearance:none}
+            my-component .accent-color-XyDYD1{accent-color:#FF0000}
 
                 </style>
               </head>
               <body>
-            <div class="appearance-V6DAJ3">
+            <div class="accent-color-XyDYD1">
             </div>
               </body>
             </html>

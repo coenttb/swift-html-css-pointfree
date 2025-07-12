@@ -1,5 +1,5 @@
 ////
-////  AnimationDelay Tests.swift
+////  AnimationDirection Tests.swift
 ////  swift-html
 ////
 ////  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 //
 //import Foundation
 //import Testing
-//import HTML_CSS
+//import CSS_PointFreeHTML
 //import PointFreeHTML
 //import CSSPropertyTypes
 //import CSSTypeTypes
@@ -17,15 +17,15 @@
 //import HTMLTestSupport
 //
 //@Suite(
-//    "AnimationDelay Tests",
+//    "AnimationDirection Tests",
 //    .snapshots(record: nil)
 //)
-//struct AnimationDelayTests {
-//    @Test("HTML element renders with animation-delay time value properly")
-//    func htmlElementWithAnimationDelayTimeRendersCorrectly() {
+//struct AnimationDirectionTests {
+//    @Test("HTML element renders with animation-direction normal properly")
+//    func htmlElementWithAnimationDirectionNormalRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.time("2s"))
+//                div.animationDirection(.normal)
 //            },
 //            as: .html
 //        ) {
@@ -34,12 +34,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-delay-atnwFz{animation-delay:2s}
+//            .animation-direction-LtYIz5{animation-direction:normal}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-atnwFz">
+//            <div class="animation-direction-LtYIz5">
 //            </div>
 //              </body>
 //            </html>
@@ -47,11 +47,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-delay milliseconds value")
-//    func htmlElementWithAnimationDelayMillisecondsRendersCorrectly() {
+//    @Test("HTML element renders with animation-direction reverse value")
+//    func htmlElementWithAnimationDirectionReverseRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.time("500ms"))
+//                div.animationDirection(.reverse)
 //            },
 //            as: .html
 //        ) {
@@ -60,12 +60,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-delay-DqVdD4{animation-delay:500ms}
+//            .animation-direction-UBNKL3{animation-direction:reverse}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-DqVdD4">
+//            <div class="animation-direction-UBNKL3">
 //            </div>
 //              </body>
 //            </html>
@@ -73,11 +73,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-delay multiple times")
-//    func htmlElementWithAnimationDelayMultipleTimesRendersCorrectly() {
+//    @Test("HTML element renders with animation-direction alternate value")
+//    func htmlElementWithAnimationDirectionAlternateRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.times(["2s", "4s"]))
+//                div.animationDirection(.alternate)
 //            },
 //            as: .html
 //        ) {
@@ -86,12 +86,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-delay-Fxvhj3{animation-delay:2s, 4s}
+//            .animation-direction-AzrRng{animation-direction:alternate}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-Fxvhj3">
+//            <div class="animation-direction-AzrRng">
 //            </div>
 //              </body>
 //            </html>
@@ -99,11 +99,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-delay with global value renders properly")
-//    func htmlAnimationDelayWithGlobalValueRendersCorrectly() {
+//    @Test("HTML element renders with animation-direction alternate-reverse value")
+//    func htmlElementWithAnimationDirectionAlternateReverseRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.inherit)
+//                div.animationDirection(.alternateReverse)
 //            },
 //            as: .html
 //        ) {
@@ -112,12 +112,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-delay-trEDH1{animation-delay:inherit}
+//            .animation-direction-HF0GG1{animation-direction:alternate-reverse}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-trEDH1">
+//            <div class="animation-direction-HF0GG1">
 //            </div>
 //              </body>
 //            </html>
@@ -125,11 +125,37 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-delay with media query renders properly")
-//    func htmlAnimationDelayWithMediaQueryRendersCorrectly() {
+//    @Test("HTML animation-direction with global value renders properly")
+//    func htmlAnimationDirectionWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.time("1.5s"), media: .print)
+//                div.animationDirection(.inherit)
+//            },
+//            as: .html
+//        ) {
+//            """
+//            <!doctype html>
+//            <html lang="en">
+//              <head>
+//                <style>
+//            .animation-direction-trEDH1{animation-direction:inherit}
+//
+//                </style>
+//              </head>
+//              <body>
+//            <div class="animation-direction-trEDH1">
+//            </div>
+//              </body>
+//            </html>
+//            """
+//        }
+//    }
+//    
+//    @Test("HTML animation-direction with media query renders properly")
+//    func htmlAnimationDirectionWithMediaQueryRendersCorrectly() {
+//        assertInlineSnapshot(
+//            of: HTMLDocument {
+//                div.animationDirection(.alternate, media: .print)
 //            },
 //            as: .html
 //        ) {
@@ -139,13 +165,13 @@
 //              <head>
 //                <style>
 //            @media print{
-//              .animation-delay-1C5bE2{animation-delay:1.5s}
+//              .animation-direction-aSLbO3{animation-direction:alternate}
 //            }
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-1C5bE2">
+//            <div class="animation-direction-aSLbO3">
 //            </div>
 //              </body>
 //            </html>
@@ -153,11 +179,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-delay with pseudo-class renders properly")
-//    func htmlAnimationDelayWithPseudoClassRendersCorrectly() {
+//    @Test("HTML animation-direction with pseudo-class renders properly")
+//    func htmlAnimationDirectionWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.time("0.3s"), pseudo: .hover)
+//                div.animationDirection(.reverse, pseudo: .hover)
 //            },
 //            as: .html
 //        ) {
@@ -166,12 +192,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-delay-YE9O7d:hover{animation-delay:0.3s}
+//            .animation-direction-1EDVMm:hover{animation-direction:reverse}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-YE9O7d">
+//            <div class="animation-direction-1EDVMm">
 //            </div>
 //              </body>
 //            </html>
@@ -179,11 +205,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-delay with prefix renders properly")
-//    func htmlAnimationDelayWithPrefixRendersCorrectly() {
+//    @Test("HTML animation-direction with prefix renders properly")
+//    func htmlAnimationDirectionWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.time("1s"), pre: "my-component")
+//                div.animationDirection(.normal, pre: "my-component")
 //            },
 //            as: .html
 //        ) {
@@ -192,38 +218,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            my-component .animation-delay-KtQeSh{animation-delay:1s}
+//            my-component .animation-direction-sODZv0{animation-direction:normal}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-delay-KtQeSh">
-//            </div>
-//              </body>
-//            </html>
-//            """
-//        }
-//    }
-//    
-//    @Test("HTML animation-delay with negative time value renders properly")
-//    func htmlAnimationDelayWithNegativeTimeValueRendersCorrectly() {
-//        assertInlineSnapshot(
-//            of: HTMLDocument {
-//                div.animationDelay(.time("-0.5s"))
-//            },
-//            as: .html
-//        ) {
-//            """
-//            <!doctype html>
-//            <html lang="en">
-//              <head>
-//                <style>
-//            .animation-delay-RfDhO3{animation-delay:-0.5s}
-//
-//                </style>
-//              </head>
-//              <body>
-//            <div class="animation-delay-RfDhO3">
+//            <div class="animation-direction-sODZv0">
 //            </div>
 //              </body>
 //            </html>

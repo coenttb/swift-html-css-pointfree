@@ -1,5 +1,5 @@
 //
-//  BackdropFilter Tests.swift
+//  Background Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "BackdropFilter Tests",
+    "Background Tests",
     .snapshots(record: nil)
 )
-struct BackdropFilterTests {
-    @Test("HTML element renders with backdrop-filter blur properly")
-    func htmlElementWithBackdropFilterBlurRendersCorrectly() {
+struct BackgroundTests {
+    @Test("HTML element renders with background color properly")
+    func htmlElementWithBackgroundColorRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.blur(.px(5)))
+                div.background(.color(.red))
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct BackdropFilterTests {
             <html lang="en">
               <head>
                 <style>
-            .backdrop-filter-0kTRU{backdrop-filter:blur(5px)}
+            .background-dMYaj4{background:red}
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-0kTRU">
+            <div class="background-dMYaj4">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct BackdropFilterTests {
         }
     }
     
-    @Test("HTML element renders with backdrop-filter brightness properly")
-    func htmlElementWithBackdropFilterBrightnessRendersCorrectly() {
+    @Test("HTML element renders with background image properly")
+    func htmlElementWithBackgroundImageRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.brightness(1.5))
+                div.background(.image("image.jpg"))
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct BackdropFilterTests {
             <html lang="en">
               <head>
                 <style>
-            .backdrop-filter-J7xul3{backdrop-filter:brightness(1.5)}
+            .background-g5Rr32{background:url('image.jpg')}
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-J7xul3">
+            <div class="background-g5Rr32">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct BackdropFilterTests {
         }
     }
     
-//    @Test("HTML element renders with multiple backdrop-filters properly")
-//    func htmlElementWithMultipleBackdropFiltersRendersCorrectly() {
+//    @Test("HTML element renders with complex background properly")
+//    func htmlElementWithComplexBackgroundRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.backdropFilter(.composite([.blur(.px(5)), .brightness(1.2)]))
+//                div.background(.composite([.color(.red), .image(.url("image.jpg"))]))
 //            },
 //            as: .html
 //        ) {
@@ -86,12 +86,12 @@ struct BackdropFilterTests {
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .backdrop-filter-YazUw1{backdrop-filter:blur(5px) brightness(1.2)}
+//            .background-yFkjt1{background:red url("image.jpg")}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="backdrop-filter-YazUw1">
+//            <div class="background-yFkjt1">
 //            </div>
 //              </body>
 //            </html>
@@ -99,11 +99,11 @@ struct BackdropFilterTests {
 //        }
 //    }
     
-    @Test("HTML backdrop-filter with none value renders properly")
-    func htmlBackdropFilterWithNoneValueRendersCorrectly() {
+    @Test("HTML background with none value renders properly")
+    func htmlBackgroundWithNoneValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(BackdropFilter.none)
+                div.background(Background.none)
             },
             as: .html
         ) {
@@ -112,12 +112,12 @@ struct BackdropFilterTests {
             <html lang="en">
               <head>
                 <style>
-            .backdrop-filter-Wl0y44{backdrop-filter:none}
+            .background-Wl0y44{background:none}
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-Wl0y44">
+            <div class="background-Wl0y44">
             </div>
               </body>
             </html>
@@ -125,11 +125,11 @@ struct BackdropFilterTests {
         }
     }
     
-    @Test("HTML backdrop-filter with global value renders properly")
-    func htmlBackdropFilterWithGlobalValueRendersCorrectly() {
+    @Test("HTML background with global value renders properly")
+    func htmlBackgroundWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.inherit)
+                div.background(.inherit)
             },
             as: .html
         ) {
@@ -138,12 +138,12 @@ struct BackdropFilterTests {
             <html lang="en">
               <head>
                 <style>
-            .backdrop-filter-trEDH1{backdrop-filter:inherit}
+            .background-trEDH1{background:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-trEDH1">
+            <div class="background-trEDH1">
             </div>
               </body>
             </html>
@@ -151,11 +151,11 @@ struct BackdropFilterTests {
         }
     }
     
-    @Test("HTML backdrop-filter with media query renders properly")
-    func htmlBackdropFilterWithMediaQueryRendersCorrectly() {
+    @Test("HTML background with media query renders properly")
+    func htmlBackgroundWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.blur(.px(5)), media: .print)
+                div.background(.color(.red), media: .print)
             },
             as: .html
         ) {
@@ -165,13 +165,13 @@ struct BackdropFilterTests {
               <head>
                 <style>
             @media print{
-              .backdrop-filter-OLeyF3{backdrop-filter:blur(5px)}
+              .background-Igguo2{background:red}
             }
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-OLeyF3">
+            <div class="background-Igguo2">
             </div>
               </body>
             </html>
@@ -179,11 +179,11 @@ struct BackdropFilterTests {
         }
     }
     
-    @Test("HTML backdrop-filter with pseudo-class renders properly")
-    func htmlBackdropFilterWithPseudoClassRendersCorrectly() {
+    @Test("HTML background with pseudo-class renders properly")
+    func htmlBackgroundWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.blur(.px(5)), pseudo: .hover)
+                div.background(.color(.red), pseudo: .hover)
             },
             as: .html
         ) {
@@ -192,12 +192,12 @@ struct BackdropFilterTests {
             <html lang="en">
               <head>
                 <style>
-            .backdrop-filter-fPwoS2:hover{backdrop-filter:blur(5px)}
+            .background-S9wdG2:hover{background:red}
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-fPwoS2">
+            <div class="background-S9wdG2">
             </div>
               </body>
             </html>
@@ -205,11 +205,11 @@ struct BackdropFilterTests {
         }
     }
     
-    @Test("HTML backdrop-filter with prefix renders properly")
-    func htmlBackdropFilterWithPrefixRendersCorrectly() {
+    @Test("HTML background with prefix renders properly")
+    func htmlBackgroundWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.blur(.px(5)), pre: "my-component")
+                div.background(.color(.red), pre: "my-component")
             },
             as: .html
         ) {
@@ -218,12 +218,12 @@ struct BackdropFilterTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .backdrop-filter-vFyYm1{backdrop-filter:blur(5px)}
+            my-component .background-KoS5g3{background:red}
 
                 </style>
               </head>
               <body>
-            <div class="backdrop-filter-vFyYm1">
+            <div class="background-KoS5g3">
             </div>
               </body>
             </html>

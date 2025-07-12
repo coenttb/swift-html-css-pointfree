@@ -1,5 +1,5 @@
 //
-//  BackgroundOrigin Tests.swift
+//  AlignSelf Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "BackgroundOrigin Tests",
+    "AlignSelf Tests",
     .snapshots(record: nil)
 )
-struct BackgroundOriginTests {
-    @Test("HTML element renders with background-origin border-box properly")
-    func htmlElementWithBackgroundOriginBorderBoxRendersCorrectly() {
+struct AlignSelfTests {
+    @Test("HTML element renders with align-self properly")
+    func htmlElementWithAlignSelfRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.borderBox)
+                div.alignSelf(.center)
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct BackgroundOriginTests {
             <html lang="en">
               <head>
                 <style>
-            .background-origin-otfSh{background-origin:border-box}
+            .align-self-CdPBO2{align-self:center}
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-otfSh">
+            <div class="align-self-CdPBO2">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct BackgroundOriginTests {
         }
     }
     
-    @Test("HTML element renders with background-origin padding-box properly")
-    func htmlElementWithBackgroundOriginPaddingBoxRendersCorrectly() {
+    @Test("HTML element renders with align-self auto value")
+    func htmlElementWithAlignSelfAutoRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.paddingBox)
+                div.alignSelf(.auto)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct BackgroundOriginTests {
             <html lang="en">
               <head>
                 <style>
-            .background-origin-hWz2j2{background-origin:padding-box}
+            .align-self-u7yQf2{align-self:auto}
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-hWz2j2">
+            <div class="align-self-u7yQf2">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct BackgroundOriginTests {
         }
     }
     
-    @Test("HTML element renders with background-origin content-box properly")
-    func htmlElementWithBackgroundOriginContentBoxRendersCorrectly() {
+    @Test("HTML align-self with global value renders properly")
+    func htmlAlignSelfWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.contentBox)
+                div.alignSelf(.inherit)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct BackgroundOriginTests {
             <html lang="en">
               <head>
                 <style>
-            .background-origin-OOyEn1{background-origin:content-box}
+            .align-self-trEDH1{align-self:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-OOyEn1">
+            <div class="align-self-trEDH1">
             </div>
               </body>
             </html>
@@ -99,37 +99,11 @@ struct BackgroundOriginTests {
         }
     }
     
-    @Test("HTML background-origin with global value renders properly")
-    func htmlBackgroundOriginWithGlobalValueRendersCorrectly() {
+    @Test("HTML align-self with media query renders properly")
+    func htmlAlignSelfWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.inherit)
-            },
-            as: .html
-        ) {
-            """
-            <!doctype html>
-            <html lang="en">
-              <head>
-                <style>
-            .background-origin-trEDH1{background-origin:inherit}
-
-                </style>
-              </head>
-              <body>
-            <div class="background-origin-trEDH1">
-            </div>
-              </body>
-            </html>
-            """
-        }
-    }
-    
-    @Test("HTML background-origin with media query renders properly")
-    func htmlBackgroundOriginWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundOrigin(.contentBox, media: .print)
+                div.alignSelf(.center, media: .print)
             },
             as: .html
         ) {
@@ -139,13 +113,13 @@ struct BackgroundOriginTests {
               <head>
                 <style>
             @media print{
-              .background-origin-oeEJE2{background-origin:content-box}
+              .align-self-pUz0j3{align-self:center}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-oeEJE2">
+            <div class="align-self-pUz0j3">
             </div>
               </body>
             </html>
@@ -153,11 +127,11 @@ struct BackgroundOriginTests {
         }
     }
     
-    @Test("HTML background-origin with pseudo-class renders properly")
-    func htmlBackgroundOriginWithPseudoClassRendersCorrectly() {
+    @Test("HTML align-self with pseudo-class renders properly")
+    func htmlAlignSelfWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.contentBox, pseudo: .hover)
+                div.alignSelf(.baseline, pseudo: .hover)
             },
             as: .html
         ) {
@@ -166,12 +140,12 @@ struct BackgroundOriginTests {
             <html lang="en">
               <head>
                 <style>
-            .background-origin-h7scE1:hover{background-origin:content-box}
+            .align-self-fCQVh2:hover{align-self:baseline}
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-h7scE1">
+            <div class="align-self-fCQVh2">
             </div>
               </body>
             </html>
@@ -179,11 +153,11 @@ struct BackgroundOriginTests {
         }
     }
     
-    @Test("HTML background-origin with prefix renders properly")
-    func htmlBackgroundOriginWithPrefixRendersCorrectly() {
+    @Test("HTML align-self with prefix renders properly")
+    func htmlAlignSelfWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.contentBox, pre: "my-component")
+                div.alignSelf(.flexEnd, pre: "my-component")
             },
             as: .html
         ) {
@@ -192,12 +166,38 @@ struct BackgroundOriginTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .background-origin-e7c0Y2{background-origin:content-box}
+            my-component .align-self-dzpgf{align-self:flex-end}
 
                 </style>
               </head>
               <body>
-            <div class="background-origin-e7c0Y2">
+            <div class="align-self-dzpgf">
+            </div>
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test("HTML align-self with stretch value renders properly")
+    func htmlAlignSelfWithStretchValueRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.alignSelf(.stretch)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .align-self-msN8p3{align-self:stretch}
+
+                </style>
+              </head>
+              <body>
+            <div class="align-self-msN8p3">
             </div>
               </body>
             </html>

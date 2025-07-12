@@ -1,5 +1,5 @@
 //
-//  BackgroundClip Tests.swift
+//  BackdropFilter Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "BackgroundClip Tests",
+    "BackdropFilter Tests",
     .snapshots(record: nil)
 )
-struct BackgroundClipTests {
-    @Test("HTML element renders with background-clip border-box properly")
-    func htmlElementWithBackgroundClipBorderBoxRendersCorrectly() {
+struct BackdropFilterTests {
+    @Test("HTML element renders with backdrop-filter blur properly")
+    func htmlElementWithBackdropFilterBlurRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.borderBox)
+                div.backdropFilter(.blur(.px(5)))
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct BackgroundClipTests {
             <html lang="en">
               <head>
                 <style>
-            .background-clip-otfSh{background-clip:border-box}
+            .backdrop-filter-0kTRU{backdrop-filter:blur(5px)}
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-otfSh">
+            <div class="backdrop-filter-0kTRU">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct BackgroundClipTests {
         }
     }
     
-    @Test("HTML element renders with background-clip padding-box properly")
-    func htmlElementWithBackgroundClipPaddingBoxRendersCorrectly() {
+    @Test("HTML element renders with backdrop-filter brightness properly")
+    func htmlElementWithBackdropFilterBrightnessRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.paddingBox)
+                div.backdropFilter(.brightness(1.5))
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct BackgroundClipTests {
             <html lang="en">
               <head>
                 <style>
-            .background-clip-hWz2j2{background-clip:padding-box}
+            .backdrop-filter-J7xul3{backdrop-filter:brightness(1.5)}
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-hWz2j2">
+            <div class="backdrop-filter-J7xul3">
             </div>
               </body>
             </html>
@@ -73,11 +73,37 @@ struct BackgroundClipTests {
         }
     }
     
-    @Test("HTML element renders with background-clip content-box properly")
-    func htmlElementWithBackgroundClipContentBoxRendersCorrectly() {
+//    @Test("HTML element renders with multiple backdrop-filters properly")
+//    func htmlElementWithMultipleBackdropFiltersRendersCorrectly() {
+//        assertInlineSnapshot(
+//            of: HTMLDocument {
+//                div.backdropFilter(.composite([.blur(.px(5)), .brightness(1.2)]))
+//            },
+//            as: .html
+//        ) {
+//            """
+//            <!doctype html>
+//            <html lang="en">
+//              <head>
+//                <style>
+//            .backdrop-filter-YazUw1{backdrop-filter:blur(5px) brightness(1.2)}
+//
+//                </style>
+//              </head>
+//              <body>
+//            <div class="backdrop-filter-YazUw1">
+//            </div>
+//              </body>
+//            </html>
+//            """
+//        }
+//    }
+    
+    @Test("HTML backdrop-filter with none value renders properly")
+    func htmlBackdropFilterWithNoneValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.contentBox)
+                div.backdropFilter(BackdropFilter.none)
             },
             as: .html
         ) {
@@ -86,12 +112,12 @@ struct BackgroundClipTests {
             <html lang="en">
               <head>
                 <style>
-            .background-clip-OOyEn1{background-clip:content-box}
+            .backdrop-filter-Wl0y44{backdrop-filter:none}
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-OOyEn1">
+            <div class="backdrop-filter-Wl0y44">
             </div>
               </body>
             </html>
@@ -99,11 +125,11 @@ struct BackgroundClipTests {
         }
     }
     
-    @Test("HTML element renders with background-clip text properly")
-    func htmlElementWithBackgroundClipTextRendersCorrectly() {
+    @Test("HTML backdrop-filter with global value renders properly")
+    func htmlBackdropFilterWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.text)
+                div.backdropFilter(.inherit)
             },
             as: .html
         ) {
@@ -112,12 +138,12 @@ struct BackgroundClipTests {
             <html lang="en">
               <head>
                 <style>
-            .background-clip-inoYC3{background-clip:text}
+            .backdrop-filter-trEDH1{backdrop-filter:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-inoYC3">
+            <div class="backdrop-filter-trEDH1">
             </div>
               </body>
             </html>
@@ -125,37 +151,11 @@ struct BackgroundClipTests {
         }
     }
     
-    @Test("HTML background-clip with global value renders properly")
-    func htmlBackgroundClipWithGlobalValueRendersCorrectly() {
+    @Test("HTML backdrop-filter with media query renders properly")
+    func htmlBackdropFilterWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.inherit)
-            },
-            as: .html
-        ) {
-            """
-            <!doctype html>
-            <html lang="en">
-              <head>
-                <style>
-            .background-clip-trEDH1{background-clip:inherit}
-
-                </style>
-              </head>
-              <body>
-            <div class="background-clip-trEDH1">
-            </div>
-              </body>
-            </html>
-            """
-        }
-    }
-    
-    @Test("HTML background-clip with media query renders properly")
-    func htmlBackgroundClipWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.contentBox, media: .print)
+                div.backdropFilter(.blur(.px(5)), media: .print)
             },
             as: .html
         ) {
@@ -165,13 +165,13 @@ struct BackgroundClipTests {
               <head>
                 <style>
             @media print{
-              .background-clip-oeEJE2{background-clip:content-box}
+              .backdrop-filter-OLeyF3{backdrop-filter:blur(5px)}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-oeEJE2">
+            <div class="backdrop-filter-OLeyF3">
             </div>
               </body>
             </html>
@@ -179,11 +179,11 @@ struct BackgroundClipTests {
         }
     }
     
-    @Test("HTML background-clip with pseudo-class renders properly")
-    func htmlBackgroundClipWithPseudoClassRendersCorrectly() {
+    @Test("HTML backdrop-filter with pseudo-class renders properly")
+    func htmlBackdropFilterWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.contentBox, pseudo: .hover)
+                div.backdropFilter(.blur(.px(5)), pseudo: .hover)
             },
             as: .html
         ) {
@@ -192,12 +192,12 @@ struct BackgroundClipTests {
             <html lang="en">
               <head>
                 <style>
-            .background-clip-h7scE1:hover{background-clip:content-box}
+            .backdrop-filter-fPwoS2:hover{backdrop-filter:blur(5px)}
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-h7scE1">
+            <div class="backdrop-filter-fPwoS2">
             </div>
               </body>
             </html>
@@ -205,11 +205,11 @@ struct BackgroundClipTests {
         }
     }
     
-    @Test("HTML background-clip with prefix renders properly")
-    func htmlBackgroundClipWithPrefixRendersCorrectly() {
+    @Test("HTML backdrop-filter with prefix renders properly")
+    func htmlBackdropFilterWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.contentBox, pre: "my-component")
+                div.backdropFilter(.blur(.px(5)), pre: "my-component")
             },
             as: .html
         ) {
@@ -218,12 +218,12 @@ struct BackgroundClipTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .background-clip-e7c0Y2{background-clip:content-box}
+            my-component .backdrop-filter-vFyYm1{backdrop-filter:blur(5px)}
 
                 </style>
               </head>
               <body>
-            <div class="background-clip-e7c0Y2">
+            <div class="backdrop-filter-vFyYm1">
             </div>
               </body>
             </html>

@@ -1,5 +1,5 @@
 //
-//  BackgroundBlendMode Tests.swift
+//  BackgroundClip Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "BackgroundBlendMode Tests",
+    "BackgroundClip Tests",
     .snapshots(record: nil)
 )
-struct BackgroundBlendModeTests {
-    @Test("HTML element renders with background-blend-mode normal properly")
-    func htmlElementWithBackgroundBlendModeNormalRendersCorrectly() {
+struct BackgroundClipTests {
+    @Test("HTML element renders with background-clip border-box properly")
+    func htmlElementWithBackgroundClipBorderBoxRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.normal)
+                div.backgroundClip(.borderBox)
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            .background-blend-mode-evfWi1{background-blend-mode:normal}
+            .background-clip-otfSh{background-clip:border-box}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-evfWi1">
+            <div class="background-clip-otfSh">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML element renders with background-blend-mode multiply properly")
-    func htmlElementWithBackgroundBlendModeMultiplyRendersCorrectly() {
+    @Test("HTML element renders with background-clip padding-box properly")
+    func htmlElementWithBackgroundClipPaddingBoxRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.multiply)
+                div.backgroundClip(.paddingBox)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            .background-blend-mode-gumfc1{background-blend-mode:multiply}
+            .background-clip-hWz2j2{background-clip:padding-box}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-gumfc1">
+            <div class="background-clip-hWz2j2">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML element renders with background-blend-mode screen properly")
-    func htmlElementWithBackgroundBlendModeScreenRendersCorrectly() {
+    @Test("HTML element renders with background-clip content-box properly")
+    func htmlElementWithBackgroundClipContentBoxRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.screen)
+                div.backgroundClip(.contentBox)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            .background-blend-mode-a7c473{background-blend-mode:screen}
+            .background-clip-OOyEn1{background-clip:content-box}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-a7c473">
+            <div class="background-clip-OOyEn1">
             </div>
               </body>
             </html>
@@ -99,11 +99,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML element renders with background-blend-mode overlay properly")
-    func htmlElementWithBackgroundBlendModeOverlayRendersCorrectly() {
+    @Test("HTML element renders with background-clip text properly")
+    func htmlElementWithBackgroundClipTextRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.overlay)
+                div.backgroundClip(.text)
             },
             as: .html
         ) {
@@ -112,12 +112,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            .background-blend-mode-UX3lO1{background-blend-mode:overlay}
+            .background-clip-inoYC3{background-clip:text}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-UX3lO1">
+            <div class="background-clip-inoYC3">
             </div>
               </body>
             </html>
@@ -125,11 +125,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML background-blend-mode with global value renders properly")
-    func htmlBackgroundBlendModeWithGlobalValueRendersCorrectly() {
+    @Test("HTML background-clip with global value renders properly")
+    func htmlBackgroundClipWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.inherit)
+                div.backgroundClip(.inherit)
             },
             as: .html
         ) {
@@ -138,12 +138,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            .background-blend-mode-trEDH1{background-blend-mode:inherit}
+            .background-clip-trEDH1{background-clip:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-trEDH1">
+            <div class="background-clip-trEDH1">
             </div>
               </body>
             </html>
@@ -151,11 +151,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML background-blend-mode with media query renders properly")
-    func htmlBackgroundBlendModeWithMediaQueryRendersCorrectly() {
+    @Test("HTML background-clip with media query renders properly")
+    func htmlBackgroundClipWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.multiply, media: .print)
+                div.backgroundClip(.contentBox, media: .print)
             },
             as: .html
         ) {
@@ -165,13 +165,13 @@ struct BackgroundBlendModeTests {
               <head>
                 <style>
             @media print{
-              .background-blend-mode-B2231{background-blend-mode:multiply}
+              .background-clip-oeEJE2{background-clip:content-box}
             }
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-B2231">
+            <div class="background-clip-oeEJE2">
             </div>
               </body>
             </html>
@@ -179,11 +179,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML background-blend-mode with pseudo-class renders properly")
-    func htmlBackgroundBlendModeWithPseudoClassRendersCorrectly() {
+    @Test("HTML background-clip with pseudo-class renders properly")
+    func htmlBackgroundClipWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.multiply, pseudo: .hover)
+                div.backgroundClip(.contentBox, pseudo: .hover)
             },
             as: .html
         ) {
@@ -192,12 +192,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            .background-blend-mode-kQHf41:hover{background-blend-mode:multiply}
+            .background-clip-h7scE1:hover{background-clip:content-box}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-kQHf41">
+            <div class="background-clip-h7scE1">
             </div>
               </body>
             </html>
@@ -205,11 +205,11 @@ struct BackgroundBlendModeTests {
         }
     }
     
-    @Test("HTML background-blend-mode with prefix renders properly")
-    func htmlBackgroundBlendModeWithPrefixRendersCorrectly() {
+    @Test("HTML background-clip with prefix renders properly")
+    func htmlBackgroundClipWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.multiply, pre: "my-component")
+                div.backgroundClip(.contentBox, pre: "my-component")
             },
             as: .html
         ) {
@@ -218,12 +218,12 @@ struct BackgroundBlendModeTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .background-blend-mode-QWNBt2{background-blend-mode:multiply}
+            my-component .background-clip-e7c0Y2{background-clip:content-box}
 
                 </style>
               </head>
               <body>
-            <div class="background-blend-mode-QWNBt2">
+            <div class="background-clip-e7c0Y2">
             </div>
               </body>
             </html>

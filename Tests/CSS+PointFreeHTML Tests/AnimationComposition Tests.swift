@@ -1,5 +1,5 @@
 ////
-////  AnimationDirection Tests.swift
+////  AnimationComposition Tests.swift
 ////  swift-html
 ////
 ////  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 //
 //import Foundation
 //import Testing
-//import HTML_CSS
+//import CSS_PointFreeHTML
 //import PointFreeHTML
 //import CSSPropertyTypes
 //import CSSTypeTypes
@@ -17,15 +17,15 @@
 //import HTMLTestSupport
 //
 //@Suite(
-//    "AnimationDirection Tests",
+//    "AnimationComposition Tests",
 //    .snapshots(record: nil)
 //)
-//struct AnimationDirectionTests {
-//    @Test("HTML element renders with animation-direction normal properly")
-//    func htmlElementWithAnimationDirectionNormalRendersCorrectly() {
+//struct AnimationCompositionTests {
+//    @Test("HTML element renders with animation-composition replace properly")
+//    func htmlElementWithAnimationCompositionReplaceRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.normal)
+//                div.animationComposition(.replace)
 //            },
 //            as: .html
 //        ) {
@@ -34,12 +34,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-direction-LtYIz5{animation-direction:normal}
+//            .animation-composition-tKSZv5{animation-composition:replace}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-LtYIz5">
+//            <div class="animation-composition-tKSZv5">
 //            </div>
 //              </body>
 //            </html>
@@ -47,11 +47,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-direction reverse value")
-//    func htmlElementWithAnimationDirectionReverseRendersCorrectly() {
+//    @Test("HTML element renders with animation-composition add value")
+//    func htmlElementWithAnimationCompositionAddRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.reverse)
+//                div.animationComposition(.add)
 //            },
 //            as: .html
 //        ) {
@@ -60,12 +60,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-direction-UBNKL3{animation-direction:reverse}
+//            .animation-composition-2bfAc4{animation-composition:add}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-UBNKL3">
+//            <div class="animation-composition-2bfAc4">
 //            </div>
 //              </body>
 //            </html>
@@ -73,11 +73,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-direction alternate value")
-//    func htmlElementWithAnimationDirectionAlternateRendersCorrectly() {
+//    @Test("HTML element renders with animation-composition accumulate value")
+//    func htmlElementWithAnimationCompositionAccumulateRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.alternate)
+//                div.animationComposition(.accumulate)
 //            },
 //            as: .html
 //        ) {
@@ -86,12 +86,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-direction-AzrRng{animation-direction:alternate}
+//            .animation-composition-N6c9H5{animation-composition:accumulate}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-AzrRng">
+//            <div class="animation-composition-N6c9H5">
 //            </div>
 //              </body>
 //            </html>
@@ -99,11 +99,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML element renders with animation-direction alternate-reverse value")
-//    func htmlElementWithAnimationDirectionAlternateReverseRendersCorrectly() {
+//    @Test("HTML animation-composition with global value renders properly")
+//    func htmlAnimationCompositionWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.alternateReverse)
+//                div.animationComposition(.inherit)
 //            },
 //            as: .html
 //        ) {
@@ -112,12 +112,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-direction-HF0GG1{animation-direction:alternate-reverse}
+//            .animation-composition-trEDH1{animation-composition:inherit}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-HF0GG1">
+//            <div class="animation-composition-trEDH1">
 //            </div>
 //              </body>
 //            </html>
@@ -125,37 +125,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-direction with global value renders properly")
-//    func htmlAnimationDirectionWithGlobalValueRendersCorrectly() {
+//    @Test("HTML animation-composition with media query renders properly")
+//    func htmlAnimationCompositionWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.inherit)
-//            },
-//            as: .html
-//        ) {
-//            """
-//            <!doctype html>
-//            <html lang="en">
-//              <head>
-//                <style>
-//            .animation-direction-trEDH1{animation-direction:inherit}
-//
-//                </style>
-//              </head>
-//              <body>
-//            <div class="animation-direction-trEDH1">
-//            </div>
-//              </body>
-//            </html>
-//            """
-//        }
-//    }
-//    
-//    @Test("HTML animation-direction with media query renders properly")
-//    func htmlAnimationDirectionWithMediaQueryRendersCorrectly() {
-//        assertInlineSnapshot(
-//            of: HTMLDocument {
-//                div.animationDirection(.alternate, media: .print)
+//                div.animationComposition(.add, media: .print)
 //            },
 //            as: .html
 //        ) {
@@ -165,13 +139,13 @@
 //              <head>
 //                <style>
 //            @media print{
-//              .animation-direction-aSLbO3{animation-direction:alternate}
+//              .animation-composition-Cm0lVg{animation-composition:add}
 //            }
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-aSLbO3">
+//            <div class="animation-composition-Cm0lVg">
 //            </div>
 //              </body>
 //            </html>
@@ -179,11 +153,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-direction with pseudo-class renders properly")
-//    func htmlAnimationDirectionWithPseudoClassRendersCorrectly() {
+//    @Test("HTML animation-composition with pseudo-class renders properly")
+//    func htmlAnimationCompositionWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.reverse, pseudo: .hover)
+//                div.animationComposition(.replace, pseudo: .hover)
 //            },
 //            as: .html
 //        ) {
@@ -192,12 +166,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            .animation-direction-1EDVMm:hover{animation-direction:reverse}
+//            .animation-composition-Vt07jl:hover{animation-composition:replace}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-1EDVMm">
+//            <div class="animation-composition-Vt07jl">
 //            </div>
 //              </body>
 //            </html>
@@ -205,11 +179,11 @@
 //        }
 //    }
 //    
-//    @Test("HTML animation-direction with prefix renders properly")
-//    func htmlAnimationDirectionWithPrefixRendersCorrectly() {
+//    @Test("HTML animation-composition with prefix renders properly")
+//    func htmlAnimationCompositionWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.normal, pre: "my-component")
+//                div.animationComposition(.accumulate, pre: "my-component")
 //            },
 //            as: .html
 //        ) {
@@ -218,12 +192,12 @@
 //            <html lang="en">
 //              <head>
 //                <style>
-//            my-component .animation-direction-sODZv0{animation-direction:normal}
+//            my-component .animation-composition-JmjCCd{animation-composition:accumulate}
 //
 //                </style>
 //              </head>
 //              <body>
-//            <div class="animation-direction-sODZv0">
+//            <div class="animation-composition-JmjCCd">
 //            </div>
 //              </body>
 //            </html>

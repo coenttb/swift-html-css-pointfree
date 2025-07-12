@@ -1,5 +1,5 @@
 //
-//  AnchorName Tests.swift
+//  AspectRatio Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "AnchorName Tests",
+    "AspectRatio Tests",
     .snapshots(record: nil)
 )
-struct AnchorNameTests {
-    @Test("HTML element renders with anchor-name string value properly")
-    func htmlElementWithAnchorNameStringRendersCorrectly() {
+struct AspectRatioTests {
+    @Test("HTML element renders with aspect-ratio properly")
+    func htmlElementWithAspectRatioRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName("section-header")
+                div.aspectRatio(.ratio(16, 9))
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct AnchorNameTests {
             <html lang="en">
               <head>
                 <style>
-            .anchor-name-rqwxL3{anchor-name:--section-header}
+            .aspect-ratio-10XyA2{aspect-ratio:16 / 9}
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-rqwxL3">
+            <div class="aspect-ratio-10XyA2">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct AnchorNameTests {
         }
     }
     
-    @Test("HTML element renders with anchor-name none value")
-    func htmlElementWithAnchorNameNoneRendersCorrectly() {
+    @Test("HTML element renders with different aspect-ratio value properly")
+    func htmlElementWithDifferentAspectRatioRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName(AnchorName.none)
+                div.aspectRatio(.ratio(4, 3))
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct AnchorNameTests {
             <html lang="en">
               <head>
                 <style>
-            .anchor-name-Wl0y44{anchor-name:none}
+            .aspect-ratio-kDJuQ2{aspect-ratio:4 / 3}
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-Wl0y44">
+            <div class="aspect-ratio-kDJuQ2">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct AnchorNameTests {
         }
     }
     
-    @Test("HTML anchor-name with global value renders properly")
-    func htmlAnchorNameWithGlobalValueRendersCorrectly() {
+    @Test("HTML element renders with auto aspect-ratio properly")
+    func htmlElementWithAutoAspectRatioRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName(.inherit)
+                div.aspectRatio(.auto)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct AnchorNameTests {
             <html lang="en">
               <head>
                 <style>
-            .anchor-name-trEDH1{anchor-name:inherit}
+            .aspect-ratio-u7yQf2{aspect-ratio:auto}
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-trEDH1">
+            <div class="aspect-ratio-u7yQf2">
             </div>
               </body>
             </html>
@@ -99,11 +99,37 @@ struct AnchorNameTests {
         }
     }
     
-    @Test("HTML anchor-name with media query renders properly")
-    func htmlAnchorNameWithMediaQueryRendersCorrectly() {
+    @Test("HTML aspect-ratio with global value renders properly")
+    func htmlAspectRatioWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName("section-intro", media: .print)
+                div.aspectRatio(.inherit)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .aspect-ratio-trEDH1{aspect-ratio:inherit}
+
+                </style>
+              </head>
+              <body>
+            <div class="aspect-ratio-trEDH1">
+            </div>
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test("HTML aspect-ratio with media query renders properly")
+    func htmlAspectRatioWithMediaQueryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.aspectRatio(.ratio(16, 9), media: .print)
             },
             as: .html
         ) {
@@ -113,13 +139,13 @@ struct AnchorNameTests {
               <head>
                 <style>
             @media print{
-              .anchor-name-KbwKJ1{anchor-name:--section-intro}
+              .aspect-ratio-WCwgo4{aspect-ratio:16 / 9}
             }
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-KbwKJ1">
+            <div class="aspect-ratio-WCwgo4">
             </div>
               </body>
             </html>
@@ -127,11 +153,11 @@ struct AnchorNameTests {
         }
     }
     
-    @Test("HTML anchor-name with pseudo-class renders properly")
-    func htmlAnchorNameWithPseudoClassRendersCorrectly() {
+    @Test("HTML aspect-ratio with pseudo-class renders properly")
+    func htmlAspectRatioWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName("heading", pseudo: .hover)
+                div.aspectRatio(.ratio(16, 9), pseudo: .hover)
             },
             as: .html
         ) {
@@ -140,12 +166,12 @@ struct AnchorNameTests {
             <html lang="en">
               <head>
                 <style>
-            .anchor-name-0ysQc1:hover{anchor-name:--heading}
+            .aspect-ratio-eQOer3:hover{aspect-ratio:16 / 9}
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-0ysQc1">
+            <div class="aspect-ratio-eQOer3">
             </div>
               </body>
             </html>
@@ -153,11 +179,11 @@ struct AnchorNameTests {
         }
     }
     
-    @Test("HTML anchor-name with prefix renders properly")
-    func htmlAnchorNameWithPrefixRendersCorrectly() {
+    @Test("HTML aspect-ratio with prefix renders properly")
+    func htmlAspectRatioWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName("footer", pre: "my-component")
+                div.aspectRatio(.ratio(16, 9), pre: "my-component")
             },
             as: .html
         ) {
@@ -166,12 +192,12 @@ struct AnchorNameTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .anchor-name-xBtcq3{anchor-name:--footer}
+            my-component .aspect-ratio-Dmiak4{aspect-ratio:16 / 9}
 
                 </style>
               </head>
               <body>
-            <div class="anchor-name-xBtcq3">
+            <div class="aspect-ratio-Dmiak4">
             </div>
               </body>
             </html>

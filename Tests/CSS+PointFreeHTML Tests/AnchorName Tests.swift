@@ -1,5 +1,5 @@
 //
-//  BackfaceVisibility Tests.swift
+//  AnchorName Tests.swift
 //  swift-html
 //
 //  Created by Claude AI on 11/04/2025.
@@ -7,7 +7,7 @@
 
 import Foundation
 import Testing
-import HTML_CSS
+import CSS_PointFreeHTML
 import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
@@ -17,15 +17,15 @@ import InlineSnapshotTesting
 import HTMLTestSupport
 
 @Suite(
-    "BackfaceVisibility Tests",
+    "AnchorName Tests",
     .snapshots(record: nil)
 )
-struct BackfaceVisibilityTests {
-    @Test("HTML element renders with backface-visibility hidden properly")
-    func htmlElementWithBackfaceVisibilityHiddenRendersCorrectly() {
+struct AnchorNameTests {
+    @Test("HTML element renders with anchor-name string value properly")
+    func htmlElementWithAnchorNameStringRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.hidden)
+                div.anchorName("section-header")
             },
             as: .html
         ) {
@@ -34,12 +34,12 @@ struct BackfaceVisibilityTests {
             <html lang="en">
               <head>
                 <style>
-            .backface-visibility-PhNC81{backface-visibility:hidden}
+            .anchor-name-rqwxL3{anchor-name:--section-header}
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-PhNC81">
+            <div class="anchor-name-rqwxL3">
             </div>
               </body>
             </html>
@@ -47,11 +47,11 @@ struct BackfaceVisibilityTests {
         }
     }
     
-    @Test("HTML element renders with backface-visibility visible properly")
-    func htmlElementWithBackfaceVisibilityVisibleRendersCorrectly() {
+    @Test("HTML element renders with anchor-name none value")
+    func htmlElementWithAnchorNameNoneRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.visible)
+                div.anchorName(AnchorName.none)
             },
             as: .html
         ) {
@@ -60,12 +60,12 @@ struct BackfaceVisibilityTests {
             <html lang="en">
               <head>
                 <style>
-            .backface-visibility-wd16m4{backface-visibility:visible}
+            .anchor-name-Wl0y44{anchor-name:none}
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-wd16m4">
+            <div class="anchor-name-Wl0y44">
             </div>
               </body>
             </html>
@@ -73,11 +73,11 @@ struct BackfaceVisibilityTests {
         }
     }
     
-    @Test("HTML backface-visibility with global value renders properly")
-    func htmlBackfaceVisibilityWithGlobalValueRendersCorrectly() {
+    @Test("HTML anchor-name with global value renders properly")
+    func htmlAnchorNameWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.inherit)
+                div.anchorName(.inherit)
             },
             as: .html
         ) {
@@ -86,12 +86,12 @@ struct BackfaceVisibilityTests {
             <html lang="en">
               <head>
                 <style>
-            .backface-visibility-trEDH1{backface-visibility:inherit}
+            .anchor-name-trEDH1{anchor-name:inherit}
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-trEDH1">
+            <div class="anchor-name-trEDH1">
             </div>
               </body>
             </html>
@@ -99,11 +99,11 @@ struct BackfaceVisibilityTests {
         }
     }
     
-    @Test("HTML backface-visibility with media query renders properly")
-    func htmlBackfaceVisibilityWithMediaQueryRendersCorrectly() {
+    @Test("HTML anchor-name with media query renders properly")
+    func htmlAnchorNameWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.hidden, media: .print)
+                div.anchorName("section-intro", media: .print)
             },
             as: .html
         ) {
@@ -113,13 +113,13 @@ struct BackfaceVisibilityTests {
               <head>
                 <style>
             @media print{
-              .backface-visibility-G9iVz2{backface-visibility:hidden}
+              .anchor-name-KbwKJ1{anchor-name:--section-intro}
             }
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-G9iVz2">
+            <div class="anchor-name-KbwKJ1">
             </div>
               </body>
             </html>
@@ -127,11 +127,11 @@ struct BackfaceVisibilityTests {
         }
     }
     
-    @Test("HTML backface-visibility with pseudo-class renders properly")
-    func htmlBackfaceVisibilityWithPseudoClassRendersCorrectly() {
+    @Test("HTML anchor-name with pseudo-class renders properly")
+    func htmlAnchorNameWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.hidden, pseudo: .hover)
+                div.anchorName("heading", pseudo: .hover)
             },
             as: .html
         ) {
@@ -140,12 +140,12 @@ struct BackfaceVisibilityTests {
             <html lang="en">
               <head>
                 <style>
-            .backface-visibility-dLjCw:hover{backface-visibility:hidden}
+            .anchor-name-0ysQc1:hover{anchor-name:--heading}
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-dLjCw">
+            <div class="anchor-name-0ysQc1">
             </div>
               </body>
             </html>
@@ -153,11 +153,11 @@ struct BackfaceVisibilityTests {
         }
     }
     
-    @Test("HTML backface-visibility with prefix renders properly")
-    func htmlBackfaceVisibilityWithPrefixRendersCorrectly() {
+    @Test("HTML anchor-name with prefix renders properly")
+    func htmlAnchorNameWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.hidden, pre: "my-component")
+                div.anchorName("footer", pre: "my-component")
             },
             as: .html
         ) {
@@ -166,12 +166,12 @@ struct BackfaceVisibilityTests {
             <html lang="en">
               <head>
                 <style>
-            my-component .backface-visibility-iXV9h3{backface-visibility:hidden}
+            my-component .anchor-name-xBtcq3{anchor-name:--footer}
 
                 </style>
               </head>
               <body>
-            <div class="backface-visibility-iXV9h3">
+            <div class="anchor-name-xBtcq3">
             </div>
               </body>
             </html>
