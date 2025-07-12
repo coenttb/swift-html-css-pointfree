@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension dialog {
+extension HTMLElementTypes.Dialog {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {

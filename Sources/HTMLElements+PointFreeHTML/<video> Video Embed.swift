@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension video {
+extension HTMLElementTypes.Video {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {

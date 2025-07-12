@@ -10,9 +10,9 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension Input: @retroactive HTML {}
+extension HTMLElementTypes.Input: @retroactive HTML {}
 
-extension Input: HTMLVoidElement {
+extension HTMLElementTypes.Input: HTMLVoidElement {
     @HTMLBuilder
     public var body: some HTML {
         let input = HTMLElement(tag: Self.tag) { HTMLEmpty() }

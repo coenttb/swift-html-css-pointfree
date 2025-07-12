@@ -8,7 +8,7 @@
 import Foundation
 import HTMLElementTypes
 
-extension wbr {
+extension HTMLElementTypes.LineBreakOpportunity {
     public func callAsFunction() -> some HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
     }

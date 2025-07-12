@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension Image: PointFreeHTML.HTML {
+extension HTMLElementTypes.Image: PointFreeHTML.HTML {
     public var body: some HTML {
         HTMLElement(tag: Self.tag)
             .src(self.src)

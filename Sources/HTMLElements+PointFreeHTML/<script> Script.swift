@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension script {
+extension HTMLElementTypes.Script {
     public func callAsFunction(
         _ script: () -> String = { "" }
     ) -> some HTML {
@@ -50,9 +50,9 @@ extension script {
     }
 }
 
-extension script: @retroactive HTML {
+extension HTMLElementTypes.Script: @retroactive HTML {
     public var body: some HTML {
-        script(
+        Script(
             src: self.src,
             async: self.async,
             defer: self.defer,
@@ -70,8 +70,3 @@ extension script: @retroactive HTML {
         }
     }
 }
-
-@MainActor let s1: some HTML = script(src: nil)
-@MainActor let s2: some HTML = script(src: .init(""))
-@MainActor let s3: some HTML = script { "" }
-@MainActor let s4: some HTML = script() { "" }

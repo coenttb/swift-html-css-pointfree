@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension base {
+extension HTMLElementTypes.Base {
     @HTMLBuilder
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML

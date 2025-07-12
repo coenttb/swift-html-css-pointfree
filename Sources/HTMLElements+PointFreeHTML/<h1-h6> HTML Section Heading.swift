@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension h1 {
+extension HTMLElementTypes.H1 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {
@@ -17,7 +17,7 @@ extension h1 {
     }
 }
 
-extension h2 {
+extension HTMLElementTypes.H2 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {
@@ -25,7 +25,7 @@ extension h2 {
     }
 }
 
-extension h3 {
+extension HTMLElementTypes.H3 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {
@@ -33,7 +33,7 @@ extension h3 {
     }
 }
 
-extension h4 {
+extension HTMLElementTypes.H4 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {
@@ -41,7 +41,7 @@ extension h4 {
     }
 }
 
-extension h5 {
+extension HTMLElementTypes.H5 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {
@@ -49,7 +49,7 @@ extension h5 {
     }
 }
 
-extension h6 {
+extension HTMLElementTypes.H6 {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {

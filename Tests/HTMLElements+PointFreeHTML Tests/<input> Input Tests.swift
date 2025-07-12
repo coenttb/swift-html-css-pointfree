@@ -145,7 +145,7 @@ struct InputTypeTests {
     @Test("Email input renders correctly")
     func emailInputRendersCorrectly() {
         assertInlineSnapshot(
-            of: input(
+            of: Input(
                 name: "email",
                 disabled: nil,
                 form: nil,
@@ -530,7 +530,7 @@ struct InputTypeTests {
     @Test("Tel input renders correctly")
     func telInputRendersCorrectly() {
         assertInlineSnapshot(
-            of: input(
+            of: Input(
                 name: "phone",
                 type: .tel(
                     .init(

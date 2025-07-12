@@ -8,9 +8,9 @@
 import Foundation
 import HTMLElementTypes
 
-extension BR: @retroactive HTML {}
+extension HTMLElementTypes.BR: @retroactive HTML {}
 
-extension BR: HTMLVoidElement {
+extension HTMLElementTypes.BR: HTMLVoidElement {
     @HTMLBuilder
     public var body: some HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }

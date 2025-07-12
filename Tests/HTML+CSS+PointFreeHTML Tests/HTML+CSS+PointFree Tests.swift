@@ -18,12 +18,18 @@ import HTMLTestSupport
     .snapshots(record: nil)
 )
 struct Tests {
-    @Test("Labeled Input renders correctly")
-    func LabeledInput() {
+    @Test("Labeled Input renders correctly in a div")
+    func labeledInputInDiv() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                label(for: "test") { input.text(name: "test") }
-                    .color(Color.red)
+                ContentDivision {
+                    Label {
+                        "label-text"
+                        Input.text
+                            .color(.red)
+                    }
+                        .color(.red)
+                }
             },
             as: .html
         ) {
@@ -36,7 +42,9 @@ struct Tests {
 
                 </style>
               </head>
-              <body><label class="color-dMYaj4" for="test"><input type="text" name="test"></label>
+              <body>
+            <div><label class="color-dMYaj4">label-text<input class="color-dMYaj4" type="text"></label>
+            </div>
               </body>
             </html>
             """
@@ -47,14 +55,14 @@ struct Tests {
     func general1() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div {
-                    h1 { "Type-safe HTML" }
+                ContentDivision {
+                    H1 { "Type-safe HTML" }
                       .color(light: .blue, dark: .red)
                       .fontSize(.px(24))
-                    p { "With type-safe CSS!" }
+                    Paragraph { "With type-safe CSS!" }
                         .marginTop(.px(10))
                     
-                    video(src: "/public/video/example.mp4", autoplay: true) {}
+                    Video(src: "/public/video/example.mp4", autoplay: true) {}
                 }
             },
             as: .html
@@ -67,15 +75,15 @@ struct Tests {
             .font-size-t6pNK3{font-size:24px}
             .color-jiDhg4{color:blue}
             .margin-top-Fqw6a1{margin-top:10px}
-            @media (prefers-color-scheme: dark), print{
-              .color-ev4qN1{color:red}
+            @media (prefers-color-scheme: dark){
+              .color-hhm4d1{color:red}
             }
 
                 </style>
               </head>
               <body>
             <div>
-              <h1 class="font-size-t6pNK3 color-jiDhg4 color-ev4qN1">Type-safe HTML
+              <h1 class="font-size-t6pNK3 color-jiDhg4 color-hhm4d1">Type-safe HTML
               </h1>
               <p class="margin-top-Fqw6a1">With type-safe CSS!
               </p>
@@ -92,7 +100,7 @@ struct Tests {
     func general2() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                input.button(name: "name", value: "value", disabled: false, form: nil)
+                Input.button(name: "name", value: "value", disabled: false, form: nil)
             },
             as: .html
         ) {

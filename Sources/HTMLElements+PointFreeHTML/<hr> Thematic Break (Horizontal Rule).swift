@@ -10,8 +10,8 @@ import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
 
-extension hr: @retroactive HTML {}
-extension hr: HTMLVoidElement {
+extension HTMLElementTypes.ThematicBreak: @retroactive HTML {}
+extension HTMLElementTypes.ThematicBreak: HTMLVoidElement {
     @HTMLBuilder
     public var body: some HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }

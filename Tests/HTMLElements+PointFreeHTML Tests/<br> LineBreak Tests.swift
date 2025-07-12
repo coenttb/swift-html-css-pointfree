@@ -6,13 +6,13 @@ import HTMLTestSupport
 
 @Suite(
     "LineBreak Element Tests",
-    .snapshots(record: .failed),
+    .snapshots(record: nil),
 )
 struct LineBreakTests {
     @Test("Basic br renders correctly")
     func basicLineBreakRendersCorrectly() {
         assertInlineSnapshot(
-            of: br(),
+            of: BR(),
             as: .html
         ) {
             """
@@ -25,8 +25,8 @@ struct LineBreakTests {
     func brWithForAttributeRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div {
-                    br()
+                ContentDivision {
+                    BR()
                 }
             },
             as: .html

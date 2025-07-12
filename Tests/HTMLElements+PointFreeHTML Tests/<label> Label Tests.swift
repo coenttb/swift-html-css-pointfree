@@ -12,7 +12,7 @@ struct LabelTests {
     @Test("Basic label renders correctly")
     func basicLabelRendersCorrectly() {
         assertInlineSnapshot(
-            of: label {
+            of: Label {
                 "Username"
             },
             as: .html
@@ -26,9 +26,9 @@ struct LabelTests {
 @Test("Label with 'for' attribute renders correctly")
 func labelWithForAttributeRendersCorrectly() {
     assertInlineSnapshot(
-        of: label(for: "username") {
+        of: Label(for: "username") {
             "Enter your username:"
-            input(name: "username", type: .text(.init()))
+            Input(name: "username", type: .text(.init()))
         },
         as: .html
     ) {

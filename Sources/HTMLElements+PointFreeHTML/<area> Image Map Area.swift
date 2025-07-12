@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension area {
+extension HTMLElementTypes.Area {
     public func callAsFunction() -> some HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
 //        NEED TO FIX AREA domain model

@@ -222,14 +222,14 @@ struct ColorTests {
               <head>
                 <style>
             .color-bQ3ZC1{color:#FF0000}
-            @media (prefers-color-scheme: dark), print{
-              .color-Dh1qJ1{color:#00FF00}
+            @media (prefers-color-scheme: dark){
+              .color-mvQv5{color:#00FF00}
             }
 
                 </style>
               </head>
               <body>
-            <div class="color-bQ3ZC1 color-Dh1qJ1">
+            <div class="color-bQ3ZC1 color-mvQv5">
             </div>
               </body>
             </html>
