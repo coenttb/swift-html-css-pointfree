@@ -8,4 +8,3 @@
 public protocol Attribute: Sendable, Equatable {
     static var attribute: String { get }
 }
-

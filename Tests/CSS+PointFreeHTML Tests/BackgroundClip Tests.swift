@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackgroundClip Tests",
@@ -46,7 +46,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-clip padding-box properly")
     func htmlElementWithBackgroundClipPaddingBoxRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-clip content-box properly")
     func htmlElementWithBackgroundClipContentBoxRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-clip text properly")
     func htmlElementWithBackgroundClipTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML background-clip with global value renders properly")
     func htmlBackgroundClipWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -150,7 +150,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML background-clip with media query renders properly")
     func htmlBackgroundClipWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML background-clip with pseudo-class renders properly")
     func htmlBackgroundClipWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -204,7 +204,7 @@ struct BackgroundClipTests {
             """
         }
     }
-    
+
     @Test("HTML background-clip with prefix renders properly")
     func htmlBackgroundClipWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

@@ -5,11 +5,11 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     /// Sets the rel attribute on an element
     @discardableResult
     package func rel(
@@ -19,7 +19,7 @@ extension HTML {
     }
 }
 
-//extension HTML {
+// extension HTML {
 //    /// Sets the rel attribute with multiple link type values
 //    @discardableResult
 //    package func rel(
@@ -27,4 +27,4 @@ extension HTML {
 //    ) -> _HTMLAttributes<Self> {
 //        self.rel(Rel(values))
 //    }
-//}
+// }

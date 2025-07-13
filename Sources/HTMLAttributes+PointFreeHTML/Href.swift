@@ -5,8 +5,8 @@
 //  Created by Coen ten Thije Boonkkamp on 04/04/2025.
 //
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Add an href attribute to specify a hyperlink destination
@@ -26,7 +26,7 @@ extension HTML {
 //    }
 }
 //
-//extension HTML {
+// extension HTML {
 //    /// Create an email link
 //    @discardableResult
 //    public func emailLink(
@@ -61,4 +61,4 @@ extension HTML {
 //    ) -> _HTMLAttributes<Self> {
 //        self.href(Href.anchor(fragmentId))
 //    }
-//}
+// }

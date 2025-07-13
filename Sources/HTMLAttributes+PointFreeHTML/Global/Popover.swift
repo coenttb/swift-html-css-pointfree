@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the popover attribute as a boolean (equivalent to popover="auto")
@@ -15,7 +15,7 @@ extension HTML {
     public func popover() -> _HTMLAttributes<Self> {
         self.attribute(Popover.attribute, "")
     }
-    
+
     /// Sets the popover attribute with a specific type
     @discardableResult
     public func popover(
@@ -23,7 +23,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Popover.attribute, type.description)
     }
-    
+
     /// Sets the popover attribute with a value
     @discardableResult
     public func popover(
@@ -41,7 +41,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(PopoverTarget.attribute, id)
     }
-    
+
     /// Sets the popovertarget attribute using a PopoverTarget struct
     @discardableResult
     public func popovertarget(

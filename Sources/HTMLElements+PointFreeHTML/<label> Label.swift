@@ -18,4 +18,3 @@ extension HTMLElementTypes.Label {
             .for(self.for)
     }
 }
-

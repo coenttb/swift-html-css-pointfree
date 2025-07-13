@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the tabindex attribute with an integer value
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Tabindex.attribute, String(value))
     }
-    
+
     /// Sets the tabindex attribute using a Tabindex struct
     @discardableResult
     public func tabindex(
@@ -25,13 +25,13 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Tabindex.attribute, attribute.description)
     }
-    
+
     /// Makes the element not focusable via keyboard but focusable programmatically
     @discardableResult
     public func notTabbable() -> _HTMLAttributes<Self> {
         self.tabindex(Tabindex.notTabbable)
     }
-    
+
     /// Makes the element focusable in the natural document order
     @discardableResult
     public func tabbableInDocumentOrder() -> _HTMLAttributes<Self> {

@@ -6,12 +6,11 @@
 //
 
 import Foundation
-import PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
 extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement {
     public func callAsFunction() -> PointFreeHTML.HTMLElement<HTMLEmpty> {
         .init(tag: Self.tag) { HTMLEmpty() }
     }
 }
-

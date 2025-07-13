@@ -13,27 +13,25 @@ extension HTMLElementTypes.Script {
     public func callAsFunction(
         _ script: () -> String = { "" }
     ) -> some HTML {
-        
+
         let script = script()
         var escaped = ""
         escaped.unicodeScalars.reserveCapacity(script.unicodeScalars.count)
-        
+
         for index in script.unicodeScalars.indices {
             let scalar = script.unicodeScalars[index]
             if scalar == "<",
                script.unicodeScalars[index...].starts(with: "<!--".unicodeScalars)
                 || script.unicodeScalars[index...].starts(with: "<script".unicodeScalars)
-                || script.unicodeScalars[index...].starts(with: "</script".unicodeScalars)
-            {
+                || script.unicodeScalars[index...].starts(with: "</script".unicodeScalars) {
                 escaped.unicodeScalars.append(contentsOf: #"\x3C"#.unicodeScalars)
             } else {
                 escaped.unicodeScalars.append(scalar)
             }
         }
-        
+
         return HTMLElement(tag: Self.tag) {
-            if script == "" { HTMLEmpty() }
-            else { HTMLRaw(escaped) }
+            if script == "" { HTMLEmpty() } else { HTMLRaw(escaped) }
         }
             .src(self.src)
             .`async`(self.`async`)

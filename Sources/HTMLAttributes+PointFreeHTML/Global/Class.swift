@@ -6,10 +6,10 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
-extension HTML {    
+extension HTML {
     @discardableResult
     public func `class`(
         _ value: Class?
@@ -18,8 +18,7 @@ extension HTML {
     }
 }
 
-
-//extension HTML {
+// extension HTML {
 //    @discardableResult
 //    public func `class`(
 //        _ value: [Class?]
@@ -33,4 +32,4 @@ extension HTML {
 //    ) -> _HTMLAttributes<Self> {
 //        self.attribute(Class.attribute, Class(value.compactMap{ $0 }.map(\.description)).description)
 //    }
-//}
+// }

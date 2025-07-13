@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackfaceVisibility Tests",
@@ -46,7 +46,7 @@ struct BackfaceVisibilityTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with backface-visibility visible properly")
     func htmlElementWithBackfaceVisibilityVisibleRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackfaceVisibilityTests {
             """
         }
     }
-    
+
     @Test("HTML backface-visibility with global value renders properly")
     func htmlBackfaceVisibilityWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackfaceVisibilityTests {
             """
         }
     }
-    
+
     @Test("HTML backface-visibility with media query renders properly")
     func htmlBackfaceVisibilityWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,7 +126,7 @@ struct BackfaceVisibilityTests {
             """
         }
     }
-    
+
     @Test("HTML backface-visibility with pseudo-class renders properly")
     func htmlBackfaceVisibilityWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct BackfaceVisibilityTests {
             """
         }
     }
-    
+
     @Test("HTML backface-visibility with prefix renders properly")
     func htmlBackfaceVisibilityWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

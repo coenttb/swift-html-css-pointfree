@@ -1,12 +1,12 @@
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "Media Tests",
@@ -40,13 +40,13 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with complex media query")
     func htmlElementRenderingWithComplexMediaQuery() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 div.backgroundColor(
-                    .blue, 
+                    .blue,
                     media: Media.screen
                         .and(.maxWidth(.px(500)))
                         .and(.prefersColorScheme(.dark))
@@ -73,7 +73,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with negated media query")
     func htmlElementRenderingWithNegatedMediaQuery() {
         assertInlineSnapshot(
@@ -101,7 +101,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with media OR query")
     func htmlElementRenderingWithMediaOrQuery() {
         assertInlineSnapshot(
@@ -129,7 +129,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with only operator")
     func htmlElementRenderingWithOnlyOperator() {
         assertInlineSnapshot(
@@ -157,7 +157,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with feature-only media query")
     func htmlElementRenderingWithFeatureOnlyMediaQuery() {
         assertInlineSnapshot(
@@ -185,7 +185,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with multiple properties in media query")
     func htmlElementRenderingWithMultiplePropertiesInMediaQuery() {
         assertInlineSnapshot(
@@ -221,7 +221,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with media query and pseudo-class")
     func htmlElementRenderingWithMediaQueryAndPseudoClass() {
         assertInlineSnapshot(
@@ -252,7 +252,7 @@ struct MediaTests {
             """
         }
     }
-    
+
     @Test("HTML element rendering with multiple media queries")
     func htmlElementRenderingWithMultipleMediaQueries() {
         assertInlineSnapshot(

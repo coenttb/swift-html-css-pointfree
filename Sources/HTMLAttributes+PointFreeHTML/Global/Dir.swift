@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the text direction for an HTML element

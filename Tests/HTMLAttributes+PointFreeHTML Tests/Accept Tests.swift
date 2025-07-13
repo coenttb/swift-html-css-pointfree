@@ -1,15 +1,15 @@
-//import Foundation
-//import Testing
-//import HTMLAttributes_PointFreeHTML
-//import PointFreeHTML
-//import InlineSnapshotTesting
-//import HTMLTestSupport
+// import Foundation
+// import Testing
+// import HTMLAttributes_PointFreeHTML
+// import PointFreeHTML
+// import InlineSnapshotTesting
+// import HTMLTestSupport
 //
-//@Suite(
+// @Suite(
 //    "Accept Attribute Tests",
 ////    .snapshots(record: .all)
-//)
-//struct AcceptTests {
+// )
+// struct AcceptTests {
 //    
 //    @Test("Input with accept attribute renders correctly")
 //    func inputWithAcceptAttributeRendersCorrectly() {
@@ -104,4 +104,4 @@
 //            """
 //        }
 //    }
-//}
+// }

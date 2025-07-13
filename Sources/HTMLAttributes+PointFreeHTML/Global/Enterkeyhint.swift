@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the Enter key label/action hint for virtual keyboards

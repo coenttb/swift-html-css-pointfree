@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "AspectRatio Tests",
@@ -46,7 +46,7 @@ struct AspectRatioTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with different aspect-ratio value properly")
     func htmlElementWithDifferentAspectRatioRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct AspectRatioTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with auto aspect-ratio properly")
     func htmlElementWithAutoAspectRatioRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct AspectRatioTests {
             """
         }
     }
-    
+
     @Test("HTML aspect-ratio with global value renders properly")
     func htmlAspectRatioWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct AspectRatioTests {
             """
         }
     }
-    
+
     @Test("HTML aspect-ratio with media query renders properly")
     func htmlAspectRatioWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct AspectRatioTests {
             """
         }
     }
-    
+
     @Test("HTML aspect-ratio with pseudo-class renders properly")
     func htmlAspectRatioWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct AspectRatioTests {
             """
         }
     }
-    
+
     @Test("HTML aspect-ratio with prefix renders properly")
     func htmlAspectRatioWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

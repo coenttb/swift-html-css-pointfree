@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackgroundColor Tests",
@@ -46,7 +46,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-color hex color properly")
     func htmlElementWithBackgroundColorHexRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-color rgb color properly")
     func htmlElementWithBackgroundColorRgbRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-color rgba color properly")
     func htmlElementWithBackgroundColorRgbaRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-color transparent properly")
     func htmlElementWithBackgroundColorTransparentRendersCorrectly() {
         assertInlineSnapshot(
@@ -150,7 +150,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML background-color with global value renders properly")
     func htmlBackgroundColorWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -176,7 +176,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML background-color with media query renders properly")
     func htmlBackgroundColorWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -204,7 +204,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML background-color with pseudo-class renders properly")
     func htmlBackgroundColorWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -230,7 +230,7 @@ struct BackgroundColorTests {
             """
         }
     }
-    
+
     @Test("HTML background-color with prefix renders properly")
     func htmlBackgroundColorWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

@@ -1,15 +1,15 @@
-//import Foundation
-//import Testing
-//import HTMLAttributes_PointFreeHTML
-//import PointFreeHTML
-//import InlineSnapshotTesting
-//import HTMLTestSupport
+// import Foundation
+// import Testing
+// import HTMLAttributes_PointFreeHTML
+// import PointFreeHTML
+// import InlineSnapshotTesting
+// import HTMLTestSupport
 //
-//@Suite(
+// @Suite(
 //    "Target Attribute Tests",
 ////    .snapshots(record: .all)
-//)
-//struct TargetTests {
+// )
+// struct TargetTests {
 //    @Test("Link with target renders correctly")
 //    func linkWithTargetRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -181,4 +181,4 @@
 //            """
 //        }
 //    }
-//}
+// }

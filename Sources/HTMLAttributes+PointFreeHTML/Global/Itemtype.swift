@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the itemtype attribute with a vocabulary URL
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Itemtype.attribute, value)
     }
-    
+
     /// Sets the itemtype attribute with multiple vocabulary URLs
     @discardableResult
     public func itemtype(
@@ -25,7 +25,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Itemtype.attribute, values.joined(separator: " "))
     }
-    
+
     /// Sets the itemtype attribute with multiple vocabulary URLs as variadic parameters
     @discardableResult
     public func itemtype(
@@ -33,7 +33,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.itemtype(values)
     }
-    
+
     /// Sets the itemtype attribute using an Itemtype struct
     @discardableResult
     public func itemtype(
@@ -41,7 +41,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Itemtype.attribute, attribute.description)
     }
-    
+
     /// Sets the itemtype attribute with a schema.org type
     @discardableResult
     public func itemtype(

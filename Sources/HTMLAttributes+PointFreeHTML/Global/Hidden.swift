@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the hidden attribute with a specific value
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Hidden.attribute)
     }
-    
+
     /// Sets the hidden attribute without a value (equivalent to hidden="")
     @discardableResult
     public func hidden() -> _HTMLAttributes<Self> {

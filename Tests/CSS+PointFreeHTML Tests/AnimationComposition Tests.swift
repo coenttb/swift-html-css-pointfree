@@ -5,22 +5,22 @@
 ////  Created by Claude AI on 11/04/2025.
 ////
 //
-//import Foundation
-//import Testing
-//import CSS_PointFreeHTML
-//import PointFreeHTML
-//import CSSPropertyTypes
-//import CSSTypeTypes
-//import Dependencies
-//import DependenciesTestSupport
-//import InlineSnapshotTesting
-//import HTMLTestSupport
+// import Foundation
+// import Testing
+// import CSS_PointFreeHTML
+// import PointFreeHTML
+// import CSSPropertyTypes
+// import CSSTypeTypes
+// import Dependencies
+// import DependenciesTestSupport
+// import InlineSnapshotTesting
+// import HTMLTestSupport
 //
-//@Suite(
+// @Suite(
 //    "AnimationComposition Tests",
 //    .snapshots(record: nil)
-//)
-//struct AnimationCompositionTests {
+// )
+// struct AnimationCompositionTests {
 //    @Test("HTML element renders with animation-composition replace properly")
 //    func htmlElementWithAnimationCompositionReplaceRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -204,4 +204,4 @@
 //            """
 //        }
 //    }
-//}
+// }

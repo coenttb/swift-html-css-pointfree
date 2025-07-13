@@ -64,14 +64,14 @@ extension HTML {
 
 extension CSSPropertyTypes.Color {
     public enum WithDarkMode: Sendable, Hashable, GlobalConvertible, ColorConvertible {
-        
+
         case darkMode(CSSPropertyTypes.Color.WithDarkMode.Color)
         case global(CSSTypeTypes.Global)
-        
+
         public struct Color: Sendable, Hashable {
             public let light: CSSTypeTypes.Color
             public let dark: CSSTypeTypes.Color
-            
+
             public init(light: CSSTypeTypes.Color, dark: CSSTypeTypes.Color? = nil) {
                 self.light = light
                 if let dark = dark {
@@ -81,11 +81,11 @@ extension CSSPropertyTypes.Color {
                 }
             }
         }
-        
+
         public static func color(_ color: CSSTypeTypes.Color) -> CSSPropertyTypes.Color.WithDarkMode {
             return .init(color)
         }
-        
+
         public static func color(_ color: CSSPropertyTypes.Color.WithDarkMode.Color) -> Self {
             return .darkMode(color)
         }
@@ -93,7 +93,7 @@ extension CSSPropertyTypes.Color {
 }
 
 extension CSSPropertyTypes.Color.WithDarkMode {
-    public init(_ color: CSSPropertyTypes.Color){
+    public init(_ color: CSSPropertyTypes.Color) {
         switch color {
         case .global(let global): self = .global(global)
         case .color(let color): self = .init(color)
@@ -102,7 +102,7 @@ extension CSSPropertyTypes.Color.WithDarkMode {
 }
 
 extension CSSPropertyTypes.Color.WithDarkMode {
-    public init(_ color: CSSTypeTypes.Color){
+    public init(_ color: CSSTypeTypes.Color) {
         self = .darkMode(.init(light: color))
     }
 }
@@ -130,11 +130,11 @@ extension CSSPropertyTypes.Color.WithDarkMode.Color {
             dark: transform(dark)
         )
     }
-    
+
     public func flatMap(_ transform: (CSSTypeTypes.Color) -> CSSPropertyTypes.Color.WithDarkMode.Color) -> Self {
         let lightTransformed = transform(light)
         let darkTransformed = transform(dark)
-        
+
         return .init(
             light: lightTransformed.light,
             dark: darkTransformed.dark
@@ -159,7 +159,7 @@ extension CSSPropertyTypes.Color.WithDarkMode.Color {
     public func darker(by percentage: Double = 0.2) -> Self {
         self.map { $0.darker(by: percentage) }
     }
-    
+
     public func lighter(by percentage: Double = 0.2) -> Self {
         self.map { $0.lighter(by: percentage) }
     }

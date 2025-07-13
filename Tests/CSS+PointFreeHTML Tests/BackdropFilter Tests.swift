@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackdropFilter Tests",
@@ -46,7 +46,7 @@ struct BackdropFilterTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with backdrop-filter brightness properly")
     func htmlElementWithBackdropFilterBrightnessRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackdropFilterTests {
             """
         }
     }
-    
+
 //    @Test("HTML element renders with multiple backdrop-filters properly")
 //    func htmlElementWithMultipleBackdropFiltersRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackdropFilterTests {
 //            """
 //        }
 //    }
-    
+
     @Test("HTML backdrop-filter with none value renders properly")
     func htmlBackdropFilterWithNoneValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackdropFilterTests {
             """
         }
     }
-    
+
     @Test("HTML backdrop-filter with global value renders properly")
     func htmlBackdropFilterWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -150,7 +150,7 @@ struct BackdropFilterTests {
             """
         }
     }
-    
+
     @Test("HTML backdrop-filter with media query renders properly")
     func htmlBackdropFilterWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct BackdropFilterTests {
             """
         }
     }
-    
+
     @Test("HTML backdrop-filter with pseudo-class renders properly")
     func htmlBackdropFilterWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -204,7 +204,7 @@ struct BackdropFilterTests {
             """
         }
     }
-    
+
     @Test("HTML backdrop-filter with prefix renders properly")
     func htmlBackdropFilterWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

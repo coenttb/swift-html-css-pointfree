@@ -5,24 +5,24 @@
 ////  Created by Claude AI on 11/04/2025.
 ////
 //
-//import Foundation
-//import Testing
-//import CSS_PointFreeHTML
-//import PointFreeHTML
-//import CSSPropertyTypes
-//import CSSTypeTypes
-//import Dependencies
-//import DependenciesTestSupport
-//import InlineSnapshotTesting
-//import HTMLTestSupport
+// import Foundation
+// import Testing
+// import CSS_PointFreeHTML
+// import PointFreeHTML
+// import CSSPropertyTypes
+// import CSSTypeTypes
+// import Dependencies
+// import DependenciesTestSupport
+// import InlineSnapshotTesting
+// import HTMLTestSupport
 //
-//"3s ease-in 1s infinite reverse both running slidein"
+// "3s ease-in 1s infinite reverse both running slidein"
 //
-//@Suite(
+// @Suite(
 //    "Animation Tests",
 //    .snapshots(record: nil)
-//)
-//struct AnimationTests {
+// )
+// struct AnimationTests {
 //    @Test("HTML element renders with animation string value properly")
 //    func htmlElementWithAnimationStringRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -206,4 +206,4 @@
 //            """
 //        }
 //    }
-//}
+// }

@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "AlignContent Tests",
@@ -46,7 +46,7 @@ struct AlignContentTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with align-content flex-start value")
     func htmlElementWithAlignContentFlexStartRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct AlignContentTests {
             """
         }
     }
-    
+
     @Test("HTML align-content with global value renders properly")
     func htmlAlignContentWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct AlignContentTests {
             """
         }
     }
-    
+
     @Test("HTML align-content with media query renders properly")
     func htmlAlignContentWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,7 +126,7 @@ struct AlignContentTests {
             """
         }
     }
-    
+
     @Test("HTML align-content with pseudo-class renders properly")
     func htmlAlignContentWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct AlignContentTests {
             """
         }
     }
-    
+
     @Test("HTML align-content with prefix renders properly")
     func htmlAlignContentWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct AlignContentTests {
             """
         }
     }
-    
+
     @Test("HTML align-content with stretch value renders properly")
     func htmlAlignContentWithStretchValueRendersCorrectly() {
         assertInlineSnapshot(

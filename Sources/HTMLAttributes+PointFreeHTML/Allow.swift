@@ -5,11 +5,11 @@
 //  Created by Coen ten Thije Boonkkamp on 11/04/2025.
 //
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     /// Sets the allow attribute on an element
     @discardableResult
     package func allow(

@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the slot attribute with a slot name
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Slot.attribute, name)
     }
-    
+
     /// Sets the slot attribute using a Slot struct
     @discardableResult
     public func slot(

@@ -17,4 +17,3 @@ extension HTMLElementTypes.Image: PointFreeHTML.HTML {
             .attribute("loading", self.loading?.rawValue)
     }
 }
-

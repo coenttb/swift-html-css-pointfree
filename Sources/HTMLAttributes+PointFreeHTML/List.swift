@@ -5,11 +5,11 @@
 /// Created by Coen ten Thije Boonkkamp on 04/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     /// Sets the list attribute on an element
     @discardableResult
     package func list(

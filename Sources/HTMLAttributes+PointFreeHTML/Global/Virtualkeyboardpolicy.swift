@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the virtualkeyboardpolicy attribute with a policy value
@@ -17,13 +17,13 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Virtualkeyboardpolicy.attribute, policy.description)
     }
-    
+
     /// Sets the virtualkeyboardpolicy attribute to auto
     @discardableResult
     public func autoKeyboard() -> _HTMLAttributes<Self> {
         self.virtualkeyboardpolicy(.auto)
     }
-    
+
     /// Sets the virtualkeyboardpolicy attribute to manual
     @discardableResult
     public func manualKeyboard() -> _HTMLAttributes<Self> {

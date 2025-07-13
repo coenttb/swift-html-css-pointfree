@@ -9,7 +9,7 @@ import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-extension HTMLElementTypes.BidirectionalTextOverride{
+extension HTMLElementTypes.BidirectionalTextOverride {
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some HTML
     ) -> some HTML {

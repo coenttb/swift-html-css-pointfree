@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the itemprop attribute with a property name
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Itemprop.attribute, propertyName)
     }
-    
+
     /// Sets the itemprop attribute with multiple property names
     @discardableResult
     public func itemprop(
@@ -25,7 +25,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Itemprop.attribute, propertyNames.joined(separator: " "))
     }
-    
+
     /// Sets the itemprop attribute with multiple property names as variadic parameters
     @discardableResult
     public func itemprop(
@@ -33,7 +33,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.itemprop(propertyNames)
     }
-    
+
     /// Sets the itemprop attribute using an Itemprop struct
     @discardableResult
     public func itemprop(

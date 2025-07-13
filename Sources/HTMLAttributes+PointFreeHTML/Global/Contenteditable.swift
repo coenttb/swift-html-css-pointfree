@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     @discardableResult
@@ -16,7 +16,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Contenteditable.attribute, value.description)
     }
-    
+
     public var contenteditable: _HTMLAttributes<Self> {
         self.contenteditable(.true)
     }

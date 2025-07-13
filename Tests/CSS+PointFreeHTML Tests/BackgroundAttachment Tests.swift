@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackgroundAttachment Tests",
@@ -46,7 +46,7 @@ struct BackgroundAttachmentTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-attachment scroll properly")
     func htmlElementWithBackgroundAttachmentScrollRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackgroundAttachmentTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-attachment local properly")
     func htmlElementWithBackgroundAttachmentLocalRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackgroundAttachmentTests {
             """
         }
     }
-    
+
     @Test("HTML background-attachment with global value renders properly")
     func htmlBackgroundAttachmentWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundAttachmentTests {
             """
         }
     }
-    
+
     @Test("HTML background-attachment with media query renders properly")
     func htmlBackgroundAttachmentWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct BackgroundAttachmentTests {
             """
         }
     }
-    
+
     @Test("HTML background-attachment with pseudo-class renders properly")
     func htmlBackgroundAttachmentWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct BackgroundAttachmentTests {
             """
         }
     }
-    
+
     @Test("HTML background-attachment with prefix renders properly")
     func htmlBackgroundAttachmentWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

@@ -5,8 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Add an action attribute to specify the URL for form submission
@@ -18,7 +18,7 @@ extension HTML {
     }
 }
 
-//extension HTML {
+// extension HTML {
 //    /// Add an action attribute with a URL object
 //    @discardableResult
 //    public func action(
@@ -26,4 +26,4 @@ extension HTML {
 //    ) -> _HTMLAttributes<Self> {
 //        self.action(.init(url))
 //    }
-//}
+// }

@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the ID attribute for an HTML element
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Id.attribute, id)
     }
-    
+
     /// Sets the ID attribute using an Id struct
     @discardableResult
     public func id(

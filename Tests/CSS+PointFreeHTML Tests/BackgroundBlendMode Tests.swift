@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackgroundBlendMode Tests",
@@ -46,7 +46,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-blend-mode multiply properly")
     func htmlElementWithBackgroundBlendModeMultiplyRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-blend-mode screen properly")
     func htmlElementWithBackgroundBlendModeScreenRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-blend-mode overlay properly")
     func htmlElementWithBackgroundBlendModeOverlayRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML background-blend-mode with global value renders properly")
     func htmlBackgroundBlendModeWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -150,7 +150,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML background-blend-mode with media query renders properly")
     func htmlBackgroundBlendModeWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML background-blend-mode with pseudo-class renders properly")
     func htmlBackgroundBlendModeWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -204,7 +204,7 @@ struct BackgroundBlendModeTests {
             """
         }
     }
-    
+
     @Test("HTML background-blend-mode with prefix renders properly")
     func htmlBackgroundBlendModeWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

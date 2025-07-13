@@ -5,11 +5,11 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     /// Sets the sizes attribute on an image element
     @discardableResult
     package func sizes(

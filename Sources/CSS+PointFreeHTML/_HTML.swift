@@ -5,11 +5,11 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
+import CSSTypes
 import Foundation
 import PointFreeHTML
-import CSSTypes
 
-//extension HTML {
+// extension HTML {
 //    @discardableResult
 //    public func inlineStyle<PropertyElement: Property>(
 //        _ property: PropertyElement?,
@@ -19,9 +19,9 @@ import CSSTypes
 //    ) -> HTMLInlineStyle<Self> {
 //        self.inlineStyle(PropertyElement.property, property?.description, media: media, pre: pre, pseudo: pseudo)
 //    }
-//}
+// }
 //
-//extension HTML {
+// extension HTML {
 //    @discardableResult
 //    public func style<PropertyElement: Property>(
 //        _ property: PropertyElement?,
@@ -31,8 +31,7 @@ import CSSTypes
 //    ) -> HTMLInlineStyle<Self> {
 //        self.inlineStyle(property, media: media, pre: pre, pseudo: pseudo)
 //    }
-//}
-
+// }
 
 extension HTML {
     @discardableResult
@@ -60,7 +59,7 @@ extension HTML {
     }
 }
 
-//extension HTML {
+// extension HTML {
 //    @discardableResult
 //    public func style<PropertyElement: CSSPropertyTypes.Property>(
 //        _ property: PropertyElement?,
@@ -70,10 +69,10 @@ extension HTML {
 //    ) -> HTMLInlineStyle<Self> {
 //        self.inlineStyle(property, media: media, pre: pre, pseudo: pseudo)
 //    }
-//}
+// }
 
 extension MediaQuery {
-    package init(_ media: CSSAtRuleTypes.Media){
+    package init(_ media: CSSAtRuleTypes.Media) {
         self = .init(rawValue: media.rawValue)
     }
 }

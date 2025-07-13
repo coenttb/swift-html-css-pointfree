@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the nonce attribute using a Nonce struct
@@ -19,10 +19,10 @@ extension HTML {
     }
 }
 
-//extension HTML {
+// extension HTML {
 //    /// Sets the nonce attribute with a newly generated secure nonce
 //    @discardableResult
 //    public func nonce() -> _HTMLAttributes<Self> {
 //        self.nonce(Nonce.generate())
 //    }
-//}
+// }

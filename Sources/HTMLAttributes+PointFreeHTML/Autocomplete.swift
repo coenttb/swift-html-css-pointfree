@@ -5,11 +5,11 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     @discardableResult
     package func autocomplete(
         _ value: Autocomplete?

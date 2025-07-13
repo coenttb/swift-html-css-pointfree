@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     @discardableResult
@@ -18,7 +18,7 @@ extension HTML {
         let attribute = DataAttribute(name: name, value: value)
         return self.attribute(attribute.attributeName, attribute.description)
     }
-    
+
     @discardableResult
     public func data(
         _ value: DataAttribute?

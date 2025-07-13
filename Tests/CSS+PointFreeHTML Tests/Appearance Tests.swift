@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "Appearance Tests",
@@ -46,7 +46,7 @@ struct AppearanceTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with different appearance value properly")
     func htmlElementWithDifferentAppearanceRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct AppearanceTests {
             """
         }
     }
-    
+
     @Test("HTML appearance with global value renders properly")
     func htmlAppearanceWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct AppearanceTests {
             """
         }
     }
-    
+
     @Test("HTML appearance with media query renders properly")
     func htmlAppearanceWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,7 +126,7 @@ struct AppearanceTests {
             """
         }
     }
-    
+
     @Test("HTML appearance with pseudo-class renders properly")
     func htmlAppearanceWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct AppearanceTests {
             """
         }
     }
-    
+
     @Test("HTML appearance with prefix renders properly")
     func htmlAppearanceWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

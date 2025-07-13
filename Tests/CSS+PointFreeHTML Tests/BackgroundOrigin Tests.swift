@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackgroundOrigin Tests",
@@ -46,7 +46,7 @@ struct BackgroundOriginTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-origin padding-box properly")
     func htmlElementWithBackgroundOriginPaddingBoxRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackgroundOriginTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background-origin content-box properly")
     func htmlElementWithBackgroundOriginContentBoxRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackgroundOriginTests {
             """
         }
     }
-    
+
     @Test("HTML background-origin with global value renders properly")
     func htmlBackgroundOriginWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundOriginTests {
             """
         }
     }
-    
+
     @Test("HTML background-origin with media query renders properly")
     func htmlBackgroundOriginWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct BackgroundOriginTests {
             """
         }
     }
-    
+
     @Test("HTML background-origin with pseudo-class renders properly")
     func htmlBackgroundOriginWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct BackgroundOriginTests {
             """
         }
     }
-    
+
     @Test("HTML background-origin with prefix renders properly")
     func htmlBackgroundOriginWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

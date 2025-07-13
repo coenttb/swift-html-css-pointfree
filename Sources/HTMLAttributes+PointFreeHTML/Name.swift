@@ -5,8 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 04/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the name attribute on an element
@@ -17,7 +17,6 @@ extension HTML {
         self.attribute(Name.attribute, value?.description)
     }
 }
-
 
 extension HTML {
     /// Sets the name attribute on an element

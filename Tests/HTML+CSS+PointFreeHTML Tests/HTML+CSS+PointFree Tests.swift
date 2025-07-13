@@ -5,13 +5,13 @@
 //  Created by Coen ten Thije Boonkkamp on 10/04/2025.
 //
 
-import HTML_CSS_PointFreeHTML
-import Foundation
-import Testing
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
+import HTML_CSS_PointFreeHTML
 import HTMLTestSupport
+import InlineSnapshotTesting
+import Testing
 
 @Suite(
     "HTML+CSS+PointFreeHTML Tests",
@@ -50,7 +50,7 @@ struct Tests {
             """
         }
     }
-    
+
     @Test("General")
     func general1() {
         assertInlineSnapshot(
@@ -61,7 +61,7 @@ struct Tests {
                       .fontSize(.px(24))
                     Paragraph { "With type-safe CSS!" }
                         .marginTop(.px(10))
-                    
+
                     Video(src: "/public/video/example.mp4", autoplay: true) {}
                 }
             },
@@ -95,7 +95,7 @@ struct Tests {
             """
         }
     }
-    
+
     @Test("General2")
     func general2() {
         assertInlineSnapshot(
@@ -113,6 +113,38 @@ struct Tests {
                 </style>
               </head>
               <body><input value="value" type="button" name="name">
+              </body>
+            </html>
+            """
+        }
+    }
+    
+    @Test(
+        "General3",
+        .snapshots(record: .failed)
+    )
+    func general3() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                ContentDivision {}
+                    .padding(.rem(3), media: .desktop)
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            @media only screen and (min-width: 832px){
+              .padding-JCLrx{padding:3rem}
+            }
+
+                </style>
+              </head>
+              <body>
+            <div class="padding-JCLrx">
+            </div>
               </body>
             </html>
             """

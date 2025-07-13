@@ -19,7 +19,7 @@ extension HTMLElementTypes.Input: HTMLVoidElement {
             .name(name)
             .disabled(self.disabled)
             .attribute("type", self.type.label)
-        
+
         switch type {
         case .button(let button):
             input
@@ -200,7 +200,6 @@ extension HTMLElementTypes.Input: HTMLVoidElement {
         case .datetime:
             input
         }
-        
-        
+
     }
 }

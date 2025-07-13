@@ -5,18 +5,18 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     @discardableResult
     package func elementtiming(
         _ value: Elementtiming?
     ) -> _HTMLAttributes<Self> {
         self.attribute(Elementtiming.attribute, value?.description)
     }
-        
+
     /// Adds element timing with a categorized identifier
     @discardableResult
     package func elementtiming(

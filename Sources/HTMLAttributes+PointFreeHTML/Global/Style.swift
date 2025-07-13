@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the style attribute with CSS declarations as a string
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Style.attribute, css)
     }
-    
+
     /// Sets the style attribute with CSS declarations as key-value pairs
     @discardableResult
     public func style(
@@ -26,10 +26,10 @@ extension HTML {
         let formattedDeclarations = declarations.map { key, value in
             "\(key): \(value)"
         }.joined(separator: "; ")
-        
+
         return self.attribute(Style.attribute, formattedDeclarations)
     }
-    
+
     /// Sets the style attribute using a Style struct
     @discardableResult
     public func style(

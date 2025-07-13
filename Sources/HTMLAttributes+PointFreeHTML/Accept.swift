@@ -5,8 +5,8 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Add an accept attribute to specify which file types are allowed
@@ -24,7 +24,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.accept(Accept(fileTypes.compactMap { $0 }))
     }
-    
+
     /// Add an accept attribute with multiple file types
     @discardableResult
     package func accept(
@@ -33,4 +33,3 @@ extension HTML {
         self.accept(Accept(fileTypes.compactMap { $0 }))
     }
 }
-

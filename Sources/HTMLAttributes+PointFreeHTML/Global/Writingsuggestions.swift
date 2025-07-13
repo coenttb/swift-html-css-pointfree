@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets the writingsuggestions attribute with a boolean value
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Writingsuggestions.attribute, enabled ? "true" : "false")
     }
-    
+
     /// Sets the writingsuggestions attribute using a Writingsuggestions enum value
     @discardableResult
     public func writingsuggestions(
@@ -25,13 +25,13 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Writingsuggestions.attribute, attribute.description)
     }
-    
+
     /// Enables browser-provided writing suggestions
     @discardableResult
     public func enableWritingSuggestions() -> _HTMLAttributes<Self> {
         self.writingsuggestions(Writingsuggestions.true)
     }
-    
+
     /// Disables browser-provided writing suggestions
     @discardableResult
     public func disableWritingSuggestions() -> _HTMLAttributes<Self> {

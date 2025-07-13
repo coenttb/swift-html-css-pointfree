@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "AlignSelf Tests",
@@ -46,7 +46,7 @@ struct AlignSelfTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with align-self auto value")
     func htmlElementWithAlignSelfAutoRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct AlignSelfTests {
             """
         }
     }
-    
+
     @Test("HTML align-self with global value renders properly")
     func htmlAlignSelfWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct AlignSelfTests {
             """
         }
     }
-    
+
     @Test("HTML align-self with media query renders properly")
     func htmlAlignSelfWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,7 +126,7 @@ struct AlignSelfTests {
             """
         }
     }
-    
+
     @Test("HTML align-self with pseudo-class renders properly")
     func htmlAlignSelfWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct AlignSelfTests {
             """
         }
     }
-    
+
     @Test("HTML align-self with prefix renders properly")
     func htmlAlignSelfWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct AlignSelfTests {
             """
         }
     }
-    
+
     @Test("HTML align-self with stretch value renders properly")
     func htmlAlignSelfWithStretchValueRendersCorrectly() {
         assertInlineSnapshot(

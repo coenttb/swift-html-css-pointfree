@@ -5,15 +5,15 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Adds the multiple attribute to the element
     package var multiple: _HTMLAttributes<Self> {
         self.attribute(Multiple.attribute)
     }
-    
+
     /// Conditionally adds the multiple attribute to the element
     @HTMLBuilder
     package func multiple(_ value: Multiple?) -> some HTML {

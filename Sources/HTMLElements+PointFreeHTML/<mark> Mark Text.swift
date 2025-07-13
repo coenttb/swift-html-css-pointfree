@@ -16,4 +16,3 @@ extension HTMLElementTypes.Mark {
         HTMLElement(tag: Self.tag) { content() }
     }
 }
-

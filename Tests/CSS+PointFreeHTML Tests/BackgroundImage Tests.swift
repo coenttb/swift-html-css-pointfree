@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "BackgroundImage Tests",
@@ -46,7 +46,7 @@ struct BackgroundImageTests {
             """
         }
     }
-    
+
 //    @Test("HTML element renders with background-image linear-gradient properly")
 //    func htmlElementWithBackgroundImageLinearGradientRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundImageTests {
 //            """
 //        }
 //    }
-    
+
     @Test("HTML background-image with none value renders properly")
     func htmlBackgroundImageWithNoneValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -150,7 +150,7 @@ struct BackgroundImageTests {
             """
         }
     }
-    
+
     @Test("HTML background-image with global value renders properly")
     func htmlBackgroundImageWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -176,7 +176,7 @@ struct BackgroundImageTests {
             """
         }
     }
-    
+
     @Test("HTML background-image with media query renders properly")
     func htmlBackgroundImageWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -204,7 +204,7 @@ struct BackgroundImageTests {
             """
         }
     }
-    
+
     @Test("HTML background-image with pseudo-class renders properly")
     func htmlBackgroundImageWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -230,7 +230,7 @@ struct BackgroundImageTests {
             """
         }
     }
-    
+
     @Test("HTML background-image with prefix renders properly")
     func htmlBackgroundImageWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

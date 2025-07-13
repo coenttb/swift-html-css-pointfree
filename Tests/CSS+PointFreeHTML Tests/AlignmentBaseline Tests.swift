@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "AlignmentBaseline Tests",
@@ -46,7 +46,7 @@ struct AlignmentBaselineTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with alignment-baseline text-bottom value")
     func htmlElementWithAlignmentBaselineTextBottomRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct AlignmentBaselineTests {
             """
         }
     }
-    
+
     @Test("HTML alignment-baseline with global value renders properly")
     func htmlAlignmentBaselineWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct AlignmentBaselineTests {
             """
         }
     }
-    
+
     @Test("HTML alignment-baseline with media query renders properly")
     func htmlAlignmentBaselineWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,7 +126,7 @@ struct AlignmentBaselineTests {
             """
         }
     }
-    
+
     @Test("HTML alignment-baseline with pseudo-class renders properly")
     func htmlAlignmentBaselineWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct AlignmentBaselineTests {
             """
         }
     }
-    
+
     @Test("HTML alignment-baseline with prefix renders properly")
     func htmlAlignmentBaselineWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct AlignmentBaselineTests {
             """
         }
     }
-    
+
     @Test("HTML alignment-baseline with after-edge value renders properly")
     func htmlAlignmentBaselineWithAfterEdgeValueRendersCorrectly() {
         assertInlineSnapshot(

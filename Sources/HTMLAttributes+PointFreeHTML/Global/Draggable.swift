@@ -6,8 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
     /// Sets whether an element is draggable
@@ -17,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Draggable.attribute, value.description)
     }
-    
+
     /// Shorthand to set draggable="true"
     public var draggable: _HTMLAttributes<Self> {
         self.draggable(.true)

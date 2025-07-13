@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "AnchorName Tests",
@@ -46,7 +46,7 @@ struct AnchorNameTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with anchor-name none value")
     func htmlElementWithAnchorNameNoneRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct AnchorNameTests {
             """
         }
     }
-    
+
     @Test("HTML anchor-name with global value renders properly")
     func htmlAnchorNameWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct AnchorNameTests {
             """
         }
     }
-    
+
     @Test("HTML anchor-name with media query renders properly")
     func htmlAnchorNameWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,7 +126,7 @@ struct AnchorNameTests {
             """
         }
     }
-    
+
     @Test("HTML anchor-name with pseudo-class renders properly")
     func htmlAnchorNameWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -152,7 +152,7 @@ struct AnchorNameTests {
             """
         }
     }
-    
+
     @Test("HTML anchor-name with prefix renders properly")
     func htmlAnchorNameWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

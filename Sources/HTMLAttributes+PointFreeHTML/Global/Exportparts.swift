@@ -6,9 +6,8 @@
 ///
 
 import Foundation
-import PointFreeHTML
 import HTMLAttributeTypes
-
+import PointFreeHTML
 
 extension HTML {
     /// Sets the exportparts attribute with part names to export
@@ -18,7 +17,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.attribute(Exportparts.attribute, parts.joined(separator: ", "))
     }
-    
+
     /// Sets the exportparts attribute with part names to export as variadic parameters
     @discardableResult
     public func exportparts(
@@ -26,7 +25,7 @@ extension HTML {
     ) -> _HTMLAttributes<Self> {
         self.exportparts(parts)
     }
-    
+
     /// Sets the exportparts attribute with explicit part mappings
     @discardableResult
     public func exportparts(
@@ -39,10 +38,10 @@ extension HTML {
                 return "\(mapping.originalName):\(mapping.exposedName)"
             }
         }.joined(separator: ", ")
-        
+
         return self.attribute(Exportparts.attribute, value)
     }
-    
+
     /// Sets the exportparts attribute using an Exportparts struct
     @discardableResult
     public func exportparts(

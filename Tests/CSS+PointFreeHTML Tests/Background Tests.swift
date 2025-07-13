@@ -5,16 +5,16 @@
 //  Created by Claude AI on 11/04/2025.
 //
 
-import Foundation
-import Testing
 import CSS_PointFreeHTML
-import PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import DependenciesTestSupport
-import InlineSnapshotTesting
+import Foundation
 import HTMLTestSupport
+import InlineSnapshotTesting
+import PointFreeHTML
+import Testing
 
 @Suite(
     "Background Tests",
@@ -46,7 +46,7 @@ struct BackgroundTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with background image properly")
     func htmlElementWithBackgroundImageRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct BackgroundTests {
             """
         }
     }
-    
+
 //    @Test("HTML element renders with complex background properly")
 //    func htmlElementWithComplexBackgroundRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct BackgroundTests {
 //            """
 //        }
 //    }
-    
+
     @Test("HTML background with none value renders properly")
     func htmlBackgroundWithNoneValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct BackgroundTests {
             """
         }
     }
-    
+
     @Test("HTML background with global value renders properly")
     func htmlBackgroundWithGlobalValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -150,7 +150,7 @@ struct BackgroundTests {
             """
         }
     }
-    
+
     @Test("HTML background with media query renders properly")
     func htmlBackgroundWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct BackgroundTests {
             """
         }
     }
-    
+
     @Test("HTML background with pseudo-class renders properly")
     func htmlBackgroundWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
@@ -204,7 +204,7 @@ struct BackgroundTests {
             """
         }
     }
-    
+
     @Test("HTML background with prefix renders properly")
     func htmlBackgroundWithPrefixRendersCorrectly() {
         assertInlineSnapshot(

@@ -7,7 +7,6 @@
 
 import Foundation
 
-import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 

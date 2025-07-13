@@ -5,9 +5,9 @@
 //  Created by Coen ten Thije Boonkkamp on 02/04/2025.
 //
 
+import Dependencies
 import Foundation
 import PointFreeHTML
-import Dependencies
 import SnapshotTesting
 
 extension Snapshotting where Value: PointFreeHTML.HTMLDocumentProtocol, Format == String {
@@ -25,7 +25,7 @@ extension Snapshotting where Value: PointFreeHTML.HTMLDocumentProtocol, Format =
 extension Snapshotting where Value: HTML, Format == String {
     public static var html: Self {
         Snapshotting<String, String>.lines.pullback { value in
-            
+
             return withDependencies {
                 $0.htmlPrinter = .init(.pretty)
             } operation: {
@@ -34,5 +34,3 @@ extension Snapshotting where Value: HTML, Format == String {
         }
     }
 }
-
-

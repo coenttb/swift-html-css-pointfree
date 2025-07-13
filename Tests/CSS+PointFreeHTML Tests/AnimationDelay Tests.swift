@@ -5,22 +5,22 @@
 ////  Created by Claude AI on 11/04/2025.
 ////
 //
-//import Foundation
-//import Testing
-//import CSS_PointFreeHTML
-//import PointFreeHTML
-//import CSSPropertyTypes
-//import CSSTypeTypes
-//import Dependencies
-//import DependenciesTestSupport
-//import InlineSnapshotTesting
-//import HTMLTestSupport
+// import Foundation
+// import Testing
+// import CSS_PointFreeHTML
+// import PointFreeHTML
+// import CSSPropertyTypes
+// import CSSTypeTypes
+// import Dependencies
+// import DependenciesTestSupport
+// import InlineSnapshotTesting
+// import HTMLTestSupport
 //
-//@Suite(
+// @Suite(
 //    "AnimationDelay Tests",
 //    .snapshots(record: nil)
-//)
-//struct AnimationDelayTests {
+// )
+// struct AnimationDelayTests {
 //    @Test("HTML element renders with animation-delay time value properly")
 //    func htmlElementWithAnimationDelayTimeRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -230,4 +230,4 @@
 //            """
 //        }
 //    }
-//}
+// }

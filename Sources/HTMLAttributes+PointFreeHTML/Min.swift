@@ -5,11 +5,11 @@
 /// Created by Coen ten Thije Boonkkamp on 03/04/2025.
 ///
 
-import PointFreeHTML
 import HTMLAttributeTypes
+import PointFreeHTML
 
 extension HTML {
-    
+
     /// Sets the min attribute on an element
     @discardableResult
     package func min(
@@ -18,8 +18,8 @@ extension HTML {
         self.attribute(Min.attribute, value?.description)
     }
 }
- 
-//extension HTML {
+
+// extension HTML {
 //    /// Sets the min attribute with a date value and format
 //    @discardableResult
 //    package func min(
@@ -28,4 +28,4 @@ extension HTML {
 //    ) -> _HTMLAttributes<Self> {
 //        self.min(Min(date: date, format: format))
 //    }
-//}
+// }
