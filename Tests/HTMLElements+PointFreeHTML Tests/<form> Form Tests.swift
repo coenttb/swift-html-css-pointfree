@@ -2,7 +2,7 @@ import Foundation
 import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
-import HTMLTestSupport
+import PointFreeHtmlTestSupport
 
 @Suite(
     "Form Element Tests",

@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import HTMLTestSupport
+// import PointFreeHtmlTestSupport
 //
 // @Suite(
 //    "AnimationDuration Tests",

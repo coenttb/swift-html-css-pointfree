@@ -8,7 +8,6 @@ extension String {
     static let htmlCSSPointFree: Self = "HTML+CSS+PointFreeHTML"
     static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
     static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"
-    static let htmlTestSupport: Self = "HTMLTestSupport"
 }
 
 extension Target.Dependency {
@@ -16,7 +15,6 @@ extension Target.Dependency {
     static var htmlAttributesPointFreeHTML: Self { .target(name: .htmlAttributesPointFreeHTML) }
     static var htmlElementsPointFreeHTML: Self { .target(name: .htmlElementsPointFreeHTML) }
     static var htmlCSSPointFree: Self { .target(name: .htmlCSSPointFree) }
-    static var htmlTestSupport: Self { .target(name: .htmlTestSupport) }
 }
 
 extension Target.Dependency {
@@ -26,6 +24,7 @@ extension Target.Dependency {
     static var htmlAttributeTypes: Self { .product(name: "HTMLAttributeTypes", package: "swift-html-types") }
     static var htmlElementTypes: Self { .product(name: "HTMLElementTypes", package: "swift-html-types") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
+    static var pointFreeHtmlTestSupport: Self { .product(name: "PointFreeHtmlTestSupport", package: "pointfree-html") }
     static var inlineSnapshotTesting: Self { .product(name: "InlineSnapshotTesting", package: "swift-snapshot-testing") }
     static var dependenciesTestSupport: Self { .product(name: "DependenciesTestSupport", package: "swift-dependencies") }
 }
@@ -44,7 +43,6 @@ let package = Package(
         .library(name: .htmlCSSPointFree, targets: [.htmlCSSPointFree]),
         .library(name: .htmlAttributesPointFreeHTML, targets: [.htmlAttributesPointFreeHTML]),
         .library(name: .htmlElementsPointFreeHTML, targets: [.htmlElementsPointFreeHTML]),
-        .library(name: .htmlTestSupport, targets: [.htmlTestSupport]),
     ],
     dependencies: [
         .package(url: "https://github.com/coenttb/swift-html-types.git", branch: "main"),
@@ -69,7 +67,7 @@ let package = Package(
             dependencies: [
                 .htmlCSSPointFree,
                 .pointFreeHTML,
-                .htmlTestSupport,
+                .pointFreeHtmlTestSupport,
             ]
         ),
         .target(
@@ -85,7 +83,7 @@ let package = Package(
                 .htmlCSS,
                 .cssTypes,
                 .pointFreeHTML,
-                .htmlTestSupport,
+                .pointFreeHtmlTestSupport,
             ]
         ),
         .target(
@@ -100,7 +98,7 @@ let package = Package(
             dependencies: [
                 .htmlAttributesPointFreeHTML,
                 .pointFreeHTML,
-                .htmlTestSupport,
+                .pointFreeHtmlTestSupport,
             ]
         ),
         .target(
@@ -116,15 +114,7 @@ let package = Package(
             dependencies: [
                 .htmlElementsPointFreeHTML,
                 .pointFreeHTML,
-                .htmlTestSupport
-            ]
-        ),
-        .target(
-            name: .htmlTestSupport,
-            dependencies: [
-                .pointFreeHTML,
-                .inlineSnapshotTesting,
-                .dependenciesTestSupport
+                .pointFreeHtmlTestSupport
             ]
         ),
     ],

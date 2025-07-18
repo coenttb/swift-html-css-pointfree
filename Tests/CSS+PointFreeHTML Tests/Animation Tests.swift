@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import HTMLTestSupport
+// import PointFreeHtmlTestSupport
 //
 // "3s ease-in 1s infinite reverse both running slidein"
 //

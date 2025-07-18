@@ -9,7 +9,7 @@ import Dependencies
 import DependenciesTestSupport
 import Foundation
 import HTML_CSS_PointFreeHTML
-import HTMLTestSupport
+import PointFreeHtmlTestSupport
 import InlineSnapshotTesting
 import Testing
 
