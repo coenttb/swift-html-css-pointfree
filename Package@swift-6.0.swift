@@ -25,8 +25,6 @@ extension Target.Dependency {
     static var htmlElementTypes: Self { .product(name: "HTMLElementTypes", package: "swift-html-types") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
     static var pointFreeHtmlTestSupport: Self { .product(name: "PointFreeHtmlTestSupport", package: "pointfree-html") }
-    static var inlineSnapshotTesting: Self { .product(name: "InlineSnapshotTesting", package: "swift-snapshot-testing") }
-    static var dependenciesTestSupport: Self { .product(name: "DependenciesTestSupport", package: "swift-dependencies") }
 }
 
 let package = Package(
@@ -48,8 +46,6 @@ let package = Package(
         .package(url: "https://github.com/coenttb/swift-html-types.git", branch: "main"),
         .package(url: "https://github.com/coenttb/swift-css-types.git", branch: "main"),
         .package(url: "https://github.com/coenttb/pointfree-html.git", branch: "main"),
-        .package(url: "https://github.com/pointfreeco/swift-snapshot-testing.git", from: "1.18.3"),
-        .package(url: "https://github.com/pointfreeco/swift-dependencies.git", branch: "1.9.0"),
     ],
     targets: [
         .target(
