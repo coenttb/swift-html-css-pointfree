@@ -107,4 +107,29 @@ struct Tests {
             """
         }
     }
+    
+    @Test("HTML element renders with named color properly")
+    func htmlElementWithNamedColorRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                "Hello World"
+                    .color(.named(.red))
+            },
+            as: .html
+        ) {
+            """
+            <!doctype html>
+            <html lang="en">
+              <head>
+                <style>
+            .color-dMYaj4{color:red}
+
+                </style>
+              </head>
+              <body>Hello World
+              </body>
+            </html>
+            """
+        }
+    }
 }

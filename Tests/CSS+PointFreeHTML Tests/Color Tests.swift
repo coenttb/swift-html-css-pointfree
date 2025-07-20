@@ -22,7 +22,8 @@ struct ColorTests {
     func htmlElementWithNamedColorRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.color(.red)
+                div
+                    .color(.red)
             },
             as: .html
         ) {
