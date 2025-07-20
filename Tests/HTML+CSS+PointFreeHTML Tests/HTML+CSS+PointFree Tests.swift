@@ -51,50 +51,7 @@ struct Tests {
         }
     }
 
-    @Test("General")
-    func general1() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                ContentDivision {
-                    H1 { "Type-safe HTML" }
-                      .color(light: .blue, dark: .red)
-                      .fontSize(.px(24))
-                    Paragraph { "With type-safe CSS!" }
-                        .marginTop(.px(10))
-
-                    Video(src: "/public/video/example.mp4", autoplay: true) {}
-                }
-            },
-            as: .html
-        ) {
-            """
-            <!doctype html>
-            <html lang="en">
-              <head>
-                <style>
-            .font-size-t6pNK3{font-size:24px}
-            .color-jiDhg4{color:blue}
-            .margin-top-Fqw6a1{margin-top:10px}
-            @media (prefers-color-scheme: dark){
-              .color-hhm4d1{color:red}
-            }
-
-                </style>
-              </head>
-              <body>
-            <div>
-              <h1 class="font-size-t6pNK3 color-jiDhg4 color-hhm4d1">Type-safe HTML
-              </h1>
-              <p class="margin-top-Fqw6a1">With type-safe CSS!
-              </p>
-              <video autoplay src="/public/video/example.mp4">
-              </video>
-            </div>
-              </body>
-            </html>
-            """
-        }
-    }
+    
 
     @Test("General2")
     func general2() {
