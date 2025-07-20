@@ -2,7 +2,7 @@ import Foundation
 import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 
 @Suite(
     "LineBreak Element Tests",
@@ -33,7 +33,7 @@ struct LineBreakTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
 

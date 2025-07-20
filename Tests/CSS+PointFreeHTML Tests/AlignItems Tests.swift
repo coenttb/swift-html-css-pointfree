@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-items-CdPBO2{align-items:center}
@@ -54,7 +54,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-items-n56cj2{align-items:flex-start}
@@ -80,7 +80,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-items-trEDH1{align-items:inherit}
@@ -106,7 +106,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -134,7 +134,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-items-fCQVh2:hover{align-items:baseline}
@@ -160,7 +160,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .align-items-dzpgf{align-items:flex-end}
@@ -186,7 +186,7 @@ struct AlignItemsTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-items-msN8p3{align-items:stretch}

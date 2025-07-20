@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-content-CdPBO2{align-content:center}
@@ -54,7 +54,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-content-n56cj2{align-content:flex-start}
@@ -80,7 +80,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-content-trEDH1{align-content:inherit}
@@ -106,7 +106,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -134,7 +134,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-content-a0Jun2:hover{align-content:space-around}
@@ -160,7 +160,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .align-content-KzNip3{align-content:space-between}
@@ -186,7 +186,7 @@ struct AlignContentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-content-msN8p3{align-content:stretch}

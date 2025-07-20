@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import PointFreeHtmlTestSupport
+// import PointFreeHTMLTestSupport
 //
 // @Suite(
 //    "AnimationComposition Tests",
@@ -31,7 +31,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-composition-tKSZv5{animation-composition:replace}
@@ -57,7 +57,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-composition-2bfAc4{animation-composition:add}
@@ -83,7 +83,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-composition-N6c9H5{animation-composition:accumulate}
@@ -109,7 +109,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-composition-trEDH1{animation-composition:inherit}
@@ -135,7 +135,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            @media print{
@@ -163,7 +163,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-composition-Vt07jl:hover{animation-composition:replace}
@@ -189,7 +189,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            my-component .animation-composition-JmjCCd{animation-composition:accumulate}

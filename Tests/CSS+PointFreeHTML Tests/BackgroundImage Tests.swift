@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundImageTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-image-g5Rr32{background-image:url('image.jpg')}
@@ -54,7 +54,7 @@ struct BackgroundImageTests {
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .background-image-EdcYg1{background-image:linear-gradient(45deg, red, blue)}
@@ -80,7 +80,7 @@ struct BackgroundImageTests {
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .background-image-kbqMx1{background-image:radial-gradient(red, blue)}
@@ -106,7 +106,7 @@ struct BackgroundImageTests {
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .background-image-PsRHs1{background-image:url("image1.jpg"), url("image2.jpg")}
@@ -132,7 +132,7 @@ struct BackgroundImageTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-image-Wl0y44{background-image:none}
@@ -158,7 +158,7 @@ struct BackgroundImageTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-image-trEDH1{background-image:inherit}
@@ -184,7 +184,7 @@ struct BackgroundImageTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -212,7 +212,7 @@ struct BackgroundImageTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-image-IZL5o1:hover{background-image:url('image.jpg')}
@@ -238,7 +238,7 @@ struct BackgroundImageTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-image-xezDo{background-image:url('image.jpg')}

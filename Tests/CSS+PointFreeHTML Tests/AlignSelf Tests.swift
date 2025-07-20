@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-self-CdPBO2{align-self:center}
@@ -54,7 +54,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-self-u7yQf2{align-self:auto}
@@ -80,7 +80,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-self-trEDH1{align-self:inherit}
@@ -106,7 +106,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -134,7 +134,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-self-fCQVh2:hover{align-self:baseline}
@@ -160,7 +160,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .align-self-dzpgf{align-self:flex-end}
@@ -186,7 +186,7 @@ struct AlignSelfTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .align-self-msN8p3{align-self:stretch}

@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import PointFreeHtmlTestSupport
+// import PointFreeHTMLTestSupport
 //
 // @Suite(
 //    "AnimationDelay Tests",
@@ -31,7 +31,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-delay-atnwFz{animation-delay:2s}
@@ -57,7 +57,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-delay-DqVdD4{animation-delay:500ms}
@@ -83,7 +83,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-delay-Fxvhj3{animation-delay:2s, 4s}
@@ -109,7 +109,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-delay-trEDH1{animation-delay:inherit}
@@ -135,7 +135,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            @media print{
@@ -163,7 +163,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-delay-YE9O7d:hover{animation-delay:0.3s}
@@ -189,7 +189,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            my-component .animation-delay-KtQeSh{animation-delay:1s}
@@ -215,7 +215,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-delay-RfDhO3{animation-delay:-0.5s}

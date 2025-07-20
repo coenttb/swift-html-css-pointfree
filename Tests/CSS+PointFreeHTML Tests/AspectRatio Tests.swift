@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .aspect-ratio-10XyA2{aspect-ratio:16 / 9}
@@ -54,7 +54,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .aspect-ratio-kDJuQ2{aspect-ratio:4 / 3}
@@ -80,7 +80,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .aspect-ratio-u7yQf2{aspect-ratio:auto}
@@ -106,7 +106,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .aspect-ratio-trEDH1{aspect-ratio:inherit}
@@ -132,7 +132,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -160,7 +160,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .aspect-ratio-eQOer3:hover{aspect-ratio:16 / 9}
@@ -186,7 +186,7 @@ struct AspectRatioTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .aspect-ratio-Dmiak4{aspect-ratio:16 / 9}

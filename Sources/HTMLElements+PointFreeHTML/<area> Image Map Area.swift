@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PointFreeHTML
 
 extension HTMLElementTypes.Area {
     public func callAsFunction() -> some HTML {

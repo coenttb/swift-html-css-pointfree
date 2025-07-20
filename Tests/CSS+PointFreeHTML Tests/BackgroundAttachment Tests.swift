@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-attachment-eA7GJ1{background-attachment:fixed}
@@ -54,7 +54,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-attachment-omYyh3{background-attachment:scroll}
@@ -80,7 +80,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-attachment-rJE42{background-attachment:local}
@@ -106,7 +106,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-attachment-trEDH1{background-attachment:inherit}
@@ -132,7 +132,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -160,7 +160,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-attachment-RYXzJ3:hover{background-attachment:fixed}
@@ -186,7 +186,7 @@ struct BackgroundAttachmentTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-attachment-8bC9G4{background-attachment:fixed}

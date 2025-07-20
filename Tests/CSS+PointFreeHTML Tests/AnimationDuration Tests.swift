@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import PointFreeHtmlTestSupport
+// import PointFreeHTMLTestSupport
 //
 // @Suite(
 //    "AnimationDuration Tests",
@@ -31,7 +31,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-duration-jrYNbv{animation-duration:3s}
@@ -57,7 +57,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-duration-Akt0Gk{animation-duration:200ms}
@@ -83,7 +83,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-duration-6Nkxph{animation-duration:1s, 2.5s}
@@ -109,7 +109,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-duration-trEDH1{animation-duration:inherit}
@@ -135,7 +135,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            @media print{
@@ -163,7 +163,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-duration-4jOFVl:hover{animation-duration:1.5s}
@@ -189,7 +189,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            my-component .animation-duration-D4Z2Sg{animation-duration:300ms}
@@ -215,7 +215,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-duration-z4x9uP{animation-duration:0s}

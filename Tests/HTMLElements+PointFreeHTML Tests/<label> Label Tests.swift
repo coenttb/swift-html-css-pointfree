@@ -2,7 +2,7 @@ import Foundation
 import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 
 @Suite(
     "Label Element Tests",

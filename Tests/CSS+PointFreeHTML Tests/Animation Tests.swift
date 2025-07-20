@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import PointFreeHtmlTestSupport
+// import PointFreeHTMLTestSupport
 //
 // "3s ease-in 1s infinite reverse both running slidein"
 //
@@ -33,7 +33,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-RzKmLe{animation:3s ease-in 1s infinite reverse both running slidein}
@@ -59,7 +59,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-WkDfA3{animation:fadeIn 2s}
@@ -85,7 +85,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-trEDH1{animation:inherit}
@@ -111,7 +111,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            @media print{
@@ -139,7 +139,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-pG3fH2:hover{animation:pulse 3s infinite}
@@ -165,7 +165,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            my-component .animation-9LLdQl{animation:slide 2s ease-out}
@@ -191,7 +191,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-3ZLVsZ{animation:none}

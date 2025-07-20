@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-origin-otfSh{background-origin:border-box}
@@ -54,7 +54,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-origin-hWz2j2{background-origin:padding-box}
@@ -80,7 +80,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-origin-OOyEn1{background-origin:content-box}
@@ -106,7 +106,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-origin-trEDH1{background-origin:inherit}
@@ -132,7 +132,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -160,7 +160,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-origin-h7scE1:hover{background-origin:content-box}
@@ -186,7 +186,7 @@ struct BackgroundOriginTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-origin-e7c0Y2{background-origin:content-box}

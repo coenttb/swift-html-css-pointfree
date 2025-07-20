@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backdrop-filter-0kTRU{backdrop-filter:blur(5px)}
@@ -54,7 +54,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backdrop-filter-J7xul3{backdrop-filter:brightness(1.5)}
@@ -80,7 +80,7 @@ struct BackdropFilterTests {
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .backdrop-filter-YazUw1{backdrop-filter:blur(5px) brightness(1.2)}
@@ -106,7 +106,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backdrop-filter-Wl0y44{backdrop-filter:none}
@@ -132,7 +132,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backdrop-filter-trEDH1{backdrop-filter:inherit}
@@ -158,7 +158,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -186,7 +186,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backdrop-filter-fPwoS2:hover{backdrop-filter:blur(5px)}
@@ -212,7 +212,7 @@ struct BackdropFilterTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .backdrop-filter-vFyYm1{backdrop-filter:blur(5px)}

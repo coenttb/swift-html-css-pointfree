@@ -24,7 +24,7 @@ extension Target.Dependency {
     static var htmlAttributeTypes: Self { .product(name: "HTMLAttributeTypes", package: "swift-html-types") }
     static var htmlElementTypes: Self { .product(name: "HTMLElementTypes", package: "swift-html-types") }
     static var pointFreeHTML: Self { .product(name: "PointFreeHTML", package: "pointfree-html") }
-    static var pointFreeHtmlTestSupport: Self { .product(name: "PointFreeHtmlTestSupport", package: "pointfree-html") }
+    static var pointFreeHtmlTestSupport: Self { .product(name: "PointFreeHTMLTestSupport", package: "pointfree-html") }
 }
 
 let package = Package(

@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-dMYaj4{background-color:red}
@@ -54,7 +54,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-bQ3ZC1{background-color:#FF0000}
@@ -80,7 +80,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-4qnGm3{background-color:rgb(255, 0, 0)}
@@ -106,7 +106,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-zd1sV1{background-color:rgba(255, 0, 0, 0.5)}
@@ -132,7 +132,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-JyKaz4{background-color:transparent}
@@ -158,7 +158,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-trEDH1{background-color:inherit}
@@ -184,7 +184,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -212,7 +212,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-color-S9wdG2:hover{background-color:red}
@@ -238,7 +238,7 @@ struct BackgroundColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-color-KoS5g3{background-color:red}

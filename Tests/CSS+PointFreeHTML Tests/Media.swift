@@ -1,7 +1,7 @@
 import CSS_PointFreeHTML
 import CSSTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -20,7 +20,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media screen{
@@ -53,7 +53,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media screen and (max-width: 500px) and (prefers-color-scheme: dark){
@@ -81,7 +81,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media not print{
@@ -109,7 +109,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media screen, print{
@@ -137,7 +137,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media only screen{
@@ -165,7 +165,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media (prefers-color-scheme: dark){
@@ -196,7 +196,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media screen and (max-width: 768px){
@@ -204,14 +204,11 @@ struct MediaTests {
               .color-iseje4{color:white}
               .background-color-eGELe4{background-color:blue}
             }
-            @media (prefers-color-scheme: dark){
-              .color-yTAIC3{color:rgb(204, 204, 204)}
-            }
 
                 </style>
               </head>
               <body>
-            <div class="padding-JBzfL color-iseje4 color-yTAIC3 background-color-eGELe4">
+            <div class="padding-JBzfL color-iseje4 background-color-eGELe4">
             </div>
               </body>
             </html>
@@ -231,7 +228,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media screen and (min-width: 768px){
@@ -262,7 +259,7 @@ struct MediaTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media screen and (prefers-color-scheme: dark){

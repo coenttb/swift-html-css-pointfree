@@ -3,7 +3,7 @@
 // import HTMLAttributes_PointFreeHTML
 // import PointFreeHTML
 // import InlineSnapshotTesting
-// import PointFreeHtmlTestSupport
+// import PointFreeHTMLTestSupport
 //
 // @Suite(
 //    "Target Attribute Tests",

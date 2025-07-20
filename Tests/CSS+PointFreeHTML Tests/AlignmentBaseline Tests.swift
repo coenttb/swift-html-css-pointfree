@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .alignment-baseline-0Zubr3{alignment-baseline:baseline}
@@ -54,7 +54,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .alignment-baseline-1AOeT2{alignment-baseline:text-bottom}
@@ -80,7 +80,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .alignment-baseline-trEDH1{alignment-baseline:inherit}
@@ -106,7 +106,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -134,7 +134,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .alignment-baseline-eg5PJ:hover{alignment-baseline:central}
@@ -160,7 +160,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .alignment-baseline-hdTb2{alignment-baseline:text-top}
@@ -186,7 +186,7 @@ struct AlignmentBaselineTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .alignment-baseline-DgkWX2{alignment-baseline:after-edge}

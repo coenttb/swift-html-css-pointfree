@@ -15,8 +15,8 @@
     {
       "target" : {
         "containerPath" : "container:",
-        "identifier" : "HTML+CSS Tests",
-        "name" : "HTML+CSS Tests"
+        "identifier" : "CSS+PointFreeHTML Tests",
+        "name" : "CSS+PointFreeHTML Tests"
       }
     }
   ],

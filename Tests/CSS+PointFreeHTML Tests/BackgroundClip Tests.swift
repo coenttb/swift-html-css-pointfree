@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-clip-otfSh{background-clip:border-box}
@@ -54,7 +54,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-clip-hWz2j2{background-clip:padding-box}
@@ -80,7 +80,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-clip-OOyEn1{background-clip:content-box}
@@ -106,7 +106,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-clip-inoYC3{background-clip:text}
@@ -132,7 +132,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-clip-trEDH1{background-clip:inherit}
@@ -158,7 +158,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -186,7 +186,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-clip-h7scE1:hover{background-clip:content-box}
@@ -212,7 +212,7 @@ struct BackgroundClipTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-clip-e7c0Y2{background-clip:content-box}

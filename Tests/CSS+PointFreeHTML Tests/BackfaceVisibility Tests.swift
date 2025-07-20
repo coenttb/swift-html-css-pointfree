@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackfaceVisibilityTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backface-visibility-PhNC81{backface-visibility:hidden}
@@ -54,7 +54,7 @@ struct BackfaceVisibilityTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backface-visibility-wd16m4{backface-visibility:visible}
@@ -80,7 +80,7 @@ struct BackfaceVisibilityTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backface-visibility-trEDH1{backface-visibility:inherit}
@@ -106,7 +106,7 @@ struct BackfaceVisibilityTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -134,7 +134,7 @@ struct BackfaceVisibilityTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .backface-visibility-dLjCw:hover{backface-visibility:hidden}
@@ -160,7 +160,7 @@ struct BackfaceVisibilityTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .backface-visibility-iXV9h3{backface-visibility:hidden}

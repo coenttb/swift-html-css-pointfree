@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-blend-mode-evfWi1{background-blend-mode:normal}
@@ -54,7 +54,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-blend-mode-gumfc1{background-blend-mode:multiply}
@@ -80,7 +80,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-blend-mode-a7c473{background-blend-mode:screen}
@@ -106,7 +106,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-blend-mode-UX3lO1{background-blend-mode:overlay}
@@ -132,7 +132,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-blend-mode-trEDH1{background-blend-mode:inherit}
@@ -158,7 +158,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -186,7 +186,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-blend-mode-kQHf41:hover{background-blend-mode:multiply}
@@ -212,7 +212,7 @@ struct BackgroundBlendModeTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-blend-mode-QWNBt2{background-blend-mode:multiply}

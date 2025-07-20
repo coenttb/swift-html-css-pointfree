@@ -10,7 +10,7 @@ import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
 import Foundation
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -29,7 +29,7 @@ struct AccentColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .accent-color-dMYaj4{accent-color:red}
@@ -55,7 +55,7 @@ struct AccentColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .accent-color-bQ3ZC1{accent-color:#FF0000}
@@ -81,7 +81,7 @@ struct AccentColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .accent-color-trEDH1{accent-color:inherit}
@@ -107,7 +107,7 @@ struct AccentColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -135,7 +135,7 @@ struct AccentColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .accent-color-egMjx3:hover{accent-color:#FF0000}
@@ -161,7 +161,7 @@ struct AccentColorTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .accent-color-XyDYD1{accent-color:#FF0000}

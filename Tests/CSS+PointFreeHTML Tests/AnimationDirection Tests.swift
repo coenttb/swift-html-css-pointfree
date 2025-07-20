@@ -14,7 +14,7 @@
 // import Dependencies
 // import DependenciesTestSupport
 // import InlineSnapshotTesting
-// import PointFreeHtmlTestSupport
+// import PointFreeHTMLTestSupport
 //
 // @Suite(
 //    "AnimationDirection Tests",
@@ -31,7 +31,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-direction-LtYIz5{animation-direction:normal}
@@ -57,7 +57,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-direction-UBNKL3{animation-direction:reverse}
@@ -83,7 +83,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-direction-AzrRng{animation-direction:alternate}
@@ -109,7 +109,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-direction-HF0GG1{animation-direction:alternate-reverse}
@@ -135,7 +135,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-direction-trEDH1{animation-direction:inherit}
@@ -161,7 +161,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            @media print{
@@ -189,7 +189,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .animation-direction-1EDVMm:hover{animation-direction:reverse}
@@ -215,7 +215,7 @@
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            my-component .animation-direction-sODZv0{animation-direction:normal}

@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-dMYaj4{background:red}
@@ -54,7 +54,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-g5Rr32{background:url('image.jpg')}
@@ -80,7 +80,7 @@ struct BackgroundTests {
 //        ) {
 //            """
 //            <!doctype html>
-//            <html lang="en">
+//            <html>
 //              <head>
 //                <style>
 //            .background-yFkjt1{background:red url("image.jpg")}
@@ -106,7 +106,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-Wl0y44{background:none}
@@ -132,7 +132,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-trEDH1{background:inherit}
@@ -158,7 +158,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -186,7 +186,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .background-S9wdG2:hover{background:red}
@@ -212,7 +212,7 @@ struct BackgroundTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .background-KoS5g3{background:red}

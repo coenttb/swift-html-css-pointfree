@@ -9,7 +9,7 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing
 
@@ -28,7 +28,7 @@ struct AnchorNameTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .anchor-name-rqwxL3{anchor-name:--section-header}
@@ -54,7 +54,7 @@ struct AnchorNameTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .anchor-name-Wl0y44{anchor-name:none}
@@ -80,7 +80,7 @@ struct AnchorNameTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .anchor-name-trEDH1{anchor-name:inherit}
@@ -106,7 +106,7 @@ struct AnchorNameTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media print{
@@ -134,7 +134,7 @@ struct AnchorNameTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .anchor-name-0ysQc1:hover{anchor-name:--heading}
@@ -160,7 +160,7 @@ struct AnchorNameTests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             my-component .anchor-name-xBtcq3{anchor-name:--footer}

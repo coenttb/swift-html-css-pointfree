@@ -9,7 +9,7 @@ import Dependencies
 import DependenciesTestSupport
 import Foundation
 import HTML_CSS_PointFreeHTML
-import PointFreeHtmlTestSupport
+import PointFreeHTMLTestSupport
 import InlineSnapshotTesting
 import Testing
 
@@ -35,7 +35,7 @@ struct Tests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .color-dMYaj4{color:red}
@@ -63,7 +63,7 @@ struct Tests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
 
@@ -90,7 +90,7 @@ struct Tests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             @media only screen and (min-width: 832px){
@@ -119,7 +119,7 @@ struct Tests {
         ) {
             """
             <!doctype html>
-            <html lang="en">
+            <html>
               <head>
                 <style>
             .color-dMYaj4{color:red}
