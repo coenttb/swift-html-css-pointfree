@@ -1,5 +1,5 @@
 {
-  "originHash" : "89f456726913e5d1bb4c2229fc313a72c997b14b612c0bc61457e5ed01a61304",
+  "originHash" : "c099e5f063ce3f7ae046b4b3115ccdfaa83153faf5aca777a3eb78e7030781e8",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -79,7 +79,7 @@
       "location" : "https://github.com/coenttb/swift-html-types.git",
       "state" : {
         "branch" : "main",
-        "revision" : "bdf8b5655c11861b9dfb245ba97b842ba18d4815"
+        "revision" : "a4ae4bf7b2d468a771242f8578c03abff3f96d2e"
       }
     },
     {

@@ -24,7 +24,7 @@ extension HTML {
     }
 
     @HTMLBuilder
-    package func attribute<Attribute: BooleanAttribute>(
+    package func attribute<Attribute: HTMLBooleanAttribute>(
         boolean value: Attribute?,
     ) -> some HTML {
         self.attribute(Attribute.attribute, value == true)
