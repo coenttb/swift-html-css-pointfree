@@ -6,7 +6,6 @@
 //
 //
 
-import Foundation
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 

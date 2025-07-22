@@ -6,7 +6,6 @@
 //
 
 import CSSAtRuleTypes
-import Foundation
 import PointFreeHTML
 
 extension CSSAtRuleTypes.Media {

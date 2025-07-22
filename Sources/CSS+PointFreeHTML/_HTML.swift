@@ -6,7 +6,6 @@
 //
 
 import CSSTypes
-import Foundation
 import PointFreeHTML
 
 // extension HTML {

@@ -5,7 +5,6 @@
 //  Created by Coen ten Thije Boonkkamp on 09/04/2025.
 //
 
-import Foundation
 import HTMLElementTypes
 import PointFreeHTML
 

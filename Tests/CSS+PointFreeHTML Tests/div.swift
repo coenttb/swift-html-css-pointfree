@@ -5,7 +5,6 @@
 //  Created by Coen ten Thije Boonkkamp on 11/04/2025.
 //
 
-import Foundation
 import PointFreeHTML
 
 @TaskLocal var div = HTMLElement(tag: "div") { HTMLEmpty() }

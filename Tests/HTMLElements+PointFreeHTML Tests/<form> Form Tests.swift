@@ -1,4 +1,3 @@
-import Foundation
 import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting

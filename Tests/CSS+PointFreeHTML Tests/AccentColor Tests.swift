@@ -9,7 +9,6 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import Foundation
 import PointFreeHTMLTestSupport
 import PointFreeHTML
 import Testing

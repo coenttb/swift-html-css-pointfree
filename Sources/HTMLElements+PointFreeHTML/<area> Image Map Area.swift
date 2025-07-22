@@ -5,7 +5,6 @@
 //  Created by Coen ten Thije Boonkkamp on 05/04/2025.
 //
 
-import Foundation
 import PointFreeHTML
 
 extension HTMLElementTypes.Area {
