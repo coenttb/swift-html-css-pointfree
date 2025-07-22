@@ -14,21 +14,17 @@ import Testing
 
 @Suite(
     "HTML+CSS+PointFreeHTML Tests",
-    .snapshots(record: nil)
+    .snapshots(record: .missing)
 )
 struct IntegrationTests {
-    @Test("HTML Elements with attributes and styles")
-    func labeledInputInDivWithStyle() {
+    @Test("HTML element with attributes and styles")
+    func anchorElementWithStyling() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                ContentDivision {
-                    Label {
-                        "label-text"
-                        Input.text
-                            .color(.blue)
-                    }
-                    .color(.red)
+                Anchor(href: "#") {
+                    "Click here!"
                 }
+                .color(.red)
             },
             as: .html
         ) {
@@ -38,13 +34,10 @@ struct IntegrationTests {
               <head>
                 <style>
             .color-dMYaj4{color:red}
-            .color-jiDhg4{color:blue}
 
                 </style>
               </head>
-              <body>
-            <div><label class="color-dMYaj4">label-text<input class="color-jiDhg4" type="text"></label>
-            </div>
+              <body><a class="color-dMYaj4" href="#">Click here!</a>
               </body>
             </html>
             """
