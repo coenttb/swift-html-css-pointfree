@@ -32,13 +32,11 @@ struct AccentColorTests {
             <html>
               <head>
                 <style>
-            .accent-color-dMYaj4{accent-color:red}
-
+                  .accent-color-dMYaj4{accent-color:red}
                 </style>
               </head>
               <body>
-            <div class="accent-color-dMYaj4">
-            </div>
+                <div class="accent-color-dMYaj4"></div>
               </body>
             </html>
             """

@@ -17,18 +17,18 @@ import Testing
     "HTML+CSS+PointFreeHTML Tests",
     .snapshots(record: nil)
 )
-struct Tests {
-    @Test("Labeled Input renders correctly in a div")
-    func labeledInputInDiv() {
+struct IntegrationTests {
+    @Test("HTML Elements with attributes and styles")
+    func labeledInputInDivWithStyle() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {
                     Label {
                         "label-text"
                         Input.text
-                            .color(.red)
+                            .color(.blue)
                     }
-                        .color(.red)
+                    .color(.red)
                 }
             },
             as: .html
@@ -39,19 +39,18 @@ struct Tests {
               <head>
                 <style>
             .color-dMYaj4{color:red}
+            .color-jiDhg4{color:blue}
 
                 </style>
               </head>
               <body>
-            <div><label class="color-dMYaj4">label-text<input class="color-dMYaj4" type="text"></label>
+            <div><label class="color-dMYaj4">label-text<input class="color-jiDhg4" type="text"></label>
             </div>
               </body>
             </html>
             """
         }
     }
-
-    
 
     @Test("General2")
     func general2() {
