@@ -206,7 +206,7 @@ struct BackgroundBlendModeTests {
     func htmlBackgroundBlendModeWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundBlendMode(.multiply, pre: "my-component")
+                div.backgroundBlendMode(.multiply, selector: "my-component")
             },
             as: .html
         ) {

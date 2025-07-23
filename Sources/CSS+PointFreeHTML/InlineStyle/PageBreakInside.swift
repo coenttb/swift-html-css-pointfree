@@ -13,9 +13,9 @@ extension HTML {
     public func pageBreakInside(
         _ pageBreakInside: CSSPropertyTypes.PageBreakInside?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(pageBreakInside, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(pageBreakInside, media: media, selector: selector, pseudo: pseudo)
     }
 }

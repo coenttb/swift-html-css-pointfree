@@ -13,9 +13,9 @@ extension HTML {
     public func scrollSnapAlign(
         _ scrollSnapAlign: CSSPropertyTypes.ScrollSnapAlign?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollSnapAlign, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollSnapAlign, media: media, selector: selector, pseudo: pseudo)
     }
 }

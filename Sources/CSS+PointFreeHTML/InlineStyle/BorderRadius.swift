@@ -13,9 +13,9 @@ extension HTML {
     public func borderRadius(
         _ borderRadius: CSSPropertyTypes.BorderRadius?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderRadius, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderRadius, media: media, selector: selector, pseudo: pseudo)
     }
 }

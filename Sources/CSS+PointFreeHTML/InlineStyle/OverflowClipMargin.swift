@@ -13,9 +13,9 @@ extension HTML {
     public func overflowClipMargin(
         _ overflowClipMargin: CSSPropertyTypes.OverflowClipMargin?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overflowClipMargin, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(overflowClipMargin, media: media, selector: selector, pseudo: pseudo)
     }
 }

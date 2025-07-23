@@ -13,9 +13,9 @@ extension HTML {
     public func textBoxTrim(
         _ textBoxTrim: CSSPropertyTypes.TextBoxTrim?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textBoxTrim, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textBoxTrim, media: media, selector: selector, pseudo: pseudo)
     }
 }

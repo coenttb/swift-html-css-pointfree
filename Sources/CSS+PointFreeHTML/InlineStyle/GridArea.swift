@@ -13,9 +13,9 @@ extension HTML {
     public func gridArea(
         _ gridArea: CSSPropertyTypes.GridArea?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(gridArea, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(gridArea, media: media, selector: selector, pseudo: pseudo)
     }
 }

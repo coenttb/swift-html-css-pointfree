@@ -13,9 +13,9 @@ extension HTML {
     public func willChange(
         _ willChange: CSSPropertyTypes.WillChange?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(willChange, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(willChange, media: media, selector: selector, pseudo: pseudo)
     }
 }

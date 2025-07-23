@@ -13,9 +13,9 @@ extension HTML {
     public func letterSpacingEastAsian(
         _ letterSpacingEastAsian: CSSPropertyTypes.LetterSpacingEastAsian?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(letterSpacingEastAsian, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(letterSpacingEastAsian, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func fontVariantLigatures(
         _ fontVariantLigatures: CSSPropertyTypes.FontVariantLigatures?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontVariantLigatures, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontVariantLigatures, media: media, selector: selector, pseudo: pseudo)
     }
 }

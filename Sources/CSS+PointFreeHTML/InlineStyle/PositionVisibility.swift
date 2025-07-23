@@ -13,9 +13,9 @@ extension HTML {
     public func positionVisibility(
         _ positionVisibility: CSSPropertyTypes.PositionVisibility?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(positionVisibility, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(positionVisibility, media: media, selector: selector, pseudo: pseudo)
     }
 }

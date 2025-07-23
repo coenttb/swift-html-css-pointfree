@@ -13,9 +13,9 @@ extension HTML {
     public func verticalAlign(
         _ verticalAlign: CSSPropertyTypes.VerticalAlign?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(verticalAlign, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(verticalAlign, media: media, selector: selector, pseudo: pseudo)
     }
 }

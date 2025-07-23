@@ -13,9 +13,9 @@ extension HTML {
     public func textAnchor(
         _ textAnchor: CSSPropertyTypes.TextAnchor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textAnchor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textAnchor, media: media, selector: selector, pseudo: pseudo)
     }
 }

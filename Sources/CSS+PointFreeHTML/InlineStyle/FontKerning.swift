@@ -13,9 +13,9 @@ extension HTML {
     public func fontKerning(
         _ fontKerning: CSSPropertyTypes.FontKerning?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontKerning, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontKerning, media: media, selector: selector, pseudo: pseudo)
     }
 }

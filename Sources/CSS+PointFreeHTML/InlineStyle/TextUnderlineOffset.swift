@@ -13,9 +13,9 @@ extension HTML {
     public func textUnderlineOffset(
         _ textUnderlineOffset: CSSPropertyTypes.TextUnderlineOffset?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textUnderlineOffset, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textUnderlineOffset, media: media, selector: selector, pseudo: pseudo)
     }
 }

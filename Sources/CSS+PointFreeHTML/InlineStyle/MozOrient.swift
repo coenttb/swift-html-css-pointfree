@@ -13,9 +13,9 @@ extension HTML {
     public func mozOrient(
         _ mozOrient: CSSPropertyTypes.MozOrient?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mozOrient, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mozOrient, media: media, selector: selector, pseudo: pseudo)
     }
 }

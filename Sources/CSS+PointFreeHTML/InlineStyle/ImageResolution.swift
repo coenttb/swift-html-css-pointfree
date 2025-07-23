@@ -13,9 +13,9 @@ extension HTML {
     public func imageResolution(
         _ imageResolution: CSSPropertyTypes.ImageResolution?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(imageResolution, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(imageResolution, media: media, selector: selector, pseudo: pseudo)
     }
 }

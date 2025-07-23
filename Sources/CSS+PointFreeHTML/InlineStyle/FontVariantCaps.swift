@@ -13,9 +13,9 @@ extension HTML {
     public func fontVariantCaps(
         _ fontVariantCaps: CSSPropertyTypes.FontVariantCaps?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontVariantCaps, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontVariantCaps, media: media, selector: selector, pseudo: pseudo)
     }
 }

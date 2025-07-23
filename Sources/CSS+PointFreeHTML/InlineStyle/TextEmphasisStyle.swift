@@ -13,9 +13,9 @@ extension HTML {
     public func textEmphasisStyle(
         _ textEmphasisStyle: CSSPropertyTypes.TextEmphasisStyle?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textEmphasisStyle, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textEmphasisStyle, media: media, selector: selector, pseudo: pseudo)
     }
 }

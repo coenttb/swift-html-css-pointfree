@@ -13,9 +13,9 @@ extension HTML {
     public func scrollSnapType(
         _ scrollSnapType: CSSPropertyTypes.ScrollSnapType?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollSnapType, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollSnapType, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func offsetAnchor(
         _ offsetAnchor: CSSPropertyTypes.OffsetAnchor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(offsetAnchor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(offsetAnchor, media: media, selector: selector, pseudo: pseudo)
     }
 }

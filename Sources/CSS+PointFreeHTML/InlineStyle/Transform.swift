@@ -13,10 +13,10 @@ extension HTML {
     public func transform(
         _ transform: CSSPropertyTypes.Transform?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(transform, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(transform, media: media, selector: selector, pseudo: pseudo)
     }
 }
 
@@ -25,9 +25,9 @@ extension HTML {
     public func transform(
         _ transform: String,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(Transform.property, transform, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(Transform.property, transform, media: media, selector: selector, pseudo: pseudo)
     }
 }

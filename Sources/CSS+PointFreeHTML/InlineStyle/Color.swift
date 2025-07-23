@@ -14,10 +14,10 @@ extension HTML {
     public func color(
         _ color: CSSPropertyTypes.Color?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(color, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(color, media: media, selector: selector, pseudo: pseudo)
     }
 }
 

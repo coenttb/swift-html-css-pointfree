@@ -13,9 +13,9 @@ extension HTML {
     public func scrollPaddingBottom(
         _ scrollPaddingBottom: CSSPropertyTypes.ScrollPaddingBottom?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollPaddingBottom, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollPaddingBottom, media: media, selector: selector, pseudo: pseudo)
     }
 }

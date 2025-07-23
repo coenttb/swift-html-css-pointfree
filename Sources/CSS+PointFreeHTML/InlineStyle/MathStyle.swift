@@ -13,9 +13,9 @@ extension HTML {
     public func mathStyle(
         _ mathStyle: CSSPropertyTypes.MathStyle?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mathStyle, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mathStyle, media: media, selector: selector, pseudo: pseudo)
     }
 }

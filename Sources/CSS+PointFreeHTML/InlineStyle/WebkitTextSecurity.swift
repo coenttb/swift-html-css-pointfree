@@ -13,9 +13,9 @@ extension HTML {
     public func webkitTextSecurity(
         _ webkitTextSecurity: CSSPropertyTypes.WebkitTextSecurity?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitTextSecurity, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitTextSecurity, media: media, selector: selector, pseudo: pseudo)
     }
 }

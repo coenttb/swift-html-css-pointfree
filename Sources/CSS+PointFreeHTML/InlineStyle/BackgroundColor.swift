@@ -13,9 +13,9 @@ extension HTML {
     public func backgroundColor(
         _ backgroundColor: CSSPropertyTypes.BackgroundColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(backgroundColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

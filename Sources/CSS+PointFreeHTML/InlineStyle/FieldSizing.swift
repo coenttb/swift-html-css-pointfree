@@ -13,9 +13,9 @@ extension HTML {
     public func fieldSizing(
         _ fieldSizing: CSSPropertyTypes.FieldSizing?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fieldSizing, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fieldSizing, media: media, selector: selector, pseudo: pseudo)
     }
 }

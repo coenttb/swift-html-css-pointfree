@@ -206,7 +206,7 @@ struct BackdropFilterTests {
     func htmlBackdropFilterWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backdropFilter(.blur(.px(5)), pre: "my-component")
+                div.backdropFilter(.blur(.px(5)), selector: "my-component")
             },
             as: .html
         ) {

@@ -13,9 +13,9 @@ extension HTML {
     public func animationIterationCount(
         _ animationIterationCount: CSSPropertyTypes.AnimationIterationCount?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationIterationCount, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationIterationCount, media: media, selector: selector, pseudo: pseudo)
     }
 }

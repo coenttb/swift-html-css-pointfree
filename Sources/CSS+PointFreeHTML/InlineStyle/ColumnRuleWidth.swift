@@ -13,9 +13,9 @@ extension HTML {
     public func columnRuleWidth(
         _ columnRuleWidth: CSSPropertyTypes.ColumnRuleWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(columnRuleWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(columnRuleWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

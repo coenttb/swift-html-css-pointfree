@@ -13,9 +13,9 @@ extension HTML {
     public func lineBreak(
         _ lineBreak: CSSPropertyTypes.LineBreak?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(lineBreak, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(lineBreak, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func interpolateSize(
         _ interpolateSize: CSSPropertyTypes.InterpolateSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(interpolateSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(interpolateSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

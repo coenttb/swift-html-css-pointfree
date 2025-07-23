@@ -13,9 +13,9 @@ extension HTML {
     public func scrollPaddingBlockEnd(
         _ scrollPaddingBlockEnd: CSSPropertyTypes.ScrollPaddingBlockEnd?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollPaddingBlockEnd, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollPaddingBlockEnd, media: media, selector: selector, pseudo: pseudo)
     }
 }

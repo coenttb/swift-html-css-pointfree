@@ -13,9 +13,9 @@ extension HTML {
     public func overflowAnchor(
         _ overflowAnchor: CSSPropertyTypes.OverflowAnchor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overflowAnchor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(overflowAnchor, media: media, selector: selector, pseudo: pseudo)
     }
 }

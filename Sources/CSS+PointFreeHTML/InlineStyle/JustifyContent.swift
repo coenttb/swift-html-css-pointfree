@@ -13,9 +13,9 @@ extension HTML {
     public func justifyContent(
         _ justifyContent: CSSPropertyTypes.JustifyContent?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(justifyContent, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(justifyContent, media: media, selector: selector, pseudo: pseudo)
     }
 }

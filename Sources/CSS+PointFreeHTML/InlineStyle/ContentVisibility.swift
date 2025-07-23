@@ -13,9 +13,9 @@ extension HTML {
     public func contentVisibility(
         _ contentVisibility: CSSPropertyTypes.ContentVisibility?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(contentVisibility, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(contentVisibility, media: media, selector: selector, pseudo: pseudo)
     }
 }

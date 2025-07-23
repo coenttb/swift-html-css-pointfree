@@ -13,9 +13,9 @@ extension HTML {
     public func outlineStyle(
         _ outlineStyle: CSSPropertyTypes.OutlineStyle?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(outlineStyle, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(outlineStyle, media: media, selector: selector, pseudo: pseudo)
     }
 }

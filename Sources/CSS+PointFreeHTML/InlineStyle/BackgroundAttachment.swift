@@ -13,9 +13,9 @@ extension HTML {
     public func backgroundAttachment(
         _ backgroundAttachment: CSSPropertyTypes.BackgroundAttachment?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundAttachment, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(backgroundAttachment, media: media, selector: selector, pseudo: pseudo)
     }
 }

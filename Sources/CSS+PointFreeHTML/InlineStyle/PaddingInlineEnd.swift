@@ -13,9 +13,9 @@ extension HTML {
     public func paddingInlineEnd(
         _ paddingInlineEnd: CSSPropertyTypes.PaddingInlineEnd?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(paddingInlineEnd, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(paddingInlineEnd, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func caretColor(
         _ caretColor: CSSPropertyTypes.CaretColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(caretColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(caretColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

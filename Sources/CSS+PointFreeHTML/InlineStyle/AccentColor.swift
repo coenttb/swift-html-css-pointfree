@@ -13,9 +13,9 @@ extension HTML {
     public func accentColor(
         _ accentColor: CSSPropertyTypes.AccentColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(accentColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(accentColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func blockSize(
         _ blockSize: CSSPropertyTypes.BlockSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(blockSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(blockSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

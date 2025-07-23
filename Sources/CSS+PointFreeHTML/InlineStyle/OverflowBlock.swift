@@ -13,9 +13,9 @@ extension HTML {
     public func overflowBlock(
         _ overflowBlock: CSSPropertyTypes.OverflowBlock?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overflowBlock, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(overflowBlock, media: media, selector: selector, pseudo: pseudo)
     }
 }

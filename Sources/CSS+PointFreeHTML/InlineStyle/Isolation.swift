@@ -13,9 +13,9 @@ extension HTML {
     public func isolation(
         _ isolation: CSSPropertyTypes.Isolation?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(isolation, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(isolation, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func gridTemplateRows(
         _ gridTemplateRows: CSSPropertyTypes.GridTemplateRows?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(gridTemplateRows, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(gridTemplateRows, media: media, selector: selector, pseudo: pseudo)
     }
 }

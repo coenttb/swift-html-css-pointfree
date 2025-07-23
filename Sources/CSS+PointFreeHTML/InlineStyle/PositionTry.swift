@@ -13,9 +13,9 @@ extension HTML {
     public func positionTry(
         _ positionTry: CSSPropertyTypes.PositionTry?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(positionTry, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(positionTry, media: media, selector: selector, pseudo: pseudo)
     }
 }

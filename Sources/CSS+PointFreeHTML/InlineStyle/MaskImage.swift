@@ -13,9 +13,9 @@ extension HTML {
     public func maskImage(
         _ maskImage: CSSPropertyTypes.MaskImage?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maskImage, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maskImage, media: media, selector: selector, pseudo: pseudo)
     }
 }

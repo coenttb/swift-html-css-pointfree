@@ -13,9 +13,9 @@ extension HTML {
     public func whiteSpaceCollapse(
         _ whiteSpaceCollapse: CSSPropertyTypes.WhiteSpaceCollapse?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(whiteSpaceCollapse, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(whiteSpaceCollapse, media: media, selector: selector, pseudo: pseudo)
     }
 }

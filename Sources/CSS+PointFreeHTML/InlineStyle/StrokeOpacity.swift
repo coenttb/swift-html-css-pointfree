@@ -13,9 +13,9 @@ extension HTML {
     public func strokeOpacity(
         _ strokeOpacity: CSSPropertyTypes.StrokeOpacity?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(strokeOpacity, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(strokeOpacity, media: media, selector: selector, pseudo: pseudo)
     }
 }

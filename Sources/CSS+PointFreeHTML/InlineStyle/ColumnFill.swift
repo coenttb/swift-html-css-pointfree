@@ -13,9 +13,9 @@ extension HTML {
     public func columnFill(
         _ columnFill: CSSPropertyTypes.ColumnFill?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(columnFill, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(columnFill, media: media, selector: selector, pseudo: pseudo)
     }
 }

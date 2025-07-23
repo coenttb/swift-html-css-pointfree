@@ -13,9 +13,9 @@ extension HTML {
     public func positionTryOrder(
         _ positionTryOrder: CSSPropertyTypes.PositionTryOrder?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(positionTryOrder, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(positionTryOrder, media: media, selector: selector, pseudo: pseudo)
     }
 }

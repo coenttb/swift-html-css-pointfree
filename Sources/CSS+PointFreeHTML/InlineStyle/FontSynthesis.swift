@@ -13,9 +13,9 @@ extension HTML {
     public func fontSynthesis(
         _ fontSynthesis: CSSPropertyTypes.FontSynthesis?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontSynthesis, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontSynthesis, media: media, selector: selector, pseudo: pseudo)
     }
 }

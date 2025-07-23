@@ -13,9 +13,9 @@ extension HTML {
     public func whiteSpace(
         _ whiteSpace: CSSPropertyTypes.WhiteSpace?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(whiteSpace, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(whiteSpace, media: media, selector: selector, pseudo: pseudo)
     }
 }

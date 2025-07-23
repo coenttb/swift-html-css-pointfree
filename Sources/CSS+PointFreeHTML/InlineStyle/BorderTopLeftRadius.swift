@@ -13,9 +13,9 @@ extension HTML {
     public func borderTopLeftRadius(
         _ borderTopLeftRadius: CSSPropertyTypes.BorderTopLeftRadius?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderTopLeftRadius, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderTopLeftRadius, media: media, selector: selector, pseudo: pseudo)
     }
 }

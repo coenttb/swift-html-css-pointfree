@@ -13,9 +13,9 @@ extension HTML {
     public func hangingPunctuation(
         _ hangingPunctuation: CSSPropertyTypes.HangingPunctuation?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(hangingPunctuation, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(hangingPunctuation, media: media, selector: selector, pseudo: pseudo)
     }
 }

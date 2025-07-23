@@ -13,9 +13,9 @@ extension HTML {
     public func order(
         _ order: CSSPropertyTypes.Order?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(order, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(order, media: media, selector: selector, pseudo: pseudo)
     }
 }

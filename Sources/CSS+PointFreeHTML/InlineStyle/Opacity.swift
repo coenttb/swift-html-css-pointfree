@@ -13,9 +13,9 @@ extension HTML {
     public func opacity(
         _ opacity: CSSPropertyTypes.Opacity?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(opacity, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(opacity, media: media, selector: selector, pseudo: pseudo)
     }
 }

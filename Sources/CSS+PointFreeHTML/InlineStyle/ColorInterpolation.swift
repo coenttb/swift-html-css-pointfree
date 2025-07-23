@@ -13,9 +13,9 @@ extension HTML {
     public func colorInterpolation(
         _ colorInterpolation: CSSPropertyTypes.ColorInterpolation?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(colorInterpolation, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(colorInterpolation, media: media, selector: selector, pseudo: pseudo)
     }
 }

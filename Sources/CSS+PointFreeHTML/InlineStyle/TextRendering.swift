@@ -13,9 +13,9 @@ extension HTML {
     public func textRendering(
         _ textRendering: CSSPropertyTypes.TextRendering?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textRendering, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textRendering, media: media, selector: selector, pseudo: pseudo)
     }
 }

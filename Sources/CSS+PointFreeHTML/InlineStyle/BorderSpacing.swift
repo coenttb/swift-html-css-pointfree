@@ -13,9 +13,9 @@ extension HTML {
     public func borderSpacing(
         _ borderSpacing: CSSPropertyTypes.BorderSpacing?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderSpacing, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderSpacing, media: media, selector: selector, pseudo: pseudo)
     }
 }

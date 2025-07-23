@@ -13,9 +13,9 @@ extension HTML {
     public func tableLayout(
         _ tableLayout: CSSPropertyTypes.TableLayout?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(tableLayout, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(tableLayout, media: media, selector: selector, pseudo: pseudo)
     }
 }

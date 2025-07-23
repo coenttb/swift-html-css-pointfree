@@ -13,9 +13,9 @@ extension HTML {
     public func imeMode(
         _ imeMode: CSSPropertyTypes.ImeMode?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(imeMode, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(imeMode, media: media, selector: selector, pseudo: pseudo)
     }
 }

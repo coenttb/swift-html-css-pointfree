@@ -13,9 +13,9 @@ extension HTML {
     public func hyphens(
         _ hyphens: CSSPropertyTypes.Hyphens?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(hyphens, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(hyphens, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func insetBlockStart(
         _ insetBlockStart: CSSPropertyTypes.InsetBlockStart?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(insetBlockStart, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(insetBlockStart, media: media, selector: selector, pseudo: pseudo)
     }
 }

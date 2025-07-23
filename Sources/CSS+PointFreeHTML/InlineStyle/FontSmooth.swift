@@ -13,9 +13,9 @@ extension HTML {
     public func fontSmooth(
         _ fontSmooth: CSSPropertyTypes.FontSmooth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontSmooth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontSmooth, media: media, selector: selector, pseudo: pseudo)
     }
 }

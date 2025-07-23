@@ -13,9 +13,9 @@ extension HTML {
     public func perspectiveOrigin(
         _ perspectiveOrigin: CSSPropertyTypes.PerspectiveOrigin?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(perspectiveOrigin, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(perspectiveOrigin, media: media, selector: selector, pseudo: pseudo)
     }
 }

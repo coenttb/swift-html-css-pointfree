@@ -13,9 +13,9 @@ extension HTML {
     public func scale(
         _ scale: CSSPropertyTypes.Scale?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scale, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scale, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func strokeMiterlimit(
         _ strokeMiterlimit: CSSPropertyTypes.StrokeMiterlimit?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(strokeMiterlimit, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(strokeMiterlimit, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func floodColor(
         _ floodColor: CSSPropertyTypes.FloodColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(floodColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(floodColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -154,7 +154,7 @@ struct AlignContentTests {
     func htmlAlignContentWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignContent(.spaceBetween, pre: "my-component")
+                div.alignContent(.spaceBetween, selector: "my-component")
             },
             as: .html
         ) {

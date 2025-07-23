@@ -206,7 +206,7 @@ struct BackgroundClipTests {
     func htmlBackgroundClipWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundClip(.contentBox, pre: "my-component")
+                div.backgroundClip(.contentBox, selector: "my-component")
             },
             as: .html
         ) {

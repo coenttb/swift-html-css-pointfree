@@ -13,9 +13,9 @@ extension HTML {
     public func scrollMarginTop(
         _ scrollMarginTop: CSSPropertyTypes.ScrollMarginTop?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollMarginTop, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollMarginTop, media: media, selector: selector, pseudo: pseudo)
     }
 }

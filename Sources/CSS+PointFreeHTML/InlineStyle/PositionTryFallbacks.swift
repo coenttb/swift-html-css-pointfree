@@ -13,9 +13,9 @@ extension HTML {
     public func positionTryFallbacks(
         _ positionTryFallbacks: CSSPropertyTypes.PositionTryFallbacks?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(positionTryFallbacks, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(positionTryFallbacks, media: media, selector: selector, pseudo: pseudo)
     }
 }

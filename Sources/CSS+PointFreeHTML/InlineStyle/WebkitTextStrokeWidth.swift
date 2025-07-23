@@ -13,9 +13,9 @@ extension HTML {
     public func webkitTextStrokeWidth(
         _ webkitTextStrokeWidth: CSSPropertyTypes.WebkitTextStrokeWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitTextStrokeWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitTextStrokeWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

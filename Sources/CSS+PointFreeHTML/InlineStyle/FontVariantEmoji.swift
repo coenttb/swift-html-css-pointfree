@@ -13,9 +13,9 @@ extension HTML {
     public func fontVariantEmoji(
         _ fontVariantEmoji: CSSPropertyTypes.FontVariantEmoji?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontVariantEmoji, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontVariantEmoji, media: media, selector: selector, pseudo: pseudo)
     }
 }

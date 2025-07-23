@@ -13,9 +13,9 @@ extension HTML {
     public func animationComposition(
         _ animationComposition: CSSPropertyTypes.AnimationComposition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationComposition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationComposition, media: media, selector: selector, pseudo: pseudo)
     }
 }

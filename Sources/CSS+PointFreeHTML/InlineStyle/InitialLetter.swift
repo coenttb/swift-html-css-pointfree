@@ -13,9 +13,9 @@ extension HTML {
     public func initialLetter(
         _ initialLetter: CSSPropertyTypes.InitialLetter?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(initialLetter, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(initialLetter, media: media, selector: selector, pseudo: pseudo)
     }
 }

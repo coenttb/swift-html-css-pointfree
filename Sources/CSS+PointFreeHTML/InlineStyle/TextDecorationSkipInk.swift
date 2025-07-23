@@ -13,9 +13,9 @@ extension HTML {
     public func textDecorationSkipInk(
         _ textDecorationSkipInk: CSSPropertyTypes.TextDecorationSkipInk?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textDecorationSkipInk, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textDecorationSkipInk, media: media, selector: selector, pseudo: pseudo)
     }
 }

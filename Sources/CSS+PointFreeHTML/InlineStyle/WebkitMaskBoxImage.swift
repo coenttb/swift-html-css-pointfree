@@ -13,9 +13,9 @@ extension HTML {
     public func webkitMaskBoxImage(
         _ webkitMaskBoxImage: CSSPropertyTypes.WebkitMaskBoxImage?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitMaskBoxImage, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitMaskBoxImage, media: media, selector: selector, pseudo: pseudo)
     }
 }

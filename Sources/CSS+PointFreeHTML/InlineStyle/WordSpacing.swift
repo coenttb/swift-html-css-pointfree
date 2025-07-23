@@ -13,9 +13,9 @@ extension HTML {
     public func wordSpacing(
         _ wordSpacing: CSSPropertyTypes.WordSpacing?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(wordSpacing, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(wordSpacing, media: media, selector: selector, pseudo: pseudo)
     }
 }

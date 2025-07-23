@@ -22,20 +22,22 @@ extension CSSAtRuleTypes.Media {
     package static let reducedMotion = Self(rawValue: "@media (prefers-reduced-motion: reduce)")
 }
 
+
+
 extension HTMLInlineStyle {
     @_disfavoredOverload
     public func inlineStyle(
         _ property: String,
         _ value: String?,
-        media mediaQuery: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle {
-        self.inlineStyle(
+        return self.inlineStyle(
             property,
             value,
-            media: mediaQuery.map(\.rawValue).map(MediaQuery.init(rawValue:)),
-            pre: pre,
+            atRule: media.map(\.rawValue).map(PointFreeHTML.AtRule.Media.init(rawValue:)),
+            selector: selector,
             pseudo: pseudo
         )
     }

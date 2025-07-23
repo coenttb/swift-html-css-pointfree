@@ -13,9 +13,9 @@ extension HTML {
     public func position(
         _ position: CSSPropertyTypes.Position?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(position, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(position, media: media, selector: selector, pseudo: pseudo)
     }
 }

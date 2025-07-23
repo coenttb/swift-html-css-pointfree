@@ -13,9 +13,9 @@ extension HTML {
     public func animationTimingFunction(
         _ animationTimingFunction: CSSPropertyTypes.AnimationTimingFunction?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationTimingFunction, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationTimingFunction, media: media, selector: selector, pseudo: pseudo)
     }
 }

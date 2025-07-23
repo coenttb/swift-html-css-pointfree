@@ -13,9 +13,9 @@ extension HTML {
     public func maskBorderOutset(
         _ maskBorderOutset: CSSPropertyTypes.MaskBorderOutset?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maskBorderOutset, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maskBorderOutset, media: media, selector: selector, pseudo: pseudo)
     }
 }

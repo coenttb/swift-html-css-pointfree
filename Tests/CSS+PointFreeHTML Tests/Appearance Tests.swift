@@ -154,7 +154,7 @@ struct AppearanceTests {
     func htmlAppearanceWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.appearance(Appearance.none, pre: "my-component")
+                div.appearance(Appearance.none, selector: "my-component")
             },
             as: .html
         ) {

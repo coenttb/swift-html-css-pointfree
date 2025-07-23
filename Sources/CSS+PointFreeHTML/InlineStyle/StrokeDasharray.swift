@@ -13,9 +13,9 @@ extension HTML {
     public func strokeDasharray(
         _ strokeDasharray: CSSPropertyTypes.StrokeDasharray?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(strokeDasharray, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(strokeDasharray, media: media, selector: selector, pseudo: pseudo)
     }
 }

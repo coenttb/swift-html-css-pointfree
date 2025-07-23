@@ -154,7 +154,7 @@ struct BackfaceVisibilityTests {
     func htmlBackfaceVisibilityWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backfaceVisibility(.hidden, pre: "my-component")
+                div.backfaceVisibility(.hidden, selector: "my-component")
             },
             as: .html
         ) {

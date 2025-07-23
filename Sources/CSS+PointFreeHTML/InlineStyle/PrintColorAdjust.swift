@@ -13,9 +13,9 @@ extension HTML {
     public func printColorAdjust(
         _ printColorAdjust: CSSPropertyTypes.PrintColorAdjust?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(printColorAdjust, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(printColorAdjust, media: media, selector: selector, pseudo: pseudo)
     }
 }

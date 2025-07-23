@@ -13,9 +13,9 @@ extension HTML {
     public func widows(
         _ widows: CSSPropertyTypes.Widows?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(widows, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(widows, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func unicodeBidi(
         _ unicodeBidi: CSSPropertyTypes.UnicodeBidi?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(unicodeBidi, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(unicodeBidi, media: media, selector: selector, pseudo: pseudo)
     }
 }

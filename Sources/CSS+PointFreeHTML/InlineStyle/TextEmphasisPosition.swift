@@ -13,9 +13,9 @@ extension HTML {
     public func textEmphasisPosition(
         _ textEmphasisPosition: CSSPropertyTypes.TextEmphasisPosition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textEmphasisPosition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textEmphasisPosition, media: media, selector: selector, pseudo: pseudo)
     }
 }

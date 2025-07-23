@@ -13,9 +13,9 @@ extension HTML {
     public func borderImageSlice(
         _ borderImageSlice: CSSPropertyTypes.BorderImageSlice?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderImageSlice, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderImageSlice, media: media, selector: selector, pseudo: pseudo)
     }
 }

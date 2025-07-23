@@ -13,9 +13,9 @@ extension HTML {
     public func mixBlendMode(
         _ mixBlendMode: CSSPropertyTypes.MixBlendMode?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mixBlendMode, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mixBlendMode, media: media, selector: selector, pseudo: pseudo)
     }
 }

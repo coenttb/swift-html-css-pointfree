@@ -13,9 +13,9 @@ extension HTML {
     public func overscrollBehaviorX(
         _ overscrollBehaviorX: CSSPropertyTypes.OverscrollBehaviorX?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overscrollBehaviorX, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(overscrollBehaviorX, media: media, selector: selector, pseudo: pseudo)
     }
 }

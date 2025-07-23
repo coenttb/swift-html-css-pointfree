@@ -13,9 +13,9 @@ extension HTML {
     public func backgroundClip(
         _ backgroundClip: CSSPropertyTypes.BackgroundClip?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundClip, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(backgroundClip, media: media, selector: selector, pseudo: pseudo)
     }
 }

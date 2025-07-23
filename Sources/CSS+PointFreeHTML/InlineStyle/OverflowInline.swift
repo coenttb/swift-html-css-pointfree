@@ -13,9 +13,9 @@ extension HTML {
     public func overflowInline(
         _ overflowInline: CSSPropertyTypes.OverflowInline?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overflowInline, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(overflowInline, media: media, selector: selector, pseudo: pseudo)
     }
 }

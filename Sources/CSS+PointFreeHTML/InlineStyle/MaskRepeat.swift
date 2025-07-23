@@ -13,9 +13,9 @@ extension HTML {
     public func maskRepeat(
         _ maskRepeat: CSSPropertyTypes.MaskRepeat?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maskRepeat, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maskRepeat, media: media, selector: selector, pseudo: pseudo)
     }
 }

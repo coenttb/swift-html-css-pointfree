@@ -13,9 +13,9 @@ extension HTML {
     public func strokeWidth(
         _ strokeWidth: CSSPropertyTypes.StrokeWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(strokeWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(strokeWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func viewTimeline(
         _ viewTimeline: CSSPropertyTypes.ViewTimeline?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(viewTimeline, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(viewTimeline, media: media, selector: selector, pseudo: pseudo)
     }
 }

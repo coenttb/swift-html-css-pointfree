@@ -13,9 +13,9 @@ extension HTML {
     public func clip(
         _ clip: CSSPropertyTypes.Clip?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(clip, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(clip, media: media, selector: selector, pseudo: pseudo)
     }
 }

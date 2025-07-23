@@ -13,9 +13,9 @@ extension HTML {
     public func borderTopColor(
         _ borderTopColor: CSSPropertyTypes.BorderTopColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderTopColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderTopColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func overlay(
         _ overlay: CSSPropertyTypes.Overlay?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overlay, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(overlay, media: media, selector: selector, pseudo: pseudo)
     }
 }

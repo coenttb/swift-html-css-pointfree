@@ -13,9 +13,9 @@ extension HTML {
     public func vectorEffect(
         _ vectorEffect: CSSPropertyTypes.VectorEffect?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(vectorEffect, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(vectorEffect, media: media, selector: selector, pseudo: pseudo)
     }
 }

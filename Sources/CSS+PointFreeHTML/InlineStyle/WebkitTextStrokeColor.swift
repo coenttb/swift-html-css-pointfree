@@ -13,9 +13,9 @@ extension HTML {
     public func webkitTextStrokeColor(
         _ webkitTextStrokeColor: CSSPropertyTypes.WebkitTextStrokeColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitTextStrokeColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitTextStrokeColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

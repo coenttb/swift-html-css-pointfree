@@ -13,9 +13,9 @@ extension HTML {
     public func borderEndEndRadius(
         _ borderEndEndRadius: CSSPropertyTypes.BorderEndEndRadius?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderEndEndRadius, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderEndEndRadius, media: media, selector: selector, pseudo: pseudo)
     }
 }

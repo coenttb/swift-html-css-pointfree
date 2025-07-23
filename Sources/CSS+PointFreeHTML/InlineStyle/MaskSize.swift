@@ -13,9 +13,9 @@ extension HTML {
     public func maskSize(
         _ maskSize: CSSPropertyTypes.MaskSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maskSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maskSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

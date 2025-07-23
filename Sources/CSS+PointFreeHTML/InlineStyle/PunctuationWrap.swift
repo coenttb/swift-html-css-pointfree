@@ -13,9 +13,9 @@ extension HTML {
     public func punctuationWrap(
         _ punctuationWrap: CSSPropertyTypes.PunctuationWrap?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(punctuationWrap, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(punctuationWrap, media: media, selector: selector, pseudo: pseudo)
     }
 }

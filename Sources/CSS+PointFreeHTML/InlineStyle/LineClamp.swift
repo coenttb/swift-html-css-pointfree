@@ -13,9 +13,9 @@ extension HTML {
     public func lineClamp(
         _ lineClamp: CSSPropertyTypes.LineClamp?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(lineClamp, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(lineClamp, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -208,7 +208,7 @@
 //    func htmlAnimationDirectionWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDirection(.normal, pre: "my-component")
+//                div.animationDirection(.normal, selector: "my-component")
 //            },
 //            as: .html
 //        ) {

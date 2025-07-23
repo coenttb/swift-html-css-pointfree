@@ -13,9 +13,9 @@ extension HTML {
     public func containIntrinsicWidth(
         _ containIntrinsicWidth: CSSPropertyTypes.ContainIntrinsicWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(containIntrinsicWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(containIntrinsicWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

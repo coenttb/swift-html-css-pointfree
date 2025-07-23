@@ -13,9 +13,9 @@ extension HTML {
     public func placeSelf(
         _ placeSelf: CSSPropertyTypes.PlaceSelf?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(placeSelf, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(placeSelf, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func scrollbarWidth(
         _ scrollbarWidth: CSSPropertyTypes.ScrollbarWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollbarWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollbarWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

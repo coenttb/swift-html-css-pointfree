@@ -13,9 +13,9 @@ extension HTML {
     public func borderBlockStyle(
         _ borderBlockStyle: CSSPropertyTypes.BorderBlockStyle?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderBlockStyle, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderBlockStyle, media: media, selector: selector, pseudo: pseudo)
     }
 }

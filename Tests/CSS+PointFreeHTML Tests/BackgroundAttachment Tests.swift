@@ -180,7 +180,7 @@ struct BackgroundAttachmentTests {
     func htmlBackgroundAttachmentWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundAttachment(.fixed, pre: "my-component")
+                div.backgroundAttachment(.fixed, selector: "my-component")
             },
             as: .html
         ) {

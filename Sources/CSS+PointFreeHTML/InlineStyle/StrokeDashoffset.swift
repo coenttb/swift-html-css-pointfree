@@ -13,9 +13,9 @@ extension HTML {
     public func strokeDashoffset(
         _ strokeDashoffset: CSSPropertyTypes.StrokeDashoffset?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(strokeDashoffset, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(strokeDashoffset, media: media, selector: selector, pseudo: pseudo)
     }
 }

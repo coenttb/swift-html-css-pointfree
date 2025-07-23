@@ -13,9 +13,9 @@ extension HTML {
     public func cursor(
         _ cursor: CSSPropertyTypes.Cursor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(cursor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(cursor, media: media, selector: selector, pseudo: pseudo)
     }
 }

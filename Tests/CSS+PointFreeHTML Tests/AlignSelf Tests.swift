@@ -154,7 +154,7 @@ struct AlignSelfTests {
     func htmlAlignSelfWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignSelf(.flexEnd, pre: "my-component")
+                div.alignSelf(.flexEnd, selector: "my-component")
             },
             as: .html
         ) {

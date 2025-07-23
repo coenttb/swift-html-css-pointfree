@@ -13,9 +13,9 @@ extension HTML {
     public func textDecoration(
         _ textDecoration: CSSPropertyTypes.TextDecoration?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textDecoration, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textDecoration, media: media, selector: selector, pseudo: pseudo)
     }
 }

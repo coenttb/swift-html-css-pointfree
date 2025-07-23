@@ -13,9 +13,9 @@ extension HTML {
     public func anchorName(
         _ anchorName: CSSPropertyTypes.AnchorName?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(anchorName, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(anchorName, media: media, selector: selector, pseudo: pseudo)
     }
 }

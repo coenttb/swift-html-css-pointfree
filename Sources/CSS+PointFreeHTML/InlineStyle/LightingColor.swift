@@ -13,9 +13,9 @@ extension HTML {
     public func lightingColor(
         _ lightingColor: CSSPropertyTypes.LightingColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(lightingColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(lightingColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

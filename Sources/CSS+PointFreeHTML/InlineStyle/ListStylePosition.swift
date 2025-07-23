@@ -13,9 +13,9 @@ extension HTML {
     public func listStylePosition(
         _ listStylePosition: CSSPropertyTypes.ListStylePosition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(listStylePosition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(listStylePosition, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func offsetRotate(
         _ offsetRotate: CSSPropertyTypes.OffsetRotate?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(offsetRotate, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(offsetRotate, media: media, selector: selector, pseudo: pseudo)
     }
 }

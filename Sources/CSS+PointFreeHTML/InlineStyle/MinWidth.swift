@@ -13,9 +13,9 @@ extension HTML {
     public func minWidth(
         _ minWidth: CSSPropertyTypes.MinWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(minWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(minWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

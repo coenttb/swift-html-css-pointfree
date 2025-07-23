@@ -232,7 +232,7 @@ struct BackgroundColorTests {
     func htmlBackgroundColorWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundColor(.color(.red), pre: "my-component")
+                div.backgroundColor(.color(.red), selector: "my-component")
             },
             as: .html
         ) {

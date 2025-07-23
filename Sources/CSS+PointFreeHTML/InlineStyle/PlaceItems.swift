@@ -13,9 +13,9 @@ extension HTML {
     public func placeItems(
         _ placeItems: CSSPropertyTypes.PlaceItems?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(placeItems, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(placeItems, media: media, selector: selector, pseudo: pseudo)
     }
 }

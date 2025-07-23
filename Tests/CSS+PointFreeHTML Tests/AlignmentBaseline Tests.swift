@@ -154,7 +154,7 @@ struct AlignmentBaselineTests {
     func htmlAlignmentBaselineWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignmentBaseline(.textTop, pre: "my-component")
+                div.alignmentBaseline(.textTop, selector: "my-component")
             },
             as: .html
         ) {

@@ -13,9 +13,9 @@ extension HTML {
     public func writingMode(
         _ writingMode: CSSPropertyTypes.WritingMode?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(writingMode, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(writingMode, media: media, selector: selector, pseudo: pseudo)
     }
 }

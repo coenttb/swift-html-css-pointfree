@@ -13,9 +13,9 @@ extension HTML {
     public func alignItems(
         _ alignItems: CSSPropertyTypes.AlignItems?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(alignItems, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(alignItems, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func webkitTapHighlightColor(
         _ webkitTapHighlightColor: CSSPropertyTypes.WebkitTapHighlightColor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitTapHighlightColor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitTapHighlightColor, media: media, selector: selector, pseudo: pseudo)
     }
 }

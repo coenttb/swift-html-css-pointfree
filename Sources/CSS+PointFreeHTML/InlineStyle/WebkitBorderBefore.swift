@@ -13,9 +13,9 @@ extension HTML {
     public func webkitBorderBefore(
         _ webkitBorderBefore: CSSPropertyTypes.WebkitBorderBefore?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitBorderBefore, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitBorderBefore, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func markerMid(
         _ markerMid: CSSPropertyTypes.MarkerMid?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(markerMid, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(markerMid, media: media, selector: selector, pseudo: pseudo)
     }
 }

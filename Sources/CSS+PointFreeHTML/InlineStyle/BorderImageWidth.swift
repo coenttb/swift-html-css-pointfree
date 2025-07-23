@@ -13,9 +13,9 @@ extension HTML {
     public func borderImageWidth(
         _ borderImageWidth: CSSPropertyTypes.BorderImageWidth?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderImageWidth, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(borderImageWidth, media: media, selector: selector, pseudo: pseudo)
     }
 }

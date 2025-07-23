@@ -182,7 +182,7 @@
 //    func htmlAnimationCompositionWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationComposition(.accumulate, pre: "my-component")
+//                div.animationComposition(.accumulate, selector: "my-component")
 //            },
 //            as: .html
 //        ) {

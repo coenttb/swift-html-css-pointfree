@@ -13,9 +13,9 @@ extension HTML {
     public func maskPosition(
         _ maskPosition: CSSPropertyTypes.MaskPosition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maskPosition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maskPosition, media: media, selector: selector, pseudo: pseudo)
     }
 }

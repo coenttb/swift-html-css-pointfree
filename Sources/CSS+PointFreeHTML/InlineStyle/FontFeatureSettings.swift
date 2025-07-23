@@ -13,9 +13,9 @@ extension HTML {
     public func fontFeatureSettings(
         _ fontFeatureSettings: CSSPropertyTypes.FontFeatureSettings?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontFeatureSettings, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontFeatureSettings, media: media, selector: selector, pseudo: pseudo)
     }
 }

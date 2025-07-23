@@ -13,9 +13,9 @@ extension HTML {
     public func rowGap(
         _ rowGap: CSSPropertyTypes.RowGap?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(rowGap, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(rowGap, media: media, selector: selector, pseudo: pseudo)
     }
 }

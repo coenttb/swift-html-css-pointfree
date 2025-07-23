@@ -13,9 +13,9 @@ extension HTML {
     public func fontVariantPosition(
         _ fontVariantPosition: CSSPropertyTypes.FontVariantPosition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fontVariantPosition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fontVariantPosition, media: media, selector: selector, pseudo: pseudo)
     }
 }

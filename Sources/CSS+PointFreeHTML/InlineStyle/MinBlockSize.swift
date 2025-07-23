@@ -13,9 +13,9 @@ extension HTML {
     public func minBlockSize(
         _ minBlockSize: CSSPropertyTypes.MinBlockSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(minBlockSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(minBlockSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

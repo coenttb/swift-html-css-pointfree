@@ -13,9 +13,9 @@ extension HTML {
     public func webkitBoxReflect(
         _ webkitBoxReflect: CSSPropertyTypes.WebkitBoxReflect?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitBoxReflect, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitBoxReflect, media: media, selector: selector, pseudo: pseudo)
     }
 }

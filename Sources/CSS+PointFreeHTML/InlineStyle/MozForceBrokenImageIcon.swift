@@ -13,9 +13,9 @@ extension HTML {
     public func mozForceBrokenImageIcon(
         _ mozForceBrokenImageIcon: CSSPropertyTypes.MozForceBrokenImageIcon?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mozForceBrokenImageIcon, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mozForceBrokenImageIcon, media: media, selector: selector, pseudo: pseudo)
     }
 }

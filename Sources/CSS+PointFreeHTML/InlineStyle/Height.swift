@@ -13,9 +13,9 @@ extension HTML {
     public func height(
         _ height: CSSPropertyTypes.Height?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(height, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(height, media: media, selector: selector, pseudo: pseudo)
     }
 }

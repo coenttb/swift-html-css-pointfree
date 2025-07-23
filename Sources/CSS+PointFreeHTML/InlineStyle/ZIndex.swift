@@ -13,9 +13,9 @@ extension HTML {
     public func zIndex(
         _ zIndex: CSSPropertyTypes.ZIndex?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(zIndex, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(zIndex, media: media, selector: selector, pseudo: pseudo)
     }
 }

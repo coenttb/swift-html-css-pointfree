@@ -13,9 +13,9 @@ extension HTML {
     public func animationName(
         _ animationName: CSSPropertyTypes.AnimationName?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationName, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationName, media: media, selector: selector, pseudo: pseudo)
     }
 }

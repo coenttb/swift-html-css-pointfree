@@ -13,9 +13,9 @@ extension HTML {
     public func animationFillMode(
         _ animationFillMode: CSSPropertyTypes.AnimationFillMode?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationFillMode, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationFillMode, media: media, selector: selector, pseudo: pseudo)
     }
 }

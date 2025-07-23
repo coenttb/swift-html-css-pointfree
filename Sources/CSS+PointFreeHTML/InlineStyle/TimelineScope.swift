@@ -13,9 +13,9 @@ extension HTML {
     public func timelineScope(
         _ timelineScope: CSSPropertyTypes.TimelineScope?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(timelineScope, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(timelineScope, media: media, selector: selector, pseudo: pseudo)
     }
 }

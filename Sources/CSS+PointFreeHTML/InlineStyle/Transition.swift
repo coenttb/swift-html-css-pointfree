@@ -13,10 +13,10 @@ extension HTML {
     public func transition(
         _ transition: CSSPropertyTypes.Transition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(transition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(transition, media: media, selector: selector, pseudo: pseudo)
     }
 }
 
@@ -25,9 +25,9 @@ extension HTML {
     public func transition(
         _ transition: String,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(Transition.property, transition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(Transition.property, transition, media: media, selector: selector, pseudo: pseudo)
     }
 }

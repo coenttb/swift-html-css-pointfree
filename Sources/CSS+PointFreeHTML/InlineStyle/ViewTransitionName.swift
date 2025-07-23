@@ -13,9 +13,9 @@ extension HTML {
     public func viewTransitionName(
         _ viewTransitionName: CSSPropertyTypes.ViewTransitionName?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(viewTransitionName, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(viewTransitionName, media: media, selector: selector, pseudo: pseudo)
     }
 }

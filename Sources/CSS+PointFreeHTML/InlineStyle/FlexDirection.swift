@@ -13,9 +13,9 @@ extension HTML {
     public func flexDirection(
         _ flexDirection: CSSPropertyTypes.FlexDirection?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(flexDirection, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(flexDirection, media: media, selector: selector, pseudo: pseudo)
     }
 }

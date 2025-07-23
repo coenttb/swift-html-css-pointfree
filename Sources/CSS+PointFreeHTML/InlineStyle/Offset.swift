@@ -13,9 +13,9 @@ extension HTML {
     public func offset(
         _ offset: CSSPropertyTypes.Offset?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(offset, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(offset, media: media, selector: selector, pseudo: pseudo)
     }
 }

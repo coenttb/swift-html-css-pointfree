@@ -13,9 +13,9 @@ extension HTML {
     public func mozFloatEdge(
         _ mozFloatEdge: CSSPropertyTypes.MozFloatEdge?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mozFloatEdge, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mozFloatEdge, media: media, selector: selector, pseudo: pseudo)
     }
 }

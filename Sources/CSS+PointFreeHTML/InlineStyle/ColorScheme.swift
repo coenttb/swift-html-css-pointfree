@@ -13,9 +13,9 @@ extension HTML {
     public func colorScheme(
         _ colorScheme: CSSPropertyTypes.ColorScheme?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(colorScheme, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(colorScheme, media: media, selector: selector, pseudo: pseudo)
     }
 }

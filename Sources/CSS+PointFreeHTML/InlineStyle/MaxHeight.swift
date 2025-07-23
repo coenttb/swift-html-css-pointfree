@@ -13,9 +13,9 @@ extension HTML {
     public func maxHeight(
         _ maxHeight: CSSPropertyTypes.MaxHeight?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maxHeight, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maxHeight, media: media, selector: selector, pseudo: pseudo)
     }
 }

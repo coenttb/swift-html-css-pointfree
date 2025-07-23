@@ -13,9 +13,9 @@ extension HTML {
     public func positionAnchor(
         _ positionAnchor: CSSPropertyTypes.PositionAnchor?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(positionAnchor, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(positionAnchor, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func containIntrinsicInlineSize(
         _ containIntrinsicInlineSize: CSSPropertyTypes.ContainIntrinsicInlineSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(containIntrinsicInlineSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(containIntrinsicInlineSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

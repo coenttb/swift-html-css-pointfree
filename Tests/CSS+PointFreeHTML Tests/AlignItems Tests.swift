@@ -154,7 +154,7 @@ struct AlignItemsTests {
     func htmlAlignItemsWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.alignItems(.flexEnd, pre: "my-component")
+                div.alignItems(.flexEnd, selector: "my-component")
             },
             as: .html
         ) {

@@ -206,7 +206,7 @@ struct BackgroundTests {
     func htmlBackgroundWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.background(.color(.red), pre: "my-component")
+                div.background(.color(.red), selector: "my-component")
             },
             as: .html
         ) {

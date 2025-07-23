@@ -13,9 +13,9 @@ extension HTML {
     public func fillRule(
         _ fillRule: CSSPropertyTypes.FillRule?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(fillRule, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(fillRule, media: media, selector: selector, pseudo: pseudo)
     }
 }

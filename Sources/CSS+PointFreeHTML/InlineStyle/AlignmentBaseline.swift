@@ -13,9 +13,9 @@ extension HTML {
     public func alignmentBaseline(
         _ alignmentBaseline: CSSPropertyTypes.AlignmentBaseline?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(alignmentBaseline, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(alignmentBaseline, media: media, selector: selector, pseudo: pseudo)
     }
 }

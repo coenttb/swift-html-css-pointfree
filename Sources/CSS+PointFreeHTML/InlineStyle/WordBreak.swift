@@ -13,9 +13,9 @@ extension HTML {
     public func wordBreak(
         _ wordBreak: CSSPropertyTypes.WordBreak?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(wordBreak, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(wordBreak, media: media, selector: selector, pseudo: pseudo)
     }
 }

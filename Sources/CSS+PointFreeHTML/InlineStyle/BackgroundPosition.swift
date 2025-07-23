@@ -13,9 +13,9 @@ extension HTML {
     public func backgroundPosition(
         _ backgroundPosition: CSSPropertyTypes.BackgroundPosition?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundPosition, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(backgroundPosition, media: media, selector: selector, pseudo: pseudo)
     }
 }

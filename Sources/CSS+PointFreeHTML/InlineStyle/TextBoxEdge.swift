@@ -13,9 +13,9 @@ extension HTML {
     public func textBoxEdge(
         _ textBoxEdge: CSSPropertyTypes.TextBoxEdge?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textBoxEdge, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textBoxEdge, media: media, selector: selector, pseudo: pseudo)
     }
 }

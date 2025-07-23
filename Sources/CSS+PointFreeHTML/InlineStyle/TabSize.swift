@@ -13,9 +13,9 @@ extension HTML {
     public func tabSize(
         _ tabSize: CSSPropertyTypes.TabSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(tabSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(tabSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

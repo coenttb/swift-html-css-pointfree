@@ -13,9 +13,9 @@ extension HTML {
     public func containerType(
         _ containerType: CSSPropertyTypes.ContainerType?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(containerType, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(containerType, media: media, selector: selector, pseudo: pseudo)
     }
 }

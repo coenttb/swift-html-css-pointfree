@@ -13,9 +13,9 @@ extension HTML {
     public func scrollTimelineAxis(
         _ scrollTimelineAxis: CSSPropertyTypes.ScrollTimelineAxis?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollTimelineAxis, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollTimelineAxis, media: media, selector: selector, pseudo: pseudo)
     }
 }

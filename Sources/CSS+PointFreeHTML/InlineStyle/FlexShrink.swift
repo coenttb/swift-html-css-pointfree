@@ -13,9 +13,9 @@ extension HTML {
     public func flexShrink(
         _ flexShrink: CSSPropertyTypes.FlexShrink? = 1,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(flexShrink, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(flexShrink, media: media, selector: selector, pseudo: pseudo)
     }
 }

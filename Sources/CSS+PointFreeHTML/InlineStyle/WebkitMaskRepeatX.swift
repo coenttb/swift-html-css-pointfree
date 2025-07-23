@@ -13,9 +13,9 @@ extension HTML {
     public func webkitMaskRepeatX(
         _ webkitMaskRepeatX: CSSPropertyTypes.WebkitMaskRepeatX?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitMaskRepeatX, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitMaskRepeatX, media: media, selector: selector, pseudo: pseudo)
     }
 }

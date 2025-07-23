@@ -13,9 +13,9 @@ extension HTML {
     public func boxSizing(
         _ boxSizing: CSSPropertyTypes.BoxSizing?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(boxSizing, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(boxSizing, media: media, selector: selector, pseudo: pseudo)
     }
 }

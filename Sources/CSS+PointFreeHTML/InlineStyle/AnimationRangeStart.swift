@@ -13,9 +13,9 @@ extension HTML {
     public func animationRangeStart(
         _ animationRangeStart: CSSPropertyTypes.AnimationRangeStart?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationRangeStart, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationRangeStart, media: media, selector: selector, pseudo: pseudo)
     }
 }

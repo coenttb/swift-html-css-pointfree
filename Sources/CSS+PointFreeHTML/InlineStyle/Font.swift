@@ -13,9 +13,9 @@ extension HTML {
     public func font(
         _ font: CSSPropertyTypes.Font?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(font, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(font, media: media, selector: selector, pseudo: pseudo)
     }
 }

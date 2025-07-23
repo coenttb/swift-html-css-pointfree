@@ -31,11 +31,13 @@ struct AccentColorTests {
             <html>
               <head>
                 <style>
-                  .accent-color-dMYaj4{accent-color:red}
+            .accent-color-dMYaj4{accent-color:red}
+
                 </style>
               </head>
               <body>
-                <div class="accent-color-dMYaj4"></div>
+            <div class="accent-color-dMYaj4">
+            </div>
               </body>
             </html>
             """
@@ -152,7 +154,7 @@ struct AccentColorTests {
     func htmlAccentColorWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.hex("FF0000")), pre: "my-component")
+                div.accentColor(.color(.hex("FF0000")), selector: "my-component")
             },
             as: .html
         ) {

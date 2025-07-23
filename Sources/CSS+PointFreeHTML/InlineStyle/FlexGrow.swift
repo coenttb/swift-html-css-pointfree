@@ -13,9 +13,9 @@ extension HTML {
     public func flexGrow(
         _ flexGrow: CSSPropertyTypes.FlexGrow? = 1,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(flexGrow, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(flexGrow, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -180,7 +180,7 @@ struct AspectRatioTests {
     func htmlAspectRatioWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.aspectRatio(.ratio(16, 9), pre: "my-component")
+                div.aspectRatio(.ratio(16, 9), selector: "my-component")
             },
             as: .html
         ) {

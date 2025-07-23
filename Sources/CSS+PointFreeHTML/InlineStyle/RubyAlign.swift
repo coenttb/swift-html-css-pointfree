@@ -13,9 +13,9 @@ extension HTML {
     public func rubyAlign(
         _ rubyAlign: CSSPropertyTypes.RubyAlign?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(rubyAlign, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(rubyAlign, media: media, selector: selector, pseudo: pseudo)
     }
 }

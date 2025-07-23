@@ -13,9 +13,9 @@ extension HTML {
     public func maxBlockSize(
         _ maxBlockSize: CSSPropertyTypes.MaxBlockSize?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maxBlockSize, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maxBlockSize, media: media, selector: selector, pseudo: pseudo)
     }
 }

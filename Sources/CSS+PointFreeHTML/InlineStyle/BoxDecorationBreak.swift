@@ -13,9 +13,9 @@ extension HTML {
     public func boxDecorationBreak(
         _ boxDecorationBreak: CSSPropertyTypes.BoxDecorationBreak?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(boxDecorationBreak, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(boxDecorationBreak, media: media, selector: selector, pseudo: pseudo)
     }
 }

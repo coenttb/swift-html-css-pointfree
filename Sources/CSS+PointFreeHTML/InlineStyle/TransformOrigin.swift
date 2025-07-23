@@ -13,9 +13,9 @@ extension HTML {
     public func transformOrigin(
         _ transformOrigin: CSSPropertyTypes.TransformOrigin?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(transformOrigin, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(transformOrigin, media: media, selector: selector, pseudo: pseudo)
     }
 }

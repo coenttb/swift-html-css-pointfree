@@ -13,9 +13,9 @@ extension HTML {
     public func shapeMargin(
         _ shapeMargin: CSSPropertyTypes.ShapeMargin?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(shapeMargin, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(shapeMargin, media: media, selector: selector, pseudo: pseudo)
     }
 }

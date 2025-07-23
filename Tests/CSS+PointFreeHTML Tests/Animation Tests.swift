@@ -158,7 +158,7 @@
 //    func htmlAnimationWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animation(.string("slide 2s ease-out"), pre: "my-component")
+//                div.animation(.string("slide 2s ease-out"), selector: "my-component")
 //            },
 //            as: .html
 //        ) {

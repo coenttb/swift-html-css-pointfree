@@ -13,9 +13,9 @@ extension HTML {
     public func columnGap(
         _ columnGap: CSSPropertyTypes.ColumnGap?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(columnGap, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(columnGap, media: media, selector: selector, pseudo: pseudo)
     }
 }

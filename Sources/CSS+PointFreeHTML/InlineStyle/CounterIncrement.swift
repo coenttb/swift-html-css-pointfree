@@ -13,9 +13,9 @@ extension HTML {
     public func counterIncrement(
         _ counterIncrement: CSSPropertyTypes.CounterIncrement?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(counterIncrement, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(counterIncrement, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func textSpacingTrim(
         _ textSpacingTrim: CSSPropertyTypes.TextSpacingTrim?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textSpacingTrim, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(textSpacingTrim, media: media, selector: selector, pseudo: pseudo)
     }
 }

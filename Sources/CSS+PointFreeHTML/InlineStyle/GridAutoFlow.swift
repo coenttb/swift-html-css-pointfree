@@ -13,9 +13,9 @@ extension HTML {
     public func gridAutoFlow(
         _ gridAutoFlow: CSSPropertyTypes.GridAutoFlow?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(gridAutoFlow, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(gridAutoFlow, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func paddingLeft(
         _ paddingLeft: CSSPropertyTypes.PaddingLeft?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(paddingLeft, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(paddingLeft, media: media, selector: selector, pseudo: pseudo)
     }
 }

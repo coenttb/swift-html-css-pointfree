@@ -13,9 +13,9 @@ extension HTML {
     public func page(
         _ page: CSSPropertyTypes.Page?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(page, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(page, media: media, selector: selector, pseudo: pseudo)
     }
 }

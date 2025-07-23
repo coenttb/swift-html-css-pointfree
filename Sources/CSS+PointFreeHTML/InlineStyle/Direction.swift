@@ -13,9 +13,9 @@ extension HTML {
     public func direction(
         _ direction: CSSPropertyTypes.Direction?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(direction, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(direction, media: media, selector: selector, pseudo: pseudo)
     }
 }

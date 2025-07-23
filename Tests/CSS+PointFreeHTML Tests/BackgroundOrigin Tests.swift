@@ -180,7 +180,7 @@ struct BackgroundOriginTests {
     func htmlBackgroundOriginWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundOrigin(.contentBox, pre: "my-component")
+                div.backgroundOrigin(.contentBox, selector: "my-component")
             },
             as: .html
         ) {

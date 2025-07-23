@@ -13,9 +13,9 @@ extension HTML {
     public func webkitMaskPositionX(
         _ webkitMaskPositionX: CSSPropertyTypes.WebkitMaskPositionX?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitMaskPositionX, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(webkitMaskPositionX, media: media, selector: selector, pseudo: pseudo)
     }
 }

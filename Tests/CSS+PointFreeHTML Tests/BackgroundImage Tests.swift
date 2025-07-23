@@ -232,7 +232,7 @@ struct BackgroundImageTests {
     func htmlBackgroundImageWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundImage(.url("image.jpg"), pre: "my-component")
+                div.backgroundImage(.url("image.jpg"), selector: "my-component")
             },
             as: .html
         ) {

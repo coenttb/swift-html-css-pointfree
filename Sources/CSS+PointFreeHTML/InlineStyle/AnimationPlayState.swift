@@ -13,9 +13,9 @@ extension HTML {
     public func animationPlayState(
         _ animationPlayState: CSSPropertyTypes.AnimationPlayState?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationPlayState, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(animationPlayState, media: media, selector: selector, pseudo: pseudo)
     }
 }

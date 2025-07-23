@@ -13,9 +13,9 @@ extension HTML {
     public func mozUserFocus(
         _ mozUserFocus: CSSPropertyTypes.MozUserFocus?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mozUserFocus, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mozUserFocus, media: media, selector: selector, pseudo: pseudo)
     }
 }

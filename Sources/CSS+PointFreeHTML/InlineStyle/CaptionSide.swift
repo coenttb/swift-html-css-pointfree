@@ -13,9 +13,9 @@ extension HTML {
     public func captionSide(
         _ captionSide: CSSPropertyTypes.CaptionSide?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(captionSide, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(captionSide, media: media, selector: selector, pseudo: pseudo)
     }
 }

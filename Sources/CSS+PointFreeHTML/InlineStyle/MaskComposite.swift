@@ -13,9 +13,9 @@ extension HTML {
     public func maskComposite(
         _ maskComposite: CSSPropertyTypes.MaskComposite?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maskComposite, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(maskComposite, media: media, selector: selector, pseudo: pseudo)
     }
 }

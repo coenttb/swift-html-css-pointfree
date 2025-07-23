@@ -13,9 +13,9 @@ extension HTML {
     public func mozImageRegion(
         _ mozImageRegion: CSSPropertyTypes.MozImageRegion?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(mozImageRegion, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(mozImageRegion, media: media, selector: selector, pseudo: pseudo)
     }
 }

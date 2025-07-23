@@ -13,9 +13,9 @@ extension HTML {
     public func touchAction(
         _ touchAction: CSSPropertyTypes.TouchAction?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(touchAction, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(touchAction, media: media, selector: selector, pseudo: pseudo)
     }
 }

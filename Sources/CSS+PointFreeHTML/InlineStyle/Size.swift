@@ -13,9 +13,9 @@ extension HTML {
     public func size(
         _ size: CSSPropertyTypes.Size?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(size, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(size, media: media, selector: selector, pseudo: pseudo)
     }
 }

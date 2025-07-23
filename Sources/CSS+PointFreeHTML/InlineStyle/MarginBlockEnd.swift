@@ -13,9 +13,9 @@ extension HTML {
     public func marginBlockEnd(
         _ marginBlockEnd: CSSPropertyTypes.MarginBlockEnd?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(marginBlockEnd, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(marginBlockEnd, media: media, selector: selector, pseudo: pseudo)
     }
 }

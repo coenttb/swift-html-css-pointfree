@@ -13,9 +13,9 @@ extension HTML {
     public func gridAutoColumns(
         _ gridAutoColumns: CSSPropertyTypes.GridAutoColumns?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(gridAutoColumns, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(gridAutoColumns, media: media, selector: selector, pseudo: pseudo)
     }
 }

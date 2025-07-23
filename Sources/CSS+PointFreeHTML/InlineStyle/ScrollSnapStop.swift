@@ -13,9 +13,9 @@ extension HTML {
     public func scrollSnapStop(
         _ scrollSnapStop: CSSPropertyTypes.ScrollSnapStop?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollSnapStop, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(scrollSnapStop, media: media, selector: selector, pseudo: pseudo)
     }
 }

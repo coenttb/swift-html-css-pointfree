@@ -13,9 +13,9 @@ extension HTML {
     public func float(
         _ float: CSSPropertyTypes.Float?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(float, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(float, media: media, selector: selector, pseudo: pseudo)
     }
 }

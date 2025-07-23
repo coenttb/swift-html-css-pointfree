@@ -182,7 +182,7 @@
 //    func htmlAnimationDelayWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
 //            of: HTMLDocument {
-//                div.animationDelay(.time("1s"), pre: "my-component")
+//                div.animationDelay(.time("1s"), selector: "my-component")
 //            },
 //            as: .html
 //        ) {

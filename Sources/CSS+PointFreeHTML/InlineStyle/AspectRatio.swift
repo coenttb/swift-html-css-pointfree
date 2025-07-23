@@ -13,9 +13,9 @@ extension HTML {
     public func aspectRatio(
         _ aspectRatio: CSSPropertyTypes.AspectRatio?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(aspectRatio, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(aspectRatio, media: media, selector: selector, pseudo: pseudo)
     }
 }

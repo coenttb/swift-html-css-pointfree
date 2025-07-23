@@ -13,9 +13,9 @@ extension HTML {
     public func backgroundOrigin(
         _ backgroundOrigin: CSSPropertyTypes.BackgroundOrigin?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundOrigin, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(backgroundOrigin, media: media, selector: selector, pseudo: pseudo)
     }
 }

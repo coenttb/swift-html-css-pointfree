@@ -154,7 +154,7 @@ struct AnchorNameTests {
     func htmlAnchorNameWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.anchorName("footer", pre: "my-component")
+                div.anchorName("footer", selector: "my-component")
             },
             as: .html
         ) {

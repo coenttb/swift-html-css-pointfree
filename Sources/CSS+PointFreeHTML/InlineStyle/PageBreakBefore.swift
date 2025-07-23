@@ -13,9 +13,9 @@ extension HTML {
     public func pageBreakBefore(
         _ pageBreakBefore: CSSPropertyTypes.PageBreakBefore?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(pageBreakBefore, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(pageBreakBefore, media: media, selector: selector, pseudo: pseudo)
     }
 }

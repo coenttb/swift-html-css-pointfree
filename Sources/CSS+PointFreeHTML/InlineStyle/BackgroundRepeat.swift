@@ -13,9 +13,9 @@ extension HTML {
     public func backgroundRepeat(
         _ backgroundRepeat: CSSPropertyTypes.BackgroundRepeat?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundRepeat, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(backgroundRepeat, media: media, selector: selector, pseudo: pseudo)
     }
 }

@@ -13,9 +13,9 @@ extension HTML {
     public func transitionTimingFunction(
         _ transitionTimingFunction: CSSPropertyTypes.TransitionTimingFunction?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(transitionTimingFunction, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(transitionTimingFunction, media: media, selector: selector, pseudo: pseudo)
     }
 }

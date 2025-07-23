@@ -13,9 +13,9 @@ extension HTML {
     public func counterReset(
         _ counterReset: CSSPropertyTypes.CounterReset?,
         media: CSSAtRuleTypes.Media? = nil,
-        pre: String? = nil,
+        selector: Selector? = nil,
         pseudo: Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(counterReset, media: media, pre: pre, pseudo: pseudo)
+        self.inlineStyle(counterReset, media: media, selector: selector, pseudo: pseudo)
     }
 }
