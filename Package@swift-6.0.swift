@@ -46,7 +46,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/coenttb/swift-html-types.git", branch: "main"),
         .package(url: "https://github.com/coenttb/swift-css-types.git", branch: "main"),
-        .package(url: "https://github.com/coenttb/pointfree-html.git", branch: "main"),
+        .package(url: "https://github.com/coenttb/pointfree-html.git", from: "2.0.0"),
     ],
     targets: [
         .target(
