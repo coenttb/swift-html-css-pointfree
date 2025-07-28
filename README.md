@@ -46,7 +46,7 @@ This package is typically used as a dependency by other packages in the ecosyste
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/coenttb/swift-html-css-pointfree", branch: "main")
+    .package(url: "https://github.com/coenttb/swift-html-css-pointfree", from: "0.0.1")
 ]
 ```
 
