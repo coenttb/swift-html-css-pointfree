@@ -13,8 +13,8 @@ extension HTML {
     public func inlineStyle<PropertyElement: CSSPropertyTypes.Property>(
         _ property: PropertyElement?,
         media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
+        selector: PointFreeHTML.Selector? = nil,
+        pseudo: PointFreeHTML.Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
         self.inlineStyle(PropertyElement.property, property?.description, media: media.map(PointFreeHTML.AtRule.Media.init), selector: selector, pseudo: pseudo)
     }
@@ -27,8 +27,8 @@ extension HTML {
         _ property: String,
         _ value: String?,
         media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
+        selector: PointFreeHTML.Selector? = nil,
+        pseudo: PointFreeHTML.Pseudo? = nil
     ) -> HTMLInlineStyle<Self> {
         self.inlineStyle(property, value, media: media.map(PointFreeHTML.AtRule.Media.init), selector: selector, pseudo: pseudo)
     }
@@ -39,3 +39,4 @@ extension PointFreeHTML.AtRule.Media {
         self = .init(rawValue: media.rawValue)
     }
 }
+
