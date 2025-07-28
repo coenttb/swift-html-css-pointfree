@@ -44,7 +44,7 @@ let package = Package(
         .library(name: .htmlElementsPointFreeHTML, targets: [.htmlElementsPointFreeHTML]),
     ],
     dependencies: [
-        .package(url: "https://github.com/coenttb/swift-html-types.git", from: "0.0.1"),
+        .package(url: "https://github.com/coenttb/swift-html-types.git", from: "0.1.0"),
         .package(url: "https://github.com/coenttb/swift-css-types.git", from: "0.0.1"),
         .package(url: "https://github.com/coenttb/pointfree-html.git", from: "2.0.0"),
     ],
