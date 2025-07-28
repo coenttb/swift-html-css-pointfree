@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "HTML Section Heading Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct HTMLSectionHeadingTests {
     @Test("H1 renders correctly")

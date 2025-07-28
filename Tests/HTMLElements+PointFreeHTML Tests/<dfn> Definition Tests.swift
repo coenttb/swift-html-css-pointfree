@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Definition Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct DefinitionTests {
     @Test("Basic dfn renders correctly")

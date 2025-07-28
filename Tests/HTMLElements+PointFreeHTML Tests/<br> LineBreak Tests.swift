@@ -5,7 +5,7 @@ import PointFreeHTMLTestSupport
 
 @Suite(
     "LineBreak Element Tests",
-    .snapshots(record: .missing),
+    .snapshots(record: .failed),
     .serialized
 )
 struct LineBreakTests {

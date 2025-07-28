@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Del Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct DelTests {
     @Test("Basic del renders correctly")

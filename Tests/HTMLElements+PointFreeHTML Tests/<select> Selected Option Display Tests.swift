@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Select Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct SelectTests {
     @Test("Basic select renders correctly")

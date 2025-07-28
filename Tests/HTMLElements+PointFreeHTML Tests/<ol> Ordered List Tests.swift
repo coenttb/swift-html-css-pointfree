@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "OrderedList Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct OrderedListTests {
     @Test("Basic ol renders correctly")

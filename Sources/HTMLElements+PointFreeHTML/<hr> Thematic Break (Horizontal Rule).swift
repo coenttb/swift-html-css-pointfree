@@ -8,4 +8,8 @@
 import HTMLElementTypes
 import PointFreeHTML
 
-extension HTMLElementTypes.ThematicBreak: @retroactive PointFreeHTML.HTML {}
+extension HTMLElementTypes.ThematicBreak: @retroactive PointFreeHTML.HTML {
+    public var body: PointFreeHTML.HTMLElement<HTMLEmpty> {
+        PointFreeHTML.HTMLElement(tag: Self.tag) { PointFreeHTML.HTMLEmpty() }
+    }
+}

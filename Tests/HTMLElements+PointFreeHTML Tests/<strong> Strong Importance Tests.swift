@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "StrongImportance Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct StrongImportanceTests {
     @Test("Basic strong renders correctly")

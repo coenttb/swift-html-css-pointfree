@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "TableHeader Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct TableHeaderTests {
     @Test("Basic th renders correctly")

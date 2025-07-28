@@ -13,7 +13,7 @@ extension HTMLElementTypes.Frameset {
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { content() }
-            .attribute("cols", self.cols)
-            .attribute("rows", self.rows)
+            .cols(self.cols)
+            .rows(self.rows)
     }
 }

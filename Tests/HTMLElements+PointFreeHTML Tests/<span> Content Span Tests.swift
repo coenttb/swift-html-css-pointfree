@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "ContentSpan Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct ContentSpanTests {
     @Test("Basic span renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Strikethrough Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct StrikethroughTests {
     @Test("Basic s renders correctly")

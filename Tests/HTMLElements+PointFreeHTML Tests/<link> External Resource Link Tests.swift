@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Link Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct LinkTests {
     @Test("Basic link renders correctly")
@@ -15,9 +15,7 @@ struct LinkTests {
             of: Link(
                 href: "style.css",
                 rel: .stylesheet
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -35,9 +33,7 @@ struct LinkTests {
                 media: "print",
                 rel: .stylesheet,
                 type: "text/css"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -56,9 +52,7 @@ struct LinkTests {
                 href: "https://cdn.example.com/font.woff2",
                 rel: .preload,
                 type: "font/woff2"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -75,9 +69,7 @@ struct LinkTests {
                 href: "https://cdn.example.com/bootstrap.css",
                 integrity: "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
                 rel: .stylesheet
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -94,9 +86,7 @@ struct LinkTests {
                 Link(
                     href: "main.css",
                     rel: .stylesheet
-                ) {
-                    HTMLEmpty()
-                }
+                )()
             },
             as: .html
         ) {

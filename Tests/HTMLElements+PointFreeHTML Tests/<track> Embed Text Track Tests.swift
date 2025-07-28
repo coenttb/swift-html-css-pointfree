@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Track Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct TrackTests {
     @Test("Basic track renders correctly")
@@ -16,9 +16,7 @@ struct TrackTests {
                 kind: .subtitles,
                 src: "subtitles_en.vtt",
                 label: "English subtitles"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -36,9 +34,7 @@ struct TrackTests {
                 src: "captions_es.vtt",
                 srclang: "es",
                 label: "Spanish captions",
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -57,9 +53,7 @@ struct TrackTests {
                 src: "subtitles_en.vtt",
                 srclang: "en",
                 label: "English",
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -77,9 +71,7 @@ struct TrackTests {
                 src: "chapters.vtt",
                 srclang: "en",
                 label: "Chapters",
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -98,9 +90,7 @@ struct TrackTests {
                         kind: "descriptions",
                         src: "descriptions.vtt",
                         label: "Audio descriptions"
-                    ) {
-                        HTMLEmpty()
-                    }
+                    )()
                 }
             },
             as: .html

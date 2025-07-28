@@ -13,6 +13,6 @@ extension HTMLElementTypes.Image: PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag)
             .src(self.src)
             .alt(self.alt)
-            .attribute("loading", self.loading?.rawValue)
+            .loading(self.loading)
     }
 }

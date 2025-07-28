@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "UnarticulatedAnnotation Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct UnarticulatedAnnotationTests {
     @Test("Basic u renders correctly")

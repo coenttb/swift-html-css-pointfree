@@ -5,7 +5,7 @@ import PointFreeHTMLTestSupport
 
 @Suite(
     "Input Type Attribute Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct InputTypeTests {
     @Test("Fully initialized Input renders correctly")

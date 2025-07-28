@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "KeyboardInput Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct KeyboardInputTests {
     @Test("Basic kbd renders correctly")

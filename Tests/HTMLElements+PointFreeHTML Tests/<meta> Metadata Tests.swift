@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Meta Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct MetaTests {
     @Test("Meta with charset renders correctly")
@@ -14,9 +14,7 @@ struct MetaTests {
         assertInlineSnapshot(
             of: Meta(
                 charset: "UTF-8"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -32,9 +30,7 @@ struct MetaTests {
             of: Meta(
                 name: "viewport",
                 content: "width=device-width, initial-scale=1.0"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -50,9 +46,7 @@ struct MetaTests {
             of: Meta(
                 httpEquiv: .refresh,
                 content: "30"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -69,9 +63,7 @@ struct MetaTests {
                 name: "theme-color",
                 content: "#ffffff",
                 media: "(prefers-color-scheme: light)"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -88,9 +80,7 @@ struct MetaTests {
                 Meta(
                     name: "description",
                     content: "A comprehensive HTML testing framework"
-                ) {
-                    HTMLEmpty()
-                }
+                )()
             },
             as: .html
         ) {

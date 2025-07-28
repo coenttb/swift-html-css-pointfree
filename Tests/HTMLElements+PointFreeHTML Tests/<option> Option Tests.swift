@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Option Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct OptionTests {
 //    @Test("Basic option renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Section Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct SectionTests {
     @Test("Basic section renders correctly")

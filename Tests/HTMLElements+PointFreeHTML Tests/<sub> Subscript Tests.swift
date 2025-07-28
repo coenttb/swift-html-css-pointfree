@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Subscript Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct SubscriptTests {
     @Test("Basic sub renders correctly")

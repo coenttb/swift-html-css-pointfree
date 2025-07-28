@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Image Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct ImageTests {
     @Test("Basic image renders correctly")
@@ -35,7 +35,7 @@ struct ImageTests {
             as: .html
         ) {
             """
-            <img alt="Lazy loaded image" loading="lazy" src="lazy-image.jpg">
+            <img loading="lazy" alt="Lazy loaded image" src="lazy-image.jpg">
             """
         }
     }

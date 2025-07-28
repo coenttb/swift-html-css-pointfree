@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Base Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct BaseTests {
     @Test("Base with href renders correctly")

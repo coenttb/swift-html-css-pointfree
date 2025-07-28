@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Embed Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct EmbedTests {
     @Test("Basic embed renders correctly")

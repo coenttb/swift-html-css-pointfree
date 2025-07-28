@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Superscript Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct SuperscriptTests {
     @Test("Basic sup renders correctly")

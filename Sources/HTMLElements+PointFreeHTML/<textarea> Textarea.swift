@@ -10,7 +10,7 @@ import HTMLElementTypes
 
 extension HTMLElementTypes.Textarea {
     public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML = { HTMLEmpty() }
     ) -> some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { content() }
             .autocapitalize(self.autocapitalize)

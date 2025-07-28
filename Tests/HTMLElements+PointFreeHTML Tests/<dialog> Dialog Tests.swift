@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Dialog Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct DialogTests {
     @Test("Basic dialog renders correctly")

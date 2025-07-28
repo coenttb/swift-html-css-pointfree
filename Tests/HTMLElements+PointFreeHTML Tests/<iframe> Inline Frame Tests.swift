@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "InlineFrame Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct InlineFrameTests {
     @Test("Basic iframe renders correctly")

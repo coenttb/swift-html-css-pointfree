@@ -7,12 +7,11 @@
 
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.Link {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
+extension HTMLElementTypes.Link: PointFreeHTML.HTML {
+    public var body: some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .`as`(self.`as`)
             .blocking(self.blocking)
             .crossorigin(self.crossorigin)

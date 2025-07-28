@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Form Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct FormTests {
     @Test("Basic form renders correctly")

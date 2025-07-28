@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Param Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct ParamTests {
     @Test("Basic param renders correctly")
@@ -15,9 +15,7 @@ struct ParamTests {
             of: Param(
                 name: "autoplay",
                 value: "true"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -33,9 +31,7 @@ struct ParamTests {
             of: Param(
                 name: "quality",
                 value: "high"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -52,15 +48,11 @@ struct ParamTests {
                 Param(
                     name: "movie",
                     value: "video.swf"
-                ) {
-                    HTMLEmpty()
-                }
+                )()
                 Param(
                     name: "quality",
                     value: "high"
-                ) {
-                    HTMLEmpty()
-                }
+                )()
             },
             as: .html
         ) {
@@ -80,9 +72,7 @@ struct ParamTests {
                     Param(
                         name: "src",
                         value: "example.swf"
-                    ) {
-                        HTMLEmpty()
-                    }
+                    )()
                 }
             },
             as: .html

@@ -7,12 +7,11 @@
 
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.Source {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
+extension HTMLElementTypes.Source: PointFreeHTML.HTML {
+    public var body: some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .type(self.type)
             .src(self.src)
             .srcset(self.srcset)

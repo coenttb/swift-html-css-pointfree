@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Paragraph Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct ParagraphTests {
     @Test("Basic paragraph renders correctly")

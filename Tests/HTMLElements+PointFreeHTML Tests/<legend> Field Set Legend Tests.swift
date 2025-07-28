@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Legend Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct LegendTests {
     @Test("Basic legend renders correctly")
@@ -224,10 +224,10 @@ struct LegendTests {
                                 HTMLText("Comments: ")
 //                                BR()
                                 Textarea(
-                                    cols: "50",
+                                    cols: 50,
                                     name: "comments",
                                     placeholder: "Please share your thoughts...",
-                                    rows: "4"
+                                    rows: 4
                                 ) {}
                             }
                         }

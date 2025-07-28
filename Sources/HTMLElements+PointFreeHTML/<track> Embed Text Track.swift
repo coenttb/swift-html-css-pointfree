@@ -7,12 +7,11 @@
 
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.Track {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
+extension HTMLElementTypes.Track: PointFreeHTML.HTML {
+    public var body: some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .default(self.default)
             .kind(self.kind)
             .label(self.label)

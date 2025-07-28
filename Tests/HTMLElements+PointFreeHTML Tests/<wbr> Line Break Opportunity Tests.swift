@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "LineBreakOpportunity Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct LineBreakOpportunityTests {
     @Test("Basic wbr renders correctly")

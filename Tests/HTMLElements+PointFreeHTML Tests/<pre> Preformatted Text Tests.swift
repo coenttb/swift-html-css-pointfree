@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "PreformattedText Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct PreformattedTextTests {
     @Test("Basic pre renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "ProgressIndicator Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct ProgressIndicatorTests {
     @Test("Basic progress renders correctly")

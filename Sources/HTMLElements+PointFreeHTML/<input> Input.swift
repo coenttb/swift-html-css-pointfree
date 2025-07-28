@@ -6,6 +6,7 @@
 //
 //
 
+import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 import PointFreeHTML
 

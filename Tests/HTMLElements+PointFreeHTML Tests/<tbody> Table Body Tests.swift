@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "TableBody Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct TableBodyTests {
     @Test("Basic tbody renders correctly")

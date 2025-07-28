@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Source Element Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct SourceTests {
     @Test("Basic source renders correctly")
@@ -15,9 +15,7 @@ struct SourceTests {
             of: Source(
                 type: "video/mp4",
                 src: "video.mp4"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -34,9 +32,7 @@ struct SourceTests {
                 type: "image/jpeg",
                 srcset: "image-320w.jpg 320w, image-480w.jpg 480w, image-800w.jpg 800w",
                 sizes: "(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -53,9 +49,7 @@ struct SourceTests {
                 type: "video/mp4",
                 src: "large-video.mp4",
                 media: "(min-width: 768px)"
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -73,9 +67,7 @@ struct SourceTests {
                 src: "video-hd.mp4",
                 height: 1080,
                 width: 1920
-            ) {
-                HTMLEmpty()
-            },
+            )(),
             as: .html
         ) {
             """
@@ -93,9 +85,7 @@ struct SourceTests {
                     Source(
                         type: "audio/ogg",
                         src: "audio.ogg",
-                    ) {
-                        HTMLEmpty()
-                    }
+                    )()
                 }
             },
             as: .html
