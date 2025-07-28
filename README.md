@@ -1,21 +1,21 @@
 # swift-html-css-pointfree
 
-A Swift package that provides a type-safe DSL for HTML and CSS. 
+⚠️ **This is an integration package. For end-user development, please use [coenttb/swift-html](https://github.com/coenttb/swift-html) instead.**
 
-Built upon [coenttb/swift-html-types](https://www.github.com/coenttb/swift-html-types), [coenttb/swift-css-types](https://www.github.com/coenttb/swift-css-types), and rendered by [coenttb/pointfree-html](https://www.github.com/coenttb/pointfree-html).
+## Overview
 
-![Development Status](https://img.shields.io/badge/status-active--development-blue.svg)
+This package serves as an integration layer that combines:
+- [swift-html-types](https://github.com/coenttb/swift-html-types) - Type definitions for HTML elements and attributes
+- [swift-css-types](https://github.com/coenttb/swift-css-types) - Type definitions for CSS properties and values  
+- [pointfree-html](https://github.com/coenttb/pointfree-html) - HTML rendering engine
 
-This package is currently in active development and is subject to changes. Features and APIs may change without prior notice until a stable release is available.
+It provides the foundational PointFree HTML integration that powers the higher-level [swift-html](https://github.com/coenttb/swift-html) package.
 
-## Features
+## For Developers
 
-- **Type-safe HTML and DSL**: Write HTML Elements and HTML Attributes with a SwiftUI-like syntax
-- **Integrated CSS styling**: Apply CSS styles directly to HTML elements with a SwiftUI-like syntax
-- **Comprehensive coverage**: Support for all standard HTML5 Elements and Attributes, and all CSS Properties and Types 
-- **Concurrency Safe**: Full Swift 6 support 
+**👉 Use [coenttb/swift-html](https://github.com/coenttb/swift-html) for your projects.**
 
-## Examples
+The `swift-html` package provides a complete, developer-friendly API for building type-safe HTML and CSS in Swift with a SwiftUI-like syntax:
 
 ```swift
 import HTML
@@ -31,11 +31,18 @@ let document = HTMLDocument {
 }
 ```
 
-## Installation
+## Package Architecture
 
-### Swift Package Manager
+This integration package consists of several modules:
 
-Add the dependency in your `Package.swift` file:
+- **HTMLElements+PointFreeHTML** - PointFree HTML extensions for HTML elements
+- **HTMLAttributes+PointFreeHTML** - PointFree HTML extensions for HTML attributes  
+- **CSS+PointFreeHTML** - PointFree HTML extensions for CSS properties
+- **HTML+CSS+PointFreeHTML** - Combined HTML and CSS functionality
+
+## Installation (Internal Use Only)
+
+This package is typically used as a dependency by other packages in the ecosystem. If you need to use it directly:
 
 ```swift
 dependencies: [
@@ -43,22 +50,15 @@ dependencies: [
 ]
 ```
 
-### Xcode
+## Related Packages
 
-1. Select File > Add Packages...
-2. Enter package URL: `https://github.com/coenttb/swift-html-css-pointfree`
-3. Choose the main branch or a specific version
+### For End Users
+* **[swift-html](https://www.github.com/coenttb/swift-html)** - **👈 Start here!** Complete Swift DSL for HTML and CSS
 
-## Integration with Web Frameworks
-
-This package is designed to work seamlessly with Swift web frameworks like Vapor. See [coenttb-com-server](https://www.github.com/coenttb/coenttb-com-server) for an example implementation.
-
-## Related Projects
-
-* [swift-html-types](https://www.github.com/coenttb/swift-html-types): A complete Swift domain model of HTML elements and attributes.
-* [swift-css-types](https://www.github.com/coenttb/swift-css-types): A complete Swift domain model of CSS properties and types.
-* [pointfree-html](https://www.github.com/coenttb/pointfree-html): Swift DSL for rendering type-safe HTML.
-* [swift-html](https://www.github.com/coenttb/swift-html): Swift DSL for rendering type-safe HTML and CSS.
+### Foundation Packages
+* [swift-html-types](https://www.github.com/coenttb/swift-html-types) - HTML type definitions
+* [swift-css-types](https://www.github.com/coenttb/swift-css-types) - CSS type definitions
+* [pointfree-html](https://www.github.com/coenttb/pointfree-html) - HTML rendering engine
 
 ## Contribution
 
