@@ -30,13 +30,13 @@ opt_in_rules:
 included:
   - Package.swift
   - Sources
-  - Tests
 
 excluded:
   - Carthage
   - Pods
   - fastlane
   - build
+  - Tests
 
 analyzer_rules:
   - unused_import
