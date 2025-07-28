@@ -4,10 +4,10 @@
 import PackageDescription
 
 extension String {
-    static let htmlCSS: Self = "CSS+PointFreeHTML"
-    static let htmlCSSPointFree: Self = "HTML+CSS+PointFreeHTML"
-    static let htmlAttributesPointFreeHTML: Self = "HTMLAttributes+PointFreeHTML"
-    static let htmlElementsPointFreeHTML: Self = "HTMLElements+PointFreeHTML"
+    static let htmlCSS: Self = "CSSPointFreeHTML"
+    static let htmlCSSPointFree: Self = "HTMLCSSPointFreeHTML"
+    static let htmlAttributesPointFreeHTML: Self = "HTMLAttributesPointFreeHTML"
+    static let htmlElementsPointFreeHTML: Self = "HTMLElementsPointFreeHTML"
 }
 
 extension Target.Dependency {

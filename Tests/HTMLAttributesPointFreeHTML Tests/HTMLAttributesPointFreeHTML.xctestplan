@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "4C289058-860F-4BB9-B136-C198D09A3422",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HTMLAttributesPointFreeHTML Tests",
+        "name" : "HTMLAttributesPointFreeHTML Tests"
+      }
+    }
+  ],
+  "version" : 1
+}
