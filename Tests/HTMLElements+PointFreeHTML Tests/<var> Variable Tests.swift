@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Variable Element Tests",
@@ -22,7 +22,7 @@ struct VariableTests {
             """
         }
     }
-    
+
     @Test("Var in mathematical expressions renders correctly")
     func varInMathematicalExpressionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -54,7 +54,7 @@ struct VariableTests {
             """
         }
     }
-    
+
     @Test("Var in programming context renders correctly")
     func varInProgrammingContextRendersCorrectly() {
         assertInlineSnapshot(
@@ -78,7 +78,7 @@ struct VariableTests {
             """
         }
     }
-    
+
     @Test("Var with complex variable names renders correctly")
     func varWithComplexVariableNamesRendersCorrectly() {
         assertInlineSnapshot(
@@ -106,7 +106,7 @@ struct VariableTests {
             """
         }
     }
-    
+
     @Test("Var in code documentation renders correctly")
     func varInCodeDocumentationRendersCorrectly() {
         assertInlineSnapshot(
@@ -145,7 +145,7 @@ struct VariableTests {
             """
         }
     }
-    
+
     @Test("Variable within HTMLDocument renders correctly")
     func variableWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

@@ -17,7 +17,7 @@ extension HTMLElementTypes.Option: PointFreeHTML.HTML {
             .selected(self.selected)
             .value(self.value)
     }
-    
+
     public func callAsFunction(
         @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
     ) -> some PointFreeHTML.HTML {

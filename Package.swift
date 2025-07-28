@@ -35,18 +35,18 @@ let package = Package(
         .macOS(.v14),
         .tvOS(.v17),
         .watchOS(.v10),
-        .macCatalyst(.v17),
-      ],
+        .macCatalyst(.v17)
+    ],
     products: [
         .library(name: .htmlCSS, targets: [.htmlCSS]),
         .library(name: .htmlCSSPointFree, targets: [.htmlCSSPointFree]),
         .library(name: .htmlAttributesPointFreeHTML, targets: [.htmlAttributesPointFreeHTML]),
-        .library(name: .htmlElementsPointFreeHTML, targets: [.htmlElementsPointFreeHTML]),
+        .library(name: .htmlElementsPointFreeHTML, targets: [.htmlElementsPointFreeHTML])
     ],
     dependencies: [
-        .package(url: "https://github.com/coenttb/swift-html-types.git", branch: "main"),
-        .package(url: "https://github.com/coenttb/swift-css-types.git", branch: "main"),
-        .package(url: "https://github.com/coenttb/pointfree-html.git", from: "2.0.0"),
+        .package(url: "https://github.com/coenttb/swift-html-types.git", from: "0.0.1"),
+        .package(url: "https://github.com/coenttb/swift-css-types.git", from: "0.0.1"),
+        .package(url: "https://github.com/coenttb/pointfree-html.git", from: "2.0.0")
     ],
     targets: [
         .target(
@@ -57,7 +57,7 @@ let package = Package(
                 .cssTypes,
                 .htmlTypes,
                 .htmlElementsPointFreeHTML,
-                .htmlAttributesPointFreeHTML,
+                .htmlAttributesPointFreeHTML
             ]
         ),
         .testTarget(
@@ -65,14 +65,14 @@ let package = Package(
             dependencies: [
                 .htmlCSSPointFree,
                 .pointFreeHTML,
-                .pointFreeHtmlTestSupport,
+                .pointFreeHtmlTestSupport
             ]
         ),
         .target(
             name: .htmlCSS,
             dependencies: [
                 .cssTypes,
-                .pointFreeHTML,
+                .pointFreeHTML
             ]
         ),
         .testTarget(
@@ -81,7 +81,7 @@ let package = Package(
                 .htmlCSS,
                 .cssTypes,
                 .pointFreeHTML,
-                .pointFreeHtmlTestSupport,
+                .pointFreeHtmlTestSupport
             ]
         ),
         .target(
@@ -96,7 +96,7 @@ let package = Package(
             dependencies: [
                 .htmlAttributesPointFreeHTML,
                 .pointFreeHTML,
-                .pointFreeHtmlTestSupport,
+                .pointFreeHtmlTestSupport
             ]
         ),
         .target(
@@ -104,7 +104,7 @@ let package = Package(
             dependencies: [
                 .htmlElementTypes,
                 .htmlAttributesPointFreeHTML,
-                .pointFreeHTML,
+                .pointFreeHTML
             ]
         ),
         .testTarget(
@@ -114,7 +114,7 @@ let package = Package(
                 .pointFreeHTML,
                 .pointFreeHtmlTestSupport
             ]
-        ),
+        )
     ],
     swiftLanguageModes: [.v5]
 )

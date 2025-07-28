@@ -1,7 +1,7 @@
-import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
+import Testing
 
 @Suite(
     "Input Type Attribute Tests",
@@ -38,7 +38,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Button input renders correctly")
     func buttonInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -57,7 +57,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Checkbox input renders correctly")
     func checkboxInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -77,7 +77,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Color input renders correctly")
     func colorInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -96,7 +96,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Date input renders correctly")
     func dateInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -118,7 +118,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Datetime-local input renders correctly")
     func datetimeLocalInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -140,7 +140,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Email input renders correctly")
     func emailInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -168,7 +168,7 @@ struct InputTypeTests {
             """#
         }
     }
-    
+
     @Test("File input renders correctly")
     func fileInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -191,7 +191,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("File input with predefined accept type renders correctly")
     func fileInputWithPredefinedAcceptTypeRendersCorrectly() {
         assertInlineSnapshot(
@@ -213,7 +213,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Hidden input renders correctly")
     func hiddenInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -234,7 +234,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Number input renders correctly with specific step")
     func numberInputWithSpecificStepRendersCorrectly() {
         assertInlineSnapshot(
@@ -260,7 +260,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Number input renders correctly with step any")
     func numberInputWithStepAnyRendersCorrectly() {
         assertInlineSnapshot(
@@ -286,7 +286,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Password input renders correctly")
     func passwordInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -315,7 +315,7 @@ struct InputTypeTests {
             """#
         }
     }
-    
+
     @Test("Password input for PIN renders correctly")
     func passwordInputForPINRendersCorrectly() {
         assertInlineSnapshot(
@@ -344,7 +344,7 @@ struct InputTypeTests {
             """#
         }
     }
-    
+
     @Test("Radio input renders correctly")
     func radioInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -367,7 +367,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Radio input with required renders correctly")
     func radioInputWithRequiredRendersCorrectly() {
         assertInlineSnapshot(
@@ -390,7 +390,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Range input renders correctly")
     func rangeInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -415,7 +415,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Range input with step any and list renders correctly")
     func rangeInputWithStepAnyAndListRendersCorrectly() {
         assertInlineSnapshot(
@@ -440,7 +440,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Reset input renders correctly")
     func resetInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -461,7 +461,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Reset input with default value renders correctly")
     func resetInputWithDefaultValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -480,7 +480,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Submit input renders correctly")
     func submitInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -499,7 +499,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
 //    @Test("Submit input with form attributes renders correctly")
 //    func submitInputWithFormAttributesRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -525,7 +525,7 @@ struct InputTypeTests {
 //            """
 //        }
 //    }
-    
+
     @Test("Tel input renders correctly")
     func telInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -545,7 +545,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Tel input with validation attributes renders correctly")
     func telInputWithValidationAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -572,7 +572,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Text input renders correctly")
     func textInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -591,7 +591,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Text input with validation attributes renders correctly")
     func textInputWithValidationAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -619,7 +619,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Time input renders correctly")
     func timeInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -638,7 +638,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Time input with min, max and step renders correctly")
     func timeInputWithMinMaxAndStepRendersCorrectly() {
         assertInlineSnapshot(
@@ -663,7 +663,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Time input with step=any renders correctly")
     func timeInputWithStepAnyRendersCorrectly() {
         assertInlineSnapshot(
@@ -685,7 +685,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("URL input renders correctly")
     func urlInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -704,7 +704,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("URL input with validation attributes renders correctly")
     func urlInputWithValidationAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -732,7 +732,7 @@ struct InputTypeTests {
             """#
         }
     }
-    
+
     @Test("Week input renders correctly")
     func weekInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -751,7 +751,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Week input with min, max and step renders correctly")
     func weekInputWithMinMaxAndStepRendersCorrectly() {
         assertInlineSnapshot(
@@ -776,7 +776,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Week input with step=any renders correctly")
     func weekInputWithStepAnyRendersCorrectly() {
         assertInlineSnapshot(
@@ -798,7 +798,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Month input renders correctly")
     func monthInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -817,7 +817,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Month input with min, max and step renders correctly")
     func monthInputWithMinMaxAndStepRendersCorrectly() {
         assertInlineSnapshot(
@@ -842,7 +842,7 @@ struct InputTypeTests {
             """
         }
     }
-    
+
     @Test("Month input with step=any renders correctly")
     func monthInputWithStepAnyRendersCorrectly() {
         assertInlineSnapshot(

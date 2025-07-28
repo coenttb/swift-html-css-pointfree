@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "InsertedText Element Tests",
@@ -24,7 +24,7 @@ struct InsertedTextTests {
             """
         }
     }
-    
+
     @Test("Ins with datetime renders correctly")
     func insWithDatetimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct InsertedTextTests {
             """
         }
     }
-    
+
     @Test("Ins with cite renders correctly")
     func insWithCiteRendersCorrectly() {
         assertInlineSnapshot(
@@ -60,7 +60,7 @@ struct InsertedTextTests {
             """
         }
     }
-    
+
     @Test("Ins with both cite and datetime renders correctly")
     func insWithBothCiteAndDatetimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -79,7 +79,7 @@ struct InsertedTextTests {
             """
         }
     }
-    
+
     @Test("Ins with complex content renders correctly")
     func insWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -104,7 +104,7 @@ struct InsertedTextTests {
             """
         }
     }
-    
+
     @Test("Ins in document revision context renders correctly")
     func insInDocumentRevisionContextRendersCorrectly() {
         assertInlineSnapshot(
@@ -122,14 +122,14 @@ struct InsertedTextTests {
         ) {
             """
 
-            <p>The meeting will be held on 
+            <p>The meeting will be held on
               <ins datetime="2024-03-01T09:00:00Z" cite="https://example.com/meeting-updates/456">Friday, March 8th at 2:00 PM
               </ins> in the main conference room.
             </p>
             """
         }
     }
-    
+
     @Test("InsertedText within HTMLDocument renders correctly")
     func insertedTextWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -219,7 +219,7 @@ struct InsertedTextTests {
                   </li>
                 </ul>
               </section>
-              <p>For technical specifications, please refer to 
+              <p>For technical specifications, please refer to
                 <ins datetime="2024-02-01T16:30:00Z" cite="https://example.com/technical-specs/v2.1"><a href="https://example.com/specs">the updated technical documentation</a>
                 </ins>.
               </p>

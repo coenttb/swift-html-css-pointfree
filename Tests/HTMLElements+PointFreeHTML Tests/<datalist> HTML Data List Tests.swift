@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "DataList Element Tests",
@@ -33,7 +33,7 @@ struct DataListTests {
             """
         }
     }
-    
+
     @Test("DataList within HTMLDocument renders correctly")
     func datalistWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -69,7 +69,7 @@ struct DataListTests {
             """
         }
     }
-    
+
     @Test("DataList within HTMLDocument renders correctly")
     func datalistWithinHTMLDocumentRendersCorrectly2() {
         assertInlineSnapshot(

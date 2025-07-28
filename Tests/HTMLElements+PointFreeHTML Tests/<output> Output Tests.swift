@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Output Element Tests",
@@ -24,7 +24,7 @@ struct OutputTests {
             """
         }
     }
-    
+
     @Test("Output with for attribute renders correctly")
     func outputWithForAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -41,7 +41,7 @@ struct OutputTests {
             """
         }
     }
-    
+
     @Test("Output with form attribute renders correctly")
     func outputWithFormAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -59,7 +59,7 @@ struct OutputTests {
             """
         }
     }
-    
+
     @Test("Output within HTMLDocument renders correctly")
     func outputWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

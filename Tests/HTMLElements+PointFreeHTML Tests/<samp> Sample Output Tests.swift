@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Samp Element Tests",
@@ -22,7 +22,7 @@ struct SampTests {
             """
         }
     }
-    
+
     @Test("Samp for program output renders correctly")
     func sampForProgramOutputRendersCorrectly() {
         assertInlineSnapshot(
@@ -45,7 +45,7 @@ struct SampTests {
             """
         }
     }
-    
+
     @Test("Samp in code documentation renders correctly")
     func sampInCodeDocumentationRendersCorrectly() {
         assertInlineSnapshot(
@@ -84,7 +84,7 @@ struct SampTests {
             """
         }
     }
-    
+
     @Test("Samp for error messages renders correctly")
     func sampForErrorMessagesRendersCorrectly() {
         assertInlineSnapshot(
@@ -92,7 +92,7 @@ struct SampTests {
                 Paragraph {
                     HTMLText("If the file doesn't exist, you'll see an error:")
                 }
-                Samp() {
+                Samp {
                     HTMLText("FileNotFoundError: [Errno 2] No such file or directory: 'missing.txt'")
                 }
             },
@@ -107,7 +107,7 @@ struct SampTests {
             """
         }
     }
-    
+
     @Test("Samp with multiple outputs renders correctly")
     func sampWithMultipleOutputsRendersCorrectly() {
         assertInlineSnapshot(
@@ -122,7 +122,7 @@ struct SampTests {
                         ✓ test_addition passed
                         ✓ test_subtraction passed
                         ✗ test_division failed
-                        
+
                         2 passed, 1 failed
                         """)
                     }
@@ -145,7 +145,7 @@ struct SampTests {
             """
         }
     }
-    
+
     @Test("Samp within HTMLDocument renders correctly")
     func sampWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

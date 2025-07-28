@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Description Term Element Tests",
@@ -24,7 +24,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Description term within description list renders correctly")
     func descriptionTermWithinDescriptionListRendersCorrectly() {
         assertInlineSnapshot(
@@ -59,7 +59,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Description term with emphasis renders correctly")
     func descriptionTermWithEmphasisRendersCorrectly() {
         assertInlineSnapshot(
@@ -77,7 +77,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Description term with code renders correctly")
     func descriptionTermWithCodeRendersCorrectly() {
         assertInlineSnapshot(
@@ -104,7 +104,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Multiple description terms for single definition renders correctly")
     func multipleDescriptionTermsForSingleDefinitionRendersCorrectly() {
         assertInlineSnapshot(
@@ -139,7 +139,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Description term with link renders correctly")
     func descriptionTermWithLinkRendersCorrectly() {
         assertInlineSnapshot(
@@ -166,7 +166,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Description term with mixed content renders correctly")
     func descriptionTermWithMixedContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -195,7 +195,7 @@ struct DescriptionTermTests {
             """
         }
     }
-    
+
     @Test("Description term within HTMLDocument renders correctly")
     func descriptionTermWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

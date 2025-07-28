@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Image Element Tests",
@@ -23,7 +23,7 @@ struct ImageTests {
             """
         }
     }
-    
+
     @Test("Image with loading attribute renders correctly")
     func imageWithLoadingAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -39,7 +39,7 @@ struct ImageTests {
             """
         }
     }
-    
+
     @Test("Image within HTMLDocument renders correctly")
     func imageWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -58,7 +58,7 @@ struct ImageTests {
             <html>
               <head>
                 <style>
-            
+
                 </style>
               </head>
               <body>

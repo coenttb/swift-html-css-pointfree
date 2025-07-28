@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Script Element Tests",
@@ -22,7 +22,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("External script renders correctly")
     func externalScriptRendersCorrectly() {
         assertInlineSnapshot(
@@ -35,7 +35,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("Script with type attribute renders correctly")
     func scriptWithTypeAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -50,7 +50,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("Script with defer attribute renders correctly")
     func scriptWithDeferAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -64,7 +64,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("Script with async attribute renders correctly")
     func scriptWithAsyncAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -78,7 +78,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("Script with integrity and crossorigin renders correctly")
     func scriptWithIntegrityAndCrossoriginRendersCorrectly() {
         assertInlineSnapshot(
@@ -93,7 +93,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("Script with nonce attribute renders correctly")
     func scriptWithNonceAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -108,7 +108,7 @@ struct ScriptTests {
             """
         }
     }
-    
+
     @Test("JSON-LD script renders correctly")
     func jsonLDScriptRendersCorrectly() {
         assertInlineSnapshot(

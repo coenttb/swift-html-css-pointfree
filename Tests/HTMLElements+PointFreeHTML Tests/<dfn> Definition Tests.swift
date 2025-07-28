@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Definition Element Tests",
@@ -22,7 +22,7 @@ struct DefinitionTests {
             """
         }
     }
-    
+
     @Test("Dfn with title renders correctly")
     func dfnWithTitleRendersCorrectly() {
         assertInlineSnapshot(
@@ -38,7 +38,7 @@ struct DefinitionTests {
             """
         }
     }
-    
+
     @Test("Dfn with complex definition renders correctly")
     func dfnWithComplexDefinitionRendersCorrectly() {
         assertInlineSnapshot(
@@ -56,7 +56,7 @@ struct DefinitionTests {
             """
         }
     }
-    
+
     @Test("Dfn in technical documentation renders correctly")
     func dfnInTechnicalDocumentationRendersCorrectly() {
         assertInlineSnapshot(
@@ -78,7 +78,7 @@ struct DefinitionTests {
             """
         }
     }
-    
+
     @Test("Dfn with ID for cross-referencing renders correctly")
     func dfnWithIdForCrossReferencingRendersCorrectly() {
         assertInlineSnapshot(
@@ -94,7 +94,7 @@ struct DefinitionTests {
             """
         }
     }
-    
+
     @Test("Definition within HTMLDocument renders correctly")
     func definitionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

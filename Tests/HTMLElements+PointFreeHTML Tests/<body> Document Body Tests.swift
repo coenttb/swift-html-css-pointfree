@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Document Body Element Tests",
@@ -18,13 +18,13 @@ struct BodyTests {
             as: .html
         ) {
             """
-            
+
             <body>Hello, World!
             </body>
             """
         }
     }
-    
+
     @Test("Empty body renders correctly")
     func emptyBodyRendersCorrectly() {
         assertInlineSnapshot(
@@ -34,13 +34,13 @@ struct BodyTests {
             as: .html
         ) {
             """
-            
+
             <body>
             </body>
             """
         }
     }
-    
+
     @Test("Body with nested elements renders correctly")
     func bodyWithNestedElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -62,7 +62,7 @@ struct BodyTests {
             as: .html
         ) {
             """
-            
+
             <body>
               <header>
                 <h1>Main Title
@@ -78,7 +78,7 @@ struct BodyTests {
             """
         }
     }
-    
+
     @Test("Body with attributes renders correctly")
     func bodyWithAttributesRendersCorrectly() {
         assertInlineSnapshot(

@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "KeyboardInput Element Tests",
@@ -22,7 +22,7 @@ struct KeyboardInputTests {
             """
         }
     }
-    
+
     @Test("Kbd for keyboard shortcuts renders correctly")
     func kbdForKeyboardShortcutsRendersCorrectly() {
         assertInlineSnapshot(
@@ -46,7 +46,7 @@ struct KeyboardInputTests {
             """
         }
     }
-    
+
     @Test("Kbd for complex key combinations renders correctly")
     func kbdForComplexKeyCombinationsRendersCorrectly() {
         assertInlineSnapshot(
@@ -74,7 +74,7 @@ struct KeyboardInputTests {
             """
         }
     }
-    
+
     @Test("Kbd for function keys renders correctly")
     func kbdForFunctionKeysRendersCorrectly() {
         assertInlineSnapshot(
@@ -113,7 +113,7 @@ struct KeyboardInputTests {
             """
         }
     }
-    
+
     @Test("Kbd for system commands renders correctly")
     func kbdForSystemCommandsRendersCorrectly() {
         assertInlineSnapshot(
@@ -151,7 +151,7 @@ struct KeyboardInputTests {
             """
         }
     }
-    
+
     @Test("KeyboardInput within HTMLDocument renders correctly")
     func keyboardInputWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

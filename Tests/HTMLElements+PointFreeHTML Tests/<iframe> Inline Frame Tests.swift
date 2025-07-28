@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "InlineFrame Element Tests",
@@ -26,7 +26,7 @@ struct InlineFrameTests {
             """
         }
     }
-    
+
     @Test("Iframe with dimensions renders correctly")
     func iframeWithDimensionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -46,7 +46,7 @@ struct InlineFrameTests {
             """
         }
     }
-    
+
     @Test("Iframe with allowfullscreen renders correctly")
     func iframeWithAllowfullscreenRendersCorrectly() {
         assertInlineSnapshot(
@@ -65,7 +65,7 @@ struct InlineFrameTests {
             """
         }
     }
-    
+
     @Test("Iframe with loading lazy renders correctly")
     func iframeWithLoadingLazyRendersCorrectly() {
         assertInlineSnapshot(
@@ -84,7 +84,7 @@ struct InlineFrameTests {
             """
         }
     }
-    
+
     @Test("Iframe within HTMLDocument renders correctly")
     func iframeWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

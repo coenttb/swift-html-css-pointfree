@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Param Element Tests",
@@ -24,7 +24,7 @@ struct ParamTests {
             """
         }
     }
-    
+
     @Test("Param with different types renders correctly")
     func paramWithDifferentTypesRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct ParamTests {
             """
         }
     }
-    
+
     @Test("Multiple params render correctly")
     func multipleParamsRenderCorrectly() {
         assertInlineSnapshot(
@@ -63,7 +63,7 @@ struct ParamTests {
             """
         }
     }
-    
+
     @Test("Param within HTMLDocument renders correctly")
     func paramWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

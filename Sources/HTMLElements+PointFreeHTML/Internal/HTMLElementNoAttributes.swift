@@ -17,4 +17,3 @@ extension HTMLElementNoAttributes {
         HTMLElement(tag: Self.tag) { content() }
     }
 }
-

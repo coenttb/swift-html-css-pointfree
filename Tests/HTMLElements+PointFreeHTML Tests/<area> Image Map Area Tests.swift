@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Area Element Tests",
@@ -24,7 +24,7 @@ struct AreaTests {
             """
         }
     }
-    
+
     @Test("Area with full attributes renders correctly")
     func areaWithFullAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -45,7 +45,7 @@ struct AreaTests {
             """
         }
     }
-    
+
     @Test("Area within HTMLDocument renders correctly")
     func areaWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

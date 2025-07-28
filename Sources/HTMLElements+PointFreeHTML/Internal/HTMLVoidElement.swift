@@ -8,11 +8,11 @@
 import HTMLElementTypes
 import PointFreeHTML
 
-//extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement & PointFreeHTML.HTML {
+// extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement & PointFreeHTML.HTML {
 //    public var body: PointFreeHTML.HTMLElement<HTMLEmpty> {
 //        PointFreeHTML.HTMLElement(tag: Self.tag) { PointFreeHTML.HTMLEmpty() }
 //    }
-//}
+// }
 
 // WORKAROUND because Input and BR fail to compile when called as BR(). With this function BR()() works
 extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement & PointFreeHTML.HTML {

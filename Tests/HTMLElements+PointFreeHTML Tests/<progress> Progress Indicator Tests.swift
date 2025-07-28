@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "ProgressIndicator Element Tests",
@@ -27,7 +27,7 @@ struct ProgressIndicatorTests {
             """
         }
     }
-    
+
     @Test("Progress without value (indeterminate) renders correctly")
     func progressWithoutValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -45,7 +45,7 @@ struct ProgressIndicatorTests {
             """
         }
     }
-    
+
     @Test("Progress with fractional values renders correctly")
     func progressWithFractionalValuesRendersCorrectly() {
         assertInlineSnapshot(
@@ -64,7 +64,7 @@ struct ProgressIndicatorTests {
             """
         }
     }
-    
+
     @Test("Progress without content renders correctly")
     func progressWithoutContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -83,7 +83,7 @@ struct ProgressIndicatorTests {
             """
         }
     }
-    
+
     @Test("Progress within HTMLDocument renders correctly")
     func progressWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

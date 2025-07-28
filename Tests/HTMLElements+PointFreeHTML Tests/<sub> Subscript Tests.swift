@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Subscript Element Tests",
@@ -22,7 +22,7 @@ struct SubscriptTests {
             """
         }
     }
-    
+
     @Test("Sub in chemical formula renders correctly")
     func subInChemicalFormulaRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct SubscriptTests {
             """
         }
     }
-    
+
     @Test("Sub in mathematical expression renders correctly")
     func subInMathematicalExpressionRendersCorrectly() {
         assertInlineSnapshot(
@@ -66,7 +66,7 @@ struct SubscriptTests {
             """
         }
     }
-    
+
     @Test("Multiple subscripts render correctly")
     func multipleSubscriptsRenderCorrectly() {
         assertInlineSnapshot(
@@ -93,7 +93,7 @@ struct SubscriptTests {
             """
         }
     }
-    
+
     @Test("Subscript within HTMLDocument renders correctly")
     func subscriptWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

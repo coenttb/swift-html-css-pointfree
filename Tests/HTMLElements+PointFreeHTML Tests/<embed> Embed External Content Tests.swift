@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Embed Element Tests",
@@ -25,7 +25,7 @@ struct EmbedTests {
             """
         }
     }
-    
+
     @Test("Embed with type renders correctly")
     func embedWithTypeRendersCorrectly() {
         assertInlineSnapshot(
@@ -43,7 +43,7 @@ struct EmbedTests {
             """
         }
     }
-    
+
     @Test("Embed with dimensions renders correctly")
     func embedWithDimensionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -62,7 +62,7 @@ struct EmbedTests {
             """
         }
     }
-    
+
     @Test("Embed with full attributes renders correctly")
     func embedWithFullAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -82,7 +82,7 @@ struct EmbedTests {
             """
         }
     }
-    
+
     @Test("Embed within HTMLDocument renders correctly")
     func embedWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

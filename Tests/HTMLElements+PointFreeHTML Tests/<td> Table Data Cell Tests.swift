@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "TableDataCell Element Tests",
@@ -24,7 +24,7 @@ struct TableDataCellTests {
             """
         }
     }
-    
+
     @Test("Td with colspan renders correctly")
     func tdWithColspanRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct TableDataCellTests {
             """
         }
     }
-    
+
     @Test("Td with rowspan renders correctly")
     func tdWithRowspanRendersCorrectly() {
         assertInlineSnapshot(
@@ -60,7 +60,7 @@ struct TableDataCellTests {
             """
         }
     }
-    
+
     @Test("Td with headers attribute renders correctly")
     func tdWithHeadersAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -78,7 +78,7 @@ struct TableDataCellTests {
             """
         }
     }
-    
+
     @Test("Td with all attributes renders correctly")
     func tdWithAllAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,7 +98,7 @@ struct TableDataCellTests {
             """
         }
     }
-    
+
     @Test("Td with complex content renders correctly")
     func tdWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,13 +124,13 @@ struct TableDataCellTests {
             """
         }
     }
-    
+
     @Test("TableDataCell within HTMLDocument renders correctly")
     func tableDataCellWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {
-                    Table() {
+                    Table {
                         Caption {
                             HTMLText("Product Comparison Table")
                         }

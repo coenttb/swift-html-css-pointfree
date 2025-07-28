@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "TableRow Element Tests",
@@ -33,7 +33,7 @@ struct TableRowTests {
             """
         }
     }
-    
+
     @Test("Tr with headers renders correctly")
     func trWithHeadersRendersCorrectly() {
         assertInlineSnapshot(
@@ -63,7 +63,7 @@ struct TableRowTests {
             """
         }
     }
-    
+
     @Test("Tr with mixed headers and data renders correctly")
     func trWithMixedHeadersAndDataRendersCorrectly() {
         assertInlineSnapshot(
@@ -93,7 +93,7 @@ struct TableRowTests {
             """
         }
     }
-    
+
     @Test("Tr with complex content renders correctly")
     func trWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -129,13 +129,13 @@ struct TableRowTests {
             """
         }
     }
-    
+
     @Test("TableRow within HTMLDocument renders correctly")
     func tableRowWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {
-                    Table() {
+                    Table {
                         TableHead {
                             TableRow {
                                 TableHeader(scope: "col") {

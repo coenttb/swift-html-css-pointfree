@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "PreformattedText Element Tests",
@@ -25,7 +25,7 @@ struct PreformattedTextTests {
             """
         }
     }
-    
+
     @Test("Pre with code block renders correctly")
     func preWithCodeBlockRendersCorrectly() {
         assertInlineSnapshot(
@@ -36,7 +36,7 @@ struct PreformattedTextTests {
                         if (n <= 1) return n;
                         return fibonacci(n - 1) + fibonacci(n - 2);
                     }
-                    
+
                     console.log(fibonacci(10)); // Output: 55
                     """)
                 }
@@ -54,14 +54,14 @@ struct PreformattedTextTests {
             """
         }
     }
-    
+
     @Test("Pre with ASCII art renders correctly")
     func preWithAsciiArtRendersCorrectly() {
         assertInlineSnapshot(
             of: PreformattedText {
                 HTMLText("""
-                       /\\_/\\  
-                      (  o.o  ) 
+                       /\\_/\\
+                      (  o.o  )
                        > ^ <
                     """)
             },
@@ -69,13 +69,13 @@ struct PreformattedTextTests {
         ) {
             #"""
 
-            <pre>   /\_/\  
-              (  o.o  ) 
+            <pre>   /\_/\
+              (  o.o  )
                &gt; ^ &lt;</pre>
             """#
         }
     }
-    
+
     @Test("Pre with formatted data renders correctly")
     func preWithFormattedDataRendersCorrectly() {
         assertInlineSnapshot(
@@ -100,7 +100,7 @@ struct PreformattedTextTests {
             """
         }
     }
-    
+
     @Test("Pre with mixed content renders correctly")
     func preWithMixedContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -134,7 +134,7 @@ struct PreformattedTextTests {
             """
         }
     }
-    
+
     @Test("PreformattedText within HTMLDocument renders correctly")
     func preformattedTextWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -146,21 +146,21 @@ struct PreformattedTextTests {
                     Paragraph {
                         HTMLText("Here's a simple Python function:")
                     }
-                    PreformattedText() {
-                        Code() {
+                    PreformattedText {
+                        Code {
                             HTMLText("""
                             def greet(name):
                                 \"\"\"
                                 Greets a person with their name.
-                                
+
                                 Args:
                                     name (str): The person's name
-                                    
+
                                 Returns:
                                     str: A greeting message
                                 \"\"\"
                                 return f"Hello, {name}!"
-                            
+
                             # Example usage
                             message = greet("World")
                             print(message)  # Output: Hello, World!
@@ -191,10 +191,10 @@ struct PreformattedTextTests {
               <pre><code>def greet(name):
                 """
                 Greets a person with their name.
-                
+
                 Args:
                     name (str): The person's name
-                    
+
                 Returns:
                     str: A greeting message
                 """

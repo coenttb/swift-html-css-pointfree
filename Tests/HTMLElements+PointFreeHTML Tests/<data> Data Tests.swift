@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Data Element Tests",
@@ -26,7 +26,7 @@ struct DataTests {
             """
         }
     }
-    
+
     @Test("Data element with numeric value renders correctly")
     func dataElementWithNumericValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -44,7 +44,7 @@ struct DataTests {
             """
         }
     }
-    
+
     @Test("Data element with URL value renders correctly")
     func dataElementWithURLValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -62,7 +62,7 @@ struct DataTests {
             """
         }
     }
-    
+
     @Test("Data element within list renders correctly")
     func dataElementWithinListRendersCorrectly() {
         assertInlineSnapshot(
@@ -99,7 +99,7 @@ struct DataTests {
             """
         }
     }
-    
+
     @Test("Data element with complex content renders correctly")
     func dataElementWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -120,7 +120,7 @@ struct DataTests {
             """
         }
     }
-    
+
     @Test("Data element in table context renders correctly")
     func dataElementInTableContextRendersCorrectly() {
         assertInlineSnapshot(
@@ -179,7 +179,7 @@ struct DataTests {
             """
         }
     }
-    
+
     @Test("Data element within HTMLDocument renders correctly")
     func dataElementWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -205,7 +205,7 @@ struct DataTests {
                 </style>
               </head>
               <body>
-            <div>Item: 
+            <div>Item:
               <data value="SKU-789">Premium Coffee Maker
               </data> is now available.
             </div>

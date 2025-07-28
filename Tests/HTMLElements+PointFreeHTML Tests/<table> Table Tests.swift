@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Table Element Tests",
@@ -51,7 +51,7 @@ struct TableTests {
             """
         }
     }
-    
+
     @Test("Table with caption renders correctly")
     func tableWithCaptionRendersCorrectly() {
         assertInlineSnapshot(
@@ -99,7 +99,7 @@ struct TableTests {
             """
         }
     }
-    
+
     @Test("Table with thead, tbody, and tfoot renders correctly")
     func tableWithTheadTbodyAndTfootRendersCorrectly() {
         assertInlineSnapshot(
@@ -182,7 +182,7 @@ struct TableTests {
             """
         }
     }
-    
+
     @Test("Table with colgroup renders correctly")
     func tableWithColgroupRendersCorrectly() {
         assertInlineSnapshot(
@@ -191,7 +191,7 @@ struct TableTests {
                     TableColumn(span: 2) {
                         HTMLEmpty()
                     }
-                    TableColumn() {
+                    TableColumn {
                         HTMLEmpty()
                     }
                 }
@@ -247,7 +247,7 @@ struct TableTests {
             """
         }
     }
-    
+
     @Test("Table within HTMLDocument renders correctly")
     func tableWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -256,7 +256,7 @@ struct TableTests {
                     H2 {
                         HTMLText("Sales Report")
                     }
-                    Table() {
+                    Table {
                         Caption {
                             HTMLText("Q1 2024 Sales Data")
                         }

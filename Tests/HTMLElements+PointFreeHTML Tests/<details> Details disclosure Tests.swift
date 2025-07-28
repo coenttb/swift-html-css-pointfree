@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Details Element Tests",
@@ -33,7 +33,7 @@ struct DetailsTests {
             """
         }
     }
-    
+
     @Test("Details with open attribute renders correctly")
     func detailsWithOpenAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -60,7 +60,7 @@ struct DetailsTests {
             """
         }
     }
-    
+
     @Test("Details with name attribute renders correctly")
     func detailsWithNameAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -87,7 +87,7 @@ struct DetailsTests {
             """
         }
     }
-    
+
     @Test("Details with complex content renders correctly")
     func detailsWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -137,7 +137,7 @@ struct DetailsTests {
             """
         }
     }
-    
+
     @Test("Multiple details create accordion effect")
     func multipleDetailsCreateAccordionEffect() {
         assertInlineSnapshot(
@@ -194,7 +194,7 @@ struct DetailsTests {
             """
         }
     }
-    
+
     @Test("Details with nested content renders correctly")
     func detailsWithNestedContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -242,7 +242,7 @@ struct DetailsTests {
             """
         }
     }
-    
+
     @Test("Details within HTMLDocument renders correctly")
     func detailsWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

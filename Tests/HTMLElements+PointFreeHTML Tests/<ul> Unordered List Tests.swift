@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "UnorderedList Element Tests",
@@ -33,7 +33,7 @@ struct UnorderedListTests {
             """
         }
     }
-    
+
     @Test("Empty ul renders correctly")
     func emptyUlRendersCorrectly() {
         assertInlineSnapshot(
@@ -49,7 +49,7 @@ struct UnorderedListTests {
             """
         }
     }
-    
+
     @Test("Nested ul renders correctly")
     func nestedUlRendersCorrectly() {
         assertInlineSnapshot(
@@ -88,7 +88,7 @@ struct UnorderedListTests {
             """
         }
     }
-    
+
     @Test("Ul with inline content in items renders correctly")
     func ulWithInlineContentInItemsRendersCorrectly() {
         assertInlineSnapshot(
@@ -121,7 +121,7 @@ struct UnorderedListTests {
             """
         }
     }
-    
+
     @Test("UnorderedList within HTMLDocument renders correctly")
     func unorderedListWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

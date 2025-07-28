@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Option Element Tests",
@@ -22,7 +22,7 @@ struct OptionTests {
 //            """
 //        }
 //    }
-    
+
     @Test("Option with value renders correctly")
     func optionWithValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -38,7 +38,7 @@ struct OptionTests {
             """
         }
     }
-    
+
     @Test("Option with selected attribute renders correctly")
     func optionWithSelectedAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -57,7 +57,7 @@ struct OptionTests {
             """
         }
     }
-    
+
     @Test("Option with disabled attribute renders correctly")
     func optionWithDisabledAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -76,7 +76,7 @@ struct OptionTests {
             """
         }
     }
-    
+
     @Test("Option with label attribute renders correctly")
     func optionWithLabelAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -95,7 +95,7 @@ struct OptionTests {
             """
         }
     }
-    
+
     @Test("Option with all attributes renders correctly")
     func optionWithAllAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -116,7 +116,7 @@ struct OptionTests {
             """
         }
     }
-    
+
     @Test("Options in select context render correctly")
     func optionsInSelectContextRenderCorrectly() {
         assertInlineSnapshot(
@@ -155,12 +155,12 @@ struct OptionTests {
             """
         }
     }
-    
+
     @Test("Option within HTMLDocument renders correctly")
     func optionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                Form() {
+                Form {
                     H2 {
                         HTMLText("Event Registration")
                     }

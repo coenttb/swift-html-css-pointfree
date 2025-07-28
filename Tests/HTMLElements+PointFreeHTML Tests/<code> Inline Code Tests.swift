@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Code Element Tests",
@@ -22,7 +22,7 @@ struct CodeTests {
             """
         }
     }
-    
+
     @Test("Code within text renders correctly")
     func codeWithinTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct CodeTests {
             """
         }
     }
-    
+
     @Test("Code with HTML entities renders correctly")
     func codeWithHTMLEntitiesRendersCorrectly() {
         assertInlineSnapshot(
@@ -56,7 +56,7 @@ struct CodeTests {
             """
         }
     }
-    
+
     @Test("Code within pre renders correctly")
     func codeWithinPreRendersCorrectly() {
         assertInlineSnapshot(
@@ -81,7 +81,7 @@ struct CodeTests {
             """
         }
     }
-    
+
     @Test("Code within HTMLDocument renders correctly")
     func codeWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

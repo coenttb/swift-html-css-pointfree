@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Document Metadata Header Element Tests",
@@ -28,7 +28,7 @@ struct HeadTests {
             """
         }
     }
-    
+
     @Test("Head with meta tags renders correctly")
     func headWithMetaTagsRendersCorrectly() {
         assertInlineSnapshot(
@@ -59,7 +59,7 @@ struct HeadTests {
             """
         }
     }
-    
+
     @Test("Head with stylesheet and script renders correctly")
     func headWithStylesheetAndScriptRendersCorrectly() {
         assertInlineSnapshot(
@@ -85,7 +85,7 @@ struct HeadTests {
             """
         }
     }
-    
+
     @Test("Head with base URL renders correctly")
     func headWithBaseURLRendersCorrectly() {
         assertInlineSnapshot(
@@ -108,7 +108,7 @@ struct HeadTests {
             """
         }
     }
-    
+
     @Test("Empty head renders correctly")
     func emptyHeadRendersCorrectly() {
         assertInlineSnapshot(

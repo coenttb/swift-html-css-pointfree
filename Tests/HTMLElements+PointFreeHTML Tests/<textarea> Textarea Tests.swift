@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Textarea Element Tests",
@@ -22,7 +22,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Textarea with rows and cols renders correctly")
     func textareaWithRowsAndColsRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Textarea with validation attributes renders correctly")
     func textareaWithValidationAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -58,7 +58,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Textarea with disabled and readonly renders correctly")
     func textareaWithDisabledAndReadonlyRendersCorrectly() {
         assertInlineSnapshot(
@@ -76,7 +76,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Textarea with form attributes renders correctly")
     func textareaWithFormAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -95,7 +95,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Textarea with wrap attribute renders correctly")
     func textareaWithWrapAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -116,7 +116,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Textarea with resize style renders correctly")
     func textareaWithResizeStyleRendersCorrectly() {
         assertInlineSnapshot(
@@ -135,7 +135,7 @@ struct TextareaTests {
             """
         }
     }
-    
+
     @Test("Empty textarea renders correctly")
     func emptyTextareaRendersCorrectly() {
         assertInlineSnapshot(

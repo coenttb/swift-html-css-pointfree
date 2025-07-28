@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Document Title Element Tests",
@@ -24,7 +24,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title with special characters renders correctly")
     func titleWithSpecialCharactersRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title within head element renders correctly")
     func titleWithinHeadElementRendersCorrectly() {
         assertInlineSnapshot(
@@ -63,7 +63,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title with long text renders correctly")
     func titleWithLongTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -79,7 +79,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title with mixed content renders correctly")
     func titleWithMixedContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -97,7 +97,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title within HTMLDocument renders correctly")
     func titleWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -137,7 +137,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title with common web page patterns renders correctly")
     func titleWithCommonWebPagePatternsRendersCorrectly() {
         assertInlineSnapshot(
@@ -153,7 +153,7 @@ struct DocumentTitleTests {
             """
         }
     }
-    
+
     @Test("Title for e-commerce page renders correctly")
     func titleForEcommercePageRendersCorrectly() {
         assertInlineSnapshot(

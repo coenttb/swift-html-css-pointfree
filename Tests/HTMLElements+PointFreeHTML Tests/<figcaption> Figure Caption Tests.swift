@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Figure Caption Element Tests",
@@ -24,7 +24,7 @@ struct FigureCaptionElementTests {
             """
         }
     }
-    
+
     @Test("Figure caption with emphasis renders correctly")
     func figureCaptionWithEmphasisRendersCorrectly() {
         assertInlineSnapshot(
@@ -43,7 +43,7 @@ struct FigureCaptionElementTests {
             """
         }
     }
-    
+
     @Test("Figure caption with code reference renders correctly")
     func figureCaptionWithCodeReferenceRendersCorrectly() {
         assertInlineSnapshot(
@@ -63,7 +63,7 @@ struct FigureCaptionElementTests {
             """
         }
     }
-    
+
     @Test("Figure caption within HTMLDocument renders correctly")
     func figureCaptionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

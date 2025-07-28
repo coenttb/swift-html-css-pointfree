@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "LineBreakOpportunity Element Tests",
@@ -21,7 +21,7 @@ struct LineBreakOpportunityTests {
             """
         }
     }
-    
+
     @Test("LineBreakOpportunity within text renders correctly")
     func lineBreakOpportunityWithinTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct LineBreakOpportunityTests {
             """
         }
     }
-    
+
     @Test("LineBreakOpportunity within HTMLDocument renders correctly")
     func lineBreakOpportunityWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

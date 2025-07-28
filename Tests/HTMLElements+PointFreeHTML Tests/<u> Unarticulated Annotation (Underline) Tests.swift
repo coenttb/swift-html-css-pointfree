@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "UnarticulatedAnnotation Element Tests",
@@ -24,7 +24,7 @@ struct UnarticulatedAnnotationTests {
             """
         }
     }
-    
+
     @Test("U for proper names in Chinese text renders correctly")
     func uForProperNamesInChineseTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -46,7 +46,7 @@ struct UnarticulatedAnnotationTests {
             """
         }
     }
-    
+
     @Test("U for misspelled words renders correctly")
     func uForMisspelledWordsRendersCorrectly() {
         assertInlineSnapshot(
@@ -61,14 +61,14 @@ struct UnarticulatedAnnotationTests {
         ) {
             """
 
-            <p>Please check the 
+            <p>Please check the
               <u>seperate
               </u> document for more information.
             </p>
             """
         }
     }
-    
+
     @Test("U with nested content renders correctly")
     func uWithNestedContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -91,7 +91,7 @@ struct UnarticulatedAnnotationTests {
             """
         }
     }
-    
+
     @Test("U in multilingual content renders correctly")
     func uInMultilingualContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -106,14 +106,14 @@ struct UnarticulatedAnnotationTests {
         ) {
             """
 
-            <p>The city 
+            <p>The city
               <u>北京
               </u> (Beijing) is the capital of China.
             </p>
             """
         }
     }
-    
+
     @Test("U with ID and data attributes renders correctly")
     func uWithIdAndDataAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -129,7 +129,7 @@ struct UnarticulatedAnnotationTests {
             """
         }
     }
-    
+
     @Test("UnarticulatedAnnotation within HTMLDocument renders correctly")
     func unarticulatedAnnotationWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -213,11 +213,11 @@ struct UnarticulatedAnnotationTests {
                 </h3>
                 <p>The following paragraph contains spelling errors:
                 </p>
-                <p>The 
+                <p>The
                   <u>recieve
-                  </u> function should 
+                  </u> function should
                   <u>seperate
-                  </u> the data into 
+                  </u> the data into
                   <u>differnt
                   </u> categories.
                 </p>

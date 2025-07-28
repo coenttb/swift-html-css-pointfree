@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "NavigationSection Element Tests",
@@ -41,11 +41,11 @@ struct NavigationSectionTests {
             """
         }
     }
-    
+
     @Test("Nav with breadcrumb navigation renders correctly")
     func navWithBreadcrumbNavigationRendersCorrectly() {
         assertInlineSnapshot(
-            of: NavigationSection() {
+            of: NavigationSection {
                 OrderedList {
                     ListItem {
                         Anchor(href: "/") {
@@ -57,7 +57,7 @@ struct NavigationSectionTests {
                             HTMLText("Products")
                         }
                     }
-                    ListItem() {
+                    ListItem {
                         HTMLText("Laptops")
                     }
                 }
@@ -79,11 +79,11 @@ struct NavigationSectionTests {
             """
         }
     }
-    
+
     @Test("Nav with primary navigation renders correctly")
     func navWithPrimaryNavigationRendersCorrectly() {
         assertInlineSnapshot(
-            of: NavigationSection() {
+            of: NavigationSection {
                 UnorderedList {
                     ListItem {
                         Anchor(href: "/") {
@@ -126,7 +126,7 @@ struct NavigationSectionTests {
             """
         }
     }
-    
+
     @Test("Nav with nested navigation renders correctly")
     func navWithNestedNavigationRendersCorrectly() {
         assertInlineSnapshot(
@@ -177,11 +177,11 @@ struct NavigationSectionTests {
             """
         }
     }
-    
+
     @Test("Nav with table of contents renders correctly")
     func navWithTableOfContentsRendersCorrectly() {
         assertInlineSnapshot(
-            of: NavigationSection() {
+            of: NavigationSection {
                 H2 {
                     HTMLText("Table of Contents")
                 }
@@ -229,18 +229,18 @@ struct NavigationSectionTests {
             """
         }
     }
-    
+
     @Test("NavigationSection within HTMLDocument renders correctly")
     func navigationSectionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                Header() {
-                    ContentDivision() {
+                Header {
+                    ContentDivision {
                         Anchor(href: "/") {
                             HTMLText("Company Logo")
                         }
                     }
-                    NavigationSection() {
+                    NavigationSection {
                         UnorderedList {
                             ListItem {
                                 Anchor(href: "/") {

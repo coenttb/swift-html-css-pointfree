@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "OrderedList Element Tests",
@@ -38,7 +38,7 @@ struct OrderedListTests {
             """
         }
     }
-    
+
     @Test("Ol with start attribute renders correctly")
     func olWithStartAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -70,7 +70,7 @@ struct OrderedListTests {
             """
         }
     }
-    
+
     @Test("Ol with type attribute renders correctly")
     func olWithTypeAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -102,7 +102,7 @@ struct OrderedListTests {
             """
         }
     }
-    
+
     @Test("Ol with reversed attribute renders correctly")
     func olWithReversedAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -134,7 +134,7 @@ struct OrderedListTests {
             """
         }
     }
-    
+
     @Test("Nested ol renders correctly")
     func nestedOlRendersCorrectly() {
         assertInlineSnapshot(
@@ -191,7 +191,7 @@ struct OrderedListTests {
             """
         }
     }
-    
+
     @Test("Ol with complex content renders correctly")
     func olWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -247,7 +247,7 @@ struct OrderedListTests {
             """
         }
     }
-    
+
     @Test("OrderedList within HTMLDocument renders correctly")
     func orderedListWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

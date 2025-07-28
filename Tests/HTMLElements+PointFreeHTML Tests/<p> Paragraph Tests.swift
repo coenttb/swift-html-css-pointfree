@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Paragraph Element Tests",
@@ -24,7 +24,7 @@ struct ParagraphTests {
             """
         }
     }
-    
+
     @Test("Paragraph with inline elements renders correctly")
     func paragraphWithInlineElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -48,7 +48,7 @@ struct ParagraphTests {
             """
         }
     }
-    
+
     @Test("Paragraph with link renders correctly")
     func paragraphWithLinkRendersCorrectly() {
         assertInlineSnapshot(
@@ -70,7 +70,7 @@ struct ParagraphTests {
             """
         }
     }
-    
+
     @Test("Multiple paragraphs render correctly")
     func multipleParagraphsRenderCorrectly() {
         assertInlineSnapshot(
@@ -93,7 +93,7 @@ struct ParagraphTests {
             """
         }
     }
-    
+
     @Test("Paragraph within HTMLDocument renders correctly")
     func paragraphWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

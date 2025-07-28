@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Mark Element Tests",
@@ -24,7 +24,7 @@ struct MarkTests {
             """
         }
     }
-    
+
     @Test("Mark within text renders correctly")
     func markWithinTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -39,14 +39,14 @@ struct MarkTests {
         ) {
             """
 
-            <p>Please review the 
+            <p>Please review the
               <mark>updated section
               </mark> carefully.
             </p>
             """
         }
     }
-    
+
     @Test("Mark for search results renders correctly")
     func markForSearchResultsRendersCorrectly() {
         assertInlineSnapshot(
@@ -67,14 +67,14 @@ struct MarkTests {
 
             <p>Search results for '
               <mark>swift
-              </mark>': The 
+              </mark>': The
               <mark>Swift
               </mark> programming language is powerful and intuitive.
             </p>
             """
         }
     }
-    
+
     @Test("Mark with nested elements renders correctly")
     func markWithNestedElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -93,7 +93,7 @@ struct MarkTests {
             """
         }
     }
-    
+
     @Test("Mark within HTMLDocument renders correctly")
     func markWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -129,9 +129,9 @@ struct MarkTests {
             <div>
               <h2>Document Review
               </h2>
-              <p>Changes were made to 
+              <p>Changes were made to
                 <mark>section 3.2
-                </mark> and 
+                </mark> and
                 <mark>appendix B
                 </mark>.
               </p>

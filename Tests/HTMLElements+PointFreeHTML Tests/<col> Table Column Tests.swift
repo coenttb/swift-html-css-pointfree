@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "TableColumn Element Tests",
@@ -12,7 +12,7 @@ struct TableColumnTests {
     @Test("Basic col renders correctly")
     func basicColRendersCorrectly() {
         assertInlineSnapshot(
-            of: TableColumn() {
+            of: TableColumn {
                 HTMLEmpty()
             },
             as: .html
@@ -23,7 +23,7 @@ struct TableColumnTests {
             """
         }
     }
-    
+
     @Test("Col with span renders correctly")
     func colWithSpanRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct TableColumnTests {
             """
         }
     }
-    
+
     @Test("Col with width renders correctly")
     func colWithWidthRendersCorrectly() {
         assertInlineSnapshot(
@@ -57,7 +57,7 @@ struct TableColumnTests {
             """
         }
     }
-    
+
     @Test("Col with full attributes renders correctly")
     func colWithFullAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -75,7 +75,7 @@ struct TableColumnTests {
             """
         }
     }
-    
+
     @Test("TableColumn within HTMLDocument renders correctly")
     func tableColumnWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

@@ -1,14 +1,14 @@
-//import Testing
-//import HTMLElements_PointFreeHTML
-//import InlineSnapshotTesting
-//import PointFreeHTMLTestSupport
-//import HTMLElementTypes
+// import Testing
+// import HTMLElements_PointFreeHTML
+// import InlineSnapshotTesting
+// import PointFreeHTMLTestSupport
+// import HTMLElementTypes
 //
-//@Suite(
+// @Suite(
 //    "Abbreviation Element Tests",
 //    .snapshots(record: .missing),
-//)
-//struct AbbreviationTests {
+// )
+// struct AbbreviationTests {
 //    @Test("Basic abbreviation renders correctly")
 //    func basicAbbreviationRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -72,4 +72,4 @@
 //            """
 //        }
 //    }
-//}
+// }

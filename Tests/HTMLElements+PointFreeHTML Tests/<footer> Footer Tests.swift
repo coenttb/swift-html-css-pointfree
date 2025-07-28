@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Footer Element Tests",
@@ -28,7 +28,7 @@ struct FooterTests {
             """
         }
     }
-    
+
     @Test("Footer with navigation renders correctly")
     func footerWithNavigationRendersCorrectly() {
         assertInlineSnapshot(
@@ -77,7 +77,7 @@ struct FooterTests {
             """
         }
     }
-    
+
     @Test("Footer for article renders correctly")
     func footerForArticleRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct FooterTests {
             """
         }
     }
-    
+
     @Test("Footer with contact information renders correctly")
     func footerWithContactInformationRendersCorrectly() {
         assertInlineSnapshot(
@@ -154,7 +154,7 @@ struct FooterTests {
             """
         }
     }
-    
+
     @Test("Footer within HTMLDocument renders correctly")
     func footerWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -169,9 +169,9 @@ struct FooterTests {
                         }
                     }
                 }
-                Footer() {
-                    ContentDivision() {
-                        ContentDivision() {
+                Footer {
+                    ContentDivision {
+                        ContentDivision {
                             H3 {
                                 HTMLText("Quick Links")
                             }
@@ -188,7 +188,7 @@ struct FooterTests {
                                 }
                             }
                         }
-                        ContentDivision() {
+                        ContentDivision {
                             Paragraph {
                                 HTMLText("© 2024 Company. All rights reserved.")
                             }

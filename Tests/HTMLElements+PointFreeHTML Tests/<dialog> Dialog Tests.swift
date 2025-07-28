@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Dialog Element Tests",
@@ -12,7 +12,7 @@ struct DialogTests {
     @Test("Basic dialog renders correctly")
     func basicDialogRendersCorrectly() {
         assertInlineSnapshot(
-            of: Dialog() {
+            of: Dialog {
                 HTMLText("This is a dialog")
             },
             as: .html
@@ -24,7 +24,7 @@ struct DialogTests {
             """
         }
     }
-    
+
     @Test("Dialog with open attribute renders correctly")
     func dialogWithOpenAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct DialogTests {
             """
         }
     }
-    
+
     @Test("Dialog with complex content renders correctly")
     func dialogWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -69,13 +69,13 @@ struct DialogTests {
             """
         }
     }
-    
+
     @Test("Dialog within HTMLDocument renders correctly")
     func dialogWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {
-                    Dialog() {
+                    Dialog {
                         HTMLText("Modal content")
                     }
                 }

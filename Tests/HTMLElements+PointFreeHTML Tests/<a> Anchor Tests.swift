@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Anchor Element Tests",
@@ -24,7 +24,7 @@ struct AnchorTests {
             """
         }
     }
-    
+
     @Test("Anchor with target blank renders correctly")
     func anchorWithTargetBlankRendersCorrectly() {
         assertInlineSnapshot(
@@ -41,7 +41,7 @@ struct AnchorTests {
             """
         }
     }
-    
+
     @Test("Anchor with download renders correctly")
     func anchorWithDownloadRendersCorrectly() {
         assertInlineSnapshot(
@@ -58,7 +58,7 @@ struct AnchorTests {
             """
         }
     }
-    
+
     @Test("Anchor with rel and hreflang renders correctly")
     func anchorWithRelAndHreflangRendersCorrectly() {
         assertInlineSnapshot(
@@ -76,7 +76,7 @@ struct AnchorTests {
             """
         }
     }
-    
+
     @Test("Anchor within HTMLDocument renders correctly")
     func anchorWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

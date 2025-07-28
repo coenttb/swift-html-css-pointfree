@@ -1,7 +1,7 @@
-import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
+import Testing
 
 @Suite(
     "LineBreak Element Tests",
@@ -20,7 +20,7 @@ struct LineBreakTests {
             """
         }
     }
-    
+
     @Test("LineBreak renders correctly")
     func brWithForAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -49,8 +49,7 @@ struct LineBreakTests {
             """
         }
     }
-    
-    
+
     @Test(
         "Bug with BR",
         .disabled("Only works with B(), not with B()()")

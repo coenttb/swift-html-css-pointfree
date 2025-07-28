@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Address Element Tests",
@@ -26,11 +26,10 @@ struct AddressTests {
             """
         }
     }
-    
+
     @Test("Address with contact information renders correctly")
     func addressWithContactInformationRendersCorrectly() {
-        
-        
+
         assertInlineSnapshot(
             of: Address {
                 StrongImportance {
@@ -58,7 +57,7 @@ struct AddressTests {
             """
         }
     }
-    
+
     @Test("Address for article author renders correctly")
     func addressForArticleAuthorRendersCorrectly() {
         assertInlineSnapshot(
@@ -103,15 +102,15 @@ struct AddressTests {
             """
         }
     }
-    
+
     @Test("Address with multiple formats renders correctly")
     func addressWithMultipleFormatsRendersCorrectly() {
         assertInlineSnapshot(
-            of: ContentDivision() {
+            of: ContentDivision {
                 H2 {
                     HTMLText("Contact Information")
                 }
-                ContentDivision() {
+                ContentDivision {
                     H3 {
                         HTMLText("Mailing Address")
                     }
@@ -125,7 +124,7 @@ struct AddressTests {
                         HTMLText("Tech City, TC 54321")
                     }
                 }
-                ContentDivision() {
+                ContentDivision {
                     H3 {
                         HTMLText("Contact Details")
                     }
@@ -180,7 +179,7 @@ struct AddressTests {
             """
         }
     }
-    
+
     @Test("Address within HTMLDocument renders correctly")
     func addressWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -225,7 +224,7 @@ struct AddressTests {
                         }
                     }
                 }
-                Footer() {
+                Footer {
                     Address {
                         Small {
                             HTMLText("© 2024 Innovation Labs. All rights reserved.")

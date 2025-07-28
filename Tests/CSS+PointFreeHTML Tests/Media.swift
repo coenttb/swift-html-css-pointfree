@@ -1,8 +1,8 @@
 import CSS_PointFreeHTML
 import CSSTypes
 import Dependencies
-import PointFreeHTMLTestSupport
 import PointFreeHTML
+import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(

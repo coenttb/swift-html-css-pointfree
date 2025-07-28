@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Small Element Tests",
@@ -22,7 +22,7 @@ struct SmallTests {
             """
         }
     }
-    
+
     @Test("Small for copyright notice renders correctly")
     func smallForCopyrightNoticeRendersCorrectly() {
         assertInlineSnapshot(
@@ -44,7 +44,7 @@ struct SmallTests {
             """
         }
     }
-    
+
     @Test("Small for disclaimers renders correctly")
     func smallForDisclaimersRendersCorrectly() {
         assertInlineSnapshot(
@@ -67,7 +67,7 @@ struct SmallTests {
             """
         }
     }
-    
+
     @Test("Small for side comments renders correctly")
     func smallForSideCommentsRendersCorrectly() {
         assertInlineSnapshot(
@@ -103,7 +103,7 @@ struct SmallTests {
             """
         }
     }
-    
+
     @Test("Small with nested elements renders correctly")
     func smallWithNestedElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct SmallTests {
             """
         }
     }
-    
+
     @Test("Small within HTMLDocument renders correctly")
     func smallWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -154,7 +154,7 @@ struct SmallTests {
                         }
                     }
                 }
-                Footer() {
+                Footer {
                     Small {
                         Anchor(href: "/privacy") {
                             HTMLText("Privacy Policy")

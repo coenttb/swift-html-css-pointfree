@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Link Element Tests",
@@ -24,7 +24,7 @@ struct LinkTests {
             """
         }
     }
-    
+
     @Test("Link with type and media renders correctly")
     func linkWithTypeAndMediaRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct LinkTests {
             """
         }
     }
-    
+
     @Test("Link with crossorigin renders correctly")
     func linkWithCrossoriginRendersCorrectly() {
         assertInlineSnapshot(
@@ -61,7 +61,7 @@ struct LinkTests {
             """
         }
     }
-    
+
     @Test("Link with integrity renders correctly")
     func linkWithIntegrityRendersCorrectly() {
         assertInlineSnapshot(
@@ -78,7 +78,7 @@ struct LinkTests {
             """
         }
     }
-    
+
     @Test("Link within HTMLDocument renders correctly")
     func linkWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -95,7 +95,7 @@ struct LinkTests {
             <html>
               <head>
                 <style>
-            
+
                 </style>
               </head>
               <body>

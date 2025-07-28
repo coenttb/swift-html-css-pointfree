@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Figure with Optional Caption Element Tests",
@@ -27,7 +27,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure with image and caption renders correctly")
     func figureWithImageAndCaptionRendersCorrectly() {
         assertInlineSnapshot(
@@ -51,7 +51,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure with code block renders correctly")
     func figureWithCodeBlockRendersCorrectly() {
         assertInlineSnapshot(
@@ -85,7 +85,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure with video renders correctly")
     func figureWithVideoRendersCorrectly() {
         assertInlineSnapshot(
@@ -115,7 +115,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure with table renders correctly")
     func figureWithTableRendersCorrectly() {
         assertInlineSnapshot(
@@ -175,7 +175,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure with blockquote renders correctly")
     func figureWithBlockquoteRendersCorrectly() {
         assertInlineSnapshot(
@@ -200,7 +200,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure with multiple elements renders correctly")
     func figureWithMultipleElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -228,7 +228,7 @@ struct FigureCaptionTests {
             """
         }
     }
-    
+
     @Test("Figure without caption renders correctly")
     func figureWithoutCaptionRendersCorrectly() {
         assertInlineSnapshot(

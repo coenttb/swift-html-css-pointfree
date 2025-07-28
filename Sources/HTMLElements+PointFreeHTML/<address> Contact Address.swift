@@ -8,7 +8,7 @@
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
-//extension HTMLElementTypes.Address: HTMLElementNoAttributes {}
+// extension HTMLElementTypes.Address: HTMLElementNoAttributes {}
 
 extension HTMLElementTypes.Address {
     public func callAsFunction(

@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Emphasis Element Tests",
@@ -22,7 +22,7 @@ struct EmphasisTests {
             """
         }
     }
-    
+
     @Test("Emphasis within text renders correctly")
     func emphasisWithinTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct EmphasisTests {
             """
         }
     }
-    
+
     @Test("Nested emphasis and strong renders correctly")
     func nestedEmphasisAndStrongRendersCorrectly() {
         assertInlineSnapshot(
@@ -65,7 +65,7 @@ struct EmphasisTests {
             """
         }
     }
-    
+
     @Test("Multiple emphasis elements render correctly")
     func multipleEmphasisElementsRenderCorrectly() {
         assertInlineSnapshot(
@@ -88,7 +88,7 @@ struct EmphasisTests {
             """
         }
     }
-    
+
     @Test("Emphasis within HTMLDocument renders correctly")
     func emphasisWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

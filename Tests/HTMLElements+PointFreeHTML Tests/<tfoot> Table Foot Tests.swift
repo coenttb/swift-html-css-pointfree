@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "TableFoot Element Tests",
@@ -47,7 +47,7 @@ struct TableFootTests {
             """
         }
     }
-    
+
     @Test("Tfoot with multiple summary rows renders correctly")
     func tfootWithMultipleSummaryRowsRendersCorrectly() {
         assertInlineSnapshot(
@@ -80,7 +80,7 @@ struct TableFootTests {
                         HTMLText("$110,000")
                     }
                 }
-                TableRow() {
+                TableRow {
                     TableHeader(scope: "row") {
                         StrongImportance {
                             HTMLText("Grand Total")
@@ -142,42 +142,42 @@ struct TableFootTests {
             """
         }
     }
-    
+
     @Test("Tfoot with styling classes renders correctly")
     func tfootWithStylingClassesRendersCorrectly() {
         assertInlineSnapshot(
-            of: TableFoot() {
-                TableRow() {
+            of: TableFoot {
+                TableRow {
                     TableHeader(scope: "row") {
                         HTMLText("Average")
                     }
-                    TableDataCell() {
+                    TableDataCell {
                         HTMLText("$75,250")
                     }
-                    TableDataCell() {
+                    TableDataCell {
                         HTMLText("$68,750")
                     }
-                    TableDataCell() {
+                    TableDataCell {
                         HTMLText("$82,500")
                     }
                 }
-                TableRow() {
+                TableRow {
                     TableHeader(scope: "row") {
                         StrongImportance {
                             HTMLText("Total")
                         }
                     }
-                    TableDataCell() {
+                    TableDataCell {
                         StrongImportance {
                             HTMLText("$301,000")
                         }
                     }
-                    TableDataCell() {
+                    TableDataCell {
                         StrongImportance {
                             HTMLText("$275,000")
                         }
                     }
-                    TableDataCell() {
+                    TableDataCell {
                         StrongImportance {
                             HTMLText("$330,000")
                         }
@@ -213,7 +213,7 @@ struct TableFootTests {
             """
         }
     }
-    
+
     @Test("Tfoot with complex content renders correctly")
     func tfootWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -224,20 +224,20 @@ struct TableFootTests {
                             HTMLText("Summary Statistics:")
                         }
                         HTMLText(" Total revenue increased by ")
-                        ContentSpan() {
+                        ContentSpan {
                             HTMLText("15.2%")
                         }
                         HTMLText(" compared to last quarter.")
                     }
-                    TableDataCell() {
-                        Button() {
+                    TableDataCell {
+                        Button {
                             HTMLText("Export Data")
                         }
                     }
                 }
                 TableRow {
                     TableDataCell(colspan: 4) {
-                        Small() {
+                        Small {
                             HTMLText("* All figures are in USD and include applicable taxes and fees.")
                         }
                     }
@@ -262,11 +262,11 @@ struct TableFootTests {
             """
         }
     }
-    
+
     @Test("Tfoot within complete table renders correctly")
     func tfootWithinCompleteTableRendersCorrectly() {
         assertInlineSnapshot(
-            of: Table() {
+            of: Table {
                 Caption {
                     HTMLText("Quarterly Financial Summary")
                 }
@@ -330,8 +330,8 @@ struct TableFootTests {
                         }
                     }
                 }
-                TableFoot() {
-                    TableRow() {
+                TableFoot {
+                    TableRow {
                         TableHeader(scope: "row") {
                             StrongImportance {
                                 HTMLText("YTD Total")
@@ -353,7 +353,7 @@ struct TableFootTests {
                             }
                         }
                     }
-                    TableRow() {
+                    TableRow {
                         TableDataCell(colspan: 4) {
                             Small {
                                 HTMLText("Notes: Figures exclude one-time bonuses and extraordinary expenses.")
@@ -433,7 +433,7 @@ struct TableFootTests {
             """
         }
     }
-    
+
     @Test("TableFoot within HTMLDocument renders correctly")
     func tableFootWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -445,17 +445,17 @@ struct TableFootTests {
                     Paragraph {
                         HTMLText("The following table summarizes our departmental budget allocation and spending for the current fiscal year:")
                     }
-                    Table() {
-                        Caption() {
+                    Table {
+                        Caption {
                             StrongImportance {
                                 HTMLText("FY 2024 Budget Summary")
                             }
 //                            BR()
-                            Small() {
+                            Small {
                                 HTMLText("All amounts in thousands of dollars")
                             }
                         }
-                        TableHead() {
+                        TableHead {
                             TableRow {
                                 TableHeader(scope: "col") {
                                     HTMLText("Department")
@@ -474,88 +474,88 @@ struct TableFootTests {
                                 }
                             }
                         }
-                        TableBody() {
-                            TableRow() {
+                        TableBody {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Engineering")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$850")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$785")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$65")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("92.4%")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Marketing")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$420")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$445")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("-$25")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("106.0%")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Operations")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$320")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$298")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("$22")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("93.1%")
                                 }
                             }
                         }
-                        TableFoot() {
-                            TableRow() {
+                        TableFoot {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     StrongImportance {
                                         HTMLText("Total Budget")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("$1,590")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("$1,528")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("$62")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("96.1%")
                                     }
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableDataCell(colspan: "2") {
                                     StrongImportance {
                                         HTMLText("Budget Variance Analysis:")
@@ -564,16 +564,16 @@ struct TableFootTests {
                                 TableDataCell(colspan: "2") {
                                     HTMLText("Under budget by $62K (3.9%)")
                                 }
-                                TableDataCell() {
-                                    ContentSpan() {
+                                TableDataCell {
+                                    ContentSpan {
                                         HTMLText("✓")
                                     }
                                     HTMLText(" On Track")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableDataCell(colspan: "5") {
-                                    Small() {
+                                    Small {
                                         StrongImportance {
                                             HTMLText("Notes:")
                                         }
@@ -587,7 +587,7 @@ struct TableFootTests {
                             }
                         }
                     }
-                    Paragraph() {
+                    Paragraph {
                         HTMLText("Overall, we maintain strong fiscal discipline with 96.1% budget utilization across all departments.")
                     }
                 }

@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "TableHead Element Tests",
@@ -42,7 +42,7 @@ struct TableHeadTests {
             """
         }
     }
-    
+
     @Test("Thead with multiple rows renders correctly")
     func theadWithMultipleRowsRendersCorrectly() {
         assertInlineSnapshot(
@@ -101,12 +101,12 @@ struct TableHeadTests {
             """
         }
     }
-    
+
     @Test("Thead with styling classes renders correctly")
     func theadWithStylingClassesRendersCorrectly() {
         assertInlineSnapshot(
-            of: TableHead() {
-                TableRow() {
+            of: TableHead {
+                TableRow {
                     TableHeader(scope: "col") {
                         HTMLText("Product Name")
                     }
@@ -140,11 +140,11 @@ struct TableHeadTests {
             """
         }
     }
-    
+
     @Test("Thead within complete table renders correctly")
     func theadWithinCompleteTableRendersCorrectly() {
         assertInlineSnapshot(
-            of: Table() {
+            of: Table {
                 Caption {
                     HTMLText("Employee Information")
                 }
@@ -240,7 +240,7 @@ struct TableHeadTests {
             """
         }
     }
-    
+
     @Test("TableHead within HTMLDocument renders correctly")
     func tableHeadWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -252,7 +252,7 @@ struct TableHeadTests {
                     Paragraph {
                         HTMLText("The following table shows our sales performance across different regions for Q1 2024:")
                     }
-                    Table() {
+                    Table {
                         Caption {
                             StrongImportance {
                                 HTMLText("Q1 2024 Sales by Region")
@@ -262,8 +262,8 @@ struct TableHeadTests {
                                 HTMLText("All figures in USD thousands")
                             }
                         }
-                        TableHead() {
-                            TableRow() {
+                        TableHead {
+                            TableRow {
                                     TableHeader(scope: "col") {
                                     HTMLText("Region")
                                 }
@@ -277,7 +277,7 @@ struct TableHeadTests {
                                     HTMLText("Growth %")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "col") {
                                     HTMLText("Q1 Total")
                                 }
@@ -297,19 +297,19 @@ struct TableHeadTests {
                                 TableHeader(scope: "row") {
                                     HTMLText("North America")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("1,250")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("400")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("425")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("425")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("+12.5%")
                                 }
                             }
@@ -317,41 +317,41 @@ struct TableHeadTests {
                                 TableHeader(scope: "row") {
                                     HTMLText("Europe")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("980")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("320")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("330")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("330")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("+8.7%")
                                 }
                             }
                         }
                         TableFoot {
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Total")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("2,230")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("720")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("755")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("755")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("+10.6%")
                                 }
                             }

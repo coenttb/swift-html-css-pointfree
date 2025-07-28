@@ -9,8 +9,8 @@ import CSS_PointFreeHTML
 import CSSPropertyTypes
 import CSSTypeTypes
 import Dependencies
-import PointFreeHTMLTestSupport
 import PointFreeHTML
+import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
@@ -44,7 +44,7 @@ struct ColorTests {
             """
         }
     }
-    
+
     @Test("HTML color method with pseudo-class parameter")
     func htmlColorMethodWithPseudoClassParameter() {
 
@@ -59,7 +59,7 @@ struct ColorTests {
         #expect(html.contains("color:#FF0000"))
 
     }
-    
+
     @Test("HTML color with Color renders properly")
     func htmlColorMethodWithColorWorks() {
         assertInlineSnapshot(
@@ -86,7 +86,5 @@ struct ColorTests {
             """
         }
     }
-    
-        
-    
+
 }

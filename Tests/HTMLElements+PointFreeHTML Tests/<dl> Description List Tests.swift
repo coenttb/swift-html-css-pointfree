@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Description List Element Tests",
@@ -33,7 +33,7 @@ struct DescriptionListTests {
             """
         }
     }
-    
+
     @Test("Description list with multiple terms renders correctly")
     func descriptionListWithMultipleTermsRendersCorrectly() {
         assertInlineSnapshot(
@@ -78,7 +78,7 @@ struct DescriptionListTests {
             """
         }
     }
-    
+
     @Test("Description list with multiple definitions per term renders correctly")
     func descriptionListWithMultipleDefinitionsPerTermRendersCorrectly() {
         assertInlineSnapshot(
@@ -113,7 +113,7 @@ struct DescriptionListTests {
             """
         }
     }
-    
+
     @Test("Description list with complex content renders correctly")
     func descriptionListWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -149,7 +149,7 @@ struct DescriptionListTests {
             """
         }
     }
-    
+
     @Test("Description list with links renders correctly")
     func descriptionListWithLinksRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct DescriptionListTests {
             """
         }
     }
-    
+
     @Test("Nested description lists render correctly")
     func nestedDescriptionListsRenderCorrectly() {
         assertInlineSnapshot(
@@ -226,7 +226,7 @@ struct DescriptionListTests {
             """
         }
     }
-    
+
     @Test("Description list within HTMLDocument renders correctly")
     func descriptionListWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

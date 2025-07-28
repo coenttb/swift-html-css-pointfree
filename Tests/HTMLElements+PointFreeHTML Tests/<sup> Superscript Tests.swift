@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Superscript Element Tests",
@@ -22,7 +22,7 @@ struct SuperscriptTests {
             """
         }
     }
-    
+
     @Test("Sup in mathematical expression renders correctly")
     func supInMathematicalExpressionRendersCorrectly() {
         assertInlineSnapshot(
@@ -41,7 +41,7 @@ struct SuperscriptTests {
             """
         }
     }
-    
+
     @Test("Sup for ordinal numbers renders correctly")
     func supForOrdinalNumbersRendersCorrectly() {
         assertInlineSnapshot(
@@ -65,7 +65,7 @@ struct SuperscriptTests {
             """
         }
     }
-    
+
     @Test("Sup with complex expressions renders correctly")
     func supWithComplexExpressionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -92,7 +92,7 @@ struct SuperscriptTests {
             """
         }
     }
-    
+
     @Test("Sup for footnote references renders correctly")
     func supForFootnoteReferencesRendersCorrectly() {
         assertInlineSnapshot(
@@ -120,7 +120,7 @@ struct SuperscriptTests {
             """
         }
     }
-    
+
     @Test("Superscript within HTMLDocument renders correctly")
     func superscriptWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

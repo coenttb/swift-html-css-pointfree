@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Aside Element Tests",
@@ -33,11 +33,11 @@ struct AsideTests {
             """
         }
     }
-    
+
     @Test("Aside with sidebar content renders correctly")
     func asideWithSidebarContentRendersCorrectly() {
         assertInlineSnapshot(
-            of: Aside() {
+            of: Aside {
                 H3 {
                     HTMLText("Quick Links")
                 }
@@ -78,7 +78,7 @@ struct AsideTests {
             """
         }
     }
-    
+
     @Test("Aside within article renders correctly")
     func asideWithinArticleRendersCorrectly() {
         assertInlineSnapshot(
@@ -122,15 +122,15 @@ struct AsideTests {
             """
         }
     }
-    
+
     @Test("Aside with advertisement content renders correctly")
     func asideWithAdvertisementContentRendersCorrectly() {
         assertInlineSnapshot(
-            of: Aside() {
+            of: Aside {
                 H3 {
                     HTMLText("Sponsored Content")
                 }
-                ContentDivision() {
+                ContentDivision {
                     Anchor(href: "https://sponsor.example.com") {
                         Image(
                             src: "ad-banner.jpg",
@@ -155,12 +155,12 @@ struct AsideTests {
             """
         }
     }
-    
+
     @Test("Aside with table of contents renders correctly")
     func asideWithTableOfContentsRendersCorrectly() {
         assertInlineSnapshot(
             of: Aside {
-                NavigationSection() {
+                NavigationSection {
                     H3 {
                         HTMLText("In This Article")
                     }
@@ -211,13 +211,13 @@ struct AsideTests {
             """
         }
     }
-    
+
     @Test("Aside within HTMLDocument renders correctly")
     func asideWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                Main() {
-                    Article() {
+                Main {
+                    Article {
                         Header {
                             H1 {
                                 HTMLText("Complete Guide to HTML5")
@@ -232,8 +232,8 @@ struct AsideTests {
                             }
                         }
                     }
-                    Aside() {
-                        Section() {
+                    Aside {
+                        Section {
                             H3 {
                                 HTMLText("Related Articles")
                             }
@@ -250,7 +250,7 @@ struct AsideTests {
                                 }
                             }
                         }
-                        Section() {
+                        Section {
                             H3 {
                                 HTMLText("Stay Updated")
                             }

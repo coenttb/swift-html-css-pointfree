@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "B Element Tests",
@@ -22,7 +22,7 @@ struct BTests {
             """
         }
     }
-    
+
     @Test("B element within text renders correctly")
     func bElementWithinTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct BTests {
             """
         }
     }
-    
+
     @Test("Nested b elements render correctly")
     func nestedBElementsRenderCorrectly() {
         assertInlineSnapshot(
@@ -60,7 +60,7 @@ struct BTests {
             """
         }
     }
-    
+
     @Test("B element within HTMLDocument renders correctly")
     func bElementWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

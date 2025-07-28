@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Video Embed Element Tests",
@@ -18,13 +18,13 @@ struct VideoTests {
             as: .html
         ) {
             """
-            
+
             <video src="movie.mp4">Your browser does not support the video tag.
             </video>
             """
         }
     }
-    
+
     @Test("Video with controls renders correctly")
     func videoWithControlsRendersCorrectly() {
         assertInlineSnapshot(
@@ -37,13 +37,13 @@ struct VideoTests {
             as: .html
         ) {
             """
-            
+
             <video controls src="movie.mp4">
             </video>
             """
         }
     }
-    
+
     @Test("Video with multiple attributes renders correctly")
     func videoWithMultipleAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -61,13 +61,13 @@ struct VideoTests {
             as: .html
         ) {
             """
-            
+
             <video height="480" width="640" muted loop autoplay controls src="movie.mp4">Video not supported
             </video>
             """
         }
     }
-    
+
     @Test("Video with poster renders correctly")
     func videoWithPosterRendersCorrectly() {
         assertInlineSnapshot(
@@ -81,13 +81,13 @@ struct VideoTests {
             as: .html
         ) {
             """
-            
+
             <video poster="poster.jpg" controls src="movie.mp4">
             </video>
             """
         }
     }
-    
+
     @Test("Video with preload attribute renders correctly")
     func videoWithPreloadAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -101,13 +101,13 @@ struct VideoTests {
             as: .html
         ) {
             """
-            
+
             <video preload="metadata" controls src="movie.mp4">
             </video>
             """
         }
     }
-    
+
 //    @Test("Video with multiple sources renders correctly")
 //    func videoWithMultipleSourcesRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -131,7 +131,7 @@ struct VideoTests {
 //            """
 //        }
 //    }
-    
+
     @Test("Video with track subtitles renders correctly")
     func videoWithTrackSubtitlesRendersCorrectly() {
         assertInlineSnapshot(
@@ -163,7 +163,7 @@ struct VideoTests {
             """
         }
     }
-    
+
     @Test("Video with playsinline attribute renders correctly")
     func videoWithPlaysinlineAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct VideoTests {
             as: .html
         ) {
             """
-            
+
             <video playsinline muted controls src="mobile.mp4">
             </video>
             """

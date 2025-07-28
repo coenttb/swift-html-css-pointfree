@@ -20,4 +20,3 @@ extension HTML {
         self.inlineStyle(color, media: media, selector: selector, pseudo: pseudo)
     }
 }
-

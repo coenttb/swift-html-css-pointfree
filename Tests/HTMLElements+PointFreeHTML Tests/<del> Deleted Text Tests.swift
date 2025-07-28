@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Del Element Tests",
@@ -24,7 +24,7 @@ struct DelTests {
             """
         }
     }
-    
+
     @Test("Del with datetime renders correctly")
     func delWithDatetimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct DelTests {
             """
         }
     }
-    
+
     @Test("Del with cite renders correctly")
     func delWithCiteRendersCorrectly() {
         assertInlineSnapshot(
@@ -60,7 +60,7 @@ struct DelTests {
             """
         }
     }
-    
+
     @Test("Del with both cite and datetime renders correctly")
     func delWithBothCiteAndDatetimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -79,7 +79,7 @@ struct DelTests {
             """
         }
     }
-    
+
     @Test("Del with complex content renders correctly")
     func delWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -104,7 +104,7 @@ struct DelTests {
             """
         }
     }
-    
+
     @Test("Del in document revision context renders correctly")
     func delInDocumentRevisionContextRendersCorrectly() {
         assertInlineSnapshot(
@@ -122,14 +122,14 @@ struct DelTests {
         ) {
             """
 
-            <p>The conference will be held 
+            <p>The conference will be held
               <del datetime="2024-02-28T16:00:00Z" cite="https://example.com/event-updates/789">in New York
               </del> virtually via Zoom.
             </p>
             """
         }
     }
-    
+
     @Test("Del within HTMLDocument renders correctly")
     func delWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -219,7 +219,7 @@ struct DelTests {
                   </li>
                 </ul>
               </section>
-              <p>For more information about these changes, see 
+              <p>For more information about these changes, see
                 <del datetime="2024-02-01T10:00:00Z" cite="https://example.com/old-migration-guide"><a href="https://example.com/old-guide">the old migration guide</a>
                 </del> our updated documentation.
               </p>

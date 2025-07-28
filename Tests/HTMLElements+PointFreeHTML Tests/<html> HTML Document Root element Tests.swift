@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "HTML Document Root Element Tests",
@@ -18,13 +18,13 @@ struct RootTests {
             as: .html
         ) {
             """
-            
+
             <html>Content
             </html>
             """
         }
     }
-    
+
     @Test("HTML root with lang attribute renders correctly")
     func htmlRootWithLangAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct RootTests {
             as: .html
         ) {
             """
-            
+
             <html lang="en">
               <head>
                 <title>Page Title
@@ -54,7 +54,7 @@ struct RootTests {
             """
         }
     }
-    
+
     @Test("HTML root with multiple attributes renders correctly")
     func htmlRootWithMultipleAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -86,7 +86,7 @@ struct RootTests {
             """
         }
     }
-    
+
     @Test("Empty HTML root renders correctly")
     func emptyHTMLRootRendersCorrectly() {
         assertInlineSnapshot(
@@ -96,7 +96,7 @@ struct RootTests {
             as: .html
         ) {
             """
-            
+
             <html>
             </html>
             """

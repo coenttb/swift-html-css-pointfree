@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "StrongImportance Element Tests",
@@ -22,7 +22,7 @@ struct StrongImportanceTests {
             """
         }
     }
-    
+
     @Test("Strong within text renders correctly")
     func strongWithinTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct StrongImportanceTests {
             """
         }
     }
-    
+
     @Test("Nested strong and emphasis renders correctly")
     func nestedStrongAndEmphasisRendersCorrectly() {
         assertInlineSnapshot(
@@ -60,7 +60,7 @@ struct StrongImportanceTests {
             """
         }
     }
-    
+
     @Test("Multiple strong elements render correctly")
     func multipleStrongElementsRenderCorrectly() {
         assertInlineSnapshot(
@@ -83,7 +83,7 @@ struct StrongImportanceTests {
             """
         }
     }
-    
+
     @Test("StrongImportance within HTMLDocument renders correctly")
     func strongImportanceWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

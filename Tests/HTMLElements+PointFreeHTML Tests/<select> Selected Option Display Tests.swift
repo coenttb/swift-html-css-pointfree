@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Select Element Tests",
@@ -31,7 +31,7 @@ struct SelectTests {
             """
         }
     }
-    
+
     @Test("Select with name renders correctly")
     func selectWithNameRendersCorrectly() {
         assertInlineSnapshot(
@@ -64,7 +64,7 @@ struct SelectTests {
             """
         }
     }
-    
+
     @Test("Select with multiple attribute renders correctly")
     func selectWithMultipleAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -101,7 +101,7 @@ struct SelectTests {
             """
         }
     }
-    
+
     @Test("Select with required and disabled attributes renders correctly")
     func selectWithRequiredAndDisabledAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -128,7 +128,7 @@ struct SelectTests {
             """
         }
     }
-    
+
     @Test("Select with optgroups renders correctly")
     func selectWithOptgroupsRendersCorrectly() {
         assertInlineSnapshot(
@@ -174,7 +174,7 @@ struct SelectTests {
             """
         }
     }
-    
+
     @Test("Select with form association renders correctly")
     func selectWithFormAssociationRendersCorrectly() {
         assertInlineSnapshot(
@@ -206,7 +206,7 @@ struct SelectTests {
             """
         }
     }
-    
+
     @Test("Select within HTMLDocument renders correctly")
     func selectWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

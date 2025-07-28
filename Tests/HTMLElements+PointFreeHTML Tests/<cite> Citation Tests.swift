@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Cite Element Tests",
@@ -22,7 +22,7 @@ struct CiteTests {
             """
         }
     }
-    
+
     @Test("Cite within blockquote renders correctly")
     func citeWithinBlockquoteRendersCorrectly() {
         assertInlineSnapshot(
@@ -45,7 +45,7 @@ struct CiteTests {
             """
         }
     }
-    
+
     @Test("Cite with link renders correctly")
     func citeWithLinkRendersCorrectly() {
         assertInlineSnapshot(
@@ -63,7 +63,7 @@ struct CiteTests {
             """
         }
     }
-    
+
     @Test("Cite within HTMLDocument renders correctly")
     func citeWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

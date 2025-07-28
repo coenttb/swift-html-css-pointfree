@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Style Information Element Tests",
@@ -18,13 +18,13 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style>body { margin: 0; }
             </style>
             """
         }
     }
-    
+
     @Test("Style with type attribute renders correctly")
     func styleWithTypeAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -35,13 +35,13 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style type="text/css">body { background: blue; }
             </style>
             """
         }
     }
-    
+
     @Test("Style with media attribute renders correctly")
     func styleWithMediaAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -52,13 +52,13 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style media="screen and (min-width: 768px)">body { font-size: 18px; }
             </style>
             """
         }
     }
-    
+
     @Test("Style with title attribute renders correctly")
     func styleWithTitleAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -69,13 +69,13 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style title="Dark Theme">.theme-dark { background: #333; color: #fff; }
             </style>
             """
         }
     }
-    
+
     @Test("Complex CSS style renders correctly")
     func complexCSSStyleRendersCorrectly() {
         assertInlineSnapshot(
@@ -86,7 +86,7 @@ struct StyleTests {
                   margin: 0 auto;
                   padding: 20px;
                 }
-                
+
                 @media (max-width: 768px) {
                   .container {
                     padding: 10px;
@@ -97,13 +97,13 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style>.container {
               max-width: 1200px;
               margin: 0 auto;
               padding: 20px;
             }
-            
+
             @media (max-width: 768px) {
               .container {
                 padding: 10px;
@@ -113,7 +113,7 @@ struct StyleTests {
             """
         }
     }
-    
+
     @Test("Style with nonce attribute renders correctly")
     func styleWithNonceAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,13 +124,13 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style nonce="abc123def456">body { font-family: Arial, sans-serif; }
             </style>
             """
         }
     }
-    
+
     @Test("Empty style renders correctly")
     func emptyStyleRendersCorrectly() {
         assertInlineSnapshot(
@@ -140,7 +140,7 @@ struct StyleTests {
             as: .html
         ) {
             """
-            
+
             <style>
             </style>
             """

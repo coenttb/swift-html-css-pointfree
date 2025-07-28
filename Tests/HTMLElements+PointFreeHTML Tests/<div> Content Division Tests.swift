@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "ContentDivision Element Tests",
@@ -24,7 +24,7 @@ struct ContentDivisionTests {
             """
         }
     }
-    
+
     @Test("Empty div renders correctly")
     func emptyDivRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct ContentDivisionTests {
             """
         }
     }
-    
+
     @Test("DIV with nested elements renders correctly")
     func divWithNestedElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -65,7 +65,7 @@ struct ContentDivisionTests {
             """
         }
     }
-    
+
     @Test("Nested divs render correctly")
     func nestedDivsRenderCorrectly() {
         assertInlineSnapshot(
@@ -86,19 +86,19 @@ struct ContentDivisionTests {
             """
         }
     }
-    
+
     @Test("ContentDivision within HTMLDocument renders correctly")
     func contentDivisionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 ContentDivision {
-                    ContentDivision() {
+                    ContentDivision {
                         HTMLText("Header")
                     }
-                    ContentDivision() {
+                    ContentDivision {
                         HTMLText("Main content")
                     }
-                    ContentDivision() {
+                    ContentDivision {
                         HTMLText("Footer")
                     }
                 }

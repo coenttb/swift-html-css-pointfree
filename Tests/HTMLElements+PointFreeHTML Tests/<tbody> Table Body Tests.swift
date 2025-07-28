@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "TableBody Element Tests",
@@ -61,7 +61,7 @@ struct TableBodyTests {
             """
         }
     }
-    
+
     @Test("Tbody with row headers renders correctly")
     func tbodyWithRowHeadersRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct TableBodyTests {
             """
         }
     }
-    
+
     @Test("Tbody with styling classes renders correctly")
     func tbodyWithStylingClassesRendersCorrectly() {
         assertInlineSnapshot(
@@ -187,7 +187,7 @@ struct TableBodyTests {
             """
         }
     }
-    
+
     @Test("Tbody with complex content renders correctly")
     func tbodyWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -202,7 +202,7 @@ struct TableBodyTests {
                         HTMLText("$29.99/month")
                     }
                     TableDataCell {
-                        UnorderedList() {
+                        UnorderedList {
                             ListItem {
                                 HTMLText("Unlimited storage")
                             }
@@ -215,7 +215,7 @@ struct TableBodyTests {
                         }
                     }
                     TableDataCell {
-                        Button() {
+                        Button {
                             HTMLText("Choose Plan")
                         }
                     }
@@ -230,7 +230,7 @@ struct TableBodyTests {
                         HTMLText("$9.99/month")
                     }
                     TableDataCell {
-                        UnorderedList() {
+                        UnorderedList {
                             ListItem {
                                 HTMLText("5GB storage")
                             }
@@ -243,7 +243,7 @@ struct TableBodyTests {
                         }
                     }
                     TableDataCell {
-                        Button() {
+                        Button {
                             HTMLText("Choose Plan")
                         }
                     }
@@ -294,11 +294,11 @@ struct TableBodyTests {
             """
         }
     }
-    
+
     @Test("Multiple tbody elements render correctly")
     func multipleTbodyElementsRenderCorrectly() {
         assertInlineSnapshot(
-            of: Table() {
+            of: Table {
                 Caption {
                     HTMLText("Sales Data by Region")
                 }
@@ -315,7 +315,7 @@ struct TableBodyTests {
                         }
                     }
                 }
-                TableBody() {
+                TableBody {
                     TableRow {
                         TableHeader(scope: "row") {
                             HTMLText("New York")
@@ -339,7 +339,7 @@ struct TableBodyTests {
                         }
                     }
                 }
-                TableBody() {
+                TableBody {
                     TableRow {
                         TableHeader(scope: "row") {
                             HTMLText("London")
@@ -421,7 +421,7 @@ struct TableBodyTests {
             """
         }
     }
-    
+
     @Test("TableBody within HTMLDocument renders correctly")
     func tableBodyWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -433,8 +433,8 @@ struct TableBodyTests {
                     Paragraph {
                         HTMLText("Compare our product offerings to find the right solution for your needs:")
                     }
-                    Table() {
-                        Caption() {
+                    Table {
+                        Caption {
                             StrongImportance {
                                 HTMLText("Product Feature Comparison")
                             }
@@ -443,7 +443,7 @@ struct TableBodyTests {
                                 HTMLText("Updated as of January 2024")
                             }
                         }
-                        TableHead() {
+                        TableHead {
                             TableRow {
                                 TableHeader(scope: "col") {
                                     HTMLText("Feature")
@@ -459,93 +459,93 @@ struct TableBodyTests {
                                 }
                             }
                         }
-                        TableBody() {
-                            TableRow() {
+                        TableBody {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Storage Space")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("5 GB")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("100 GB")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("Unlimited")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Users")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("1 User")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("5 Users")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("Unlimited")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     HTMLText("Support")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("Email")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("Email + Chat")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("24/7 Phone + Dedicated Manager")
                                 }
                             }
-                            TableRow() {
+                            TableRow {
                                 TableHeader(scope: "row") {
                                     StrongImportance {
                                         HTMLText("Monthly Price")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("$9.99")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("$29.99")
                                     }
 //                                    BR()
-                                    Small() {
+                                    Small {
                                         HTMLText("Most Popular")
                                     }
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     StrongImportance {
                                         HTMLText("Custom")
                                     }
                                 }
                             }
                         }
-                        TableFoot() {
+                        TableFoot {
                             TableRow {
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("Action")
                                 }
-                                TableDataCell() {
-                                    Button() {
+                                TableDataCell {
+                                    Button {
                                         HTMLText("Get Started")
                                     }
                                 }
-                                TableDataCell() {
-                                    Button() {
+                                TableDataCell {
+                                    Button {
                                         HTMLText("Start Free Trial")
                                     }
                                 }
-                                TableDataCell() {
-                                    Button() {
+                                TableDataCell {
+                                    Button {
                                         HTMLText("Contact Sales")
                                     }
                                 }

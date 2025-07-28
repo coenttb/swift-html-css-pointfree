@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "IdiomaticText Element Tests",
@@ -22,7 +22,7 @@ struct IdiomaticTextTests {
             """
         }
     }
-    
+
     @Test("I element for foreign words renders correctly")
     func iElementForForeignWordsRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct IdiomaticTextTests {
             """
         }
     }
-    
+
     @Test("I element for technical terms renders correctly")
     func iElementForTechnicalTermsRendersCorrectly() {
         assertInlineSnapshot(
@@ -62,7 +62,7 @@ struct IdiomaticTextTests {
             """
         }
     }
-    
+
     @Test("I element with nested content renders correctly")
     func iElementWithNestedContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -80,7 +80,7 @@ struct IdiomaticTextTests {
             """
         }
     }
-    
+
     @Test("IdiomaticText within HTMLDocument renders correctly")
     func idiomaticTextWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

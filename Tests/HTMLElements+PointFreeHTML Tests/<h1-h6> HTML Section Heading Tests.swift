@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "HTML Section Heading Tests",
@@ -24,7 +24,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("H2 renders correctly")
     func h2RendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("H3 renders correctly")
     func h3RendersCorrectly() {
         assertInlineSnapshot(
@@ -56,7 +56,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("H4 renders correctly")
     func h4RendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("H5 renders correctly")
     func h5RendersCorrectly() {
         assertInlineSnapshot(
@@ -88,7 +88,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("H6 renders correctly")
     func h6RendersCorrectly() {
         assertInlineSnapshot(
@@ -104,7 +104,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("Hierarchical headings render correctly")
     func hierarchicalHeadingsRenderCorrectly() {
         assertInlineSnapshot(
@@ -132,7 +132,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("Headings with inline content render correctly")
     func headingsWithInlineContentRenderCorrectly() {
         assertInlineSnapshot(
@@ -155,7 +155,7 @@ struct HTMLSectionHeadingTests {
             """
         }
     }
-    
+
     @Test("Headings within HTMLDocument render correctly")
     func headingsWithinHTMLDocumentRenderCorrectly() {
         assertInlineSnapshot(

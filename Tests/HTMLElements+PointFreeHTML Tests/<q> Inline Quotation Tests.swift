@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Inline Quotation Element Tests",
@@ -22,7 +22,7 @@ struct InlineQuotationTests {
             """
         }
     }
-    
+
     @Test("Inline quotation with cite attribute renders correctly")
     func inlineQuotationWithCiteAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -38,7 +38,7 @@ struct InlineQuotationTests {
             """
         }
     }
-    
+
     @Test("Inline quotation within paragraph renders correctly")
     func inlineQuotationWithinParagraphRendersCorrectly() {
         assertInlineSnapshot(
@@ -58,7 +58,7 @@ struct InlineQuotationTests {
             """
         }
     }
-    
+
     @Test("Nested inline quotations render correctly")
     func nestedInlineQuotationsRenderCorrectly() {
         assertInlineSnapshot(
@@ -76,7 +76,7 @@ struct InlineQuotationTests {
             """
         }
     }
-    
+
     @Test("Inline quotation with link renders correctly")
     func inlineQuotationWithLinkRendersCorrectly() {
         assertInlineSnapshot(
@@ -96,7 +96,7 @@ struct InlineQuotationTests {
             """
         }
     }
-    
+
     @Test("Inline quotation within HTMLDocument renders correctly")
     func inlineQuotationWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

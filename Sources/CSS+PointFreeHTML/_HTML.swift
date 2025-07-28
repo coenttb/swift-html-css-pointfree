@@ -39,4 +39,3 @@ extension PointFreeHTML.AtRule.Media {
         self = .init(rawValue: media.rawValue)
     }
 }
-

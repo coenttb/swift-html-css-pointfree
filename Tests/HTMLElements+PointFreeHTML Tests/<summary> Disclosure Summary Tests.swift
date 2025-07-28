@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Disclosure Summary Element Tests",
@@ -24,7 +24,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Disclosure summary within details renders correctly")
     func disclosureSummaryWithinDetailsRendersCorrectly() {
         assertInlineSnapshot(
@@ -49,7 +49,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Disclosure summary with emphasis renders correctly")
     func disclosureSummaryWithEmphasisRendersCorrectly() {
         assertInlineSnapshot(
@@ -68,7 +68,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Disclosure summary with icon renders correctly")
     func disclosureSummaryWithIconRendersCorrectly() {
         assertInlineSnapshot(
@@ -103,7 +103,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Disclosure summary with link renders correctly")
     func disclosureSummaryWithLinkRendersCorrectly() {
         assertInlineSnapshot(
@@ -132,7 +132,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Disclosure summary with code renders correctly")
     func disclosureSummaryWithCodeRendersCorrectly() {
         assertInlineSnapshot(
@@ -160,7 +160,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Multiple disclosure summaries in accordion renders correctly")
     func multipleDisclosureSummariesInAccordionRendersCorrectly() {
         assertInlineSnapshot(
@@ -217,7 +217,7 @@ struct DisclosureSummaryTests {
             """
         }
     }
-    
+
     @Test("Disclosure summary within HTMLDocument renders correctly")
     func disclosureSummaryWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

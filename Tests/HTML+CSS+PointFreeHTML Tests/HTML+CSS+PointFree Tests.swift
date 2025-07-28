@@ -8,8 +8,8 @@
 import Dependencies
 import DependenciesTestSupport
 import HTML_CSS_PointFreeHTML
-import PointFreeHTMLTestSupport
 import InlineSnapshotTesting
+import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
@@ -66,7 +66,7 @@ struct IntegrationTests {
             """
         }
     }
-    
+
     @Test(
         "General3",
         .snapshots(record: .missing)
@@ -98,7 +98,7 @@ struct IntegrationTests {
             """
         }
     }
-    
+
     @Test("HTML element renders with named color properly")
     func htmlElementWithNamedColorRendersCorrectly() {
         assertInlineSnapshot(

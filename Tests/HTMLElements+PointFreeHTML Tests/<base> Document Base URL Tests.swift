@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Base Element Tests",
@@ -25,7 +25,7 @@ struct BaseTests {
             """
         }
     }
-    
+
     @Test("Base with target renders correctly")
     func baseWithTargetRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct BaseTests {
             """
         }
     }
-    
+
     @Test("Base with both href and target renders correctly")
     func baseWithBothHrefAndTargetRendersCorrectly() {
         assertInlineSnapshot(
@@ -59,7 +59,7 @@ struct BaseTests {
             """
         }
     }
-    
+
     @Test("Base within HTMLDocument renders correctly")
     func baseWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -77,7 +77,7 @@ struct BaseTests {
             <html>
               <head>
                 <style>
-            
+
                 </style>
               </head>
               <body>

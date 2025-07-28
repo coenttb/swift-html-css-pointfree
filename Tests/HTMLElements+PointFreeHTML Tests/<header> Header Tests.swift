@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Header Element Tests",
@@ -28,7 +28,7 @@ struct HeaderTests {
             """
         }
     }
-    
+
     @Test("Header with navigation renders correctly")
     func headerWithNavigationRendersCorrectly() {
         assertInlineSnapshot(
@@ -77,7 +77,7 @@ struct HeaderTests {
             """
         }
     }
-    
+
     @Test("Header for article renders correctly")
     func headerForArticleRendersCorrectly() {
         assertInlineSnapshot(
@@ -115,7 +115,7 @@ struct HeaderTests {
             """
         }
     }
-    
+
     @Test("Header with multiple headings renders correctly")
     func headerWithMultipleHeadingsRendersCorrectly() {
         assertInlineSnapshot(
@@ -145,14 +145,14 @@ struct HeaderTests {
             """
         }
     }
-    
+
     @Test("Header within HTMLDocument renders correctly")
     func headerWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                Header() {
-                    ContentDivision() {
-                        H1() {
+                Header {
+                    ContentDivision {
+                        H1 {
                             Anchor(href: "/") {
                                 HTMLText("Company Name")
                             }

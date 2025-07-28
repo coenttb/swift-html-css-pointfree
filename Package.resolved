@@ -1,5 +1,5 @@
 {
-  "originHash" : "d108754e53dfb8e4f84e4ce5d4d2f68310ae9994d22cad28fe570deb1cf910c6",
+  "originHash" : "21de7ab6a052bc2cf1fbe9782ec2be0c64c2bfcb791f14a16d04e805ef2d8e5e",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/coenttb/swift-css-types.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "affd6981a74682b2a345ac663309a4f50ef5710b"
+        "revision" : "3e54aa7d8b61510edd1d8bad2697476908f4f1d8",
+        "version" : "0.0.1"
       }
     },
     {
@@ -78,8 +78,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/coenttb/swift-html-types.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "1fe84874c693ab7a1e3f42a94ecc712ae5091da9"
+        "revision" : "c0e7f642573eef0e06006ef16b53ad7a0c7010c6",
+        "version" : "0.1.0"
       }
     },
     {

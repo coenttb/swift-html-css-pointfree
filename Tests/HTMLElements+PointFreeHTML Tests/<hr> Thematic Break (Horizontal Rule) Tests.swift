@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "ThematicBreak Element Tests",
@@ -21,7 +21,7 @@ struct ThematicBreakTests {
             """
         }
     }
-    
+
     @Test("ThematicBreak within HTMLDocument renders correctly")
     func thematicBreakWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

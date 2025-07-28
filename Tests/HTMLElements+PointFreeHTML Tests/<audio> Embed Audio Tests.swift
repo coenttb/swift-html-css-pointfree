@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Embed Audio Element Tests",
@@ -18,13 +18,13 @@ struct AudioTests {
             as: .html
         ) {
             """
-            
+
             <audio src="audio.mp3">Your browser does not support the audio element.
             </audio>
             """
         }
     }
-    
+
     @Test("Audio with controls renders correctly")
     func audioWithControlsRendersCorrectly() {
         assertInlineSnapshot(
@@ -37,13 +37,13 @@ struct AudioTests {
             as: .html
         ) {
             """
-            
+
             <audio controls src="audio.mp3">
             </audio>
             """
         }
     }
-    
+
     @Test("Audio with multiple attributes renders correctly")
     func audioWithMultipleAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -59,13 +59,13 @@ struct AudioTests {
             as: .html
         ) {
             """
-            
+
             <audio muted loop autoplay controls src="background.mp3">Audio not supported
             </audio>
             """
         }
     }
-    
+
     @Test("Audio with preload attribute renders correctly")
     func audioWithPreloadAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -79,13 +79,13 @@ struct AudioTests {
             as: .html
         ) {
             """
-            
+
             <audio preload="none" controls src="podcast.mp3">
             </audio>
             """
         }
     }
-    
+
     @Test("Audio with multiple sources renders correctly")
     func audioWithMultipleSourcesRendersCorrectly() {
         assertInlineSnapshot(
@@ -116,7 +116,7 @@ struct AudioTests {
             """
         }
     }
-    
+
     @Test("Audio with volume control renders correctly")
     func audioWithVolumeControlRendersCorrectly() {
         assertInlineSnapshot(
@@ -130,13 +130,13 @@ struct AudioTests {
             as: .html
         ) {
             """
-            
+
             <audio volume="0.5" controls src="music.mp3">
             </audio>
             """
         }
     }
-    
+
     @Test("Audio without src using sources renders correctly")
     func audioWithoutSrcUsingSourcesRendersCorrectly() {
         assertInlineSnapshot(
@@ -162,7 +162,7 @@ struct AudioTests {
             """
         }
     }
-    
+
     @Test("Muted autoplay audio renders correctly")
     func mutedAutoplayAudioRendersCorrectly() {
         assertInlineSnapshot(
@@ -178,7 +178,7 @@ struct AudioTests {
             as: .html
         ) {
             """
-            
+
             <audio style="display: none;" muted loop autoplay src="ambient.mp3">
             </audio>
             """

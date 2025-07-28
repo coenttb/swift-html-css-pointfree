@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Block Quotation Element Tests",
@@ -18,13 +18,13 @@ struct BlockQuoteTests {
             as: .html
         ) {
             """
-            
+
             <blockquote>The only way to do great work is to love what you do.
             </blockquote>
             """
         }
     }
-    
+
     @Test("Blockquote with cite attribute renders correctly")
     func blockquoteWithCiteAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -35,13 +35,13 @@ struct BlockQuoteTests {
             as: .html
         ) {
             """
-            
+
             <blockquote cite="https://news.stanford.edu/2005/06/14/jobs-061505/">Stay hungry, stay foolish.
             </blockquote>
             """
         }
     }
-    
+
     @Test("Blockquote with nested elements renders correctly")
     func blockquoteWithNestedElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -57,7 +57,7 @@ struct BlockQuoteTests {
             as: .html
         ) {
             """
-            
+
             <blockquote>
               <p>Innovation distinguishes between a leader and a follower.
               </p>
@@ -67,7 +67,7 @@ struct BlockQuoteTests {
             """
         }
     }
-    
+
     @Test("Blockquote with footer and cite renders correctly")
     func blockquoteWithFooterAndCiteRendersCorrectly() {
         assertInlineSnapshot(
@@ -96,7 +96,7 @@ struct BlockQuoteTests {
             """
         }
     }
-    
+
     @Test("Multi-paragraph blockquote renders correctly")
     func multiParagraphBlockquoteRendersCorrectly() {
         assertInlineSnapshot(
@@ -111,7 +111,7 @@ struct BlockQuoteTests {
             as: .html
         ) {
             """
-            
+
             <blockquote>
               <p>To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.
               </p>
@@ -121,7 +121,7 @@ struct BlockQuoteTests {
             """
         }
     }
-    
+
     @Test("Blockquote with custom styling renders correctly")
     func blockquoteWithCustomStylingRendersCorrectly() {
         assertInlineSnapshot(
@@ -139,7 +139,7 @@ struct BlockQuoteTests {
             """
         }
     }
-    
+
     @Test("Empty blockquote renders correctly")
     func emptyBlockquoteRendersCorrectly() {
         assertInlineSnapshot(
@@ -149,13 +149,13 @@ struct BlockQuoteTests {
             as: .html
         ) {
             """
-            
+
             <blockquote>
             </blockquote>
             """
         }
     }
-    
+
     @Test("Nested blockquote renders correctly")
     func nestedBlockquoteRendersCorrectly() {
         assertInlineSnapshot(
@@ -169,7 +169,7 @@ struct BlockQuoteTests {
             as: .html
         ) {
             """
-            
+
             <blockquote>As someone once said:
               <blockquote>The best time to plant a tree was 20 years ago. The second best time is now.
               </blockquote>This wisdom still holds true today.

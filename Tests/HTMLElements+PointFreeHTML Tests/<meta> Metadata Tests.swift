@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Meta Element Tests",
@@ -23,7 +23,7 @@ struct MetaTests {
             """
         }
     }
-    
+
     @Test("Meta with name and content renders correctly")
     func metaWithNameAndContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -39,7 +39,7 @@ struct MetaTests {
             """
         }
     }
-    
+
     @Test("Meta with http-equiv renders correctly")
     func metaWithHttpEquivRendersCorrectly() {
         assertInlineSnapshot(
@@ -55,7 +55,7 @@ struct MetaTests {
             """
         }
     }
-    
+
     @Test("Meta with media renders correctly")
     func metaWithMediaRendersCorrectly() {
         assertInlineSnapshot(
@@ -72,7 +72,7 @@ struct MetaTests {
             """
         }
     }
-    
+
     @Test("Meta within HTMLDocument renders correctly")
     func metaWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -89,7 +89,7 @@ struct MetaTests {
             <html>
               <head>
                 <style>
-            
+
                 </style>
               </head>
               <body>

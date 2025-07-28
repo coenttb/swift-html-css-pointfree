@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Meter Element Tests",
@@ -26,7 +26,7 @@ struct MeterTests {
             """
         }
     }
-    
+
     @Test("Meter with min and max renders correctly")
     func meterWithMinAndMaxRendersCorrectly() {
         assertInlineSnapshot(
@@ -46,7 +46,7 @@ struct MeterTests {
             """
         }
     }
-    
+
     @Test("Meter with low and high thresholds renders correctly")
     func meterWithLowAndHighThresholdsRendersCorrectly() {
         assertInlineSnapshot(
@@ -68,7 +68,7 @@ struct MeterTests {
             """
         }
     }
-    
+
     @Test("Meter with optimum value renders correctly")
     func meterWithOptimumValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -91,7 +91,7 @@ struct MeterTests {
             """
         }
     }
-    
+
     @Test("Meter within HTMLDocument renders correctly")
     func meterWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

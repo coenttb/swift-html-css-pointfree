@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Picture Element Tests",
@@ -27,7 +27,7 @@ struct PictureTests {
             """
         }
     }
-    
+
     @Test("Picture within HTMLDocument renders correctly")
     func pictureWithinHTMLDocumentRendersCorrectly() {
         let picture = Picture {
@@ -36,7 +36,7 @@ struct PictureTests {
                 alt: "Website banner"
             )
         }
-        
+
         assertInlineSnapshot(
             of: HTMLDocument {
                 picture

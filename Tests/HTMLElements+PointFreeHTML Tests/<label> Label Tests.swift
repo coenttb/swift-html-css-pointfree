@@ -1,7 +1,7 @@
-import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
+import Testing
 
 @Suite(
     "Label Element Tests",
@@ -21,7 +21,7 @@ struct LabelTests {
             """
         }
     }
-    
+
     @Test("Label with 'for' attribute renders correctly")
     func labelWithForAttributeRendersCorrectly() {
         assertInlineSnapshot(

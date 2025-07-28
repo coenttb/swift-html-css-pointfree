@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Article Element Tests",
@@ -33,7 +33,7 @@ struct ArticleTests {
             """
         }
     }
-    
+
     @Test("Article with header and footer renders correctly")
     func articleWithHeaderAndFooterRendersCorrectly() {
         assertInlineSnapshot(
@@ -76,7 +76,7 @@ struct ArticleTests {
             """
         }
     }
-    
+
     @Test("Article with multiple sections renders correctly")
     func articleWithMultipleSectionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct ArticleTests {
             """
         }
     }
-    
+
     @Test("Nested articles render correctly")
     func nestedArticlesRenderCorrectly() {
         assertInlineSnapshot(
@@ -163,7 +163,7 @@ struct ArticleTests {
             """
         }
     }
-    
+
     @Test("Article within HTMLDocument renders correctly")
     func articleWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "OptionGroup Element Tests",
@@ -33,7 +33,7 @@ struct OptionGroupTests {
             """
         }
     }
-    
+
     @Test("Optgroup with label renders correctly")
     func optgroupWithLabelRendersCorrectly() {
         assertInlineSnapshot(
@@ -63,7 +63,7 @@ struct OptionGroupTests {
             """
         }
     }
-    
+
     @Test("Optgroup with disabled attribute renders correctly")
     func optgroupWithDisabledAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -91,7 +91,7 @@ struct OptionGroupTests {
             """
         }
     }
-    
+
     @Test("Multiple optgroups render correctly")
     func multipleOptgroupsRenderCorrectly() {
         assertInlineSnapshot(
@@ -149,7 +149,7 @@ struct OptionGroupTests {
             """
         }
     }
-    
+
     @Test("Optgroup with complex options renders correctly")
     func optgroupWithComplexOptionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -189,12 +189,12 @@ struct OptionGroupTests {
             """
         }
     }
-    
+
     @Test("OptionGroup within HTMLDocument renders correctly")
     func optionGroupWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                Form() {
+                Form {
                     H2 {
                         HTMLText("Travel Booking")
                     }

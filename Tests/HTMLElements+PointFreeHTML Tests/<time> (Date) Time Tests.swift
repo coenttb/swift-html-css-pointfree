@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Time Element Tests",
@@ -22,7 +22,7 @@ struct TimeTests {
             """
         }
     }
-    
+
     @Test("Time with datetime attribute renders correctly")
     func timeWithDatetimeAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -38,7 +38,7 @@ struct TimeTests {
             """
         }
     }
-    
+
     @Test("Time with full datetime renders correctly")
     func timeWithFullDatetimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -54,7 +54,7 @@ struct TimeTests {
             """
         }
     }
-    
+
     @Test("Time within paragraph renders correctly")
     func timeWithinParagraphRendersCorrectly() {
         assertInlineSnapshot(
@@ -76,7 +76,7 @@ struct TimeTests {
             """
         }
     }
-    
+
     @Test("Time with relative datetime renders correctly")
     func timeWithRelativeDatetimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -92,7 +92,7 @@ struct TimeTests {
             """
         }
     }
-    
+
     @Test("Time in article context renders correctly")
     func timeInArticleContextRendersCorrectly() {
         assertInlineSnapshot(
@@ -131,7 +131,7 @@ struct TimeTests {
             """
         }
     }
-    
+
     @Test("Time within HTMLDocument renders correctly")
     func timeWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

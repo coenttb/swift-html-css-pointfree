@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "ContentSpan Element Tests",
@@ -22,11 +22,11 @@ struct ContentSpanTests {
             """
         }
     }
-    
+
     @Test("Span with class attribute renders correctly")
     func spanWithClassAttributeRendersCorrectly() {
         assertInlineSnapshot(
-            of: ContentSpan() {
+            of: ContentSpan {
                 HTMLText("Highlighted text")
             },
             as: .html
@@ -36,13 +36,13 @@ struct ContentSpanTests {
             """
         }
     }
-    
+
     @Test("Span within text renders correctly")
     func spanWithinTextRendersCorrectly() {
         assertInlineSnapshot(
             of: Paragraph {
                 HTMLText("This paragraph has ")
-                ContentSpan() {
+                ContentSpan {
                     HTMLText("accented text")
                 }
                 HTMLText(" within it.")
@@ -56,13 +56,13 @@ struct ContentSpanTests {
             """
         }
     }
-    
+
     @Test("Nested spans render correctly")
     func nestedSpansRenderCorrectly() {
         assertInlineSnapshot(
-            of: ContentSpan() {
+            of: ContentSpan {
                 HTMLText("Outer ")
-                ContentSpan() {
+                ContentSpan {
                     HTMLText("inner")
                 }
                 HTMLText(" span")
@@ -74,11 +74,11 @@ struct ContentSpanTests {
             """
         }
     }
-    
+
     @Test("Span with inline elements renders correctly")
     func spanWithInlineElementsRendersCorrectly() {
         assertInlineSnapshot(
-            of: ContentSpan() {
+            of: ContentSpan {
                 StrongImportance {
                     HTMLText("Bold")
                 }
@@ -95,7 +95,7 @@ struct ContentSpanTests {
             """
         }
     }
-    
+
     @Test("ContentSpan within HTMLDocument renders correctly")
     func contentSpanWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -103,13 +103,13 @@ struct ContentSpanTests {
                 ContentDivision {
                     Paragraph {
                         HTMLText("The price is ")
-                        ContentSpan() {
+                        ContentSpan {
                             HTMLText("$19.99")
                         }
                         HTMLText(" including tax.")
                     }
                     Paragraph {
-                        ContentSpan() {
+                        ContentSpan {
                             HTMLText("Operation completed successfully")
                         }
                     }

@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Caption Element Tests",
@@ -24,7 +24,7 @@ struct CaptionTests {
             """
         }
     }
-    
+
     @Test("Caption with descriptive text renders correctly")
     func captionWithDescriptiveTextRendersCorrectly() {
         assertInlineSnapshot(
@@ -40,7 +40,7 @@ struct CaptionTests {
             """
         }
     }
-    
+
     @Test("Caption with complex content renders correctly")
     func captionWithComplexContentRendersCorrectly() {
         assertInlineSnapshot(
@@ -62,7 +62,7 @@ struct CaptionTests {
             """
         }
     }
-    
+
     @Test("Caption within table renders correctly")
     func captionWithinTableRendersCorrectly() {
         assertInlineSnapshot(
@@ -120,12 +120,12 @@ struct CaptionTests {
             """
         }
     }
-    
+
     @Test("Caption with styling class renders correctly")
     func captionWithStylingClassRendersCorrectly() {
         assertInlineSnapshot(
-            of: Table() {
-                Caption() {
+            of: Table {
+                Caption {
                     HTMLText("Annual Report Data Summary")
                 }
                 TableHead {
@@ -186,7 +186,7 @@ struct CaptionTests {
             """
         }
     }
-    
+
     @Test("Caption within HTMLDocument renders correctly")
     func captionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
@@ -198,7 +198,7 @@ struct CaptionTests {
                     Paragraph {
                         HTMLText("The following table shows market performance across different sectors:")
                     }
-                    Table() {
+                    Table {
                         Caption {
                             StrongImportance {
                                 HTMLText("Market Performance by Sector")
@@ -232,7 +232,7 @@ struct CaptionTests {
                                 TableDataCell {
                                     HTMLText("+15.2%")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("↑")
                                 }
                             }
@@ -243,7 +243,7 @@ struct CaptionTests {
                                 TableDataCell {
                                     HTMLText("+8.7%")
                                 }
-                                TableDataCell() {
+                                TableDataCell {
                                     HTMLText("↑")
                                 }
                             }

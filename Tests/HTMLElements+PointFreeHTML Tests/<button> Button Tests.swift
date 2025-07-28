@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Button Element Tests",
@@ -12,7 +12,7 @@ struct ButtonTests {
     @Test("Basic button renders correctly")
     func basicButtonRendersCorrectly() {
         assertInlineSnapshot(
-            of: Button() {
+            of: Button {
                 HTMLText("Click Me")
             },
             as: .html
@@ -22,7 +22,7 @@ struct ButtonTests {
             """
         }
     }
-    
+
     @Test("Button with type submit renders correctly")
     func buttonWithTypeSubmitRendersCorrectly() {
         assertInlineSnapshot(
@@ -38,7 +38,7 @@ struct ButtonTests {
             """
         }
     }
-    
+
     @Test("Button with disabled attribute renders correctly")
     func buttonWithDisabledAttributeRendersCorrectly() {
         assertInlineSnapshot(
@@ -54,7 +54,7 @@ struct ButtonTests {
             """
         }
     }
-    
+
     @Test("Button with name and value renders correctly")
     func buttonWithNameAndValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -71,7 +71,7 @@ struct ButtonTests {
             """
         }
     }
-    
+
     @Test("Button with form attributes renders correctly")
     func buttonWithFormAttributesRendersCorrectly() {
         assertInlineSnapshot(
@@ -90,11 +90,11 @@ struct ButtonTests {
             """
         }
     }
-    
+
     @Test("Button with nested content renders correctly")
     func buttonWithNestedContentRendersCorrectly() {
         assertInlineSnapshot(
-            of: Button() {
+            of: Button {
                 StrongImportance {
                     HTMLText("Bold")
                 }
@@ -107,7 +107,7 @@ struct ButtonTests {
             """
         }
     }
-    
+
     @Test(
         "Button within HTMLDocument renders correctly",
         .disabled("Doesn't compile when Input is uncommented")

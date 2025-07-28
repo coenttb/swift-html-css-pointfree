@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "ListItem Element Tests",
@@ -24,7 +24,7 @@ struct ListItemTests {
             """
         }
     }
-    
+
     @Test("Li with value renders correctly")
     func liWithValueRendersCorrectly() {
         assertInlineSnapshot(
@@ -42,7 +42,7 @@ struct ListItemTests {
             """
         }
     }
-    
+
     @Test("Li with inline elements renders correctly")
     func liWithInlineElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -65,7 +65,7 @@ struct ListItemTests {
             """
         }
     }
-    
+
     @Test("Li with nested elements renders correctly")
     func liWithNestedElementsRendersCorrectly() {
         assertInlineSnapshot(
@@ -88,7 +88,7 @@ struct ListItemTests {
             """
         }
     }
-    
+
     @Test("ListItem within HTMLDocument renders correctly")
     func listItemWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(

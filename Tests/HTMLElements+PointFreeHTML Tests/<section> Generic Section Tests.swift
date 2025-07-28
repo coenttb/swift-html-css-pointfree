@@ -1,8 +1,8 @@
-import Testing
 import HTMLElements_PointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
-import HTMLElementTypes
+import Testing
 
 @Suite(
     "Section Element Tests",
@@ -33,7 +33,7 @@ struct SectionTests {
             """
         }
     }
-    
+
     @Test("Section with multiple subsections renders correctly")
     func sectionWithMultipleSubsectionsRendersCorrectly() {
         assertInlineSnapshot(
@@ -81,7 +81,7 @@ struct SectionTests {
             """
         }
     }
-    
+
     @Test("Section with header and footer renders correctly")
     func sectionWithHeaderAndFooterRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,7 +124,7 @@ struct SectionTests {
             """
         }
     }
-    
+
     @Test("Section with various content types renders correctly")
     func sectionWithVariousContentTypesRendersCorrectly() {
         assertInlineSnapshot(
@@ -169,13 +169,13 @@ struct SectionTests {
             """
         }
     }
-    
+
     @Test("Section within HTMLDocument renders correctly")
     func sectionWithinHTMLDocumentRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
                 Main {
-                    Section() {
+                    Section {
                         H1 {
                             HTMLText("Introduction")
                         }
@@ -183,7 +183,7 @@ struct SectionTests {
                             HTMLText("Welcome to our comprehensive guide.")
                         }
                     }
-                    Section() {
+                    Section {
                         H1 {
                             HTMLText("Getting Started")
                         }
