@@ -52,7 +52,7 @@ extension HTML {
     @HTMLBuilder
     public func openInNewTab(
         withOpener: Bool = false
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         let result = self.target(anchor: .blank)
 
         if withOpener {

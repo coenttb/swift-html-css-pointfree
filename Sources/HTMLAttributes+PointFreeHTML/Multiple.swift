@@ -16,7 +16,7 @@ extension HTML {
 
     /// Conditionally adds the multiple attribute to the element
     @HTMLBuilder
-    package func multiple(_ value: Multiple?) -> some HTML {
+    package func multiple(_ value: Multiple?) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

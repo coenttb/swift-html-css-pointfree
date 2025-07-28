@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func loop(
         _ value: Loop?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

@@ -6,9 +6,6 @@
 //
 
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.LineBreakOpportunity {
-    public func callAsFunction() -> some HTML {
-        HTMLElement(tag: Self.tag) { HTMLEmpty() }
-    }
-}
+extension HTMLElementTypes.LineBreakOpportunity: @retroactive PointFreeHTML.HTML {}

@@ -18,7 +18,7 @@ extension HTML {
     @discardableResult
     public func itemscope(
         _ value: Itemscope?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

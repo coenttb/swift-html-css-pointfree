@@ -13,7 +13,7 @@ extension HTML {
     package func attribute(
         _ value: String,
         _ condition: @autoclosure () -> Bool?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         let conditionResult = condition()
         if conditionResult == true {
             self.attribute(value, "")
@@ -25,7 +25,7 @@ extension HTML {
     @HTMLBuilder
     package func attribute<Attribute: HTMLBooleanAttribute>(
         boolean value: Attribute?,
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(Attribute.attribute, value == true)
     }
 }

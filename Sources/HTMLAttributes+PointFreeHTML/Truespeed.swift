@@ -18,7 +18,7 @@ extension HTML {
     @HTMLBuilder
     package func truespeed(
         _ value: Truespeed?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

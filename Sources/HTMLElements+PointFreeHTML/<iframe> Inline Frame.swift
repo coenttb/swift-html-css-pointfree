@@ -10,8 +10,8 @@ import HTMLElementTypes
 
 extension HTMLElementTypes.InlineFrame {
     public func callAsFunction(
-        @HTMLBuilder _ content: () -> some HTML
-    ) -> some HTML {
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { content() }
             .src(self.src)
             .attribute("srcdoc", self.srcdoc)

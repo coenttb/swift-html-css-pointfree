@@ -10,7 +10,7 @@ import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.ContentDivision {
-    public func callAsFunction(@HTMLBuilder _ content: () -> some HTML) -> some HTML {
+    public func callAsFunction(@HTMLBuilder _ content: () -> some PointFreeHTML.HTML) -> some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { content() }
     }
 }

@@ -5,9 +5,10 @@
 //  Created by Coen ten Thije Boonkkamp on 09/04/2025.
 //
 
+import PointFreeHTML
 
-extension String: @retroactive HTML {
-    public var body: some HTML {
+extension String: @retroactive PointFreeHTML.HTML {
+    public var body: HTMLText {
         HTMLText(self)
     }
 }

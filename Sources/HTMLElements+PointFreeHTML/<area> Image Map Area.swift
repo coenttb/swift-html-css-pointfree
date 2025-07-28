@@ -7,8 +7,8 @@
 
 import PointFreeHTML
 
-extension HTMLElementTypes.Area {
-    public func callAsFunction() -> some HTML {
+extension HTMLElementTypes.Area: PointFreeHTML.HTML {
+    public var body: some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { HTMLEmpty() }
 //        NEED TO FIX AREA domain model
 //            .shape(self.shape)

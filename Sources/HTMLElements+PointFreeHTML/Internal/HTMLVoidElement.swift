@@ -8,8 +8,15 @@
 import HTMLElementTypes
 import PointFreeHTML
 
-extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement {
-    public func callAsFunction() -> PointFreeHTML.HTMLElement<HTMLEmpty> {
-        .init(tag: Self.tag) { HTMLEmpty() }
+extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement & HTML {
+    public var body: PointFreeHTML.HTMLElement<HTMLEmpty> {
+        PointFreeHTML.HTMLElement(tag: Self.tag) { HTMLEmpty() }
+    }
+}
+
+extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement & HTML {
+    public func callAsFunction(
+    ) -> some PointFreeHTML.HTML {
+        self
     }
 }

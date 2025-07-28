@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func isMap(
         _ value: Ismap?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

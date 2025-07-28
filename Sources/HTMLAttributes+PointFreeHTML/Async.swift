@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func async(
         _ value: Async?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

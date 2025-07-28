@@ -10,8 +10,8 @@ import HTMLElementTypes
 
 extension HTMLElementTypes.HeadingGroup {
     public func callAsFunction(
-        @HTMLBuilder _ content: () -> some HTML
-    ) -> some HTML {
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
         HTMLElement(tag: Self.tag) { content() }
     }
 }

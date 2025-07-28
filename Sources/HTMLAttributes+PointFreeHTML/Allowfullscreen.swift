@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func allowfullscreen(
         _ value: Allowfullscreen?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

@@ -18,7 +18,7 @@ extension HTML {
     @HTMLBuilder
     package func required(
         _ value: Required?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

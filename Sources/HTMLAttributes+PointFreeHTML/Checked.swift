@@ -17,7 +17,7 @@ extension HTML {
 
     /// Conditionally adds the checked attribute to the element
     @HTMLBuilder
-    package func checked(_ value: Checked?) -> some HTML {
+    package func checked(_ value: Checked?) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

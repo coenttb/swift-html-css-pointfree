@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func formNovalidate(
         _ value: FormNovalidate?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

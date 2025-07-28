@@ -2,10 +2,11 @@ import Testing
 import HTMLElements_PointFreeHTML
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
+import HTMLElementTypes
 
 @Suite(
     "Form Element Tests",
-    .snapshots(record: nil),
+    .snapshots(record: .missing)
 )
 struct FormTests {
     @Test("Basic form renders correctly")
@@ -70,8 +71,7 @@ struct FormTests {
                     Input.text(
                         name: "name",
                         required: true
-                    )
-                    .id("name")
+                    )()
                     
                     Label(for: "email") {
                         "Email:"
@@ -80,21 +80,19 @@ struct FormTests {
                     Input.email(
                         name: "email",
                         required: true
-                    )
-                    .id("email")
+                    )()
                     
                     Button {
                         "Submit"
                     }
-                    .attribute("type", "submit")
                 }
             },
             as: .html
         ) {
             """
-            
+
             <form method="post" action="/contact" name="contact">
-              <div><label for="name">Name:</label><input id="name" required type="text" name="name"><label for="email">Email:</label><input id="email" required type="email" name="email"><button type="submit">Submit</button>
+              <div><label for="name">Name:</label><input required type="text" name="name"><label for="email">Email:</label><input required type="email" name="email"><button>Submit</button>
               </div>
             </form>
             """
@@ -110,7 +108,8 @@ struct FormTests {
                 enctype: .multipartFormData,
                 method: .post
             ) {
-                Input.file(name: "document")
+                Input
+                    .file(name: "document")()
             }
                 .accept(.documents),
             as: .html
@@ -152,7 +151,7 @@ struct FormTests {
                 action: .relative("/search"),
                 method: .get
             ) {
-                Input.search(name: "q")
+                Input.search(name: "q")()
                 
                 Button {
                     "Search"
@@ -200,16 +199,15 @@ struct FormTests {
                 method: .post,
             ) {
                 ContentDivision {
-                    Input.text(name: "cardNumber")
-                        .autocomplete("cc-number")
+                    Input.text(name: "cardNumber")()
                 }
             },
             as: .html
         ) {
             """
-            
+
             <form method="post" action="/payment" name="payment" autocomplete="off">
-              <div><input autocomplete="cc-number" type="text" name="cardNumber">
+              <div><input type="text" name="cardNumber">
               </div>
             </form>
             """
@@ -225,13 +223,12 @@ struct FormTests {
                 Button {
                     "Close"
                 }
-                .attribute("type", "submit")
             },
             as: .html
         ) {
             """
-            
-            <form method="dialog"><button type="submit">Close</button>
+
+            <form method="dialog"><button>Close</button>
             </form>
             """
         }
@@ -265,7 +262,7 @@ struct FormTests {
                 autocapitalize: .characters,
                 name: "capitalize-test",
             ) {
-                Input.text(name: "uppercase")
+                Input.text(name: "uppercase")()
             },
             as: .html
         ) {

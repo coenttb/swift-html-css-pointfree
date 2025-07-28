@@ -16,7 +16,7 @@ extension HTML {
 
     /// Conditionally adds the disabled attribute to the element
     @HTMLBuilder
-    package func inert(_ value: Inert?) -> some HTML {
+    package func inert(_ value: Inert?) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

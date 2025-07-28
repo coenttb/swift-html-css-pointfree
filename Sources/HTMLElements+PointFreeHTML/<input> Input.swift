@@ -6,14 +6,14 @@
 //
 //
 
-import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.Input: @retroactive HTML {}
+extension HTMLElementTypes.Input: @retroactive PointFreeHTML.HTML {}
 
-extension HTMLElementTypes.Input: HTMLVoidElement {
+extension HTMLElementTypes.Input {
     @HTMLBuilder
-    public var body: some HTML {
+    public var body: some PointFreeHTML.HTML {
         let input = HTMLElement(tag: Self.tag) { HTMLEmpty() }
             .name(name)
             .disabled(self.disabled)
@@ -199,6 +199,5 @@ extension HTMLElementTypes.Input: HTMLVoidElement {
         case .datetime:
             input
         }
-
     }
 }

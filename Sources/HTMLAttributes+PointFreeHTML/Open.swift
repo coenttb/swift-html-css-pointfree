@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func open(
         _ value: Open?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

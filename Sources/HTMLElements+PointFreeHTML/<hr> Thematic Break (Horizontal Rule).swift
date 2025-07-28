@@ -5,13 +5,7 @@
 //  Created by Coen ten Thije Boonkkamp on 05/04/2025.
 //
 
-import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.ThematicBreak: @retroactive HTML {}
-extension HTMLElementTypes.ThematicBreak: HTMLVoidElement {
-    @HTMLBuilder
-    public var body: some HTML {
-        HTMLElement(tag: Self.tag) { HTMLEmpty() }
-    }
-}
+extension HTMLElementTypes.ThematicBreak: @retroactive PointFreeHTML.HTML {}

@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func nomodule(
         _ value: Nomodule?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

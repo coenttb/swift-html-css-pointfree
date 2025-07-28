@@ -18,7 +18,7 @@ extension HTML {
     @HTMLBuilder
     package func novalidate(
         _ value: Novalidate?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

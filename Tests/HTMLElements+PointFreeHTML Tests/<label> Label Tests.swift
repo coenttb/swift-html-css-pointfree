@@ -5,7 +5,7 @@ import PointFreeHTMLTestSupport
 
 @Suite(
     "Label Element Tests",
-    .snapshots(record: nil),
+    .snapshots(record: .missing)
 )
 struct LabelTests {
     @Test("Basic label renders correctly")

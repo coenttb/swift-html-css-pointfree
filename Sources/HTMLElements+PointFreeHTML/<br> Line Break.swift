@@ -6,11 +6,6 @@
 //
 
 import HTMLElementTypes
+import PointFreeHTML
 
-extension HTMLElementTypes.BR: @retroactive HTML {}
-extension HTMLElementTypes.BR: @retroactive HTMLVoidElement {
-    @HTMLBuilder
-    public var body: some HTML {
-        HTMLElement(tag: Self.tag) { HTMLEmpty() }
-    }
-}
+extension HTMLElementTypes.BR: @retroactive PointFreeHTML.HTML {}

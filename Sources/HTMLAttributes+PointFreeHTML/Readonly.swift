@@ -19,7 +19,7 @@ extension HTML {
     @HTMLBuilder
     package func readonly(
         _ value: Readonly?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

@@ -7,11 +7,12 @@
 
 import HTMLAttributes_PointFreeHTML
 import HTMLElementTypes
+import PointFreeHTML
 
 extension HTMLElementTypes.Script {
     public func callAsFunction(
         _ script: () -> String = { "" }
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
 
         let script = script()
         var escaped = ""
@@ -47,8 +48,8 @@ extension HTMLElementTypes.Script {
     }
 }
 
-extension HTMLElementTypes.Script: @retroactive HTML {
-    public var body: some HTML {
+extension HTMLElementTypes.Script: @retroactive PointFreeHTML.HTML {
+    public var body: some PointFreeHTML.HTML {
         Script(
             src: self.src,
             async: self.async,

@@ -18,7 +18,7 @@ extension HTML {
     @discardableResult
     public func autofocus(
         _ value: Autofocus?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }

@@ -14,7 +14,7 @@ extension HTML {
     @discardableResult
     package func autoplay(
         _ value: Autoplay?
-    ) -> some HTML {
+    ) -> some PointFreeHTML.HTML {
         self.attribute(boolean: value)
     }
 }
