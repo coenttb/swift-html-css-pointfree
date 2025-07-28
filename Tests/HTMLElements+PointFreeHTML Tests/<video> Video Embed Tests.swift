@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Video Embed Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct VideoTests {
     @Test("Basic video renders correctly")

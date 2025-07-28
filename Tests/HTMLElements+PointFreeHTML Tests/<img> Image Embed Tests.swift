@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Image Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ImageTests {
     @Test("Basic image renders correctly")

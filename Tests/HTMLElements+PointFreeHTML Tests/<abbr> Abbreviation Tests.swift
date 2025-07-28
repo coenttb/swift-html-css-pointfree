@@ -6,7 +6,7 @@
 //
 //@Suite(
 //    "Abbreviation Element Tests",
-//    .snapshots(record: .failed),
+//    .snapshots(record: .missing),
 //)
 //struct AbbreviationTests {
 //    @Test("Basic abbreviation renders correctly")

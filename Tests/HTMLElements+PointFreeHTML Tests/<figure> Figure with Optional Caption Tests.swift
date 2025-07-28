@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Figure with Optional Caption Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct FigureCaptionTests {
     @Test("Basic figure with image renders correctly")

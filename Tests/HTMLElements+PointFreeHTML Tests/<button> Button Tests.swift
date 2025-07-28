@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Button Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ButtonTests {
     @Test("Basic button renders correctly")

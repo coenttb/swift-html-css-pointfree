@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Aside Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct AsideTests {
     @Test("Basic aside renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Canvas Element Tests",
-    .snapshots(record: .failed),
+    .snapshots(record: .missing),
 )
 struct CanvasTests {
     @Test("Basic canvas renders correctly")

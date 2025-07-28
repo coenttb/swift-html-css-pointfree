@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Data Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct DataTests {
     @Test("Basic data element renders correctly")

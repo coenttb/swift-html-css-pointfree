@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "OptionGroup Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct OptionGroupTests {
     @Test("Basic optgroup renders correctly")

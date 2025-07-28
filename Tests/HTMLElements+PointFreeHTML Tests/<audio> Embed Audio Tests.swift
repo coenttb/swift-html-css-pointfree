@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Embed Audio Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct AudioTests {
     @Test("Basic audio renders correctly")

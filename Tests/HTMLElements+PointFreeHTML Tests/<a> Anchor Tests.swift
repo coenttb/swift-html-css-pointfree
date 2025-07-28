@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Anchor Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct AnchorTests {
     @Test("Basic anchor renders correctly")

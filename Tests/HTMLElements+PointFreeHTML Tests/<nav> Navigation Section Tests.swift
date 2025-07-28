@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "NavigationSection Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct NavigationSectionTests {
     @Test("Basic nav renders correctly")

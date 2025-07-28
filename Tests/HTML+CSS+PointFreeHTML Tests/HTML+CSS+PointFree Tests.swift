@@ -69,7 +69,7 @@ struct IntegrationTests {
     
     @Test(
         "General3",
-        .snapshots(record: .failed)
+        .snapshots(record: .missing)
     )
     func general3() {
         assertInlineSnapshot(

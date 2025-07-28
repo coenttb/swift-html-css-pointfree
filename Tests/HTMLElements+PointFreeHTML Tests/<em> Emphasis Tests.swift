@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Emphasis Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct EmphasisTests {
     @Test("Basic emphasis renders correctly")

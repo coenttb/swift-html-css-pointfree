@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Script Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ScriptTests {
     @Test("Basic inline script renders correctly")

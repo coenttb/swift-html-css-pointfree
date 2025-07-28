@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Time Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct TimeTests {
     @Test("Basic time renders correctly")

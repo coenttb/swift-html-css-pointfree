@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "InsertedText Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct InsertedTextTests {
     @Test("Basic ins renders correctly")

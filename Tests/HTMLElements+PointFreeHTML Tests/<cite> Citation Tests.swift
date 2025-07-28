@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Cite Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct CiteTests {
     @Test("Basic cite renders correctly")

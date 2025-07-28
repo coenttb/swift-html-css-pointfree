@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Inline Quotation Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct InlineQuotationTests {
     @Test("Basic inline quotation renders correctly")

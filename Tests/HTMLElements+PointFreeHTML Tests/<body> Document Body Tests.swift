@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Document Body Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct BodyTests {
     @Test("Basic body renders correctly")

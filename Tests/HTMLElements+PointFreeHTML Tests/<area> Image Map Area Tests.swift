@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Area Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct AreaTests {
     @Test("Basic area renders correctly")

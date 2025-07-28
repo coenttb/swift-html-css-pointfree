@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Disclosure Summary Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct DisclosureSummaryTests {
     @Test("Basic disclosure summary renders correctly")

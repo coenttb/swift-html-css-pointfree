@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Block Quotation Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct BlockQuoteTests {
     @Test("Basic blockquote renders correctly")

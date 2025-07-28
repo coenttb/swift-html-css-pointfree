@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Link Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct LinkTests {
     @Test("Basic link renders correctly")

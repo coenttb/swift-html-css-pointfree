@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Document Metadata Header Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct HeadTests {
     @Test("Basic head renders correctly")

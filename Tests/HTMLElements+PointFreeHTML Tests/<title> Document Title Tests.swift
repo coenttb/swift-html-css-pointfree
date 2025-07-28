@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Document Title Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct DocumentTitleTests {
     @Test("Basic title renders correctly")

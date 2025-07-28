@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Footer Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct FooterTests {
     @Test("Basic footer renders correctly")

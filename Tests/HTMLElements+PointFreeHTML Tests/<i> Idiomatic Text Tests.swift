@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "IdiomaticText Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct IdiomaticTextTests {
     @Test("Basic i element renders correctly")

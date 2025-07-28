@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Caption Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct CaptionTests {
     @Test("Basic caption renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Style Information Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct StyleTests {
     @Test("Basic style renders correctly")

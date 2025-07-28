@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "HTML Document Root Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct RootTests {
     @Test("Basic HTML root renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "ThematicBreak Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ThematicBreakTests {
     @Test("Basic hr renders correctly")

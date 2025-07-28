@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Param Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ParamTests {
     @Test("Basic param renders correctly")

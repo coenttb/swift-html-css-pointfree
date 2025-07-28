@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Track Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct TrackTests {
     @Test("Basic track renders correctly")

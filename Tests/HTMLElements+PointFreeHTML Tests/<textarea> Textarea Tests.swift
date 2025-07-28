@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Textarea Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct TextareaTests {
     @Test("Basic textarea renders correctly")

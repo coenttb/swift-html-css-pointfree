@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Address Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct AddressTests {
     @Test("Basic address renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Variable Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct VariableTests {
     @Test("Basic var renders correctly")

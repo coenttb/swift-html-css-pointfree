@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "TableColumn Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct TableColumnTests {
     @Test("Basic col renders correctly")

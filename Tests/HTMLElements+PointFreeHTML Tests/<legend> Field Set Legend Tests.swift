@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Legend Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct LegendTests {
     @Test("Basic legend renders correctly")

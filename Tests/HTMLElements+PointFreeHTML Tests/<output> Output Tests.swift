@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Output Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct OutputTests {
     @Test("Basic output renders correctly")

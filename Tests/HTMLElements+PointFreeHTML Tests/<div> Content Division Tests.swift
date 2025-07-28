@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "ContentDivision Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ContentDivisionTests {
     @Test("Basic div renders correctly")

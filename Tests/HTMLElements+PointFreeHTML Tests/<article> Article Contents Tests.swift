@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Article Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ArticleTests {
     @Test("Basic article renders correctly")

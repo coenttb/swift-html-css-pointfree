@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "TableFoot Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct TableFootTests {
     @Test("Basic tfoot renders correctly")

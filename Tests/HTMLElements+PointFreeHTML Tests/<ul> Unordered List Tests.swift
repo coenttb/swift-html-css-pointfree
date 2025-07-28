@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "UnorderedList Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct UnorderedListTests {
     @Test("Basic ul renders correctly")

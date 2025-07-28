@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "DataList Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct DataListTests {
     @Test("Basic datalist renders correctly")

@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "ListItem Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct ListItemTests {
     @Test("Basic li renders correctly")

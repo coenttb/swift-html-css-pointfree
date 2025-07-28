@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "FieldSet Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct FieldSetTests {
     @Test("Basic fieldset renders correctly")

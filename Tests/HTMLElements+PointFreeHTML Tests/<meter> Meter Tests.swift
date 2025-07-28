@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Meter Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct MeterTests {
     @Test("Basic meter renders correctly")

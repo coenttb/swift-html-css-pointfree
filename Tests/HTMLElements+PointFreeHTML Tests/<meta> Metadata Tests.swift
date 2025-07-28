@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Meta Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct MetaTests {
     @Test("Meta with charset renders correctly")

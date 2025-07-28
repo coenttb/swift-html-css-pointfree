@@ -6,7 +6,7 @@ import HTMLElementTypes
 
 @Suite(
     "Description List Element Tests",
-    .snapshots(record: .failed)
+    .snapshots(record: .missing)
 )
 struct DescriptionListTests {
     @Test("Basic description list renders correctly")
