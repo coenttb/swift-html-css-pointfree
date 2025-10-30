@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the referrerpolicy attribute on an element
-    @discardableResult
-    package func referrerPolicy(
-        _ value: ReferrerPolicy?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(ReferrerPolicy.attribute, value?.description)
-    }
+  /// Sets the referrerpolicy attribute on an element
+  @discardableResult
+  package func referrerPolicy(
+    _ value: ReferrerPolicy?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(ReferrerPolicy.attribute, value?.description)
+  }
 }

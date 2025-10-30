@@ -9,10 +9,10 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Definition {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
-            .title(self.title)
-    }
+  public func callAsFunction(
+    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+  ) -> some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { content() }
+      .title(self.title)
+  }
 }

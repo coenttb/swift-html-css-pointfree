@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the poster attribute on an element
-    @discardableResult
-    package func poster(
-        _ value: Poster?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Poster.attribute, value?.description)
-    }
+  /// Sets the poster attribute on an element
+  @discardableResult
+  package func poster(
+    _ value: Poster?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Poster.attribute, value?.description)
+  }
 }

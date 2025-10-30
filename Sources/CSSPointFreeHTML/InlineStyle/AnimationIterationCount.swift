@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func animationIterationCount(
-        _ animationIterationCount: CSSPropertyTypes.AnimationIterationCount?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(animationIterationCount, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func animationIterationCount(
+    _ animationIterationCount: CSSPropertyTypes.AnimationIterationCount?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(animationIterationCount, media: media, selector: selector, pseudo: pseudo)
+  }
 }

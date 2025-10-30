@@ -9,9 +9,9 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Search {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
-    }
+  public func callAsFunction(
+    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+  ) -> some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { content() }
+  }
 }

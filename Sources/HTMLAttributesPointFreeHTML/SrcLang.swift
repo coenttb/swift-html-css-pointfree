@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the step attribute on an element
-    @discardableResult
-    package func srcLang(
-        _ value: SrcLang?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(SrcLang.attribute, value?.description)
-    }
+  /// Sets the step attribute on an element
+  @discardableResult
+  package func srcLang(
+    _ value: SrcLang?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(SrcLang.attribute, value?.description)
+  }
 }

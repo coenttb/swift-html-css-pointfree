@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the hreflang attribute on an element
-    @discardableResult
-    package func hreflang(
-        _ value: Hreflang?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Hreflang.attribute, value?.description)
-    }
+  /// Sets the hreflang attribute on an element
+  @discardableResult
+  package func hreflang(
+    _ value: Hreflang?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Hreflang.attribute, value?.description)
+  }
 }

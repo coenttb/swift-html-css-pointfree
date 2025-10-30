@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func webkitMaskRepeatY(
-        _ webkitMaskRepeatY: CSSPropertyTypes.WebkitMaskRepeatY?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitMaskRepeatY, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func webkitMaskRepeatY(
+    _ webkitMaskRepeatY: CSSPropertyTypes.WebkitMaskRepeatY?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(webkitMaskRepeatY, media: media, selector: selector, pseudo: pseudo)
+  }
 }

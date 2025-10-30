@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the size attribute on a font element
-    @discardableResult
-    package func size(
-        _ value: FontSize?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(FontSize.attribute, value?.description)
-    }
+  /// Sets the size attribute on a font element
+  @discardableResult
+  package func size(
+    _ value: FontSize?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(FontSize.attribute, value?.description)
+  }
 }

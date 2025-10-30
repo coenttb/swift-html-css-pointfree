@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the wrap attribute on an element
-    @discardableResult
-    package func wrap(
-        _ value: TextareaWrap?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(TextareaWrap.attribute, value?.description)
-    }
+  /// Sets the wrap attribute on an element
+  @discardableResult
+  package func wrap(
+    _ value: TextareaWrap?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(TextareaWrap.attribute, value?.description)
+  }
 }

@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the cols attribute on an element
-    @discardableResult
-    package func cols(
-        _ value: Cols?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Cols.attribute, value?.description)
-    }
+  /// Sets the cols attribute on an element
+  @discardableResult
+  package func cols(
+    _ value: Cols?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Cols.attribute, value?.description)
+  }
 }

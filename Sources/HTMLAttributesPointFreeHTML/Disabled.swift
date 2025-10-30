@@ -9,14 +9,14 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Adds the disabled attribute to the element
-    package var disabled: _HTMLAttributes<Self> {
-        self.attribute(Disabled.attribute)
-    }
+  /// Adds the disabled attribute to the element
+  package var disabled: _HTMLAttributes<Self> {
+    self.attribute(Disabled.attribute)
+  }
 
-    /// Conditionally adds the disabled attribute to the element
-    @HTMLBuilder
-    package func disabled(_ value: Disabled?) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Conditionally adds the disabled attribute to the element
+  @HTMLBuilder
+  package func disabled(_ value: Disabled?) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func alignSelf(
-        _ alignSelf: CSSPropertyTypes.AlignSelf?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(alignSelf, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func alignSelf(
+    _ alignSelf: CSSPropertyTypes.AlignSelf?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(alignSelf, media: media, selector: selector, pseudo: pseudo)
+  }
 }

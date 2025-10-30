@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func markerStart(
-        _ markerStart: CSSPropertyTypes.MarkerStart?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(markerStart, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func markerStart(
+    _ markerStart: CSSPropertyTypes.MarkerStart?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(markerStart, media: media, selector: selector, pseudo: pseudo)
+  }
 }

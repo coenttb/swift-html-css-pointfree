@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the sizes attribute on an element
-    @discardableResult
-    package func sizes(
-        _ value: Sizes?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Sizes.attribute, value?.description)
-    }
+  /// Sets the sizes attribute on an element
+  @discardableResult
+  package func sizes(
+    _ value: Sizes?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Sizes.attribute, value?.description)
+  }
 }

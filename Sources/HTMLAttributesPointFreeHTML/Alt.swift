@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the alt attribute on an element
-    @discardableResult
-    package func alt(
-        _ value: Alt?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Alt.attribute, value?.description)
-    }
+  /// Sets the alt attribute on an element
+  @discardableResult
+  package func alt(
+    _ value: Alt?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Alt.attribute, value?.description)
+  }
 }

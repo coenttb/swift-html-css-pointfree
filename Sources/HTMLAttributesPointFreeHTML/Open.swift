@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the open attribute on an element
-    @discardableResult
-    package func open(
-        _ value: Open?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the open attribute on an element
+  @discardableResult
+  package func open(
+    _ value: Open?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

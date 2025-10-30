@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func textJustify(
-        _ textJustify: CSSPropertyTypes.TextJustify?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textJustify, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func textJustify(
+    _ textJustify: CSSPropertyTypes.TextJustify?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(textJustify, media: media, selector: selector, pseudo: pseudo)
+  }
 }

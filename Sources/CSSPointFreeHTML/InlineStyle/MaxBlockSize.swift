@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func maxBlockSize(
-        _ maxBlockSize: CSSPropertyTypes.MaxBlockSize?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(maxBlockSize, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func maxBlockSize(
+    _ maxBlockSize: CSSPropertyTypes.MaxBlockSize?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(maxBlockSize, media: media, selector: selector, pseudo: pseudo)
+  }
 }

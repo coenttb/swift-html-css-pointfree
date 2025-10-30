@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the shadowrootclonable attribute on an element
-    @discardableResult
-    package func shadowRootClonable(
-        _ value: ShadowRootClonable?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(ShadowRootClonable.attribute, value?.description)
-    }
+  /// Sets the shadowrootclonable attribute on an element
+  @discardableResult
+  package func shadowRootClonable(
+    _ value: ShadowRootClonable?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(ShadowRootClonable.attribute, value?.description)
+  }
 }

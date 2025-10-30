@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the formaction attribute on an element
-    @discardableResult
-    package func formAction(
-        _ value: FormAction?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(FormAction.attribute, value?.description)
-    }
+  /// Sets the formaction attribute on an element
+  @discardableResult
+  package func formAction(
+    _ value: FormAction?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(FormAction.attribute, value?.description)
+  }
 }

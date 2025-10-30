@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the type attribute on a button element
-    @discardableResult
-    package func type(
-        _ value: ButtonType?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(ButtonType.attribute, value?.rawValue)
-    }
+  /// Sets the type attribute on a button element
+  @discardableResult
+  package func type(
+    _ value: ButtonType?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(ButtonType.attribute, value?.rawValue)
+  }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func backgroundAttachment(
-        _ backgroundAttachment: CSSPropertyTypes.BackgroundAttachment?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundAttachment, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func backgroundAttachment(
+    _ backgroundAttachment: CSSPropertyTypes.BackgroundAttachment?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(backgroundAttachment, media: media, selector: selector, pseudo: pseudo)
+  }
 }

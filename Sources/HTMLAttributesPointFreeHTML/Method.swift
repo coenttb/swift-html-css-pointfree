@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Add a method attribute to specify the HTTP method for form submission
-    @discardableResult
-    package func method(
-        _ value: HTMLAttributeTypes.Method?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Method.attribute, value?.description)
-    }
+  /// Add a method attribute to specify the HTTP method for form submission
+  @discardableResult
+  package func method(
+    _ value: HTMLAttributeTypes.Method?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Method.attribute, value?.description)
+  }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func contentVisibility(
-        _ contentVisibility: CSSPropertyTypes.ContentVisibility?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(contentVisibility, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func contentVisibility(
+    _ contentVisibility: CSSPropertyTypes.ContentVisibility?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(contentVisibility, media: media, selector: selector, pseudo: pseudo)
+  }
 }

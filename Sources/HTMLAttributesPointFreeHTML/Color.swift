@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the color attribute on an element
-    @discardableResult
-    package func color(
-        _ value: HTMLAttributeTypes.Color?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Color.attribute, value?.description)
-    }
+  /// Sets the color attribute on an element
+  @discardableResult
+  package func color(
+    _ value: HTMLAttributeTypes.Color?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(HTMLAttributeTypes.Color.attribute, value?.description)
+  }
 }

@@ -8,17 +8,17 @@
 import PointFreeHTML
 
 extension HTMLElementTypes.Area: PointFreeHTML.HTML {
-    public var body: some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { HTMLEmpty() }
-//        NEED TO FIX AREA domain model
-//            .shape(self.shape)
-//            .coords(self.coords)
-            .alt(self.alt)
-            .href(self.href)
-            .download(download)
-            .ping(ping)
-            .referrerPolicy(referrerpolicy)
-            .rel(rel)
-            .target(target)
-    }
+  public var body: some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { HTMLEmpty() }
+      //        NEED TO FIX AREA domain model
+      //            .shape(self.shape)
+      //            .coords(self.coords)
+      .alt(self.alt)
+      .href(self.href)
+      .download(download)
+      .ping(ping)
+      .referrerPolicy(referrerpolicy)
+      .rel(rel)
+      .target(target)
+  }
 }

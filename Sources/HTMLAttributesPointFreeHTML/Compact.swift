@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the compact attribute on an element
-    @discardableResult
-    package func compact(
-        _ value: Compact?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Compact.attribute, value?.description)
-    }
+  /// Sets the compact attribute on an element
+  @discardableResult
+  package func compact(
+    _ value: Compact?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Compact.attribute, value?.description)
+  }
 }

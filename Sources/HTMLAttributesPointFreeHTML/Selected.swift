@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the selected attribute on an element
-    @discardableResult
-    package func selected(
-        _ value: Selected?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the selected attribute on an element
+  @discardableResult
+  package func selected(
+    _ value: Selected?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

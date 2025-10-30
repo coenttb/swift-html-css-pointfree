@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the controls attribute on an element
-    @discardableResult
-    package func controls(
-        _ value: Controls?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the controls attribute on an element
+  @discardableResult
+  package func controls(
+    _ value: Controls?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

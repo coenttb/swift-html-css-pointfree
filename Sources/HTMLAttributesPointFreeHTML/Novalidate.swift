@@ -9,16 +9,16 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Add the novalidate attribute to disable browser validation for a form
-    package var novalidate: _HTMLAttributes<Self> {
-        self.attribute(Novalidate.attribute)
-    }
+  /// Add the novalidate attribute to disable browser validation for a form
+  package var novalidate: _HTMLAttributes<Self> {
+    self.attribute(Novalidate.attribute)
+  }
 
-    /// Conditionally adds the required attribute to the element
-    @HTMLBuilder
-    package func novalidate(
-        _ value: Novalidate?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Conditionally adds the required attribute to the element
+  @HTMLBuilder
+  package func novalidate(
+    _ value: Novalidate?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

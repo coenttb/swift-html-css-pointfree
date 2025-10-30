@@ -9,14 +9,14 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func contenteditable(
-        _ value: Contenteditable
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Contenteditable.attribute, value.description)
-    }
+  @discardableResult
+  public func contenteditable(
+    _ value: Contenteditable
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Contenteditable.attribute, value.description)
+  }
 
-    public var contenteditable: _HTMLAttributes<Self> {
-        self.contenteditable(.true)
-    }
+  public var contenteditable: _HTMLAttributes<Self> {
+    self.contenteditable(.true)
+  }
 }

@@ -9,12 +9,12 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.OrderedList {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
-            .reversed(self.reversed)
-            .start(self.start)
-            .type(self.type)
-    }
+  public func callAsFunction(
+    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+  ) -> some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { content() }
+      .reversed(self.reversed)
+      .start(self.start)
+      .type(self.type)
+  }
 }

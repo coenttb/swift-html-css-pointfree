@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the formmethod attribute on an element
-    @discardableResult
-    package func formMethod(
-        _ value: FormMethod?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(FormMethod.attribute, value?.description)
-    }
+  /// Sets the formmethod attribute on an element
+  @discardableResult
+  package func formMethod(
+    _ value: FormMethod?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(FormMethod.attribute, value?.description)
+  }
 }

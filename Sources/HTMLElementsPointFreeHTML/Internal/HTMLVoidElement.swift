@@ -16,8 +16,7 @@ import PointFreeHTML
 
 // WORKAROUND because Input and BR fail to compile when called as BR(). With this function BR()() works
 extension HTMLVoidElement where Self: HTMLElementTypes.HTMLElement & PointFreeHTML.HTML {
-    public func callAsFunction(
-    ) -> some PointFreeHTML.HTML {
-        self
-    }
+  public func callAsFunction() -> some PointFreeHTML.HTML {
+    self
+  }
 }

@@ -9,21 +9,21 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the name attribute on an element
-    @discardableResult
-    package func name(
-        _ value: Name?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Name.attribute, value?.description)
-    }
+  /// Sets the name attribute on an element
+  @discardableResult
+  package func name(
+    _ value: Name?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Name.attribute, value?.description)
+  }
 }
 
 extension HTML {
-    /// Sets the name attribute on an element
-    @discardableResult
-    package func name(
-        _ value: MetaName?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(MetaName.attribute, value?.description)
-    }
+  /// Sets the name attribute on an element
+  @discardableResult
+  package func name(
+    _ value: MetaName?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(MetaName.attribute, value?.description)
+  }
 }

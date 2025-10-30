@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the formnovalidate attribute on an element
-    @discardableResult
-    package func formNovalidate(
-        _ value: FormNovalidate?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the formnovalidate attribute on an element
+  @discardableResult
+  package func formNovalidate(
+    _ value: FormNovalidate?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

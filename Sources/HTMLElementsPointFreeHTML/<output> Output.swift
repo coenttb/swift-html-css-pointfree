@@ -9,12 +9,12 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Output {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
-            .`for`(self.`for`)
-            .form(self.form)
-            .name(self.name)
-    }
+  public func callAsFunction(
+    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+  ) -> some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { content() }
+      .`for`(self.`for`)
+      .form(self.form)
+      .name(self.name)
+  }
 }

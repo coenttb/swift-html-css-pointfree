@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func backgroundClip(
-        _ backgroundClip: CSSPropertyTypes.BackgroundClip?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundClip, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func backgroundClip(
+    _ backgroundClip: CSSPropertyTypes.BackgroundClip?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(backgroundClip, media: media, selector: selector, pseudo: pseudo)
+  }
 }

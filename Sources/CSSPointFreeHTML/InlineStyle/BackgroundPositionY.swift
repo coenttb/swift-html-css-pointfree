@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func backgroundPositionY(
-        _ backgroundPositionY: CSSPropertyTypes.BackgroundPositionY?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(backgroundPositionY, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func backgroundPositionY(
+    _ backgroundPositionY: CSSPropertyTypes.BackgroundPositionY?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(backgroundPositionY, media: media, selector: selector, pseudo: pseudo)
+  }
 }

@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the inputmode attribute to hint at what type of virtual keyboard to display
-    @discardableResult
-    public func inputmode(
-        _ mode: Inputmode?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Inputmode.attribute, mode?.description)
-    }
+  /// Sets the inputmode attribute to hint at what type of virtual keyboard to display
+  @discardableResult
+  public func inputmode(
+    _ mode: Inputmode?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Inputmode.attribute, mode?.description)
+  }
 }

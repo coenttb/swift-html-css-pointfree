@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the kind attribute on an element
-    @discardableResult
-    package func kind(
-        _ value: Kind?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Kind.attribute, value?.description)
-    }
+  /// Sets the kind attribute on an element
+  @discardableResult
+  package func kind(
+    _ value: Kind?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Kind.attribute, value?.description)
+  }
 }

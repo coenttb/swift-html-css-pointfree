@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func marginInlineStart(
-        _ marginInlineStart: CSSPropertyTypes.MarginInlineStart?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(marginInlineStart, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func marginInlineStart(
+    _ marginInlineStart: CSSPropertyTypes.MarginInlineStart?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(marginInlineStart, media: media, selector: selector, pseudo: pseudo)
+  }
 }

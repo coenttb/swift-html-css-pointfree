@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func webkitMaskBoxImage(
-        _ webkitMaskBoxImage: CSSPropertyTypes.WebkitMaskBoxImage?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(webkitMaskBoxImage, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func webkitMaskBoxImage(
+    _ webkitMaskBoxImage: CSSPropertyTypes.WebkitMaskBoxImage?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(webkitMaskBoxImage, media: media, selector: selector, pseudo: pseudo)
+  }
 }

@@ -10,9 +10,9 @@ import HTMLElementTypes
 import PointFreeHTML
 
 extension HTMLElementTypes.Param: PointFreeHTML.HTML {
-    public var body: some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { HTMLEmpty() }
-            .name(self.name)
-            .value(self.value)
-    }
+  public var body: some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { HTMLEmpty() }
+      .name(self.name)
+      .value(self.value)
+  }
 }

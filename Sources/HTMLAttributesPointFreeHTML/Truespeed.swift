@@ -9,16 +9,16 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Adds the truespeed attribute to the element
-    package var truespeed: _HTMLAttributes<Self> {
-        self.attribute(Truespeed.attribute)
-    }
+  /// Adds the truespeed attribute to the element
+  package var truespeed: _HTMLAttributes<Self> {
+    self.attribute(Truespeed.attribute)
+  }
 
-    /// Conditionally adds the truespeed attribute to the element
-    @HTMLBuilder
-    package func truespeed(
-        _ value: Truespeed?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Conditionally adds the truespeed attribute to the element
+  @HTMLBuilder
+  package func truespeed(
+    _ value: Truespeed?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

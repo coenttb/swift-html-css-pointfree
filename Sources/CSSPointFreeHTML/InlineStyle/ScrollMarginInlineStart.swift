@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func scrollMarginInlineStart(
-        _ scrollMarginInlineStart: CSSPropertyTypes.ScrollMarginInlineStart?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(scrollMarginInlineStart, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func scrollMarginInlineStart(
+    _ scrollMarginInlineStart: CSSPropertyTypes.ScrollMarginInlineStart?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(scrollMarginInlineStart, media: media, selector: selector, pseudo: pseudo)
+  }
 }

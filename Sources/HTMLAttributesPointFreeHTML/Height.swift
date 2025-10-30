@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the height attribute on an element
-    @discardableResult
-    package func height(
-        _ value: Height?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Height.attribute, value?.description)
-    }
+  /// Sets the height attribute on an element
+  @discardableResult
+  package func height(
+    _ value: Height?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Height.attribute, value?.description)
+  }
 }

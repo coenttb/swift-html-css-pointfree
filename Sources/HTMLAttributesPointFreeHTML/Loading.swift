@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the loading attribute on an element
-    @discardableResult
-    package func loading(
-        _ value: Loading?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Loading.attribute, value?.rawValue)
-    }
+  /// Sets the loading attribute on an element
+  @discardableResult
+  package func loading(
+    _ value: Loading?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Loading.attribute, value?.rawValue)
+  }
 }

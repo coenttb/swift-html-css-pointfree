@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the headers attribute on an element
-    @discardableResult
-    package func headers(
-        _ value: Headers?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Headers.attribute, value?.description)
-    }
+  /// Sets the headers attribute on an element
+  @discardableResult
+  package func headers(
+    _ value: Headers?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Headers.attribute, value?.description)
+  }
 }

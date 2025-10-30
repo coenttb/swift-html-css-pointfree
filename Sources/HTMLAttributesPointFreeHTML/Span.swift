@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the span attribute on an element
-    @discardableResult
-    package func span(
-        _ value: Span?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Span.attribute, value?.description)
-    }
+  /// Sets the span attribute on an element
+  @discardableResult
+  package func span(
+    _ value: Span?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Span.attribute, value?.description)
+  }
 }

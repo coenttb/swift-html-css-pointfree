@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the Enter key label/action hint for virtual keyboards
-    @discardableResult
-    public func enterkeyhint(
-        _ value: Enterkeyhint
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Enterkeyhint.attribute, value.description)
-    }
+  /// Sets the Enter key label/action hint for virtual keyboards
+  @discardableResult
+  public func enterkeyhint(
+    _ value: Enterkeyhint
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Enterkeyhint.attribute, value.description)
+  }
 }

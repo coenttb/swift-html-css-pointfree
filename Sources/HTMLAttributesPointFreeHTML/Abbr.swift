@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the colspan attribute on an element
-    @discardableResult
-    package func abbr(
-        _ value: HTMLAttributeTypes.Abbr?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Abbr.attribute, value?.description)
-    }
+  /// Sets the colspan attribute on an element
+  @discardableResult
+  package func abbr(
+    _ value: HTMLAttributeTypes.Abbr?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(HTMLAttributeTypes.Abbr.attribute, value?.description)
+  }
 }

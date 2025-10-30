@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func textEmphasisStyle(
-        _ textEmphasisStyle: CSSPropertyTypes.TextEmphasisStyle?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(textEmphasisStyle, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func textEmphasisStyle(
+    _ textEmphasisStyle: CSSPropertyTypes.TextEmphasisStyle?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(textEmphasisStyle, media: media, selector: selector, pseudo: pseudo)
+  }
 }

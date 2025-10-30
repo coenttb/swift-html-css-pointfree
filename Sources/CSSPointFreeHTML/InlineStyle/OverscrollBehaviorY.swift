@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func overscrollBehaviorY(
-        _ overscrollBehaviorY: CSSPropertyTypes.OverscrollBehaviorY?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(overscrollBehaviorY, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func overscrollBehaviorY(
+    _ overscrollBehaviorY: CSSPropertyTypes.OverscrollBehaviorY?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(overscrollBehaviorY, media: media, selector: selector, pseudo: pseudo)
+  }
 }

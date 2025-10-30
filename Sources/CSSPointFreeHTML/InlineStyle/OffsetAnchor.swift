@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func offsetAnchor(
-        _ offsetAnchor: CSSPropertyTypes.OffsetAnchor?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(offsetAnchor, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func offsetAnchor(
+    _ offsetAnchor: CSSPropertyTypes.OffsetAnchor?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(offsetAnchor, media: media, selector: selector, pseudo: pseudo)
+  }
 }

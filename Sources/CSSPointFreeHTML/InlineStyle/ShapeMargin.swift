@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func shapeMargin(
-        _ shapeMargin: CSSPropertyTypes.ShapeMargin?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(shapeMargin, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func shapeMargin(
+    _ shapeMargin: CSSPropertyTypes.ShapeMargin?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(shapeMargin, media: media, selector: selector, pseudo: pseudo)
+  }
 }

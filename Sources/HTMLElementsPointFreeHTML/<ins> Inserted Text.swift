@@ -9,11 +9,11 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.InsertedText {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
-            .cite(self.cite)
-            .dateTime(self.datetime)
-    }
+  public func callAsFunction(
+    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+  ) -> some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { content() }
+      .cite(self.cite)
+      .dateTime(self.datetime)
+  }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func borderBlockEnd(
-        _ borderBlockEnd: CSSPropertyTypes.BorderBlockEnd?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(borderBlockEnd, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func borderBlockEnd(
+    _ borderBlockEnd: CSSPropertyTypes.BorderBlockEnd?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(borderBlockEnd, media: media, selector: selector, pseudo: pseudo)
+  }
 }

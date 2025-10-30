@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the placeholder attribute on an element
-    @discardableResult
-    package func placeholder(
-        _ value: Placeholder?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Placeholder.attribute, value?.description)
-    }
+  /// Sets the placeholder attribute on an element
+  @discardableResult
+  package func placeholder(
+    _ value: Placeholder?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Placeholder.attribute, value?.description)
+  }
 }

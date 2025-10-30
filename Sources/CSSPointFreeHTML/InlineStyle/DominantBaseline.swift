@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func dominantBaseline(
-        _ dominantBaseline: CSSPropertyTypes.DominantBaseline?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(dominantBaseline, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func dominantBaseline(
+    _ dominantBaseline: CSSPropertyTypes.DominantBaseline?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(dominantBaseline, media: media, selector: selector, pseudo: pseudo)
+  }
 }

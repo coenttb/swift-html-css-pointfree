@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the reversed attribute on an element
-    @discardableResult
-    package func reversed(
-        _ value: Reversed?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the reversed attribute on an element
+  @discardableResult
+  package func reversed(
+    _ value: Reversed?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

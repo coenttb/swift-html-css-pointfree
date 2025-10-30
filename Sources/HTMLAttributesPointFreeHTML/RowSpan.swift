@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the rowspan attribute on an element
-    @discardableResult
-    package func rowspan(
-        _ value: RowSpan?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(RowSpan.attribute, value?.description)
-    }
+  /// Sets the rowspan attribute on an element
+  @discardableResult
+  package func rowspan(
+    _ value: RowSpan?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(RowSpan.attribute, value?.description)
+  }
 }

@@ -10,12 +10,12 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the disablepictureinpicture attribute on an element
-    @discardableResult
-    @_disfavoredOverload
-    package func label(
-        _ value: HTMLAttributeTypes.Label?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(HTMLAttributeTypes.Label.attribute, value?.description)
-    }
+  /// Sets the disablepictureinpicture attribute on an element
+  @discardableResult
+  @_disfavoredOverload
+  package func label(
+    _ value: HTMLAttributeTypes.Label?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(HTMLAttributeTypes.Label.attribute, value?.description)
+  }
 }

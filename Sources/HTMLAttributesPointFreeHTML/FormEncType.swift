@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the formenctype attribute on an element
-    @discardableResult
-    package func formEncType(
-        _ value: FormEncType?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(FormEncType.attribute, value?.description)
-    }
+  /// Sets the formenctype attribute on an element
+  @discardableResult
+  package func formEncType(
+    _ value: FormEncType?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(FormEncType.attribute, value?.description)
+  }
 }

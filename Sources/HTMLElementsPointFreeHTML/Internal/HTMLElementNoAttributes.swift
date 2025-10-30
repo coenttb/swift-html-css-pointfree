@@ -8,12 +8,12 @@
 import HTMLElementTypes
 import PointFreeHTML
 
-protocol HTMLElementNoAttributes: HTMLElementTypes.HTMLElement { }
+protocol HTMLElementNoAttributes: HTMLElementTypes.HTMLElement {}
 
 extension HTMLElementNoAttributes {
-    public func callAsFunction(
-        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-    ) -> some PointFreeHTML.HTML {
-        HTMLElement(tag: Self.tag) { content() }
-    }
+  public func callAsFunction(
+    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+  ) -> some PointFreeHTML.HTML {
+    HTMLElement(tag: Self.tag) { content() }
+  }
 }

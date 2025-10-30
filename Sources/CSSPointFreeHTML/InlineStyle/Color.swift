@@ -9,14 +9,14 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @_disfavoredOverload
-    @discardableResult
-    public func color(
-        _ color: CSSPropertyTypes.Color?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(color, media: media, selector: selector, pseudo: pseudo)
-    }
+  @_disfavoredOverload
+  @discardableResult
+  public func color(
+    _ color: CSSPropertyTypes.Color?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(color, media: media, selector: selector, pseudo: pseudo)
+  }
 }

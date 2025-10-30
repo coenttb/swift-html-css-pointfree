@@ -10,13 +10,13 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the min attribute on an element
-    @discardableResult
-    package func min(
-        _ value: Min?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Min.attribute, value?.description)
-    }
+  /// Sets the min attribute on an element
+  @discardableResult
+  package func min(
+    _ value: Min?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Min.attribute, value?.description)
+  }
 }
 
 // extension HTML {

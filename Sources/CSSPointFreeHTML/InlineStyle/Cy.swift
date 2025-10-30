@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func cy(
-        _ cy: CSSPropertyTypes.Cy?,
-        media: CSSAtRuleTypes.Media? = nil,
-        selector: Selector? = nil,
-        pseudo: Pseudo? = nil
-    ) -> HTMLInlineStyle<Self> {
-        self.inlineStyle(cy, media: media, selector: selector, pseudo: pseudo)
-    }
+  @discardableResult
+  public func cy(
+    _ cy: CSSPropertyTypes.Cy?,
+    media: CSSAtRuleTypes.Media? = nil,
+    selector: Selector? = nil,
+    pseudo: Pseudo? = nil
+  ) -> HTMLInlineStyle<Self> {
+    self.inlineStyle(cy, media: media, selector: selector, pseudo: pseudo)
+  }
 }

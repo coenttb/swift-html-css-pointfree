@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the type attribute on a script element
-    @discardableResult
-    package func type(
-        _ value: ScriptType?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(ScriptType.attribute, value?.description)
-    }
+  /// Sets the type attribute on a script element
+  @discardableResult
+  package func type(
+    _ value: ScriptType?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(ScriptType.attribute, value?.description)
+  }
 }

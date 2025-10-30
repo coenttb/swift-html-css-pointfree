@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the allowfullscreen attribute on an element
-    @discardableResult
-    package func allowfullscreen(
-        _ value: Allowfullscreen?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the allowfullscreen attribute on an element
+  @discardableResult
+  package func allowfullscreen(
+    _ value: Allowfullscreen?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the ismap attribute on an element
-    @discardableResult
-    package func isMap(
-        _ value: Ismap?
-    ) -> some PointFreeHTML.HTML {
-        self.attribute(boolean: value)
-    }
+  /// Sets the ismap attribute on an element
+  @discardableResult
+  package func isMap(
+    _ value: Ismap?
+  ) -> some PointFreeHTML.HTML {
+    self.attribute(boolean: value)
+  }
 }

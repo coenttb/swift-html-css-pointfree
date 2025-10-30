@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the charset attribute on an element
-    @discardableResult
-    package func charset(
-        _ value: CharSet?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute("charset", value?.description)
-    }
+  /// Sets the charset attribute on an element
+  @discardableResult
+  package func charset(
+    _ value: CharSet?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute("charset", value?.description)
+  }
 }

@@ -9,27 +9,27 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Add an accept attribute to specify which file types are allowed
-    @discardableResult
-    package func accept(
-        _ value: Accept?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Accept.attribute, value?.description)
-    }
+  /// Add an accept attribute to specify which file types are allowed
+  @discardableResult
+  package func accept(
+    _ value: Accept?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Accept.attribute, value?.description)
+  }
 
-    /// Add an accept attribute with multiple file types
-    @discardableResult
-    package func accept(
-        _ fileTypes: Accept.FileType?...
-    ) -> _HTMLAttributes<Self> {
-        self.accept(Accept(fileTypes.compactMap { $0 }))
-    }
+  /// Add an accept attribute with multiple file types
+  @discardableResult
+  package func accept(
+    _ fileTypes: Accept.FileType?...
+  ) -> _HTMLAttributes<Self> {
+    self.accept(Accept(fileTypes.compactMap { $0 }))
+  }
 
-    /// Add an accept attribute with multiple file types
-    @discardableResult
-    package func accept(
-        _ fileTypes: [Accept.FileType?]
-    ) -> _HTMLAttributes<Self> {
-        self.accept(Accept(fileTypes.compactMap { $0 }))
-    }
+  /// Add an accept attribute with multiple file types
+  @discardableResult
+  package func accept(
+    _ fileTypes: [Accept.FileType?]
+  ) -> _HTMLAttributes<Self> {
+    self.accept(Accept(fileTypes.compactMap { $0 }))
+  }
 }

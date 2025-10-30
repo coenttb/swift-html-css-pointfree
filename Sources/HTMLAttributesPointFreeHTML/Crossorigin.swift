@@ -10,17 +10,17 @@ import PointFreeHTML
 
 extension HTML {
 
-    @discardableResult
-    package func crossorigin(
-        _ value: Crossorigin?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Crossorigin.attribute, value?.description)
-    }
+  @discardableResult
+  package func crossorigin(
+    _ value: Crossorigin?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Crossorigin.attribute, value?.description)
+  }
 
-//    @discardableResult
-//    package func crossorigin(
-//        _ policy: CrosPolicy
-//    ) -> _HTMLAttributes<Self> {
-//        self.crossorigin(Crossorigin(policy))
-//    }
+  //    @discardableResult
+  //    package func crossorigin(
+  //        _ policy: CrosPolicy
+  //    ) -> _HTMLAttributes<Self> {
+  //        self.crossorigin(Crossorigin(policy))
+  //    }
 }

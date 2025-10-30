@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the shadowrootmode attribute on an element
-    @discardableResult
-    package func shadowRootMode(
-        _ value: ShadowRootMode?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(ShadowRootMode.attribute, value?.description)
-    }
+  /// Sets the shadowrootmode attribute on an element
+  @discardableResult
+  package func shadowRootMode(
+    _ value: ShadowRootMode?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(ShadowRootMode.attribute, value?.description)
+  }
 }

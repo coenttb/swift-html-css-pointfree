@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the shadowrootdelegatesfocus attribute on an element
-    @discardableResult
-    package func shadowRootDelegatesFocus(
-        _ value: ShadowRootDelegatesFocus?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(ShadowRootDelegatesFocus.attribute, value?.description)
-    }
+  /// Sets the shadowrootdelegatesfocus attribute on an element
+  @discardableResult
+  package func shadowRootDelegatesFocus(
+    _ value: ShadowRootDelegatesFocus?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(ShadowRootDelegatesFocus.attribute, value?.description)
+  }
 }

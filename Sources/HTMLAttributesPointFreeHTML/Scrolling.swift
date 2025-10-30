@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the scope attribute on an element
-    @discardableResult
-    package func scrolling(
-        _ value: Scrolling?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Scrolling.attribute, value?.rawValue)
-    }
+  /// Sets the scope attribute on an element
+  @discardableResult
+  package func scrolling(
+    _ value: Scrolling?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Scrolling.attribute, value?.rawValue)
+  }
 }

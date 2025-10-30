@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the form attribute on an object element
-    @discardableResult
-    package func form(
-        _ value: Form.ID?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute("form", value?.description)
-    }
+  /// Sets the form attribute on an object element
+  @discardableResult
+  package func form(
+    _ value: Form.ID?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute("form", value?.description)
+  }
 }

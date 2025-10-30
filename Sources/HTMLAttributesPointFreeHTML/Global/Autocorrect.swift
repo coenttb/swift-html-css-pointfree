@@ -9,10 +9,10 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    @discardableResult
-    public func autocorrect(
-        _ value: Autocorrect?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Autocorrect.attribute, value?.description)
-    }
+  @discardableResult
+  public func autocorrect(
+    _ value: Autocorrect?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Autocorrect.attribute, value?.description)
+  }
 }

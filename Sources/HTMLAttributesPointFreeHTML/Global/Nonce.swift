@@ -9,13 +9,13 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-    /// Sets the nonce attribute using a Nonce struct
-    @discardableResult
-    public func nonce(
-        _ attribute: Nonce?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Nonce.attribute, attribute?.description)
-    }
+  /// Sets the nonce attribute using a Nonce struct
+  @discardableResult
+  public func nonce(
+    _ attribute: Nonce?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Nonce.attribute, attribute?.description)
+  }
 }
 
 // extension HTML {

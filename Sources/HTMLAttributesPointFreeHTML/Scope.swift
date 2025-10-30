@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the scope attribute on an element
-    @discardableResult
-    package func scope(
-        _ value: Scope?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Scope.attribute, value?.description)
-    }
+  /// Sets the scope attribute on an element
+  @discardableResult
+  package func scope(
+    _ value: Scope?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Scope.attribute, value?.description)
+  }
 }

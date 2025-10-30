@@ -10,13 +10,13 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the rel attribute on an element
-    @discardableResult
-    package func rel(
-        _ value: Rel?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Rel.attribute, value?.description)
-    }
+  /// Sets the rel attribute on an element
+  @discardableResult
+  package func rel(
+    _ value: Rel?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Rel.attribute, value?.description)
+  }
 }
 
 // extension HTML {

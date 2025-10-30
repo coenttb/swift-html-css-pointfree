@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the preload attribute on an element
-    @discardableResult
-    package func preload(
-        _ value: Preload?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(Preload.attribute, value?.description)
-    }
+  /// Sets the preload attribute on an element
+  @discardableResult
+  package func preload(
+    _ value: Preload?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(Preload.attribute, value?.description)
+  }
 }

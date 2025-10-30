@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-    /// Sets the fetchpriority attribute on an element
-    @discardableResult
-    package func fetchPriority(
-        _ value: FetchPriority?
-    ) -> _HTMLAttributes<Self> {
-        self.attribute(FetchPriority.attribute, value?.description)
-    }
+  /// Sets the fetchpriority attribute on an element
+  @discardableResult
+  package func fetchPriority(
+    _ value: FetchPriority?
+  ) -> _HTMLAttributes<Self> {
+    self.attribute(FetchPriority.attribute, value?.description)
+  }
 }
