@@ -22,7 +22,7 @@ struct AccentColorTests {
     func htmlElementWithAccentColorRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.accentColor(.color(.red))
+                div.accentColor(.red)
             },
             as: .html
         ) {

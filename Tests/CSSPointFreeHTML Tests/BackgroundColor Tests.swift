@@ -22,7 +22,7 @@ struct BackgroundColorTests {
     func htmlElementWithBackgroundColorNamedColorRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundColor(.color(.red))
+                div.backgroundColor(.red)
             },
             as: .html
         ) {
@@ -178,7 +178,7 @@ struct BackgroundColorTests {
     func htmlBackgroundColorWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundColor(.color(.red), media: .print)
+                div.backgroundColor(.red, media: .print)
             },
             as: .html
         ) {
@@ -206,7 +206,7 @@ struct BackgroundColorTests {
     func htmlBackgroundColorWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundColor(.color(.red), pseudo: .hover)
+                div.backgroundColor(.red, pseudo: .hover)
             },
             as: .html
         ) {
@@ -232,7 +232,7 @@ struct BackgroundColorTests {
     func htmlBackgroundColorWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.backgroundColor(.color(.red), selector: "my-component")
+                div.backgroundColor(.red, selector: "my-component")
             },
             as: .html
         ) {

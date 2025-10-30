@@ -22,7 +22,7 @@ struct BackgroundTests {
     func htmlElementWithBackgroundColorRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.background(.color(.red))
+                div.background(.red)
             },
             as: .html
         ) {
@@ -152,7 +152,7 @@ struct BackgroundTests {
     func htmlBackgroundWithMediaQueryRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.background(.color(.red), media: .print)
+                div.background(.red, media: .print)
             },
             as: .html
         ) {
@@ -180,7 +180,7 @@ struct BackgroundTests {
     func htmlBackgroundWithPseudoClassRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.background(.color(.red), pseudo: .hover)
+                div.background(.red, pseudo: .hover)
             },
             as: .html
         ) {
@@ -206,7 +206,7 @@ struct BackgroundTests {
     func htmlBackgroundWithPrefixRendersCorrectly() {
         assertInlineSnapshot(
             of: HTMLDocument {
-                div.background(.color(.red), selector: "my-component")
+                div.background(.red, selector: "my-component")
             },
             as: .html
         ) {
