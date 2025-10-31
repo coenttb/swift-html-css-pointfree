@@ -45,7 +45,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-direction reverse value")
 //    func htmlElementWithAnimationDirectionReverseRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -71,7 +71,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-direction alternate value")
 //    func htmlElementWithAnimationDirectionAlternateRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -97,7 +97,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-direction alternate-reverse value")
 //    func htmlElementWithAnimationDirectionAlternateReverseRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -123,7 +123,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-direction with global value renders properly")
 //    func htmlAnimationDirectionWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -149,7 +149,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-direction with media query renders properly")
 //    func htmlAnimationDirectionWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -177,7 +177,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-direction with pseudo-class renders properly")
 //    func htmlAnimationDirectionWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -203,7 +203,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-direction with prefix renders properly")
 //    func htmlAnimationDirectionWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(

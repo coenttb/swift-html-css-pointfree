@@ -9,7 +9,7 @@
 ////    .snapshots(record: .all)
 // )
 // struct AcceptTests {
-//    
+//
 //    @Test("Input with accept attribute renders correctly")
 //    func inputWithAcceptAttributeRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -23,7 +23,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Input with multiple file types renders correctly")
 //    func inputWithMultipleFileTypesRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -37,7 +37,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Input with MIME types renders correctly")
 //    func inputWithMimeTypesRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -51,7 +51,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Input with MIME types renders correctly")
 //    func inputWithMimeTypesRendersCorrectly2() {
 //        assertInlineSnapshot(
@@ -65,7 +65,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Input with mixed accept types renders correctly")
 //    func inputWithMixedAcceptTypesRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -79,7 +79,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Form with file input renders correctly")
 //    func formWithFileInputRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -87,7 +87,7 @@
 //                label()
 //                    .for("fileUpload")
 ////                    .text("Upload Images:")
-//                
+//
 //                div
 //                    .id("fileUpload")
 ////                    .attribute("type", "file")

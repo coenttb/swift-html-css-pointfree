@@ -24,7 +24,7 @@
 //            """
 //        }
 //    }
-//    
+//
 ////    @Test("Email link renders correctly")
 ////    func emailLinkRendersCorrectly() {
 ////        assertInlineSnapshot(
@@ -39,7 +39,7 @@
 ////            """
 ////        }
 ////    }
-////    
+////
 ////    @Test("Email link with subject renders correctly")
 ////    func emailLinkWithSubjectRendersCorrectly() {
 ////        assertInlineSnapshot(
@@ -54,7 +54,7 @@
 ////            """
 ////        }
 ////    }
-////    
+////
 ////    @Test("Telephone link renders correctly")
 ////    func telephoneLinkRendersCorrectly() {
 ////        assertInlineSnapshot(
@@ -69,7 +69,7 @@
 ////            """
 ////        }
 ////    }
-////    
+////
 ////    @Test("SMS link renders correctly")
 ////    func smsLinkRendersCorrectly() {
 ////        assertInlineSnapshot(
@@ -84,7 +84,7 @@
 ////            """
 ////        }
 ////    }
-////    
+////
 ////    @Test("Fragment link renders correctly")
 ////    func fragmentLinkRendersCorrectly() {
 ////        assertInlineSnapshot(
@@ -99,7 +99,7 @@
 ////            """
 ////        }
 ////    }
-////    
+////
 ////    @Test("Complete navigation example renders correctly")
 ////    func completeNavigationExampleRendersCorrectly() {
 ////        assertInlineSnapshot(

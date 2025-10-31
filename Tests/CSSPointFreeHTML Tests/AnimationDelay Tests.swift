@@ -45,7 +45,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-delay milliseconds value")
 //    func htmlElementWithAnimationDelayMillisecondsRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -71,7 +71,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-delay multiple times")
 //    func htmlElementWithAnimationDelayMultipleTimesRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -97,7 +97,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-delay with global value renders properly")
 //    func htmlAnimationDelayWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -123,7 +123,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-delay with media query renders properly")
 //    func htmlAnimationDelayWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -151,7 +151,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-delay with pseudo-class renders properly")
 //    func htmlAnimationDelayWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -177,7 +177,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-delay with prefix renders properly")
 //    func htmlAnimationDelayWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -203,7 +203,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-delay with negative time value renders properly")
 //    func htmlAnimationDelayWithNegativeTimeValueRendersCorrectly() {
 //        assertInlineSnapshot(

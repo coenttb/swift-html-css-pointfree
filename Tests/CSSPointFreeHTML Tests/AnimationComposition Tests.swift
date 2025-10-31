@@ -45,7 +45,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-composition add value")
 //    func htmlElementWithAnimationCompositionAddRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -71,7 +71,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation-composition accumulate value")
 //    func htmlElementWithAnimationCompositionAccumulateRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -97,7 +97,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-composition with global value renders properly")
 //    func htmlAnimationCompositionWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -123,7 +123,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-composition with media query renders properly")
 //    func htmlAnimationCompositionWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -151,7 +151,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-composition with pseudo-class renders properly")
 //    func htmlAnimationCompositionWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -177,7 +177,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation-composition with prefix renders properly")
 //    func htmlAnimationCompositionWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(

@@ -47,7 +47,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML element renders with animation simple value")
 //    func htmlElementWithAnimationSimpleRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -73,7 +73,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation with global value renders properly")
 //    func htmlAnimationWithGlobalValueRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -99,7 +99,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation with media query renders properly")
 //    func htmlAnimationWithMediaQueryRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -127,7 +127,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation with pseudo-class renders properly")
 //    func htmlAnimationWithPseudoClassRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -153,7 +153,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation with prefix renders properly")
 //    func htmlAnimationWithPrefixRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -179,7 +179,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("HTML animation with none value renders properly")
 //    func htmlAnimationWithNoneValueRendersCorrectly() {
 //        assertInlineSnapshot(

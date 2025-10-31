@@ -24,7 +24,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Link with named target renders correctly")
 //    func linkWithNamedTargetRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -40,7 +40,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Link with target context renders correctly")
 //    func linkWithTargetContextRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -56,7 +56,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("openInNewTab helper renders correctly")
 //    func openInNewTabHelperRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -73,7 +73,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("openInNewTab with opener renders correctly")
 //    func openInNewTabWithOpenerRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -89,7 +89,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("openInParent helper renders correctly")
 //    func openInParentHelperRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -106,7 +106,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("openInTop helper renders correctly")
 //    func openInTopHelperRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -122,7 +122,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("targetFrame helper renders correctly")
 //    func targetFrameHelperRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -138,7 +138,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("iframe with name and link targeting it renders correctly")
 //    func iframeWithNameAndLinkTargetingItRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -148,7 +148,7 @@
 //                    .attribute("src", "empty.html")
 //                    .attribute("width", "600")
 //                    .attribute("height", "400")
-//                
+//
 //                p {
 //                    a {
 //                        "Load Page 1"
@@ -156,7 +156,7 @@
 //                        .href("page1.html")
 //                        .targetFrame("content-area")
 //                }
-//                
+//
 //                p {
 //                    a {
 //                        "Load Page 2"

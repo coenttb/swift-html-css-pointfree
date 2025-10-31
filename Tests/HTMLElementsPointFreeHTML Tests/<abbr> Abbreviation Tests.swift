@@ -22,7 +22,7 @@
 //            """
 //        }
 //    }
-//      
+//
 //    @Test("Abbreviation within text renders correctly")
 //    func abbreviationWithinTextRendersCorrectly() {
 //        assertInlineSnapshot(
@@ -42,7 +42,7 @@
 //            """
 //        }
 //    }
-//    
+//
 //    @Test("Abbreviation within HTMLDocument renders correctly")
 //    func abbreviationWithinHTMLDocumentRendersCorrectly() {
 //        assertInlineSnapshot(
