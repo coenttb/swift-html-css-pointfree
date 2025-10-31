@@ -172,14 +172,4 @@ This project is licensed under the Apache 2.0 License. See [LICENSE](LICENSE) fo
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Feedback
-
-If you have suggestions or find issues, please open a GitHub issue.
-
-> [Subscribe to my newsletter](http://coenttb.com/en/newsletter/subscribe)
->
-> [Follow me on X](http://x.com/coenttb)
->
-> [Connect on LinkedIn](https://www.linkedin.com/in/tenthijeboonkkamp)
+Contributions are welcome. Please submit a Pull Request or open an issue.
