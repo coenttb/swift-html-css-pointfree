@@ -156,12 +156,12 @@ HTMLCSSPointFreeHTML
 ## Related Packages
 
 ### For End Users
-* [swift-html](https://www.github.com/coenttb/swift-html) - Complete Swift DSL for type-safe HTML and CSS
+* [swift-html](https://www.github.com/coenttb/swift-html) - The Swift library for domain-accurate and type-safe HTML & CSS.
 
 ### Foundation Packages
-* [swift-html-types](https://www.github.com/coenttb/swift-html-types) - Type definitions for HTML elements and attributes
-* [swift-css-types](https://www.github.com/coenttb/swift-css-types) - Type definitions for CSS properties and values
-* [pointfree-html](https://www.github.com/coenttb/pointfree-html) - Efficient HTML rendering engine
+* [swift-html-types](https://www.github.com/coenttb/swift-html-types) - A Swift package with foundational types for HTML.
+* [swift-css-types](https://www.github.com/coenttb/swift-css-types) - A Swift package with foundational types for CSS.
+* [pointfree-html](https://www.github.com/coenttb/pointfree-html) - A fork of pointfreeco/swift-html with extended functionality.
 
 ## License
 
