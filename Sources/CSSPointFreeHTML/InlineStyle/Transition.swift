@@ -29,6 +29,11 @@ extension HTML {
     pseudo: Pseudo? = nil
   ) -> HTMLInlineStyle<Self> {
     self.inlineStyle(
-      Transition.property, transition, media: media, selector: selector, pseudo: pseudo)
+      Transition.property,
+      transition,
+      media: media,
+      selector: selector,
+      pseudo: pseudo
+    )
   }
 }

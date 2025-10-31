@@ -29,8 +29,11 @@ extension HTML {
     pseudo: Pseudo? = nil
   ) -> HTMLInlineStyle<Self> {
     self.inlineStyle(
-      lineHeight.map { LineHeight(integerLiteral: Int($0)) }, media: media, selector: selector,
-      pseudo: pseudo)
+      lineHeight.map { LineHeight(integerLiteral: Int($0)) },
+      media: media,
+      selector: selector,
+      pseudo: pseudo
+    )
   }
 
   @discardableResult
@@ -41,7 +44,10 @@ extension HTML {
     pseudo: Pseudo? = nil
   ) -> HTMLInlineStyle<Self> {
     self.inlineStyle(
-      lineHeight.map { LineHeight(floatLiteral: Double($0)) }, media: media, selector: selector,
-      pseudo: pseudo)
+      lineHeight.map { LineHeight(floatLiteral: Double($0)) },
+      media: media,
+      selector: selector,
+      pseudo: pseudo
+    )
   }
 }

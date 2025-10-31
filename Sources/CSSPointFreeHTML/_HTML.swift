@@ -17,8 +17,12 @@ extension HTML {
     pseudo: PointFreeHTML.Pseudo? = nil
   ) -> HTMLInlineStyle<Self> {
     self.inlineStyle(
-      PropertyElement.property, property?.description,
-      media: media.map(PointFreeHTML.AtRule.Media.init), selector: selector, pseudo: pseudo)
+      PropertyElement.property,
+      property?.description,
+      media: media.map(PointFreeHTML.AtRule.Media.init),
+      selector: selector,
+      pseudo: pseudo
+    )
   }
 }
 
@@ -33,8 +37,12 @@ extension HTML {
     pseudo: PointFreeHTML.Pseudo? = nil
   ) -> HTMLInlineStyle<Self> {
     self.inlineStyle(
-      property, value, media: media.map(PointFreeHTML.AtRule.Media.init), selector: selector,
-      pseudo: pseudo)
+      property,
+      value,
+      media: media.map(PointFreeHTML.AtRule.Media.init),
+      selector: selector,
+      pseudo: pseudo
+    )
   }
 }
 
