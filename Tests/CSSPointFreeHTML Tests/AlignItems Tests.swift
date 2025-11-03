@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-    "AlignItems Tests",
-    .snapshots(record: nil)
+  "AlignItems Tests",
+  .snapshots(record: nil)
 )
 struct AlignItemsTests {
-    @Test("HTML element renders with align-items properly")
-    func htmlElementWithAlignItemsRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.center)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with align-items properly")
+  func htmlElementWithAlignItemsRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.center)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with align-items flex-start value")
-    func htmlElementWithAlignItemsFlexStartRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.flexStart)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with align-items flex-start value")
+  func htmlElementWithAlignItemsFlexStartRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.flexStart)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-items with global value renders properly")
-    func htmlAlignItemsWithGlobalValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.inherit)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-items with global value renders properly")
+  func htmlAlignItemsWithGlobalValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.inherit)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-items with media query renders properly")
-    func htmlAlignItemsWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.center, media: .print)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-items with media query renders properly")
+  func htmlAlignItemsWithMediaQueryRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.center, media: .print)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -121,18 +121,18 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-items with pseudo-class renders properly")
-    func htmlAlignItemsWithPseudoClassRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.baseline, pseudo: .hover)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-items with pseudo-class renders properly")
+  func htmlAlignItemsWithPseudoClassRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.baseline, pseudo: .hover)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -147,18 +147,18 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-items with prefix renders properly")
-    func htmlAlignItemsWithPrefixRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.flexEnd, selector: "my-component")
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-items with prefix renders properly")
+  func htmlAlignItemsWithPrefixRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.flexEnd, selector: "my-component")
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -173,18 +173,18 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-items with stretch value renders properly")
-    func htmlAlignItemsWithStretchValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignItems(.stretch)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-items with stretch value renders properly")
+  func htmlAlignItemsWithStretchValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignItems(.stretch)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -199,6 +199,6 @@ struct AlignItemsTests {
         </body>
       </html>
       """
-        }
     }
+  }
 }

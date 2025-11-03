@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-    "BackgroundClip Tests",
-    .snapshots(record: nil)
+  "BackgroundClip Tests",
+  .snapshots(record: nil)
 )
 struct BackgroundClipTests {
-    @Test("HTML element renders with background-clip border-box properly")
-    func htmlElementWithBackgroundClipBorderBoxRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.borderBox)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-clip border-box properly")
+  func htmlElementWithBackgroundClipBorderBoxRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.borderBox)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-clip padding-box properly")
-    func htmlElementWithBackgroundClipPaddingBoxRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.paddingBox)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-clip padding-box properly")
+  func htmlElementWithBackgroundClipPaddingBoxRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.paddingBox)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-clip content-box properly")
-    func htmlElementWithBackgroundClipContentBoxRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.contentBox)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-clip content-box properly")
+  func htmlElementWithBackgroundClipContentBoxRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.contentBox)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-clip text properly")
-    func htmlElementWithBackgroundClipTextRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.text)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-clip text properly")
+  func htmlElementWithBackgroundClipTextRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.text)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -119,18 +119,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-clip with global value renders properly")
-    func htmlBackgroundClipWithGlobalValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.inherit)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-clip with global value renders properly")
+  func htmlBackgroundClipWithGlobalValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.inherit)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -145,18 +145,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-clip with media query renders properly")
-    func htmlBackgroundClipWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.contentBox, media: .print)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-clip with media query renders properly")
+  func htmlBackgroundClipWithMediaQueryRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.contentBox, media: .print)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -173,18 +173,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-clip with pseudo-class renders properly")
-    func htmlBackgroundClipWithPseudoClassRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.contentBox, pseudo: .hover)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-clip with pseudo-class renders properly")
+  func htmlBackgroundClipWithPseudoClassRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.contentBox, pseudo: .hover)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -199,18 +199,18 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-clip with prefix renders properly")
-    func htmlBackgroundClipWithPrefixRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundClip(.contentBox, selector: "my-component")
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-clip with prefix renders properly")
+  func htmlBackgroundClipWithPrefixRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundClip(.contentBox, selector: "my-component")
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -225,6 +225,6 @@ struct BackgroundClipTests {
         </body>
       </html>
       """
-        }
     }
+  }
 }

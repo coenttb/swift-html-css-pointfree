@@ -14,20 +14,20 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-    "Color Tests",
-    .snapshots(record: nil)
+  "Color Tests",
+  .snapshots(record: nil)
 )
 struct ColorTests {
-    @Test("HTML element renders with named color properly")
-    func htmlElementWithNamedColorRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div
-                    .color(.red)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with named color properly")
+  func htmlElementWithNamedColorRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div
+          .color(.red)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -42,34 +42,34 @@ struct ColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML color method with pseudo-class parameter")
-    func htmlColorMethodWithPseudoClassParameter() {
+  @Test("HTML color method with pseudo-class parameter")
+  func htmlColorMethodWithPseudoClassParameter() {
 
-        let test = HTMLDocument {
-            div
-                .color(.hex("FF0000"), pseudo: .hover)
-
-        }
-
-        let html = String(bytes: test.render(), encoding: .utf8)!
-        #expect(html.contains(":hover"))
-        #expect(html.contains("color:#FF0000"))
+    let test = HTMLDocument {
+      div
+        .color(.hex("FF0000"), pseudo: .hover)
 
     }
 
-    @Test("HTML color with Color renders properly")
-    func htmlColorMethodWithColorWorks() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div
-                    .color(CSSPropertyTypes.Color.color(.hex("FF0000")))
-            },
-            as: .html
-        ) {
-            """
+    let html = String(bytes: test.render(), encoding: .utf8)!
+    #expect(html.contains(":hover"))
+    #expect(html.contains("color:#FF0000"))
+
+  }
+
+  @Test("HTML color with Color renders properly")
+  func htmlColorMethodWithColorWorks() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div
+          .color(CSSPropertyTypes.Color.color(.hex("FF0000")))
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -84,7 +84,7 @@ struct ColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
 }

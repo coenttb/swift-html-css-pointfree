@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-    "BackgroundColor Tests",
-    .snapshots(record: nil)
+  "BackgroundColor Tests",
+  .snapshots(record: nil)
 )
 struct BackgroundColorTests {
-    @Test("HTML element renders with background-color named color properly")
-    func htmlElementWithBackgroundColorNamedColorRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.red)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-color named color properly")
+  func htmlElementWithBackgroundColorNamedColorRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.red)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-color hex color properly")
-    func htmlElementWithBackgroundColorHexRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.color(.hex("FF0000")))
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-color hex color properly")
+  func htmlElementWithBackgroundColorHexRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.color(.hex("FF0000")))
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-color rgb color properly")
-    func htmlElementWithBackgroundColorRgbRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.color(.rgb(255, 0, 0)))
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-color rgb color properly")
+  func htmlElementWithBackgroundColorRgbRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.color(.rgb(255, 0, 0)))
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-color rgba color properly")
-    func htmlElementWithBackgroundColorRgbaRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.color(.rgba(255, 0, 0, 0.5)))
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-color rgba color properly")
+  func htmlElementWithBackgroundColorRgbaRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.color(.rgba(255, 0, 0, 0.5)))
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -119,18 +119,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with background-color transparent properly")
-    func htmlElementWithBackgroundColorTransparentRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.transparent)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with background-color transparent properly")
+  func htmlElementWithBackgroundColorTransparentRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.transparent)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -145,18 +145,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-color with global value renders properly")
-    func htmlBackgroundColorWithGlobalValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.inherit)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-color with global value renders properly")
+  func htmlBackgroundColorWithGlobalValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.inherit)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -171,18 +171,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-color with media query renders properly")
-    func htmlBackgroundColorWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.red, media: .print)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-color with media query renders properly")
+  func htmlBackgroundColorWithMediaQueryRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.red, media: .print)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -199,18 +199,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-color with pseudo-class renders properly")
-    func htmlBackgroundColorWithPseudoClassRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.red, pseudo: .hover)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-color with pseudo-class renders properly")
+  func htmlBackgroundColorWithPseudoClassRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.red, pseudo: .hover)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -225,18 +225,18 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML background-color with prefix renders properly")
-    func htmlBackgroundColorWithPrefixRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.backgroundColor(.red, selector: "my-component")
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML background-color with prefix renders properly")
+  func htmlBackgroundColorWithPrefixRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.backgroundColor(.red, selector: "my-component")
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -251,6 +251,6 @@ struct BackgroundColorTests {
         </body>
       </html>
       """
-        }
     }
+  }
 }

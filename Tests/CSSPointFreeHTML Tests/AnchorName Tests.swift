@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-    "AnchorName Tests",
-    .snapshots(record: nil)
+  "AnchorName Tests",
+  .snapshots(record: nil)
 )
 struct AnchorNameTests {
-    @Test("HTML element renders with anchor-name string value properly")
-    func htmlElementWithAnchorNameStringRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.anchorName("section-header")
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with anchor-name string value properly")
+  func htmlElementWithAnchorNameStringRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.anchorName("section-header")
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct AnchorNameTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with anchor-name none value")
-    func htmlElementWithAnchorNameNoneRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.anchorName(AnchorName.none)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with anchor-name none value")
+  func htmlElementWithAnchorNameNoneRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.anchorName(AnchorName.none)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct AnchorNameTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML anchor-name with global value renders properly")
-    func htmlAnchorNameWithGlobalValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.anchorName(.inherit)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML anchor-name with global value renders properly")
+  func htmlAnchorNameWithGlobalValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.anchorName(.inherit)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct AnchorNameTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML anchor-name with media query renders properly")
-    func htmlAnchorNameWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.anchorName("section-intro", media: .print)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML anchor-name with media query renders properly")
+  func htmlAnchorNameWithMediaQueryRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.anchorName("section-intro", media: .print)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -121,18 +121,18 @@ struct AnchorNameTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML anchor-name with pseudo-class renders properly")
-    func htmlAnchorNameWithPseudoClassRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.anchorName("heading", pseudo: .hover)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML anchor-name with pseudo-class renders properly")
+  func htmlAnchorNameWithPseudoClassRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.anchorName("heading", pseudo: .hover)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -147,18 +147,18 @@ struct AnchorNameTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML anchor-name with prefix renders properly")
-    func htmlAnchorNameWithPrefixRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.anchorName("footer", selector: "my-component")
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML anchor-name with prefix renders properly")
+  func htmlAnchorNameWithPrefixRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.anchorName("footer", selector: "my-component")
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -173,6 +173,6 @@ struct AnchorNameTests {
         </body>
       </html>
       """
-        }
     }
+  }
 }

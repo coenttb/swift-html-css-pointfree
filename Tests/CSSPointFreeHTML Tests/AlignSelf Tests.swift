@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-    "AlignSelf Tests",
-    .snapshots(record: nil)
+  "AlignSelf Tests",
+  .snapshots(record: nil)
 )
 struct AlignSelfTests {
-    @Test("HTML element renders with align-self properly")
-    func htmlElementWithAlignSelfRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.center)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with align-self properly")
+  func htmlElementWithAlignSelfRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.center)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML element renders with align-self auto value")
-    func htmlElementWithAlignSelfAutoRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.auto)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML element renders with align-self auto value")
+  func htmlElementWithAlignSelfAutoRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.auto)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-self with global value renders properly")
-    func htmlAlignSelfWithGlobalValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.inherit)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-self with global value renders properly")
+  func htmlAlignSelfWithGlobalValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.inherit)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-self with media query renders properly")
-    func htmlAlignSelfWithMediaQueryRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.center, media: .print)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-self with media query renders properly")
+  func htmlAlignSelfWithMediaQueryRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.center, media: .print)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -121,18 +121,18 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-self with pseudo-class renders properly")
-    func htmlAlignSelfWithPseudoClassRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.baseline, pseudo: .hover)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-self with pseudo-class renders properly")
+  func htmlAlignSelfWithPseudoClassRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.baseline, pseudo: .hover)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -147,18 +147,18 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-self with prefix renders properly")
-    func htmlAlignSelfWithPrefixRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.flexEnd, selector: "my-component")
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-self with prefix renders properly")
+  func htmlAlignSelfWithPrefixRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.flexEnd, selector: "my-component")
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -173,18 +173,18 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 
-    @Test("HTML align-self with stretch value renders properly")
-    func htmlAlignSelfWithStretchValueRendersCorrectly() {
-        assertInlineSnapshot(
-            of: HTMLDocument {
-                div.alignSelf(.stretch)
-            },
-            as: .html
-        ) {
-            """
+  @Test("HTML align-self with stretch value renders properly")
+  func htmlAlignSelfWithStretchValueRendersCorrectly() {
+    assertInlineSnapshot(
+      of: HTMLDocument {
+        div.alignSelf(.stretch)
+      },
+      as: .html
+    ) {
+      """
       <!doctype html>
       <html>
         <head>
@@ -199,6 +199,6 @@ struct AlignSelfTests {
         </body>
       </html>
       """
-        }
     }
+  }
 }
