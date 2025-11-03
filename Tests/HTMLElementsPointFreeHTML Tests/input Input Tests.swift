@@ -161,8 +161,8 @@ extension SnapshotTests {
             as: .html
         ) {
             #"""
-                <input size="30" placeholder="username@example.com" pattern=".+@example\.com" multiple minlength="5" maxlength="64" value="user@example.com" type="email" name="email">
-      """#
+            <input size="30" placeholder="username@example.com" pattern=".+@example\.com" multiple minlength="5" maxlength="64" value="user@example.com" type="email" name="email">
+            """#
         }
     }
 
@@ -308,8 +308,8 @@ extension SnapshotTests {
             as: .html
         ) {
             #"""
-                <input inputmode="text" autocomplete="new-password" size="30" placeholder="Enter password" pattern="[A-Za-z0-9\d@$!%*?&amp;]{8,}" minlength="8" maxlength="64" type="password" name="password">
-      """#
+            <input inputmode="text" autocomplete="new-password" size="30" placeholder="Enter password" pattern="[A-Za-z0-9\d@$!%*?&amp;]{8,}" minlength="8" maxlength="64" type="password" name="password">
+            """#
         }
     }
 
@@ -337,8 +337,8 @@ extension SnapshotTests {
             as: .html
         ) {
             #"""
-                <input inputmode="numeric" autocomplete="one-time-code" size="8" placeholder="Enter PIN" pattern="\d{4,8}" minlength="4" maxlength="8" type="password" name="pin">
-      """#
+            <input inputmode="numeric" autocomplete="one-time-code" size="8" placeholder="Enter PIN" pattern="\d{4,8}" minlength="4" maxlength="8" type="password" name="pin">
+            """#
         }
     }
 
@@ -725,8 +725,8 @@ extension SnapshotTests {
             as: .html
         ) {
             #"""
-                <input required spellcheck="false" size="50" placeholder="https://example.mydomain.com" pattern="https://.*\.mydomain\.com" minlength="10" maxlength="100" list="website-suggestions" type="url" name="website">
-      """#
+            <input required spellcheck="false" size="50" placeholder="https://example.mydomain.com" pattern="https://.*\.mydomain\.com" minlength="10" maxlength="100" list="website-suggestions" type="url" name="website">
+            """#
         }
     }
 

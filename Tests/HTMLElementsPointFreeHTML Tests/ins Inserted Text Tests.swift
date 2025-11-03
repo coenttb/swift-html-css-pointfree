@@ -119,11 +119,11 @@ extension SnapshotTests {
         ) {
             """
 
-      <p>The meeting will be held on
-        <ins datetime="2024-03-01T09:00:00Z" cite="https://example.com/meeting-updates/456">Friday, March 8th at 2:00 PM
-        </ins> in the main conference room.
-      </p>
-      """
+            <p>The meeting will be held on 
+              <ins datetime="2024-03-01T09:00:00Z" cite="https://example.com/meeting-updates/456">Friday, March 8th at 2:00 PM
+              </ins> in the main conference room.
+            </p>
+            """
         }
     }
 
@@ -185,45 +185,45 @@ extension SnapshotTests {
             as: .html
         ) {
             """
-      <!doctype html>
-      <html>
-        <head>
-          <style>
+            <!doctype html>
+            <html>
+              <head>
+                <style>
 
-          </style>
-        </head>
-        <body>
-      <article>
-        <h2>Document Revision History
-        </h2>
-        <section>
-          <h3>Version 2.1 Changes
-          </h3>
-          <p>This document has been updated to include:
-          </p>
-          <ul>
-            <li>
-              <ins datetime="2024-01-15T11:30:00Z" cite="https://example.com/updates/security">Enhanced security protocols
-              </ins>
-            </li>
-            <li>
-              <ins datetime="2024-01-20T14:15:00Z" cite="https://example.com/updates/accessibility">Improved accessibility guidelines
-              </ins>
-            </li>
-            <li>
-              <ins datetime="2024-01-25T10:00:00Z">Additional code examples and best practices
-              </ins>
-            </li>
-          </ul>
-        </section>
-        <p>For technical specifications, please refer to
-          <ins datetime="2024-02-01T16:30:00Z" cite="https://example.com/technical-specs/v2.1"><a href="https://example.com/specs">the updated technical documentation</a>
-          </ins>.
-        </p>
-      </article>
-        </body>
-      </html>
-      """
+                </style>
+              </head>
+              <body>
+            <article>
+              <h2>Document Revision History
+              </h2>
+              <section>
+                <h3>Version 2.1 Changes
+                </h3>
+                <p>This document has been updated to include:
+                </p>
+                <ul>
+                  <li>
+                    <ins datetime="2024-01-15T11:30:00Z" cite="https://example.com/updates/security">Enhanced security protocols
+                    </ins>
+                  </li>
+                  <li>
+                    <ins datetime="2024-01-20T14:15:00Z" cite="https://example.com/updates/accessibility">Improved accessibility guidelines
+                    </ins>
+                  </li>
+                  <li>
+                    <ins datetime="2024-01-25T10:00:00Z">Additional code examples and best practices
+                    </ins>
+                  </li>
+                </ul>
+              </section>
+              <p>For technical specifications, please refer to 
+                <ins datetime="2024-02-01T16:30:00Z" cite="https://example.com/technical-specs/v2.1"><a href="https://example.com/specs">the updated technical documentation</a>
+                </ins>.
+              </p>
+            </article>
+              </body>
+            </html>
+            """
         }
     }
     }

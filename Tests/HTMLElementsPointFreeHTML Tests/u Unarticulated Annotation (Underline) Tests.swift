@@ -58,11 +58,11 @@ extension SnapshotTests {
         ) {
             """
 
-      <p>Please check the
-        <u>seperate
-        </u> document for more information.
-      </p>
-      """
+            <p>Please check the 
+              <u>seperate
+              </u> document for more information.
+            </p>
+            """
         }
     }
 
@@ -103,11 +103,11 @@ extension SnapshotTests {
         ) {
             """
 
-      <p>The city
-        <u>北京
-        </u> (Beijing) is the capital of China.
-      </p>
-      """
+            <p>The city 
+              <u>北京
+              </u> (Beijing) is the capital of China.
+            </p>
+            """
         }
     }
 
@@ -182,47 +182,47 @@ extension SnapshotTests {
             as: .html
         ) {
             """
-      <!doctype html>
-      <html>
-        <head>
-          <style>
+            <!doctype html>
+            <html>
+              <head>
+                <style>
 
-          </style>
-        </head>
-        <body>
-      <article>
-        <h2>Language Learning Exercise
-        </h2>
-        <section>
-          <h3>Chinese Proper Names
-          </h3>
-          <p>Identify the proper names in the following text:
-          </p>
-          <p>在古代中国，
-            <u>孔子
-            </u>是一位伟大的哲学家。他的思想影响了整个
-            <u>中华文明
-            </u>。
-          </p>
-        </section>
-        <section>
-          <h3>Spelling Check
-          </h3>
-          <p>The following paragraph contains spelling errors:
-          </p>
-          <p>The
-            <u>recieve
-            </u> function should
-            <u>seperate
-            </u> the data into
-            <u>differnt
-            </u> categories.
-          </p>
-        </section>
-      </article>
-        </body>
-      </html>
-      """
+                </style>
+              </head>
+              <body>
+            <article>
+              <h2>Language Learning Exercise
+              </h2>
+              <section>
+                <h3>Chinese Proper Names
+                </h3>
+                <p>Identify the proper names in the following text:
+                </p>
+                <p>在古代中国，
+                  <u>孔子
+                  </u>是一位伟大的哲学家。他的思想影响了整个
+                  <u>中华文明
+                  </u>。
+                </p>
+              </section>
+              <section>
+                <h3>Spelling Check
+                </h3>
+                <p>The following paragraph contains spelling errors:
+                </p>
+                <p>The 
+                  <u>recieve
+                  </u> function should 
+                  <u>seperate
+                  </u> the data into 
+                  <u>differnt
+                  </u> categories.
+                </p>
+              </section>
+            </article>
+              </body>
+            </html>
+            """
         }
     }
     }
