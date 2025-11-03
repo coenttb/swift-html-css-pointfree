@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Area Element Tests",
-    .snapshots(record: .missing)
-)
-struct AreaTests {
+extension SnapshotTests {
+    @Suite(
+        "Area Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct AreaTests {
     @Test("Basic area renders correctly")
     func basicAreaRendersCorrectly() {
         assertInlineSnapshot(
@@ -75,5 +76,6 @@ struct AreaTests {
       </html>
       """
         }
+    }
     }
 }

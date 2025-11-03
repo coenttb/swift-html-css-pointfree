@@ -3,11 +3,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Label Element Tests",
-    .snapshots(record: .missing)
-)
-struct LabelTests {
+extension SnapshotTests {
+    @Suite struct LabelTests {
     @Test("Basic label renders correctly")
     func basicLabelRendersCorrectly() {
         assertInlineSnapshot(
@@ -35,5 +32,6 @@ struct LabelTests {
       <label for="username">Enter your username:<input type="text" name="username"></label>
       """
         }
+    }
     }
 }

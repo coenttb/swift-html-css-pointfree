@@ -14,7 +14,7 @@ import Testing
 
 @Suite(
     "HTML+CSS+PointFreeHTML Tests",
-    .snapshots(record: .missing)
+    .snapshots(record: .failed)
 )
 struct IntegrationTests {
     @Test("HTML element with attributes and styles")
@@ -69,7 +69,7 @@ struct IntegrationTests {
 
     @Test(
         "General3",
-        .snapshots(record: .missing)
+        .snapshots(record: .failed)
     )
     func general3() {
         assertInlineSnapshot(

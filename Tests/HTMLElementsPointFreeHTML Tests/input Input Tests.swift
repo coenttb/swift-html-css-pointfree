@@ -3,11 +3,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Input Type Attribute Tests",
-    .snapshots(record: .missing)
-)
-struct InputTypeTests {
+extension SnapshotTests {
+    @Suite struct InputTypeTests {
     @Test("Fully initialized Input renders correctly")
     func fullyInitializedInputRendersCorrectly() {
         assertInlineSnapshot(
@@ -863,5 +860,6 @@ struct InputTypeTests {
       <input step="any" max="2023-12" min="2023-01" value="2023-07" type="month" name="month">
       """
         }
+    }
     }
 }

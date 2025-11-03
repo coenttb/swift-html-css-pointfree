@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Aside Element Tests",
-    .snapshots(record: .missing)
-)
-struct AsideTests {
+extension SnapshotTests {
+    @Suite(
+        "Aside Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct AsideTests {
     @Test("Basic aside renders correctly")
     func basicAsideRendersCorrectly() {
         assertInlineSnapshot(
@@ -312,5 +313,6 @@ struct AsideTests {
       </html>
       """
         }
+    }
     }
 }

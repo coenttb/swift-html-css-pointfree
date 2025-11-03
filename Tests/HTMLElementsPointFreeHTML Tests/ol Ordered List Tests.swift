@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "OrderedList Element Tests",
-    .snapshots(record: .missing)
-)
-struct OrderedListTests {
+extension SnapshotTests {
+    @Suite struct OrderedListTests {
     @Test("Basic ol renders correctly")
     func basicOlRendersCorrectly() {
         assertInlineSnapshot(
@@ -318,5 +315,6 @@ struct OrderedListTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Select Element Tests",
-    .snapshots(record: .missing)
-)
-struct SelectTests {
+extension SnapshotTests {
+    @Suite(
+        "Select Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct SelectTests {
     @Test("Basic select renders correctly")
     func basicSelectRendersCorrectly() {
         assertInlineSnapshot(
@@ -384,5 +385,6 @@ struct SelectTests {
       </html>
       """
         }
+    }
     }
 }

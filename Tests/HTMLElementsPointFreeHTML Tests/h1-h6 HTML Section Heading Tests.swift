@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "HTML Section Heading Tests",
-    .snapshots(record: .missing)
-)
-struct HTMLSectionHeadingTests {
+extension SnapshotTests {
+    @Suite(
+        "HTML Section Heading Tests",
+        .snapshots(record: .failed)
+    )
+    struct HTMLSectionHeadingTests {
     @Test("H1 renders correctly")
     func h1RendersCorrectly() {
         assertInlineSnapshot(
@@ -200,5 +201,6 @@ struct HTMLSectionHeadingTests {
       </html>
       """
         }
+    }
     }
 }

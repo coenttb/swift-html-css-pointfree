@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Definition Element Tests",
-    .snapshots(record: .missing)
-)
-struct DefinitionTests {
+extension SnapshotTests {
+    @Suite(
+        "Definition Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct DefinitionTests {
     @Test("Basic dfn renders correctly")
     func basicDfnRendersCorrectly() {
         assertInlineSnapshot(
@@ -179,5 +180,6 @@ struct DefinitionTests {
       </html>
       """
         }
+    }
     }
 }

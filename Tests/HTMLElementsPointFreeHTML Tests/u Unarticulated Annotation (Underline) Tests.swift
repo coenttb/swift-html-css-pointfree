@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "UnarticulatedAnnotation Element Tests",
-    .snapshots(record: .missing)
-)
-struct UnarticulatedAnnotationTests {
+extension SnapshotTests {
+    @Suite struct UnarticulatedAnnotationTests {
     @Test("Basic u renders correctly")
     func basicURendersCorrectly() {
         assertInlineSnapshot(
@@ -227,5 +224,6 @@ struct UnarticulatedAnnotationTests {
       </html>
       """
         }
+    }
     }
 }

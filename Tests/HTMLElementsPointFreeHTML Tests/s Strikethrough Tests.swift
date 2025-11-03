@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Strikethrough Element Tests",
-    .snapshots(record: .missing)
-)
-struct StrikethroughTests {
+extension SnapshotTests {
+    @Suite(
+        "Strikethrough Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct StrikethroughTests {
     @Test("Basic s renders correctly")
     func basicSRendersCorrectly() {
         assertInlineSnapshot(
@@ -211,5 +212,6 @@ struct StrikethroughTests {
       </html>
       """
         }
+    }
     }
 }

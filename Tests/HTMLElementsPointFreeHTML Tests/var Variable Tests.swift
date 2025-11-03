@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Variable Element Tests",
-    .snapshots(record: .missing)
-)
-struct VariableTests {
+extension SnapshotTests {
+    @Suite(
+        "Variable Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct VariableTests {
     @Test("Basic var renders correctly")
     func basicVarRendersCorrectly() {
         assertInlineSnapshot(
@@ -205,5 +206,6 @@ struct VariableTests {
       </html>
       """
         }
+    }
     }
 }

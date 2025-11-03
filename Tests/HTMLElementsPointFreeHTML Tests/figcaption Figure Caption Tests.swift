@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Figure Caption Element Tests",
-    .snapshots(record: .missing)
-)
-struct FigureCaptionElementTests {
+extension SnapshotTests {
+    @Suite(
+        "Figure Caption Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct FigureCaptionElementTests {
     @Test("Basic figure caption renders correctly")
     func basicFigureCaptionRendersCorrectly() {
         assertInlineSnapshot(
@@ -89,5 +90,6 @@ struct FigureCaptionElementTests {
       </html>
       """
         }
+    }
     }
 }

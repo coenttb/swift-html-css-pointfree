@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "TableDataCell Element Tests",
-    .snapshots(record: .missing)
-)
-struct TableDataCellTests {
+extension SnapshotTests {
+    @Suite struct TableDataCellTests {
     @Test("Basic td renders correctly")
     func basicTdRendersCorrectly() {
         assertInlineSnapshot(
@@ -256,5 +253,6 @@ struct TableDataCellTests {
       </html>
       """
         }
+    }
     }
 }

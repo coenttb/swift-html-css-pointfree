@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Time Element Tests",
-    .snapshots(record: .missing)
-)
-struct TimeTests {
+extension SnapshotTests {
+    @Suite struct TimeTests {
     @Test("Basic time renders correctly")
     func basicTimeRendersCorrectly() {
         assertInlineSnapshot(
@@ -162,5 +159,6 @@ struct TimeTests {
       </html>
       """
         }
+    }
     }
 }

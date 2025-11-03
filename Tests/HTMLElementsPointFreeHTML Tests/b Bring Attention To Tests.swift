@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "B Element Tests",
-    .snapshots(record: .missing)
-)
-struct BTests {
+extension SnapshotTests {
+    @Suite(
+        "B Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct BTests {
     @Test("Basic b element renders correctly")
     func basicBElementRendersCorrectly() {
         assertInlineSnapshot(
@@ -89,5 +90,6 @@ struct BTests {
       </html>
       """
         }
+    }
     }
 }

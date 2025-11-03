@@ -3,12 +3,13 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "LineBreak Element Tests",
-    .snapshots(record: .missing),
-    .serialized
-)
-struct LineBreakTests {
+extension SnapshotTests {
+    @Suite(
+        "LineBreak Element Tests",
+        .snapshots(record: .failed),
+        .serialized
+    )
+    struct LineBreakTests {
     @Test("Basic br renders correctly")
     func basicLineBreakRendersCorrectly() {
         assertInlineSnapshot(
@@ -81,5 +82,6 @@ struct LineBreakTests {
       </address>
       """
         }
+    }
     }
 }

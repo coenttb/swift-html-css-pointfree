@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "ContentDivision Element Tests",
-    .snapshots(record: .missing)
-)
-struct ContentDivisionTests {
+extension SnapshotTests {
+    @Suite(
+        "ContentDivision Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ContentDivisionTests {
     @Test("Basic div renders correctly")
     func basicDivRendersCorrectly() {
         assertInlineSnapshot(
@@ -126,5 +127,6 @@ struct ContentDivisionTests {
       </html>
       """
         }
+    }
     }
 }

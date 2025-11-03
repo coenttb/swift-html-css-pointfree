@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Inline Quotation Element Tests",
-    .snapshots(record: .missing)
-)
-struct InlineQuotationTests {
+extension SnapshotTests {
+    @Suite(
+        "Inline Quotation Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct InlineQuotationTests {
     @Test("Basic inline quotation renders correctly")
     func basicInlineQuotationRendersCorrectly() {
         assertInlineSnapshot(
@@ -127,5 +128,6 @@ struct InlineQuotationTests {
       </html>
       """
         }
+    }
     }
 }

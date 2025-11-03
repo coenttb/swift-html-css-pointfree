@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Cite Element Tests",
-    .snapshots(record: .missing)
-)
-struct CiteTests {
+extension SnapshotTests {
+    @Suite(
+        "Cite Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct CiteTests {
     @Test("Basic cite renders correctly")
     func basicCiteRendersCorrectly() {
         assertInlineSnapshot(
@@ -95,5 +96,6 @@ struct CiteTests {
       </html>
       """
         }
+    }
     }
 }

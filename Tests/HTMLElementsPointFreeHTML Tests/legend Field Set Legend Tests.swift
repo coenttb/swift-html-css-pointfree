@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Legend Element Tests",
-    .snapshots(record: .missing)
-)
-struct LegendTests {
+extension SnapshotTests {
+    @Suite struct LegendTests {
     @Test("Basic legend renders correctly")
     func basicLegendRendersCorrectly() {
         assertInlineSnapshot(
@@ -282,5 +279,6 @@ struct LegendTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "ContentSpan Element Tests",
-    .snapshots(record: .missing)
-)
-struct ContentSpanTests {
+extension SnapshotTests {
+    @Suite(
+        "ContentSpan Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ContentSpanTests {
     @Test("Basic span renders correctly")
     func basicSpanRendersCorrectly() {
         assertInlineSnapshot(
@@ -136,5 +137,6 @@ struct ContentSpanTests {
       </html>
       """
         }
+    }
     }
 }

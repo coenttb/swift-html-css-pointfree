@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Meter Element Tests",
-    .snapshots(record: .missing)
-)
-struct MeterTests {
+extension SnapshotTests {
+    @Suite struct MeterTests {
     @Test("Basic meter renders correctly")
     func basicMeterRendersCorrectly() {
         assertInlineSnapshot(
@@ -125,5 +122,6 @@ struct MeterTests {
       </html>
       """
         }
+    }
     }
 }

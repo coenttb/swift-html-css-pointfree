@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Mark Element Tests",
-    .snapshots(record: .missing)
-)
-struct MarkTests {
+extension SnapshotTests {
+    @Suite struct MarkTests {
     @Test("Basic mark renders correctly")
     func basicMarkRendersCorrectly() {
         assertInlineSnapshot(
@@ -140,5 +137,6 @@ struct MarkTests {
       </html>
       """
         }
+    }
     }
 }

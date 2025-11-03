@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Anchor Element Tests",
-    .snapshots(record: .missing)
-)
-struct AnchorTests {
+extension SnapshotTests {
+    @Suite(
+        "Anchor Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct AnchorTests {
     @Test("Basic anchor renders correctly")
     func basicAnchorRendersCorrectly() {
         assertInlineSnapshot(
@@ -108,5 +109,6 @@ struct AnchorTests {
       </html>
       """
         }
+    }
     }
 }

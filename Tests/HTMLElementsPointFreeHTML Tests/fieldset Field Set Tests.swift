@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "FieldSet Element Tests",
-    .snapshots(record: .missing)
-)
-struct FieldSetTests {
+extension SnapshotTests {
+    @Suite(
+        "FieldSet Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct FieldSetTests {
     @Test("Basic fieldset renders correctly")
     func basicFieldsetRendersCorrectly() {
         assertInlineSnapshot(
@@ -322,5 +323,6 @@ struct FieldSetTests {
       </html>
       """
         }
+    }
     }
 }

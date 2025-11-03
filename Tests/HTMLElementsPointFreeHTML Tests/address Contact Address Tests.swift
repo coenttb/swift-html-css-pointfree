@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Address Element Tests",
-    .snapshots(record: .missing)
-)
-struct AddressTests {
+extension SnapshotTests {
+    @Suite(
+        "Address Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct AddressTests {
     @Test("Basic address renders correctly")
     func basicAddressRendersCorrectly() {
         assertInlineSnapshot(
@@ -275,5 +276,6 @@ struct AddressTests {
       </html>
       """
         }
+    }
     }
 }

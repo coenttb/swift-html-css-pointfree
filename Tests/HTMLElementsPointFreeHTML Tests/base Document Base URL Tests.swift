@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Base Element Tests",
-    .snapshots(record: .missing)
-)
-struct BaseTests {
+extension SnapshotTests {
+    @Suite(
+        "Base Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct BaseTests {
     @Test("Base with href renders correctly")
     func baseWithHrefRendersCorrectly() {
         assertInlineSnapshot(
@@ -86,5 +87,6 @@ struct BaseTests {
       </html>
       """
         }
+    }
     }
 }

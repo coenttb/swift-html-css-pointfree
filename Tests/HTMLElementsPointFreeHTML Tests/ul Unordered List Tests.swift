@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "UnorderedList Element Tests",
-    .snapshots(record: .missing)
-)
-struct UnorderedListTests {
+extension SnapshotTests {
+    @Suite(
+        "UnorderedList Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct UnorderedListTests {
     @Test("Basic ul renders correctly")
     func basicUlRendersCorrectly() {
         assertInlineSnapshot(
@@ -170,5 +171,6 @@ struct UnorderedListTests {
       </html>
       """
         }
+    }
     }
 }

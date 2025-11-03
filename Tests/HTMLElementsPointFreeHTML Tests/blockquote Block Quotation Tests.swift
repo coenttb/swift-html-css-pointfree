@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Block Quotation Element Tests",
-    .snapshots(record: .missing)
-)
-struct BlockQuoteTests {
+extension SnapshotTests {
+    @Suite(
+        "Block Quotation Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct BlockQuoteTests {
     @Test("Basic blockquote renders correctly")
     func basicBlockquoteRendersCorrectly() {
         assertInlineSnapshot(
@@ -180,5 +181,6 @@ struct BlockQuoteTests {
       </blockquote>
       """
         }
+    }
     }
 }

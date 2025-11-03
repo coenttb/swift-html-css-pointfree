@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Link Element Tests",
-    .snapshots(record: .missing)
-)
-struct LinkTests {
+extension SnapshotTests {
+    @Suite struct LinkTests {
     @Test("Basic link renders correctly")
     func basicLinkRendersCorrectly() {
         assertInlineSnapshot(
@@ -104,5 +101,6 @@ struct LinkTests {
       </html>
       """
         }
+    }
     }
 }

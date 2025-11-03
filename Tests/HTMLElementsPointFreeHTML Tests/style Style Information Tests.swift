@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Style Information Element Tests",
-    .snapshots(record: .missing)
-)
-struct StyleTests {
+extension SnapshotTests {
+    @Suite(
+        "Style Information Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct StyleTests {
     @Test("Basic style renders correctly")
     func basicStyleRendersCorrectly() {
         assertInlineSnapshot(
@@ -147,5 +148,6 @@ struct StyleTests {
       </style>
       """
         }
+    }
     }
 }

@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "IdiomaticText Element Tests",
-    .snapshots(record: .missing)
-)
-struct IdiomaticTextTests {
+extension SnapshotTests {
+    @Suite struct IdiomaticTextTests {
     @Test("Basic i element renders correctly")
     func basicIElementRendersCorrectly() {
         assertInlineSnapshot(
@@ -123,5 +120,6 @@ struct IdiomaticTextTests {
       </html>
       """
         }
+    }
     }
 }

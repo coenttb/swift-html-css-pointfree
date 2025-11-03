@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "NavigationSection Element Tests",
-    .snapshots(record: .missing)
-)
-struct NavigationSectionTests {
+extension SnapshotTests {
+    @Suite struct NavigationSectionTests {
     @Test("Basic nav renders correctly")
     func basicNavRendersCorrectly() {
         assertInlineSnapshot(
@@ -315,5 +312,6 @@ struct NavigationSectionTests {
       </html>
       """
         }
+    }
     }
 }

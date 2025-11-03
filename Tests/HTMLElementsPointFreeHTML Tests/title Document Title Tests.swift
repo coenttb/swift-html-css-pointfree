@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Document Title Element Tests",
-    .snapshots(record: .missing)
-)
-struct DocumentTitleTests {
+extension SnapshotTests {
+    @Suite struct DocumentTitleTests {
     @Test("Basic title renders correctly")
     func basicTitleRendersCorrectly() {
         assertInlineSnapshot(
@@ -170,5 +167,6 @@ struct DocumentTitleTests {
       </title>
       """
         }
+    }
     }
 }

@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Script Element Tests",
-    .snapshots(record: .missing)
-)
-struct ScriptTests {
+extension SnapshotTests {
+    @Suite(
+        "Script Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ScriptTests {
     @Test("Basic inline script renders correctly")
     func basicInlineScriptRendersCorrectly() {
         assertInlineSnapshot(
@@ -132,5 +133,6 @@ struct ScriptTests {
       }</script>
       """
         }
+    }
     }
 }

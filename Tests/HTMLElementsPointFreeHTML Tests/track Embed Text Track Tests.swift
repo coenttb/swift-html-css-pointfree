@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Track Element Tests",
-    .snapshots(record: .missing)
-)
-struct TrackTests {
+extension SnapshotTests {
+    @Suite struct TrackTests {
     @Test("Basic track renders correctly")
     func basicTrackRendersCorrectly() {
         assertInlineSnapshot(
@@ -111,5 +108,6 @@ struct TrackTests {
       </html>
       """
         }
+    }
     }
 }

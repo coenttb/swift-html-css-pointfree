@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "InlineFrame Element Tests",
-    .snapshots(record: .missing)
-)
-struct InlineFrameTests {
+extension SnapshotTests {
+    @Suite struct InlineFrameTests {
     @Test("Basic iframe renders correctly")
     func basicIframeRendersCorrectly() {
         assertInlineSnapshot(
@@ -118,5 +115,6 @@ struct InlineFrameTests {
       </html>
       """
         }
+    }
     }
 }

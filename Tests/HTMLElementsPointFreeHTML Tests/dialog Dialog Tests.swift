@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Dialog Element Tests",
-    .snapshots(record: .missing)
-)
-struct DialogTests {
+extension SnapshotTests {
+    @Suite(
+        "Dialog Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct DialogTests {
     @Test("Basic dialog renders correctly")
     func basicDialogRendersCorrectly() {
         assertInlineSnapshot(
@@ -99,5 +100,6 @@ struct DialogTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "InsertedText Element Tests",
-    .snapshots(record: .missing)
-)
-struct InsertedTextTests {
+extension SnapshotTests {
+    @Suite struct InsertedTextTests {
     @Test("Basic ins renders correctly")
     func basicInsRendersCorrectly() {
         assertInlineSnapshot(
@@ -228,5 +225,6 @@ struct InsertedTextTests {
       </html>
       """
         }
+    }
     }
 }

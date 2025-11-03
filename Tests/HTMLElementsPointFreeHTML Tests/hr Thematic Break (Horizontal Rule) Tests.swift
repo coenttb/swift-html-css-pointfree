@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "ThematicBreak Element Tests",
-    .snapshots(record: .missing)
-)
-struct ThematicBreakTests {
+extension SnapshotTests {
+    @Suite(
+        "ThematicBreak Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ThematicBreakTests {
     @Test("Basic hr renders correctly")
     func basicHrRendersCorrectly() {
         assertInlineSnapshot(
@@ -48,5 +49,6 @@ struct ThematicBreakTests {
       </html>
       """
         }
+    }
     }
 }

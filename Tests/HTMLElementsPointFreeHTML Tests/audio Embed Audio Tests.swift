@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Embed Audio Element Tests",
-    .snapshots(record: .missing)
-)
-struct AudioTests {
+extension SnapshotTests {
+    @Suite(
+        "Embed Audio Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct AudioTests {
     @Test("Basic audio renders correctly")
     func basicAudioRendersCorrectly() {
         assertInlineSnapshot(
@@ -183,5 +184,6 @@ struct AudioTests {
       </audio>
       """
         }
+    }
     }
 }

@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Option Element Tests",
-    .snapshots(record: .missing)
-)
-struct OptionTests {
+extension SnapshotTests {
+    @Suite struct OptionTests {
     //    @Test("Basic option renders correctly")
     //    func basicOptionRendersCorrectly() {
     //        assertInlineSnapshot(
@@ -323,5 +320,6 @@ struct OptionTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Meta Element Tests",
-    .snapshots(record: .missing)
-)
-struct MetaTests {
+extension SnapshotTests {
+    @Suite struct MetaTests {
     @Test("Meta with charset renders correctly")
     func metaWithCharsetRendersCorrectly() {
         assertInlineSnapshot(
@@ -98,5 +95,6 @@ struct MetaTests {
       </html>
       """
         }
+    }
     }
 }

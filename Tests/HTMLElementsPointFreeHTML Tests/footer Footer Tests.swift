@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Footer Element Tests",
-    .snapshots(record: .missing)
-)
-struct FooterTests {
+extension SnapshotTests {
+    @Suite(
+        "Footer Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct FooterTests {
     @Test("Basic footer renders correctly")
     func basicFooterRendersCorrectly() {
         assertInlineSnapshot(
@@ -237,5 +238,6 @@ struct FooterTests {
       </html>
       """
         }
+    }
     }
 }

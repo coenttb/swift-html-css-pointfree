@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "TableFoot Element Tests",
-    .snapshots(record: .missing)
-)
-struct TableFootTests {
+extension SnapshotTests {
+    @Suite struct TableFootTests {
     @Test("Basic tfoot renders correctly")
     func basicTfootRendersCorrectly() {
         assertInlineSnapshot(
@@ -703,5 +700,6 @@ struct TableFootTests {
       </html>
       """
         }
+    }
     }
 }

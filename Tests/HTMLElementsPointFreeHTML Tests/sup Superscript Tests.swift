@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Superscript Element Tests",
-    .snapshots(record: .missing)
-)
-struct SuperscriptTests {
+extension SnapshotTests {
+    @Suite(
+        "Superscript Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct SuperscriptTests {
     @Test("Basic sup renders correctly")
     func basicSupRendersCorrectly() {
         assertInlineSnapshot(
@@ -174,5 +175,6 @@ struct SuperscriptTests {
       </html>
       """
         }
+    }
     }
 }

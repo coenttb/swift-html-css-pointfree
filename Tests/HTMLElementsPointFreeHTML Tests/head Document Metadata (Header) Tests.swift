@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Document Metadata Header Element Tests",
-    .snapshots(record: .missing)
-)
-struct HeadTests {
+extension SnapshotTests {
+    @Suite(
+        "Document Metadata Header Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct HeadTests {
     @Test("Basic head renders correctly")
     func basicHeadRendersCorrectly() {
         assertInlineSnapshot(
@@ -123,5 +124,6 @@ struct HeadTests {
       </header>
       """
         }
+    }
     }
 }

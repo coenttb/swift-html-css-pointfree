@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Param Element Tests",
-    .snapshots(record: .missing)
-)
-struct ParamTests {
+extension SnapshotTests {
+    @Suite(
+        "Param Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ParamTests {
     @Test("Basic param renders correctly")
     func basicParamRendersCorrectly() {
         assertInlineSnapshot(
@@ -93,5 +94,6 @@ struct ParamTests {
       </html>
       """
         }
+    }
     }
 }

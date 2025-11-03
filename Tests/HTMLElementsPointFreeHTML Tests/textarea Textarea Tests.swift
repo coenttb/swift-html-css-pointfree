@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Textarea Element Tests",
-    .snapshots(record: .missing)
-)
-struct TextareaTests {
+extension SnapshotTests {
+    @Suite struct TextareaTests {
     @Test("Basic textarea renders correctly")
     func basicTextareaRendersCorrectly() {
         assertInlineSnapshot(
@@ -148,5 +145,6 @@ struct TextareaTests {
       <textarea name="empty"></textarea>
       """
         }
+    }
     }
 }

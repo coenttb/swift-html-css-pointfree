@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Del Element Tests",
-    .snapshots(record: .missing)
-)
-struct DelTests {
+extension SnapshotTests {
+    @Suite(
+        "Del Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct DelTests {
     @Test("Basic del renders correctly")
     func basicDelRendersCorrectly() {
         assertInlineSnapshot(
@@ -122,11 +123,11 @@ struct DelTests {
         ) {
             """
 
-      <p>The conference will be held
-        <del datetime="2024-02-28T16:00:00Z" cite="https://example.com/event-updates/789">in New York
-        </del> virtually via Zoom.
-      </p>
-      """
+            <p>The conference will be held 
+              <del datetime="2024-02-28T16:00:00Z" cite="https://example.com/event-updates/789">in New York
+              </del> virtually via Zoom.
+            </p>
+            """
         }
     }
 
@@ -188,45 +189,46 @@ struct DelTests {
             as: .html
         ) {
             """
-      <!doctype html>
-      <html>
-        <head>
-          <style>
+            <!doctype html>
+            <html>
+              <head>
+                <style>
 
-          </style>
-        </head>
-        <body>
-      <article>
-        <h2>Document Change Log
-        </h2>
-        <section>
-          <h3>Version 1.5 Removals
-          </h3>
-          <p>The following items have been removed from this version:
-          </p>
-          <ul>
-            <li>
-              <del datetime="2024-01-10T12:00:00Z" cite="https://example.com/removals/feature-x">Experimental feature X (beta)
-              </del>
-            </li>
-            <li>
-              <del datetime="2024-01-15T14:30:00Z" cite="https://example.com/removals/deprecated-api">Legacy API endpoints for user management
-              </del>
-            </li>
-            <li>
-              <del datetime="2024-01-20T11:15:00Z">Outdated documentation sections
-              </del>
-            </li>
-          </ul>
-        </section>
-        <p>For more information about these changes, see
-          <del datetime="2024-02-01T10:00:00Z" cite="https://example.com/old-migration-guide"><a href="https://example.com/old-guide">the old migration guide</a>
-          </del> our updated documentation.
-        </p>
-      </article>
-        </body>
-      </html>
-      """
+                </style>
+              </head>
+              <body>
+            <article>
+              <h2>Document Change Log
+              </h2>
+              <section>
+                <h3>Version 1.5 Removals
+                </h3>
+                <p>The following items have been removed from this version:
+                </p>
+                <ul>
+                  <li>
+                    <del datetime="2024-01-10T12:00:00Z" cite="https://example.com/removals/feature-x">Experimental feature X (beta)
+                    </del>
+                  </li>
+                  <li>
+                    <del datetime="2024-01-15T14:30:00Z" cite="https://example.com/removals/deprecated-api">Legacy API endpoints for user management
+                    </del>
+                  </li>
+                  <li>
+                    <del datetime="2024-01-20T11:15:00Z">Outdated documentation sections
+                    </del>
+                  </li>
+                </ul>
+              </section>
+              <p>For more information about these changes, see 
+                <del datetime="2024-02-01T10:00:00Z" cite="https://example.com/old-migration-guide"><a href="https://example.com/old-guide">the old migration guide</a>
+                </del> our updated documentation.
+              </p>
+            </article>
+              </body>
+            </html>
+            """
         }
+    }
     }
 }

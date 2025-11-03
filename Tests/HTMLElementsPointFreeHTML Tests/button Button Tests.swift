@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Button Element Tests",
-    .snapshots(record: .missing)
-)
-struct ButtonTests {
+extension SnapshotTests {
+    @Suite(
+        "Button Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ButtonTests {
     @Test("Basic button renders correctly")
     func basicButtonRendersCorrectly() {
         assertInlineSnapshot(
@@ -160,5 +161,6 @@ struct ButtonTests {
       </html>
       """
         }
+    }
     }
 }

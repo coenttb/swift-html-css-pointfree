@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "ListItem Element Tests",
-    .snapshots(record: .missing)
-)
-struct ListItemTests {
+extension SnapshotTests {
+    @Suite struct ListItemTests {
     @Test("Basic li renders correctly")
     func basicLiRendersCorrectly() {
         assertInlineSnapshot(
@@ -128,5 +125,6 @@ struct ListItemTests {
       </html>
       """
         }
+    }
     }
 }

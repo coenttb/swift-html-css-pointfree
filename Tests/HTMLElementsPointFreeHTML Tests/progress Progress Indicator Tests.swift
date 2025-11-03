@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "ProgressIndicator Element Tests",
-    .snapshots(record: .missing)
-)
-struct ProgressIndicatorTests {
+extension SnapshotTests {
+    @Suite(
+        "ProgressIndicator Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct ProgressIndicatorTests {
     @Test("Basic progress renders correctly")
     func basicProgressRendersCorrectly() {
         assertInlineSnapshot(
@@ -116,5 +117,6 @@ struct ProgressIndicatorTests {
       </html>
       """
         }
+    }
     }
 }

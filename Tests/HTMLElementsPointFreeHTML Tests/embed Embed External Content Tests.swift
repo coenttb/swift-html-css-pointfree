@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Embed Element Tests",
-    .snapshots(record: .missing)
-)
-struct EmbedTests {
+extension SnapshotTests {
+    @Suite(
+        "Embed Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct EmbedTests {
     @Test("Basic embed renders correctly")
     func basicEmbedRendersCorrectly() {
         assertInlineSnapshot(
@@ -114,5 +115,6 @@ struct EmbedTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "LineBreakOpportunity Element Tests",
-    .snapshots(record: .missing)
-)
-struct LineBreakOpportunityTests {
+extension SnapshotTests {
+    @Suite(
+        "LineBreakOpportunity Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct LineBreakOpportunityTests {
     @Test("Basic wbr renders correctly")
     func basicWbrRendersCorrectly() {
         assertInlineSnapshot(
@@ -69,5 +70,6 @@ struct LineBreakOpportunityTests {
       </html>
       """
         }
+    }
     }
 }

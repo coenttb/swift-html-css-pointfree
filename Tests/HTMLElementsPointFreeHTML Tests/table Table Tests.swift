@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Table Element Tests",
-    .snapshots(record: .missing)
-)
-struct TableTests {
+extension SnapshotTests {
+    @Suite(
+        "Table Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct TableTests {
     @Test("Basic table renders correctly")
     func basicTableRendersCorrectly() {
         assertInlineSnapshot(
@@ -336,5 +337,6 @@ struct TableTests {
       </html>
       """
         }
+    }
     }
 }

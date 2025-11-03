@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "PreformattedText Element Tests",
-    .snapshots(record: .missing)
-)
-struct PreformattedTextTests {
+extension SnapshotTests {
+    @Suite(
+        "PreformattedText Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct PreformattedTextTests {
     @Test("Basic pre renders correctly")
     func basicPreRendersCorrectly() {
         assertInlineSnapshot(
@@ -222,5 +223,6 @@ struct PreformattedTextTests {
                 </html>
       """#
         }
+    }
     }
 }

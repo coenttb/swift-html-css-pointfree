@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Image Element Tests",
-    .snapshots(record: .missing)
-)
-struct ImageTests {
+extension SnapshotTests {
+    @Suite struct ImageTests {
     @Test("Basic image renders correctly")
     func basicImageRendersCorrectly() {
         assertInlineSnapshot(
@@ -68,5 +65,6 @@ struct ImageTests {
       </html>
       """
         }
+    }
     }
 }

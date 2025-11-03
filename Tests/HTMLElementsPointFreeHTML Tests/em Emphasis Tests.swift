@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Emphasis Element Tests",
-    .snapshots(record: .missing)
-)
-struct EmphasisTests {
+extension SnapshotTests {
+    @Suite(
+        "Emphasis Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct EmphasisTests {
     @Test("Basic emphasis renders correctly")
     func basicEmphasisRendersCorrectly() {
         assertInlineSnapshot(
@@ -118,5 +119,6 @@ struct EmphasisTests {
       </html>
       """
         }
+    }
     }
 }

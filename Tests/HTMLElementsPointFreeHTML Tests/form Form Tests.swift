@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Form Element Tests",
-    .snapshots(record: .missing)
-)
-struct FormTests {
+extension SnapshotTests {
+    @Suite(
+        "Form Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct FormTests {
     @Test("Basic form renders correctly")
     func basicFormRendersCorrectly() {
         assertInlineSnapshot(
@@ -272,5 +273,6 @@ struct FormTests {
       </form>
       """
         }
+    }
     }
 }

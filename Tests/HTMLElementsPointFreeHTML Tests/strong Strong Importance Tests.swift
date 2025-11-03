@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "StrongImportance Element Tests",
-    .snapshots(record: .missing)
-)
-struct StrongImportanceTests {
+extension SnapshotTests {
+    @Suite(
+        "StrongImportance Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct StrongImportanceTests {
     @Test("Basic strong renders correctly")
     func basicStrongRendersCorrectly() {
         assertInlineSnapshot(
@@ -124,5 +125,6 @@ struct StrongImportanceTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "KeyboardInput Element Tests",
-    .snapshots(record: .missing)
-)
-struct KeyboardInputTests {
+extension SnapshotTests {
+    @Suite struct KeyboardInputTests {
     @Test("Basic kbd renders correctly")
     func basicKbdRendersCorrectly() {
         assertInlineSnapshot(
@@ -244,5 +241,6 @@ struct KeyboardInputTests {
       </html>
       """
         }
+    }
     }
 }

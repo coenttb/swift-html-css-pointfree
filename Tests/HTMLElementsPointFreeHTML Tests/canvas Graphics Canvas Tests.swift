@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Canvas Element Tests",
-    .snapshots(record: .missing)
-)
-struct CanvasTests {
+extension SnapshotTests {
+    @Suite(
+        "Canvas Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct CanvasTests {
     @Test("Basic canvas renders correctly")
     func basicCanvasRendersCorrectly() {
         assertInlineSnapshot(
@@ -95,5 +96,6 @@ struct CanvasTests {
       </html>
       """
         }
+    }
     }
 }

@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Header Element Tests",
-    .snapshots(record: .missing)
-)
-struct HeaderTests {
+extension SnapshotTests {
+    @Suite(
+        "Header Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct HeaderTests {
     @Test("Basic header renders correctly")
     func basicHeaderRendersCorrectly() {
         assertInlineSnapshot(
@@ -203,5 +204,6 @@ struct HeaderTests {
       </html>
       """
         }
+    }
     }
 }

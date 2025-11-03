@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Data Element Tests",
-    .snapshots(record: .missing)
-)
-struct DataTests {
+extension SnapshotTests {
+    @Suite(
+        "Data Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct DataTests {
     @Test("Basic data element renders correctly")
     func basicDataElementRendersCorrectly() {
         assertInlineSnapshot(
@@ -213,5 +214,6 @@ struct DataTests {
       </html>
       """
         }
+    }
     }
 }

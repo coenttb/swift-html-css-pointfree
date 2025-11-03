@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Video Embed Element Tests",
-    .snapshots(record: .missing)
-)
-struct VideoTests {
+extension SnapshotTests {
+    @Suite(
+        "Video Embed Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct VideoTests {
     @Test("Basic video renders correctly")
     func basicVideoRendersCorrectly() {
         assertInlineSnapshot(
@@ -183,5 +184,6 @@ struct VideoTests {
       </video>
       """
         }
+    }
     }
 }

@@ -4,11 +4,8 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "OptionGroup Element Tests",
-    .snapshots(record: .missing)
-)
-struct OptionGroupTests {
+extension SnapshotTests {
+    @Suite struct OptionGroupTests {
     @Test("Basic optgroup renders correctly")
     func basicOptgroupRendersCorrectly() {
         assertInlineSnapshot(
@@ -377,5 +374,6 @@ struct OptionGroupTests {
       </html>
       """
         }
+    }
     }
 }

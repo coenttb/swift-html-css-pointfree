@@ -4,11 +4,12 @@ import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
 
-@Suite(
-    "Description Details Element Tests",
-    .snapshots(record: .missing)
-)
-struct DescriptionDetailsTests {
+extension SnapshotTests {
+    @Suite(
+        "Description Details Element Tests",
+        .snapshots(record: .failed)
+    )
+    struct DescriptionDetailsTests {
     @Test("Basic description details renders correctly")
     func basicDescriptionDetailsRendersCorrectly() {
         assertInlineSnapshot(
@@ -189,5 +190,6 @@ struct DescriptionDetailsTests {
       </html>
       """
         }
+    }
     }
 }
