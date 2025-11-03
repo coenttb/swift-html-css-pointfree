@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "TableColumn Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("TableColumn Element Tests")
     struct TableColumnTests {
     @Test("Basic col renders correctly")
     func basicColRendersCorrectly() {

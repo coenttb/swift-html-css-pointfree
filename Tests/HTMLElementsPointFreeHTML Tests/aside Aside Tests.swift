@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Aside Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Aside Element Tests")
     struct AsideTests {
     @Test("Basic aside renders correctly")
     func basicAsideRendersCorrectly() {

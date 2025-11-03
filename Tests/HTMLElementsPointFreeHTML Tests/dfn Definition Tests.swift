@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Definition Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Definition Element Tests")
     struct DefinitionTests {
     @Test("Basic dfn renders correctly")
     func basicDfnRendersCorrectly() {

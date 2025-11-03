@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Inline Quotation Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Inline Quotation Element Tests")
     struct InlineQuotationTests {
     @Test("Basic inline quotation renders correctly")
     func basicInlineQuotationRendersCorrectly() {

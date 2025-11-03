@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Caption Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Caption Element Tests")
     struct CaptionTests {
     @Test("Basic caption renders correctly")
     func basicCaptionRendersCorrectly() {

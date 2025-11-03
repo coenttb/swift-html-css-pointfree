@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Script Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Script Element Tests")
     struct ScriptTests {
     @Test("Basic inline script renders correctly")
     func basicInlineScriptRendersCorrectly() {

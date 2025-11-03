@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Video Embed Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Video Embed Element Tests")
     struct VideoTests {
     @Test("Basic video renders correctly")
     func basicVideoRendersCorrectly() {

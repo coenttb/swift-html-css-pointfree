@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "ThematicBreak Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("ThematicBreak Element Tests")
     struct ThematicBreakTests {
     @Test("Basic hr renders correctly")
     func basicHrRendersCorrectly() {

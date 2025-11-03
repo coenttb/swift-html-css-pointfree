@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Disclosure Summary Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Disclosure Summary Element Tests")
     struct DisclosureSummaryTests {
     @Test("Basic disclosure summary renders correctly")
     func basicDisclosureSummaryRendersCorrectly() {

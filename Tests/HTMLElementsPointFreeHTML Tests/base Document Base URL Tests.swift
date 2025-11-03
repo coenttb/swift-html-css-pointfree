@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Base Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Base Element Tests")
     struct BaseTests {
     @Test("Base with href renders correctly")
     func baseWithHrefRendersCorrectly() {

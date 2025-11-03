@@ -4,11 +4,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "LineBreak Element Tests",
-        .snapshots(record: .failed),
-        .serialized
-    )
+    @Suite("LineBreak Element Tests")
     struct LineBreakTests {
     @Test("Basic br renders correctly")
     func basicLineBreakRendersCorrectly() {

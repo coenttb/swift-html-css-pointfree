@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "PreformattedText Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("PreformattedText Element Tests")
     struct PreformattedTextTests {
     @Test("Basic pre renders correctly")
     func basicPreRendersCorrectly() {
@@ -76,10 +73,10 @@ extension SnapshotTests {
         ) {
             #"""
 
-                <pre>   /\_/\
-                (  o.o  )
-                &gt; ^ &lt;</pre>
-      """#
+            <pre>   /\_/\
+              (  o.o  )
+               &gt; ^ &lt;</pre>
+            """#
         }
     }
 
@@ -188,40 +185,40 @@ extension SnapshotTests {
             as: .html
         ) {
             #"""
-                <!doctype html>
-                <html>
-                <head>
+            <!doctype html>
+            <html>
+              <head>
                 <style>
 
                 </style>
-                </head>
-                <body>
-                <article>
-                <h2>Code Example
-                </h2>
-                <p>Here's a simple Python function:
-                </p>
-                <pre><code>def greet(name):
+              </head>
+              <body>
+            <article>
+              <h2>Code Example
+              </h2>
+              <p>Here's a simple Python function:
+              </p>
+              <pre><code>def greet(name):
                 """
                 Greets a person with their name.
 
                 Args:
-                name (str): The person's name
+                    name (str): The person's name
 
                 Returns:
-                str: A greeting message
+                    str: A greeting message
                 """
                 return f"Hello, {name}!"
 
-                # Example usage
-                message = greet("World")
-                print(message)  # Output: Hello, World!</code></pre>
-                <p>This function demonstrates basic Python syntax including docstrings and f-string formatting.
-                </p>
-                </article>
-                </body>
-                </html>
-      """#
+            # Example usage
+            message = greet("World")
+            print(message)  # Output: Hello, World!</code></pre>
+              <p>This function demonstrates basic Python syntax including docstrings and f-string formatting.
+              </p>
+            </article>
+              </body>
+            </html>
+            """#
         }
     }
     }

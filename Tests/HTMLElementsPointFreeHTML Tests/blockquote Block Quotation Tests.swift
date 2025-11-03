@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Block Quotation Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Block Quotation Element Tests")
     struct BlockQuoteTests {
     @Test("Basic blockquote renders correctly")
     func basicBlockquoteRendersCorrectly() {

@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "TableBody Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("TableBody Element Tests")
     struct TableBodyTests {
     @Test("Basic tbody renders correctly")
     func basicTbodyRendersCorrectly() {

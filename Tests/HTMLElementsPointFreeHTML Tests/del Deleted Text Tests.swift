@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Del Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Del Element Tests")
     struct DelTests {
     @Test("Basic del renders correctly")
     func basicDelRendersCorrectly() {

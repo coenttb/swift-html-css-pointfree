@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Superscript Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Superscript Element Tests")
     struct SuperscriptTests {
     @Test("Basic sup renders correctly")
     func basicSupRendersCorrectly() {

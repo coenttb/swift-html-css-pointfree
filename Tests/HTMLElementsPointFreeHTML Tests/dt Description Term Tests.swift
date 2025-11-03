@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Description Term Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Description Term Element Tests")
     struct DescriptionTermTests {
     @Test("Basic description term renders correctly")
     func basicDescriptionTermRendersCorrectly() {

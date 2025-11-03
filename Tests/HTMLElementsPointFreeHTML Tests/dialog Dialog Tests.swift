@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Dialog Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Dialog Element Tests")
     struct DialogTests {
     @Test("Basic dialog renders correctly")
     func basicDialogRendersCorrectly() {

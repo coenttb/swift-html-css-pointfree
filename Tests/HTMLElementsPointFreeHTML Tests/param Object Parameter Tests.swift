@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Param Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Param Element Tests")
     struct ParamTests {
     @Test("Basic param renders correctly")
     func basicParamRendersCorrectly() {

@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "ProgressIndicator Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("ProgressIndicator Element Tests")
     struct ProgressIndicatorTests {
     @Test("Basic progress renders correctly")
     func basicProgressRendersCorrectly() {

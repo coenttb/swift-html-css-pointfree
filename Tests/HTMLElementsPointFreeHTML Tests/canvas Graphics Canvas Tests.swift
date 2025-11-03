@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Canvas Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Canvas Element Tests")
     struct CanvasTests {
     @Test("Basic canvas renders correctly")
     func basicCanvasRendersCorrectly() {

@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "LineBreakOpportunity Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("LineBreakOpportunity Element Tests")
     struct LineBreakOpportunityTests {
     @Test("Basic wbr renders correctly")
     func basicWbrRendersCorrectly() {

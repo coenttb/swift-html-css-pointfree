@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Emphasis Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Emphasis Element Tests")
     struct EmphasisTests {
     @Test("Basic emphasis renders correctly")
     func basicEmphasisRendersCorrectly() {

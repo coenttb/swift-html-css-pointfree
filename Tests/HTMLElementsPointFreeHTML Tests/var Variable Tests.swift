@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Variable Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Variable Element Tests")
     struct VariableTests {
     @Test("Basic var renders correctly")
     func basicVarRendersCorrectly() {

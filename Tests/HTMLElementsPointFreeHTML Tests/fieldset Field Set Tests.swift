@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "FieldSet Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("FieldSet Element Tests")
     struct FieldSetTests {
     @Test("Basic fieldset renders correctly")
     func basicFieldsetRendersCorrectly() {

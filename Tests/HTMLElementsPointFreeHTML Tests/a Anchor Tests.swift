@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Anchor Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Anchor Element Tests")
     struct AnchorTests {
     @Test("Basic anchor renders correctly")
     func basicAnchorRendersCorrectly() {

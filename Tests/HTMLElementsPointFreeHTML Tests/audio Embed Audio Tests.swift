@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Embed Audio Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Embed Audio Element Tests")
     struct AudioTests {
     @Test("Basic audio renders correctly")
     func basicAudioRendersCorrectly() {

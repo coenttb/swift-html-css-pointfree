@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "HTML Document Root Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("HTML Document Root Element Tests")
     struct RootTests {
     @Test("Basic HTML root renders correctly")
     func basicHTMLRootRendersCorrectly() {

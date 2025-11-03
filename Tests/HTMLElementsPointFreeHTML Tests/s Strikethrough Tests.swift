@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Strikethrough Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Strikethrough Element Tests")
     struct StrikethroughTests {
     @Test("Basic s renders correctly")
     func basicSRendersCorrectly() {
@@ -40,11 +37,11 @@ extension SnapshotTests {
         ) {
             """
 
-      <p>Original price:
-        <s>$99.99
-        </s> Now only $79.99!
-      </p>
-      """
+            <p>Original price: 
+              <s>$99.99
+              </s> Now only $79.99!
+            </p>
+            """
         }
     }
 
@@ -66,11 +63,11 @@ extension SnapshotTests {
         ) {
             """
 
-      <p>The event was scheduled for
-        <s>March 15th
-        </s> <strong>March 22nd</strong> due to scheduling conflicts.
-      </p>
-      """
+            <p>The event was scheduled for 
+              <s>March 15th
+              </s> <strong>March 22nd</strong> due to scheduling conflicts.
+            </p>
+            """
         }
     }
 
@@ -110,11 +107,11 @@ extension SnapshotTests {
         ) {
             """
 
-      <p>Product status:
-        <s>Available
-        </s> - Discontinued
-      </p>
-      """
+            <p>Product status: 
+              <s>Available
+              </s> - Discontinued
+            </p>
+            """
         }
     }
 
@@ -170,47 +167,47 @@ extension SnapshotTests {
             as: .html
         ) {
             """
-      <!doctype html>
-      <html>
-        <head>
-          <style>
+            <!doctype html>
+            <html>
+              <head>
+                <style>
 
-          </style>
-        </head>
-        <body>
-      <article>
-        <h2>Product Updates
-        </h2>
-        <section>
-          <h3>Pricing Changes
-          </h3>
-          <ul>
-            <li>Basic Plan:
-              <s>$9.99/month
-              </s> now $7.99/month
-            </li>
-            <li>Premium Plan:
-              <s>$19.99/month
-              </s> now $14.99/month
-            </li>
-            <li>Enterprise Plan:
-              <s>$49.99/month
-              </s> now $39.99/month
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3>Feature Updates
-          </h3>
-          <p>
-            <s>Beta feature X is now deprecated.
-            </s> Feature X has been officially released and is available to all users.
-          </p>
-        </section>
-      </article>
-        </body>
-      </html>
-      """
+                </style>
+              </head>
+              <body>
+            <article>
+              <h2>Product Updates
+              </h2>
+              <section>
+                <h3>Pricing Changes
+                </h3>
+                <ul>
+                  <li>Basic Plan: 
+                    <s>$9.99/month
+                    </s> now $7.99/month
+                  </li>
+                  <li>Premium Plan: 
+                    <s>$19.99/month
+                    </s> now $14.99/month
+                  </li>
+                  <li>Enterprise Plan: 
+                    <s>$49.99/month
+                    </s> now $39.99/month
+                  </li>
+                </ul>
+              </section>
+              <section>
+                <h3>Feature Updates
+                </h3>
+                <p>
+                  <s>Beta feature X is now deprecated.
+                  </s> Feature X has been officially released and is available to all users.
+                </p>
+              </section>
+            </article>
+              </body>
+            </html>
+            """
         }
     }
     }

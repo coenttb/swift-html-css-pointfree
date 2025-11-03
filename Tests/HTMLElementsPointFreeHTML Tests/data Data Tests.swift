@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Data Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Data Element Tests")
     struct DataTests {
     @Test("Basic data element renders correctly")
     func basicDataElementRendersCorrectly() {
@@ -198,21 +195,21 @@ extension SnapshotTests {
             as: .html
         ) {
             """
-      <!doctype html>
-      <html>
-        <head>
-          <style>
+            <!doctype html>
+            <html>
+              <head>
+                <style>
 
-          </style>
-        </head>
-        <body>
-      <div>Item:
-        <data value="SKU-789">Premium Coffee Maker
-        </data> is now available.
-      </div>
-        </body>
-      </html>
-      """
+                </style>
+              </head>
+              <body>
+            <div>Item: 
+              <data value="SKU-789">Premium Coffee Maker
+              </data> is now available.
+            </div>
+              </body>
+            </html>
+            """
         }
     }
     }

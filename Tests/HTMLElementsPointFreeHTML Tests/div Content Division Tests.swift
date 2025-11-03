@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "ContentDivision Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("ContentDivision Element Tests")
     struct ContentDivisionTests {
     @Test("Basic div renders correctly")
     func basicDivRendersCorrectly() {

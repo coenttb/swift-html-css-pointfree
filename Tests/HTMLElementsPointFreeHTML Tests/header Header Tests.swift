@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Header Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Header Element Tests")
     struct HeaderTests {
     @Test("Basic header renders correctly")
     func basicHeaderRendersCorrectly() {

@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "DataList Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("DataList Element Tests")
     struct DataListTests {
     @Test("Basic datalist renders correctly")
     func basicDatalistRendersCorrectly() {

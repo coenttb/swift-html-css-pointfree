@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Cite Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Cite Element Tests")
     struct CiteTests {
     @Test("Basic cite renders correctly")
     func basicCiteRendersCorrectly() {

@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "UnorderedList Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("UnorderedList Element Tests")
     struct UnorderedListTests {
     @Test("Basic ul renders correctly")
     func basicUlRendersCorrectly() {

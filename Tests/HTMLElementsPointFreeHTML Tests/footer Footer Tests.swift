@@ -5,10 +5,7 @@ import PointFreeHTMLTestSupport
 import Testing
 
 extension SnapshotTests {
-    @Suite(
-        "Footer Element Tests",
-        .snapshots(record: .failed)
-    )
+    @Suite("Footer Element Tests")
     struct FooterTests {
     @Test("Basic footer renders correctly")
     func basicFooterRendersCorrectly() {
