@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "BackfaceVisibility Tests",
-  .snapshots(record: nil)
+    "BackfaceVisibility Tests",
+    .snapshots(record: nil)
 )
 struct BackfaceVisibilityTests {
-  @Test("HTML element renders with backface-visibility hidden properly")
-  func htmlElementWithBackfaceVisibilityHiddenRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backfaceVisibility(.hidden)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with backface-visibility hidden properly")
+    func htmlElementWithBackfaceVisibilityHiddenRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backfaceVisibility(.hidden)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct BackfaceVisibilityTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with backface-visibility visible properly")
-  func htmlElementWithBackfaceVisibilityVisibleRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backfaceVisibility(.visible)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with backface-visibility visible properly")
+    func htmlElementWithBackfaceVisibilityVisibleRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backfaceVisibility(.visible)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct BackfaceVisibilityTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML backface-visibility with global value renders properly")
-  func htmlBackfaceVisibilityWithGlobalValueRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backfaceVisibility(.inherit)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML backface-visibility with global value renders properly")
+    func htmlBackfaceVisibilityWithGlobalValueRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backfaceVisibility(.inherit)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct BackfaceVisibilityTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML backface-visibility with media query renders properly")
-  func htmlBackfaceVisibilityWithMediaQueryRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backfaceVisibility(.hidden, media: .print)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML backface-visibility with media query renders properly")
+    func htmlBackfaceVisibilityWithMediaQueryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backfaceVisibility(.hidden, media: .print)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -121,18 +121,18 @@ struct BackfaceVisibilityTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML backface-visibility with pseudo-class renders properly")
-  func htmlBackfaceVisibilityWithPseudoClassRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backfaceVisibility(.hidden, pseudo: .hover)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML backface-visibility with pseudo-class renders properly")
+    func htmlBackfaceVisibilityWithPseudoClassRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backfaceVisibility(.hidden, pseudo: .hover)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -147,18 +147,18 @@ struct BackfaceVisibilityTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML backface-visibility with prefix renders properly")
-  func htmlBackfaceVisibilityWithPrefixRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backfaceVisibility(.hidden, selector: "my-component")
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML backface-visibility with prefix renders properly")
+    func htmlBackfaceVisibilityWithPrefixRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backfaceVisibility(.hidden, selector: "my-component")
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -173,6 +173,6 @@ struct BackfaceVisibilityTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

@@ -5,76 +5,76 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "B Element Tests",
-  .snapshots(record: .missing)
+    "B Element Tests",
+    .snapshots(record: .missing)
 )
 struct BTests {
-  @Test("Basic b element renders correctly")
-  func basicBElementRendersCorrectly() {
-    assertInlineSnapshot(
-      of: B {
-        HTMLText("Important")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic b element renders correctly")
+    func basicBElementRendersCorrectly() {
+        assertInlineSnapshot(
+            of: B {
+                HTMLText("Important")
+            },
+            as: .html
+        ) {
+            """
       <b>Important</b>
       """
-    }
-  }
-
-  @Test("B element within text renders correctly")
-  func bElementWithinTextRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Paragraph {
-        HTMLText("This is ")
-        B {
-          HTMLText("bold text")
         }
-        HTMLText(" in a paragraph.")
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("B element within text renders correctly")
+    func bElementWithinTextRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Paragraph {
+                HTMLText("This is ")
+                B {
+                    HTMLText("bold text")
+                }
+                HTMLText(" in a paragraph.")
+            },
+            as: .html
+        ) {
+            """
 
       <p>This is <b>bold text</b> in a paragraph.
       </p>
       """
-    }
-  }
-
-  @Test("Nested b elements render correctly")
-  func nestedBElementsRenderCorrectly() {
-    assertInlineSnapshot(
-      of: B {
-        HTMLText("Bold ")
-        Emphasis {
-          HTMLText("and emphasized")
         }
-        HTMLText(" text")
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Nested b elements render correctly")
+    func nestedBElementsRenderCorrectly() {
+        assertInlineSnapshot(
+            of: B {
+                HTMLText("Bold ")
+                Emphasis {
+                    HTMLText("and emphasized")
+                }
+                HTMLText(" text")
+            },
+            as: .html
+        ) {
+            """
       <b>Bold <em>and emphasized</em> text</b>
       """
-    }
-  }
-
-  @Test("B element within HTMLDocument renders correctly")
-  func bElementWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        ContentDivision {
-          B {
-            HTMLText("Warning: ")
-          }
-          HTMLText("This action cannot be undone.")
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("B element within HTMLDocument renders correctly")
+    func bElementWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                ContentDivision {
+                    B {
+                        HTMLText("Warning: ")
+                    }
+                    HTMLText("This action cannot be undone.")
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -88,6 +88,6 @@ struct BTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

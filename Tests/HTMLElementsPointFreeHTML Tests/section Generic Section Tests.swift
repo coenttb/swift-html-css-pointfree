@@ -5,24 +5,24 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Section Element Tests",
-  .snapshots(record: .missing)
+    "Section Element Tests",
+    .snapshots(record: .missing)
 )
 struct SectionTests {
-  @Test("Basic section renders correctly")
-  func basicSectionRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Section {
-        H2 {
-          HTMLText("Section Title")
-        }
-        Paragraph {
-          HTMLText("Section content goes here.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic section renders correctly")
+    func basicSectionRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Section {
+                H2 {
+                    HTMLText("Section Title")
+                }
+                Paragraph {
+                    HTMLText("Section content goes here.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <section>
         <h2>Section Title
@@ -31,36 +31,36 @@ struct SectionTests {
         </p>
       </section>
       """
+        }
     }
-  }
 
-  @Test("Section with multiple subsections renders correctly")
-  func sectionWithMultipleSubsectionsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Section {
-        H2 {
-          HTMLText("Main Section")
-        }
-        Section {
-          H3 {
-            HTMLText("Subsection 1")
-          }
-          Paragraph {
-            HTMLText("First subsection content.")
-          }
-        }
-        Section {
-          H3 {
-            HTMLText("Subsection 2")
-          }
-          Paragraph {
-            HTMLText("Second subsection content.")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Section with multiple subsections renders correctly")
+    func sectionWithMultipleSubsectionsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Section {
+                H2 {
+                    HTMLText("Main Section")
+                }
+                Section {
+                    H3 {
+                        HTMLText("Subsection 1")
+                    }
+                    Paragraph {
+                        HTMLText("First subsection content.")
+                    }
+                }
+                Section {
+                    H3 {
+                        HTMLText("Subsection 2")
+                    }
+                    Paragraph {
+                        HTMLText("Second subsection content.")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <section>
         <h2>Main Section
@@ -79,33 +79,33 @@ struct SectionTests {
         </section>
       </section>
       """
+        }
     }
-  }
 
-  @Test("Section with header and footer renders correctly")
-  func sectionWithHeaderAndFooterRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Section {
-        Header {
-          H2 {
-            HTMLText("Chapter 1")
-          }
-          Paragraph {
-            HTMLText("Introduction to the topic")
-          }
-        }
-        Paragraph {
-          HTMLText("Main chapter content goes here.")
-        }
-        Footer {
-          Paragraph {
-            HTMLText("End of Chapter 1")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Section with header and footer renders correctly")
+    func sectionWithHeaderAndFooterRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Section {
+                Header {
+                    H2 {
+                        HTMLText("Chapter 1")
+                    }
+                    Paragraph {
+                        HTMLText("Introduction to the topic")
+                    }
+                }
+                Paragraph {
+                    HTMLText("Main chapter content goes here.")
+                }
+                Footer {
+                    Paragraph {
+                        HTMLText("End of Chapter 1")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <section>
         <header>
@@ -122,36 +122,36 @@ struct SectionTests {
         </footer>
       </section>
       """
+        }
     }
-  }
 
-  @Test("Section with various content types renders correctly")
-  func sectionWithVariousContentTypesRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Section {
-        H2 {
-          HTMLText("Documentation")
-        }
-        Paragraph {
-          HTMLText("This section contains various content types:")
-        }
-        UnorderedList {
-          ListItem {
-            HTMLText("Text content")
-          }
-          ListItem {
-            HTMLText("Code examples")
-          }
-        }
-        PreformattedText {
-          Code {
-            HTMLText("function example() { return true; }")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Section with various content types renders correctly")
+    func sectionWithVariousContentTypesRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Section {
+                H2 {
+                    HTMLText("Documentation")
+                }
+                Paragraph {
+                    HTMLText("This section contains various content types:")
+                }
+                UnorderedList {
+                    ListItem {
+                        HTMLText("Text content")
+                    }
+                    ListItem {
+                        HTMLText("Code examples")
+                    }
+                }
+                PreformattedText {
+                    Code {
+                        HTMLText("function example() { return true; }")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <section>
         <h2>Documentation
@@ -167,35 +167,35 @@ struct SectionTests {
         <pre><code>function example() { return true; }</code></pre>
       </section>
       """
-    }
-  }
-
-  @Test("Section within HTMLDocument renders correctly")
-  func sectionWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Main {
-          Section {
-            H1 {
-              HTMLText("Introduction")
-            }
-            Paragraph {
-              HTMLText("Welcome to our comprehensive guide.")
-            }
-          }
-          Section {
-            H1 {
-              HTMLText("Getting Started")
-            }
-            Paragraph {
-              HTMLText("Follow these steps to begin.")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Section within HTMLDocument renders correctly")
+    func sectionWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Main {
+                    Section {
+                        H1 {
+                            HTMLText("Introduction")
+                        }
+                        Paragraph {
+                            HTMLText("Welcome to our comprehensive guide.")
+                        }
+                    }
+                    Section {
+                        H1 {
+                            HTMLText("Getting Started")
+                        }
+                        Paragraph {
+                            HTMLText("Follow these steps to begin.")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -221,6 +221,6 @@ struct SectionTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "BackgroundBlendMode Tests",
-  .snapshots(record: nil)
+    "BackgroundBlendMode Tests",
+    .snapshots(record: nil)
 )
 struct BackgroundBlendModeTests {
-  @Test("HTML element renders with background-blend-mode normal properly")
-  func htmlElementWithBackgroundBlendModeNormalRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.normal)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-blend-mode normal properly")
+    func htmlElementWithBackgroundBlendModeNormalRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.normal)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with background-blend-mode multiply properly")
-  func htmlElementWithBackgroundBlendModeMultiplyRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.multiply)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-blend-mode multiply properly")
+    func htmlElementWithBackgroundBlendModeMultiplyRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.multiply)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with background-blend-mode screen properly")
-  func htmlElementWithBackgroundBlendModeScreenRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.screen)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-blend-mode screen properly")
+    func htmlElementWithBackgroundBlendModeScreenRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.screen)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with background-blend-mode overlay properly")
-  func htmlElementWithBackgroundBlendModeOverlayRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.overlay)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-blend-mode overlay properly")
+    func htmlElementWithBackgroundBlendModeOverlayRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.overlay)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -119,18 +119,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-blend-mode with global value renders properly")
-  func htmlBackgroundBlendModeWithGlobalValueRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.inherit)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-blend-mode with global value renders properly")
+    func htmlBackgroundBlendModeWithGlobalValueRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.inherit)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -145,18 +145,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-blend-mode with media query renders properly")
-  func htmlBackgroundBlendModeWithMediaQueryRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.multiply, media: .print)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-blend-mode with media query renders properly")
+    func htmlBackgroundBlendModeWithMediaQueryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.multiply, media: .print)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -173,18 +173,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-blend-mode with pseudo-class renders properly")
-  func htmlBackgroundBlendModeWithPseudoClassRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.multiply, pseudo: .hover)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-blend-mode with pseudo-class renders properly")
+    func htmlBackgroundBlendModeWithPseudoClassRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.multiply, pseudo: .hover)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -199,18 +199,18 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-blend-mode with prefix renders properly")
-  func htmlBackgroundBlendModeWithPrefixRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundBlendMode(.multiply, selector: "my-component")
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-blend-mode with prefix renders properly")
+    func htmlBackgroundBlendModeWithPrefixRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundBlendMode(.multiply, selector: "my-component")
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -225,6 +225,6 @@ struct BackgroundBlendModeTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

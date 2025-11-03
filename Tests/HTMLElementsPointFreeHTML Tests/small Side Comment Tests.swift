@@ -5,94 +5,94 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Small Element Tests",
-  .snapshots(record: .missing)
+    "Small Element Tests",
+    .snapshots(record: .missing)
 )
 struct SmallTests {
-  @Test("Basic small renders correctly")
-  func basicSmallRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Small {
-        HTMLText("Fine print")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic small renders correctly")
+    func basicSmallRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Small {
+                HTMLText("Fine print")
+            },
+            as: .html
+        ) {
+            """
       <small>Fine print</small>
       """
-    }
-  }
-
-  @Test("Small for copyright notice renders correctly")
-  func smallForCopyrightNoticeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Footer {
-        Paragraph {
-          Small {
-            HTMLText("© 2024 Company Name. All rights reserved.")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Small for copyright notice renders correctly")
+    func smallForCopyrightNoticeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Footer {
+                Paragraph {
+                    Small {
+                        HTMLText("© 2024 Company Name. All rights reserved.")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <footer>
         <p><small>© 2024 Company Name. All rights reserved.</small>
         </p>
       </footer>
       """
+        }
     }
-  }
 
-  @Test("Small for disclaimers renders correctly")
-  func smallForDisclaimersRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        Paragraph {
-          HTMLText("Get up to 50% off selected items!")
-        }
-        Small {
-          HTMLText(
-            "*Offer valid until December 31, 2024. Terms and conditions apply. Cannot be combined with other offers."
-          )
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Small for disclaimers renders correctly")
+    func smallForDisclaimersRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                Paragraph {
+                    HTMLText("Get up to 50% off selected items!")
+                }
+                Small {
+                    HTMLText(
+                        "*Offer valid until December 31, 2024. Terms and conditions apply. Cannot be combined with other offers."
+                    )
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <div>
         <p>Get up to 50% off selected items!
         </p><small>*Offer valid until December 31, 2024. Terms and conditions apply. Cannot be combined with other offers.</small>
       </div>
       """
+        }
     }
-  }
 
-  @Test("Small for side comments renders correctly")
-  func smallForSideCommentsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Article {
-        H2 {
-          HTMLText("Product Review")
-        }
-        Paragraph {
-          HTMLText("This product exceeded my expectations. ")
-          Small {
-            HTMLText("(Based on 3 months of usage)")
-          }
-        }
-        Paragraph {
-          HTMLText("The build quality is excellent and worth the price. ")
-          Small {
-            HTMLText("(Compared to similar products in this price range)")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Small for side comments renders correctly")
+    func smallForSideCommentsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Article {
+                H2 {
+                    HTMLText("Product Review")
+                }
+                Paragraph {
+                    HTMLText("This product exceeded my expectations. ")
+                    Small {
+                        HTMLText("(Based on 3 months of usage)")
+                    }
+                }
+                Paragraph {
+                    HTMLText("The build quality is excellent and worth the price. ")
+                    Small {
+                        HTMLText("(Compared to similar products in this price range)")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <article>
         <h2>Product Review
@@ -103,79 +103,79 @@ struct SmallTests {
         </p>
       </article>
       """
+        }
     }
-  }
 
-  @Test("Small with nested elements renders correctly")
-  func smallWithNestedElementsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Small {
-        HTMLText("Last updated: ")
-        Time(datetime: "2024-01-15") {
-          HTMLText("January 15, 2024")
-        }
-        HTMLText(" by ")
-        Anchor(href: "/authors/john-doe") {
-          HTMLText("John Doe")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Small with nested elements renders correctly")
+    func smallWithNestedElementsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Small {
+                HTMLText("Last updated: ")
+                Time(datetime: "2024-01-15") {
+                    HTMLText("January 15, 2024")
+                }
+                HTMLText(" by ")
+                Anchor(href: "/authors/john-doe") {
+                    HTMLText("John Doe")
+                }
+            },
+            as: .html
+        ) {
+            """
       <small>Last updated: <time datetime="2024-01-15">January 15, 2024</time> by <a href="/authors/john-doe">John Doe</a></small>
       """
+        }
     }
-  }
 
-  @Test("Small within HTMLDocument renders correctly")
-  func smallWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Main {
-          Article {
-            Header {
-              H1 {
-                HTMLText("Website Terms of Service")
-              }
-              Small {
-                HTMLText("Last updated: January 1, 2024")
-              }
-            }
-            Section {
-              H2 {
-                HTMLText("Acceptance of Terms")
-              }
-              Paragraph {
-                HTMLText(
-                  "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement."
-                )
-              }
-            }
-            Footer {
-              Small {
-                HTMLText(
-                  "This document is legally binding. Please read carefully before using our services."
-                )
-              }
-            }
-          }
-        }
-        Footer {
-          Small {
-            Anchor(href: "/privacy") {
-              HTMLText("Privacy Policy")
-            }
-            HTMLText(" | ")
-            Anchor(href: "/terms") {
-              HTMLText("Terms of Service")
-            }
-            HTMLText(" | © 2024 Website Name")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Small within HTMLDocument renders correctly")
+    func smallWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Main {
+                    Article {
+                        Header {
+                            H1 {
+                                HTMLText("Website Terms of Service")
+                            }
+                            Small {
+                                HTMLText("Last updated: January 1, 2024")
+                            }
+                        }
+                        Section {
+                            H2 {
+                                HTMLText("Acceptance of Terms")
+                            }
+                            Paragraph {
+                                HTMLText(
+                                    "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement."
+                                )
+                            }
+                        }
+                        Footer {
+                            Small {
+                                HTMLText(
+                                    "This document is legally binding. Please read carefully before using our services."
+                                )
+                            }
+                        }
+                    }
+                }
+                Footer {
+                    Small {
+                        Anchor(href: "/privacy") {
+                            HTMLText("Privacy Policy")
+                        }
+                        HTMLText(" | ")
+                        Anchor(href: "/terms") {
+                            HTMLText("Terms of Service")
+                        }
+                        HTMLText(" | © 2024 Website Name")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -205,6 +205,6 @@ struct SmallTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

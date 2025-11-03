@@ -13,22 +13,22 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "HTML+CSS+PointFreeHTML Tests",
-  .snapshots(record: .missing)
+    "HTML+CSS+PointFreeHTML Tests",
+    .snapshots(record: .missing)
 )
 struct IntegrationTests {
-  @Test("HTML element with attributes and styles")
-  func anchorElementWithStyling() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Anchor(href: "#") {
-          "Click here!"
-        }
-        .color(.red)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element with attributes and styles")
+    func anchorElementWithStyling() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Anchor(href: "#") {
+                    "Click here!"
+                }
+                .color(.red)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct IntegrationTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("General2")
-  func general2() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Input.button(name: "name", value: "value", disabled: false, form: nil)
-      },
-      as: .html
-    ) {
-      """
+    @Test("General2")
+    func general2() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Input.button(name: "name", value: "value", disabled: false, form: nil)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -64,22 +64,22 @@ struct IntegrationTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test(
-    "General3",
-    .snapshots(record: .missing)
-  )
-  func general3() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        ContentDivision {}
-          .padding(.rem(3), media: .desktop)
-      },
-      as: .html
-    ) {
-      """
+    @Test(
+        "General3",
+        .snapshots(record: .missing)
+    )
+    func general3() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                ContentDivision {}
+                    .padding(.rem(3), media: .desktop)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -96,19 +96,19 @@ struct IntegrationTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with named color properly")
-  func htmlElementWithNamedColorRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        "Hello World"
-          .color(.named(.red))
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with named color properly")
+    func htmlElementWithNamedColorRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                "Hello World"
+                    .color(.named(.red))
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -121,6 +121,6 @@ struct IntegrationTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

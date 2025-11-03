@@ -5,24 +5,24 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Description List Element Tests",
-  .snapshots(record: .missing)
+    "Description List Element Tests",
+    .snapshots(record: .missing)
 )
 struct DescriptionListTests {
-  @Test("Basic description list renders correctly")
-  func basicDescriptionListRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("HTML")
-        }
-        DescriptionDetails {
-          HTMLText("HyperText Markup Language")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic description list renders correctly")
+    func basicDescriptionListRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("HTML")
+                }
+                DescriptionDetails {
+                    HTMLText("HyperText Markup Language")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>HTML
@@ -31,35 +31,35 @@ struct DescriptionListTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Description list with multiple terms renders correctly")
-  func descriptionListWithMultipleTermsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("Frontend")
-        }
-        DescriptionDetails {
-          HTMLText("The client-side part of a web application")
-        }
-        DescriptionTerm {
-          HTMLText("Backend")
-        }
-        DescriptionDetails {
-          HTMLText("The server-side part of a web application")
-        }
-        DescriptionTerm {
-          HTMLText("Database")
-        }
-        DescriptionDetails {
-          HTMLText("System for storing and organizing data")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description list with multiple terms renders correctly")
+    func descriptionListWithMultipleTermsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("Frontend")
+                }
+                DescriptionDetails {
+                    HTMLText("The client-side part of a web application")
+                }
+                DescriptionTerm {
+                    HTMLText("Backend")
+                }
+                DescriptionDetails {
+                    HTMLText("The server-side part of a web application")
+                }
+                DescriptionTerm {
+                    HTMLText("Database")
+                }
+                DescriptionDetails {
+                    HTMLText("System for storing and organizing data")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>Frontend
@@ -76,29 +76,29 @@ struct DescriptionListTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Description list with multiple definitions per term renders correctly")
-  func descriptionListWithMultipleDefinitionsPerTermRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("JavaScript")
-        }
-        DescriptionDetails {
-          HTMLText("A high-level programming language")
-        }
-        DescriptionDetails {
-          HTMLText("Originally designed for web browsers")
-        }
-        DescriptionDetails {
-          HTMLText("Now used for server-side development too")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description list with multiple definitions per term renders correctly")
+    func descriptionListWithMultipleDefinitionsPerTermRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("JavaScript")
+                }
+                DescriptionDetails {
+                    HTMLText("A high-level programming language")
+                }
+                DescriptionDetails {
+                    HTMLText("Originally designed for web browsers")
+                }
+                DescriptionDetails {
+                    HTMLText("Now used for server-side development too")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>JavaScript
@@ -111,30 +111,30 @@ struct DescriptionListTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Description list with complex content renders correctly")
-  func descriptionListWithComplexContentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          StrongImportance {
-            HTMLText("React")
-          }
-        }
-        DescriptionDetails {
-          Paragraph {
-            HTMLText("A JavaScript library for building user interfaces.")
-          }
-          Paragraph {
-            HTMLText("Developed by Facebook and maintained by Meta.")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description list with complex content renders correctly")
+    func descriptionListWithComplexContentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    StrongImportance {
+                        HTMLText("React")
+                    }
+                }
+                DescriptionDetails {
+                    Paragraph {
+                        HTMLText("A JavaScript library for building user interfaces.")
+                    }
+                    Paragraph {
+                        HTMLText("Developed by Facebook and maintained by Meta.")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt><strong>React</strong>
@@ -147,27 +147,27 @@ struct DescriptionListTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Description list with links renders correctly")
-  func descriptionListWithLinksRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("GitHub")
-        }
-        DescriptionDetails {
-          HTMLText("A platform for version control and collaboration. Visit ")
-          Anchor(href: "https://github.com") {
-            HTMLText("github.com")
-          }
-          HTMLText(" to learn more.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description list with links renders correctly")
+    func descriptionListWithLinksRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("GitHub")
+                }
+                DescriptionDetails {
+                    HTMLText("A platform for version control and collaboration. Visit ")
+                    Anchor(href: "https://github.com") {
+                        HTMLText("github.com")
+                    }
+                    HTMLText(" to learn more.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>GitHub
@@ -176,36 +176,36 @@ struct DescriptionListTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Nested description lists render correctly")
-  func nestedDescriptionListsRenderCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("Programming Languages")
-        }
-        DescriptionDetails {
-          DescriptionList {
-            DescriptionTerm {
-              HTMLText("Swift")
-            }
-            DescriptionDetails {
-              HTMLText("iOS and macOS development")
-            }
-            DescriptionTerm {
-              HTMLText("JavaScript")
-            }
-            DescriptionDetails {
-              HTMLText("Web development")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Nested description lists render correctly")
+    func nestedDescriptionListsRenderCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("Programming Languages")
+                }
+                DescriptionDetails {
+                    DescriptionList {
+                        DescriptionTerm {
+                            HTMLText("Swift")
+                        }
+                        DescriptionDetails {
+                            HTMLText("iOS and macOS development")
+                        }
+                        DescriptionTerm {
+                            HTMLText("JavaScript")
+                        }
+                        DescriptionDetails {
+                            HTMLText("Web development")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>Programming Languages
@@ -224,31 +224,31 @@ struct DescriptionListTests {
         </dd>
       </dl>
       """
-    }
-  }
-
-  @Test("Description list within HTMLDocument renders correctly")
-  func descriptionListWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        DescriptionList {
-          DescriptionTerm {
-            HTMLText("HTML")
-          }
-          DescriptionDetails {
-            HTMLText("The standard markup language for creating web pages")
-          }
-          DescriptionTerm {
-            HTMLText("CSS")
-          }
-          DescriptionDetails {
-            HTMLText("A stylesheet language for describing presentation")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Description list within HTMLDocument renders correctly")
+    func descriptionListWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                DescriptionList {
+                    DescriptionTerm {
+                        HTMLText("HTML")
+                    }
+                    DescriptionDetails {
+                        HTMLText("The standard markup language for creating web pages")
+                    }
+                    DescriptionTerm {
+                        HTMLText("CSS")
+                    }
+                    DescriptionDetails {
+                        HTMLText("A stylesheet language for describing presentation")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -270,6 +270,6 @@ struct DescriptionListTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

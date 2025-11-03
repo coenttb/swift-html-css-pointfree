@@ -5,34 +5,34 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "ThematicBreak Element Tests",
-  .snapshots(record: .missing)
+    "ThematicBreak Element Tests",
+    .snapshots(record: .missing)
 )
 struct ThematicBreakTests {
-  @Test("Basic hr renders correctly")
-  func basicHrRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ThematicBreak(),
-      as: .html
-    ) {
-      """
+    @Test("Basic hr renders correctly")
+    func basicHrRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ThematicBreak(),
+            as: .html
+        ) {
+            """
 
       <hr>
       """
-    }
-  }
-
-  @Test("ThematicBreak within HTMLDocument renders correctly")
-  func thematicBreakWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        ContentDivision {
-          ThematicBreak()
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("ThematicBreak within HTMLDocument renders correctly")
+    func thematicBreakWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                ContentDivision {
+                    ThematicBreak()
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -47,6 +47,6 @@ struct ThematicBreakTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

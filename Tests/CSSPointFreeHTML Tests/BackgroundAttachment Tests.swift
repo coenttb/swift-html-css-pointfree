@@ -14,19 +14,19 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "BackgroundAttachment Tests",
-  .snapshots(record: nil)
+    "BackgroundAttachment Tests",
+    .snapshots(record: nil)
 )
 struct BackgroundAttachmentTests {
-  @Test("HTML element renders with background-attachment fixed properly")
-  func htmlElementWithBackgroundAttachmentFixedRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.fixed)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-attachment fixed properly")
+    func htmlElementWithBackgroundAttachmentFixedRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.fixed)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -41,18 +41,18 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with background-attachment scroll properly")
-  func htmlElementWithBackgroundAttachmentScrollRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.scroll)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-attachment scroll properly")
+    func htmlElementWithBackgroundAttachmentScrollRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.scroll)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -67,18 +67,18 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML element renders with background-attachment local properly")
-  func htmlElementWithBackgroundAttachmentLocalRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.local)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML element renders with background-attachment local properly")
+    func htmlElementWithBackgroundAttachmentLocalRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.local)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -93,18 +93,18 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-attachment with global value renders properly")
-  func htmlBackgroundAttachmentWithGlobalValueRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.inherit)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-attachment with global value renders properly")
+    func htmlBackgroundAttachmentWithGlobalValueRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.inherit)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -119,18 +119,18 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-attachment with media query renders properly")
-  func htmlBackgroundAttachmentWithMediaQueryRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.fixed, media: .print)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-attachment with media query renders properly")
+    func htmlBackgroundAttachmentWithMediaQueryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.fixed, media: .print)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -147,18 +147,18 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-attachment with pseudo-class renders properly")
-  func htmlBackgroundAttachmentWithPseudoClassRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.fixed, pseudo: .hover)
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-attachment with pseudo-class renders properly")
+    func htmlBackgroundAttachmentWithPseudoClassRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.fixed, pseudo: .hover)
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -173,18 +173,18 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 
-  @Test("HTML background-attachment with prefix renders properly")
-  func htmlBackgroundAttachmentWithPrefixRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        div.backgroundAttachment(.fixed, selector: "my-component")
-      },
-      as: .html
-    ) {
-      """
+    @Test("HTML background-attachment with prefix renders properly")
+    func htmlBackgroundAttachmentWithPrefixRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                div.backgroundAttachment(.fixed, selector: "my-component")
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -199,6 +199,6 @@ struct BackgroundAttachmentTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

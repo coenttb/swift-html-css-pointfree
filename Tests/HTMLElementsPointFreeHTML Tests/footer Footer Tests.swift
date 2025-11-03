@@ -5,60 +5,60 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Footer Element Tests",
-  .snapshots(record: .missing)
+    "Footer Element Tests",
+    .snapshots(record: .missing)
 )
 struct FooterTests {
-  @Test("Basic footer renders correctly")
-  func basicFooterRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Footer {
-        Paragraph {
-          HTMLText("© 2024 Company Name. All rights reserved.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic footer renders correctly")
+    func basicFooterRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Footer {
+                Paragraph {
+                    HTMLText("© 2024 Company Name. All rights reserved.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <footer>
         <p>© 2024 Company Name. All rights reserved.
         </p>
       </footer>
       """
+        }
     }
-  }
 
-  @Test("Footer with navigation renders correctly")
-  func footerWithNavigationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Footer {
-        NavigationSection {
-          UnorderedList {
-            ListItem {
-              Anchor(href: "/privacy") {
-                HTMLText("Privacy Policy")
-              }
-            }
-            ListItem {
-              Anchor(href: "/terms") {
-                HTMLText("Terms of Service")
-              }
-            }
-            ListItem {
-              Anchor(href: "/contact") {
-                HTMLText("Contact Us")
-              }
-            }
-          }
-        }
-        Paragraph {
-          HTMLText("© 2024 All rights reserved.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Footer with navigation renders correctly")
+    func footerWithNavigationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Footer {
+                NavigationSection {
+                    UnorderedList {
+                        ListItem {
+                            Anchor(href: "/privacy") {
+                                HTMLText("Privacy Policy")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "/terms") {
+                                HTMLText("Terms of Service")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "/contact") {
+                                HTMLText("Contact Us")
+                            }
+                        }
+                    }
+                }
+                Paragraph {
+                    HTMLText("© 2024 All rights reserved.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <footer>
         <nav>
@@ -75,37 +75,37 @@ struct FooterTests {
         </p>
       </footer>
       """
+        }
     }
-  }
 
-  @Test("Footer for article renders correctly")
-  func footerForArticleRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Article {
-        H1 {
-          HTMLText("Article Title")
-        }
-        Paragraph {
-          HTMLText("Article content goes here.")
-        }
-        Footer {
-          Paragraph {
-            HTMLText("Author: ")
-            Anchor(href: "/authors/john-doe") {
-              HTMLText("John Doe")
-            }
-          }
-          Paragraph {
-            HTMLText("Published: January 15, 2024")
-          }
-          Paragraph {
-            HTMLText("Tags: web development, HTML, CSS")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Footer for article renders correctly")
+    func footerForArticleRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Article {
+                H1 {
+                    HTMLText("Article Title")
+                }
+                Paragraph {
+                    HTMLText("Article content goes here.")
+                }
+                Footer {
+                    Paragraph {
+                        HTMLText("Author: ")
+                        Anchor(href: "/authors/john-doe") {
+                            HTMLText("John Doe")
+                        }
+                    }
+                    Paragraph {
+                        HTMLText("Published: January 15, 2024")
+                    }
+                    Paragraph {
+                        HTMLText("Tags: web development, HTML, CSS")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <article>
         <h1>Article Title
@@ -122,83 +122,83 @@ struct FooterTests {
         </footer>
       </article>
       """
-    }
-  }
-
-  @Test("Footer with contact information renders correctly")
-  func footerWithContactInformationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Footer {
-        Address {
-          StrongImportance {
-            HTMLText("Company Name")
-          }
-          //                    BR()
-          HTMLText("123 Main Street")
-          //                    BR()
-          HTMLText("City, State 12345")
-          //                    BR()
-          Anchor(href: "mailto:info@company.com") {
-            HTMLText("info@company.com")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Footer with contact information renders correctly")
+    func footerWithContactInformationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Footer {
+                Address {
+                    StrongImportance {
+                        HTMLText("Company Name")
+                    }
+                    //                    BR()
+                    HTMLText("123 Main Street")
+                    //                    BR()
+                    HTMLText("City, State 12345")
+                    //                    BR()
+                    Anchor(href: "mailto:info@company.com") {
+                        HTMLText("info@company.com")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <footer>
         <address><strong>Company Name</strong>123 Main StreetCity, State 12345<a href="mailto:info@company.com">info@company.com</a>
         </address>
       </footer>
       """
+        }
     }
-  }
 
-  @Test("Footer within HTMLDocument renders correctly")
-  func footerWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Main {
-          Article {
-            H1 {
-              HTMLText("Page Content")
-            }
-            Paragraph {
-              HTMLText("Main content goes here.")
-            }
-          }
-        }
-        Footer {
-          ContentDivision {
-            ContentDivision {
-              H3 {
-                HTMLText("Quick Links")
-              }
-              UnorderedList {
-                ListItem {
-                  Anchor(href: "/about") {
-                    HTMLText("About Us")
-                  }
+    @Test("Footer within HTMLDocument renders correctly")
+    func footerWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Main {
+                    Article {
+                        H1 {
+                            HTMLText("Page Content")
+                        }
+                        Paragraph {
+                            HTMLText("Main content goes here.")
+                        }
+                    }
                 }
-                ListItem {
-                  Anchor(href: "/services") {
-                    HTMLText("Services")
-                  }
+                Footer {
+                    ContentDivision {
+                        ContentDivision {
+                            H3 {
+                                HTMLText("Quick Links")
+                            }
+                            UnorderedList {
+                                ListItem {
+                                    Anchor(href: "/about") {
+                                        HTMLText("About Us")
+                                    }
+                                }
+                                ListItem {
+                                    Anchor(href: "/services") {
+                                        HTMLText("Services")
+                                    }
+                                }
+                            }
+                        }
+                        ContentDivision {
+                            Paragraph {
+                                HTMLText("© 2024 Company. All rights reserved.")
+                            }
+                        }
+                    }
                 }
-              }
-            }
-            ContentDivision {
-              Paragraph {
-                HTMLText("© 2024 Company. All rights reserved.")
-              }
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -236,6 +236,6 @@ struct FooterTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

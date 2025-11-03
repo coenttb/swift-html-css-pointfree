@@ -5,60 +5,60 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Header Element Tests",
-  .snapshots(record: .missing)
+    "Header Element Tests",
+    .snapshots(record: .missing)
 )
 struct HeaderTests {
-  @Test("Basic header renders correctly")
-  func basicHeaderRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Header {
-        H1 {
-          HTMLText("Site Title")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic header renders correctly")
+    func basicHeaderRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Header {
+                H1 {
+                    HTMLText("Site Title")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <header>
         <h1>Site Title
         </h1>
       </header>
       """
+        }
     }
-  }
 
-  @Test("Header with navigation renders correctly")
-  func headerWithNavigationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Header {
-        H1 {
-          HTMLText("My Website")
-        }
-        NavigationSection {
-          UnorderedList {
-            ListItem {
-              Anchor(href: "/") {
-                HTMLText("Home")
-              }
-            }
-            ListItem {
-              Anchor(href: "/about") {
-                HTMLText("About")
-              }
-            }
-            ListItem {
-              Anchor(href: "/contact") {
-                HTMLText("Contact")
-              }
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Header with navigation renders correctly")
+    func headerWithNavigationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Header {
+                H1 {
+                    HTMLText("My Website")
+                }
+                NavigationSection {
+                    UnorderedList {
+                        ListItem {
+                            Anchor(href: "/") {
+                                HTMLText("Home")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "/about") {
+                                HTMLText("About")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "/contact") {
+                                HTMLText("Contact")
+                            }
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <header>
         <h1>My Website
@@ -75,32 +75,32 @@ struct HeaderTests {
         </nav>
       </header>
       """
+        }
     }
-  }
 
-  @Test("Header for article renders correctly")
-  func headerForArticleRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Article {
-        Header {
-          H1 {
-            HTMLText("Article Title")
-          }
-          Paragraph {
-            HTMLText("Published on ")
-            Time(datetime: "2024-01-15") {
-              HTMLText("January 15, 2024")
-            }
-            HTMLText(" by John Doe")
-          }
-        }
-        Paragraph {
-          HTMLText("Article content goes here.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Header for article renders correctly")
+    func headerForArticleRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Article {
+                Header {
+                    H1 {
+                        HTMLText("Article Title")
+                    }
+                    Paragraph {
+                        HTMLText("Published on ")
+                        Time(datetime: "2024-01-15") {
+                            HTMLText("January 15, 2024")
+                        }
+                        HTMLText(" by John Doe")
+                    }
+                }
+                Paragraph {
+                    HTMLText("Article content goes here.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <article>
         <header>
@@ -113,26 +113,26 @@ struct HeaderTests {
         </p>
       </article>
       """
+        }
     }
-  }
 
-  @Test("Header with multiple headings renders correctly")
-  func headerWithMultipleHeadingsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Header {
-        H1 {
-          HTMLText("Main Title")
-        }
-        H2 {
-          HTMLText("Subtitle")
-        }
-        Paragraph {
-          HTMLText("Additional header information")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Header with multiple headings renders correctly")
+    func headerWithMultipleHeadingsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Header {
+                H1 {
+                    HTMLText("Main Title")
+                }
+                H2 {
+                    HTMLText("Subtitle")
+                }
+                Paragraph {
+                    HTMLText("Additional header information")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <header>
         <h1>Main Title
@@ -143,40 +143,40 @@ struct HeaderTests {
         </p>
       </header>
       """
-    }
-  }
-
-  @Test("Header within HTMLDocument renders correctly")
-  func headerWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Header {
-          ContentDivision {
-            H1 {
-              Anchor(href: "/") {
-                HTMLText("Company Name")
-              }
-            }
-            NavigationSection {
-              UnorderedList {
-                ListItem {
-                  Anchor(href: "/products") {
-                    HTMLText("Products")
-                  }
-                }
-                ListItem {
-                  Anchor(href: "/services") {
-                    HTMLText("Services")
-                  }
-                }
-              }
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Header within HTMLDocument renders correctly")
+    func headerWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Header {
+                    ContentDivision {
+                        H1 {
+                            Anchor(href: "/") {
+                                HTMLText("Company Name")
+                            }
+                        }
+                        NavigationSection {
+                            UnorderedList {
+                                ListItem {
+                                    Anchor(href: "/products") {
+                                        HTMLText("Products")
+                                    }
+                                }
+                                ListItem {
+                                    Anchor(href: "/services") {
+                                        HTMLText("Services")
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -202,6 +202,6 @@ struct HeaderTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

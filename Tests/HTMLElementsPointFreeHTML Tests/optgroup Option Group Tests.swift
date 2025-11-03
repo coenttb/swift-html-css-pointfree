@@ -5,24 +5,24 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "OptionGroup Element Tests",
-  .snapshots(record: .missing)
+    "OptionGroup Element Tests",
+    .snapshots(record: .missing)
 )
 struct OptionGroupTests {
-  @Test("Basic optgroup renders correctly")
-  func basicOptgroupRendersCorrectly() {
-    assertInlineSnapshot(
-      of: OptionGroup {
-        Option(value: "item1") {
-          HTMLText("Item 1")
-        }
-        Option(value: "item2") {
-          HTMLText("Item 2")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic optgroup renders correctly")
+    func basicOptgroupRendersCorrectly() {
+        assertInlineSnapshot(
+            of: OptionGroup {
+                Option(value: "item1") {
+                    HTMLText("Item 1")
+                }
+                Option(value: "item2") {
+                    HTMLText("Item 2")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <optgroup>
         <option value="item1">Item 1
@@ -31,26 +31,26 @@ struct OptionGroupTests {
         </option>
       </optgroup>
       """
+        }
     }
-  }
 
-  @Test("Optgroup with label renders correctly")
-  func optgroupWithLabelRendersCorrectly() {
-    assertInlineSnapshot(
-      of: OptionGroup(label: "Fruits") {
-        Option(value: "apple") {
-          HTMLText("Apple")
-        }
-        Option(value: "banana") {
-          HTMLText("Banana")
-        }
-        Option(value: "orange") {
-          HTMLText("Orange")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Optgroup with label renders correctly")
+    func optgroupWithLabelRendersCorrectly() {
+        assertInlineSnapshot(
+            of: OptionGroup(label: "Fruits") {
+                Option(value: "apple") {
+                    HTMLText("Apple")
+                }
+                Option(value: "banana") {
+                    HTMLText("Banana")
+                }
+                Option(value: "orange") {
+                    HTMLText("Orange")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <optgroup label="Fruits">
         <option value="apple">Apple
@@ -61,26 +61,26 @@ struct OptionGroupTests {
         </option>
       </optgroup>
       """
+        }
     }
-  }
 
-  @Test("Optgroup with disabled attribute renders correctly")
-  func optgroupWithDisabledAttributeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: OptionGroup(
-        disabled: true,
-        label: "Unavailable Items"
-      ) {
-        Option(value: "out-of-stock-1") {
-          HTMLText("Out of Stock Item 1")
-        }
-        Option(value: "out-of-stock-2") {
-          HTMLText("Out of Stock Item 2")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Optgroup with disabled attribute renders correctly")
+    func optgroupWithDisabledAttributeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: OptionGroup(
+                disabled: true,
+                label: "Unavailable Items"
+            ) {
+                Option(value: "out-of-stock-1") {
+                    HTMLText("Out of Stock Item 1")
+                }
+                Option(value: "out-of-stock-2") {
+                    HTMLText("Out of Stock Item 2")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <optgroup label="Unavailable Items" disabled>
         <option value="out-of-stock-1">Out of Stock Item 1
@@ -89,44 +89,44 @@ struct OptionGroupTests {
         </option>
       </optgroup>
       """
+        }
     }
-  }
 
-  @Test("Multiple optgroups render correctly")
-  func multipleOptgroupsRenderCorrectly() {
-    assertInlineSnapshot(
-      of: Select(name: "food-categories") {
-        OptionGroup(label: "Fruits") {
-          Option(value: "apple") {
-            HTMLText("Apple")
-          }
-          Option(value: "banana") {
-            HTMLText("Banana")
-          }
-        }
-        OptionGroup(label: "Vegetables") {
-          Option(value: "carrot") {
-            HTMLText("Carrot")
-          }
-          Option(value: "spinach") {
-            HTMLText("Spinach")
-          }
-        }
-        OptionGroup(
-          disabled: true,
-          label: "Dairy"
+    @Test("Multiple optgroups render correctly")
+    func multipleOptgroupsRenderCorrectly() {
+        assertInlineSnapshot(
+            of: Select(name: "food-categories") {
+                OptionGroup(label: "Fruits") {
+                    Option(value: "apple") {
+                        HTMLText("Apple")
+                    }
+                    Option(value: "banana") {
+                        HTMLText("Banana")
+                    }
+                }
+                OptionGroup(label: "Vegetables") {
+                    Option(value: "carrot") {
+                        HTMLText("Carrot")
+                    }
+                    Option(value: "spinach") {
+                        HTMLText("Spinach")
+                    }
+                }
+                OptionGroup(
+                    disabled: true,
+                    label: "Dairy"
+                ) {
+                    Option(value: "milk") {
+                        HTMLText("Milk")
+                    }
+                    Option(value: "cheese") {
+                        HTMLText("Cheese")
+                    }
+                }
+            },
+            as: .html
         ) {
-          Option(value: "milk") {
-            HTMLText("Milk")
-          }
-          Option(value: "cheese") {
-            HTMLText("Cheese")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+            """
       <select name="food-categories">
       <optgroup label="Fruits">
         <option value="apple">Apple
@@ -147,36 +147,36 @@ struct OptionGroupTests {
         </option>
       </optgroup></select>
       """
+        }
     }
-  }
 
-  @Test("Optgroup with complex options renders correctly")
-  func optgroupWithComplexOptionsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: OptionGroup(label: "Software Licenses") {
-        Option(
-          selected: true,
-          value: "basic"
+    @Test("Optgroup with complex options renders correctly")
+    func optgroupWithComplexOptionsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: OptionGroup(label: "Software Licenses") {
+                Option(
+                    selected: true,
+                    value: "basic"
+                ) {
+                    HTMLText("Basic License ($10/month)")
+                }
+                Option(
+                    label: "Professional License - Full Features",
+                    value: "pro"
+                ) {
+                    HTMLText("Pro License ($25/month)")
+                }
+                Option(
+                    disabled: true,
+                    label: "Enterprise License - Contact Sales",
+                    value: "enterprise"
+                ) {
+                    HTMLText("Enterprise (Contact Us)")
+                }
+            },
+            as: .html
         ) {
-          HTMLText("Basic License ($10/month)")
-        }
-        Option(
-          label: "Professional License - Full Features",
-          value: "pro"
-        ) {
-          HTMLText("Pro License ($25/month)")
-        }
-        Option(
-          disabled: true,
-          label: "Enterprise License - Contact Sales",
-          value: "enterprise"
-        ) {
-          HTMLText("Enterprise (Contact Us)")
-        }
-      },
-      as: .html
-    ) {
-      """
+            """
 
       <optgroup label="Software Licenses">
         <option value="basic" selected>Basic License ($10/month)
@@ -187,124 +187,124 @@ struct OptionGroupTests {
         </option>
       </optgroup>
       """
-    }
-  }
-
-  @Test("OptionGroup within HTMLDocument renders correctly")
-  func optionGroupWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Form {
-          H2 {
-            HTMLText("Travel Booking")
-          }
-          FieldSet {
-            Legend {
-              HTMLText("Destination Selection")
-            }
-            Paragraph {
-              Label {
-                HTMLText("Choose your destination: ")
-                Select(
-                  name: "destination",
-                  required: true
-                ) {
-                  Option(value: "") {
-                    HTMLText("Select a destination")
-                  }
-                  OptionGroup(label: "Europe") {
-                    Option(value: "paris") {
-                      HTMLText("Paris, France")
-                    }
-                    Option(value: "london") {
-                      HTMLText("London, UK")
-                    }
-                    Option(value: "rome") {
-                      HTMLText("Rome, Italy")
-                    }
-                    Option(value: "barcelona") {
-                      HTMLText("Barcelona, Spain")
-                    }
-                  }
-                  OptionGroup(label: "Asia") {
-                    Option(value: "tokyo") {
-                      HTMLText("Tokyo, Japan")
-                    }
-                    Option(value: "seoul") {
-                      HTMLText("Seoul, South Korea")
-                    }
-                    Option(value: "beijing") {
-                      HTMLText("Beijing, China")
-                    }
-                  }
-                  OptionGroup(
-                    disabled: false,
-                    label: "Americas"
-                  ) {
-                    Option(value: "nyc") {
-                      HTMLText("New York City, USA")
-                    }
-                    Option(
-                      selected: true,
-                      value: "toronto"
-                    ) {
-                      HTMLText("Toronto, Canada")
-                    }
-                    Option(value: "mexico-city") {
-                      HTMLText("Mexico City, Mexico")
-                    }
-                  }
-                  OptionGroup(
-                    disabled: true,
-                    label: "Oceania"
-                  ) {
-                    Option(value: "sydney") {
-                      HTMLText("Sydney, Australia (Unavailable)")
-                    }
-                    Option(value: "auckland") {
-                      HTMLText("Auckland, New Zealand (Unavailable)")
-                    }
-                  }
-                }
-              }
-            }
-            Paragraph {
-              Label {
-                HTMLText("Travel class: ")
-                Select(name: "class") {
-                  OptionGroup(label: "Standard Options") {
-                    Option(
-                      selected: true,
-                      value: "economy"
-                    ) {
-                      HTMLText("Economy Class")
-                    }
-                    Option(value: "premium-economy") {
-                      HTMLText("Premium Economy")
-                    }
-                  }
-                  OptionGroup(label: "Premium Options") {
-                    Option(value: "business") {
-                      HTMLText("Business Class")
-                    }
-                    Option(value: "first") {
-                      HTMLText("First Class")
-                    }
-                  }
-                }
-              }
-            }
-          }
-          Paragraph {
-            Button(type: .submit) {
-              HTMLText("Search Flights")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("OptionGroup within HTMLDocument renders correctly")
+    func optionGroupWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Form {
+                    H2 {
+                        HTMLText("Travel Booking")
+                    }
+                    FieldSet {
+                        Legend {
+                            HTMLText("Destination Selection")
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Choose your destination: ")
+                                Select(
+                                    name: "destination",
+                                    required: true
+                                ) {
+                                    Option(value: "") {
+                                        HTMLText("Select a destination")
+                                    }
+                                    OptionGroup(label: "Europe") {
+                                        Option(value: "paris") {
+                                            HTMLText("Paris, France")
+                                        }
+                                        Option(value: "london") {
+                                            HTMLText("London, UK")
+                                        }
+                                        Option(value: "rome") {
+                                            HTMLText("Rome, Italy")
+                                        }
+                                        Option(value: "barcelona") {
+                                            HTMLText("Barcelona, Spain")
+                                        }
+                                    }
+                                    OptionGroup(label: "Asia") {
+                                        Option(value: "tokyo") {
+                                            HTMLText("Tokyo, Japan")
+                                        }
+                                        Option(value: "seoul") {
+                                            HTMLText("Seoul, South Korea")
+                                        }
+                                        Option(value: "beijing") {
+                                            HTMLText("Beijing, China")
+                                        }
+                                    }
+                                    OptionGroup(
+                                        disabled: false,
+                                        label: "Americas"
+                                    ) {
+                                        Option(value: "nyc") {
+                                            HTMLText("New York City, USA")
+                                        }
+                                        Option(
+                                            selected: true,
+                                            value: "toronto"
+                                        ) {
+                                            HTMLText("Toronto, Canada")
+                                        }
+                                        Option(value: "mexico-city") {
+                                            HTMLText("Mexico City, Mexico")
+                                        }
+                                    }
+                                    OptionGroup(
+                                        disabled: true,
+                                        label: "Oceania"
+                                    ) {
+                                        Option(value: "sydney") {
+                                            HTMLText("Sydney, Australia (Unavailable)")
+                                        }
+                                        Option(value: "auckland") {
+                                            HTMLText("Auckland, New Zealand (Unavailable)")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Travel class: ")
+                                Select(name: "class") {
+                                    OptionGroup(label: "Standard Options") {
+                                        Option(
+                                            selected: true,
+                                            value: "economy"
+                                        ) {
+                                            HTMLText("Economy Class")
+                                        }
+                                        Option(value: "premium-economy") {
+                                            HTMLText("Premium Economy")
+                                        }
+                                    }
+                                    OptionGroup(label: "Premium Options") {
+                                        Option(value: "business") {
+                                            HTMLText("Business Class")
+                                        }
+                                        Option(value: "first") {
+                                            HTMLText("First Class")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    Paragraph {
+                        Button(type: .submit) {
+                            HTMLText("Search Flights")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -376,6 +376,6 @@ struct OptionGroupTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

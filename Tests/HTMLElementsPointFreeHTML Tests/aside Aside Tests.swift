@@ -5,24 +5,24 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Aside Element Tests",
-  .snapshots(record: .missing)
+    "Aside Element Tests",
+    .snapshots(record: .missing)
 )
 struct AsideTests {
-  @Test("Basic aside renders correctly")
-  func basicAsideRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Aside {
-        H3 {
-          HTMLText("Related Information")
-        }
-        Paragraph {
-          HTMLText("This is additional information related to the main content.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic aside renders correctly")
+    func basicAsideRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Aside {
+                H3 {
+                    HTMLText("Related Information")
+                }
+                Paragraph {
+                    HTMLText("This is additional information related to the main content.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <aside>
         <h3>Related Information
@@ -31,37 +31,37 @@ struct AsideTests {
         </p>
       </aside>
       """
+        }
     }
-  }
 
-  @Test("Aside with sidebar content renders correctly")
-  func asideWithSidebarContentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Aside {
-        H3 {
-          HTMLText("Quick Links")
-        }
-        UnorderedList {
-          ListItem {
-            Anchor(href: "/about") {
-              HTMLText("About Us")
-            }
-          }
-          ListItem {
-            Anchor(href: "/contact") {
-              HTMLText("Contact")
-            }
-          }
-          ListItem {
-            Anchor(href: "/faq") {
-              HTMLText("FAQ")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Aside with sidebar content renders correctly")
+    func asideWithSidebarContentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Aside {
+                H3 {
+                    HTMLText("Quick Links")
+                }
+                UnorderedList {
+                    ListItem {
+                        Anchor(href: "/about") {
+                            HTMLText("About Us")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/contact") {
+                            HTMLText("Contact")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/faq") {
+                            HTMLText("FAQ")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <aside>
         <h3>Quick Links
@@ -76,36 +76,36 @@ struct AsideTests {
         </ul>
       </aside>
       """
+        }
     }
-  }
 
-  @Test("Aside within article renders correctly")
-  func asideWithinArticleRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Article {
-        H1 {
-          HTMLText("The History of Web Development")
-        }
-        Paragraph {
-          HTMLText("Web development has evolved significantly over the past few decades.")
-        }
-        Aside {
-          H4 {
-            HTMLText("Did You Know?")
-          }
-          Paragraph {
-            HTMLText("The first website was created in 1991 by Tim Berners-Lee.")
-          }
-        }
-        Paragraph {
-          HTMLText(
-            "From simple HTML pages to complex web applications, the field has grown tremendously."
-          )
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Aside within article renders correctly")
+    func asideWithinArticleRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Article {
+                H1 {
+                    HTMLText("The History of Web Development")
+                }
+                Paragraph {
+                    HTMLText("Web development has evolved significantly over the past few decades.")
+                }
+                Aside {
+                    H4 {
+                        HTMLText("Did You Know?")
+                    }
+                    Paragraph {
+                        HTMLText("The first website was created in 1991 by Tim Berners-Lee.")
+                    }
+                }
+                Paragraph {
+                    HTMLText(
+                        "From simple HTML pages to complex web applications, the field has grown tremendously."
+                    )
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <article>
         <h1>The History of Web Development
@@ -122,31 +122,31 @@ struct AsideTests {
         </p>
       </article>
       """
+        }
     }
-  }
 
-  @Test("Aside with advertisement content renders correctly")
-  func asideWithAdvertisementContentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Aside {
-        H3 {
-          HTMLText("Sponsored Content")
-        }
-        ContentDivision {
-          Anchor(href: "https://sponsor.example.com") {
-            Image(
-              src: "ad-banner.jpg",
-              alt: "Visit our sponsor"
-            )
-          }
-        }
-        Small {
-          HTMLText("Advertisement - Learn more about our sponsor")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Aside with advertisement content renders correctly")
+    func asideWithAdvertisementContentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Aside {
+                H3 {
+                    HTMLText("Sponsored Content")
+                }
+                ContentDivision {
+                    Anchor(href: "https://sponsor.example.com") {
+                        Image(
+                            src: "ad-banner.jpg",
+                            alt: "Visit our sponsor"
+                        )
+                    }
+                }
+                Small {
+                    HTMLText("Advertisement - Learn more about our sponsor")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <aside>
         <h3>Sponsored Content
@@ -155,44 +155,44 @@ struct AsideTests {
         </div><small>Advertisement - Learn more about our sponsor</small>
       </aside>
       """
-    }
-  }
-
-  @Test("Aside with table of contents renders correctly")
-  func asideWithTableOfContentsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Aside {
-        NavigationSection {
-          H3 {
-            HTMLText("In This Article")
-          }
-          OrderedList {
-            ListItem {
-              Anchor(href: "#introduction") {
-                HTMLText("Introduction")
-              }
-            }
-            ListItem {
-              Anchor(href: "#getting-started") {
-                HTMLText("Getting Started")
-              }
-            }
-            ListItem {
-              Anchor(href: "#advanced-topics") {
-                HTMLText("Advanced Topics")
-              }
-            }
-            ListItem {
-              Anchor(href: "#conclusion") {
-                HTMLText("Conclusion")
-              }
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Aside with table of contents renders correctly")
+    func asideWithTableOfContentsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Aside {
+                NavigationSection {
+                    H3 {
+                        HTMLText("In This Article")
+                    }
+                    OrderedList {
+                        ListItem {
+                            Anchor(href: "#introduction") {
+                                HTMLText("Introduction")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "#getting-started") {
+                                HTMLText("Getting Started")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "#advanced-topics") {
+                                HTMLText("Advanced Topics")
+                            }
+                        }
+                        ListItem {
+                            Anchor(href: "#conclusion") {
+                                HTMLText("Conclusion")
+                            }
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <aside>
         <nav>
@@ -211,63 +211,63 @@ struct AsideTests {
         </nav>
       </aside>
       """
-    }
-  }
-
-  @Test("Aside within HTMLDocument renders correctly")
-  func asideWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Main {
-          Article {
-            Header {
-              H1 {
-                HTMLText("Complete Guide to HTML5")
-              }
-            }
-            Section {
-              H2 {
-                HTMLText("Semantic Elements")
-              }
-              Paragraph {
-                HTMLText(
-                  "HTML5 introduced many new semantic elements that provide meaning to web content."
-                )
-              }
-            }
-          }
-          Aside {
-            Section {
-              H3 {
-                HTMLText("Related Articles")
-              }
-              UnorderedList {
-                ListItem {
-                  Anchor(href: "/css3-guide") {
-                    HTMLText("CSS3 Complete Guide")
-                  }
-                }
-                ListItem {
-                  Anchor(href: "/javascript-basics") {
-                    HTMLText("JavaScript Fundamentals")
-                  }
-                }
-              }
-            }
-            Section {
-              H3 {
-                HTMLText("Stay Updated")
-              }
-              Paragraph {
-                HTMLText("Subscribe to our newsletter for the latest web development tips.")
-              }
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Aside within HTMLDocument renders correctly")
+    func asideWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Main {
+                    Article {
+                        Header {
+                            H1 {
+                                HTMLText("Complete Guide to HTML5")
+                            }
+                        }
+                        Section {
+                            H2 {
+                                HTMLText("Semantic Elements")
+                            }
+                            Paragraph {
+                                HTMLText(
+                                    "HTML5 introduced many new semantic elements that provide meaning to web content."
+                                )
+                            }
+                        }
+                    }
+                    Aside {
+                        Section {
+                            H3 {
+                                HTMLText("Related Articles")
+                            }
+                            UnorderedList {
+                                ListItem {
+                                    Anchor(href: "/css3-guide") {
+                                        HTMLText("CSS3 Complete Guide")
+                                    }
+                                }
+                                ListItem {
+                                    Anchor(href: "/javascript-basics") {
+                                        HTMLText("JavaScript Fundamentals")
+                                    }
+                                }
+                            }
+                        }
+                        Section {
+                            H3 {
+                                HTMLText("Stay Updated")
+                            }
+                            Paragraph {
+                                HTMLText("Subscribe to our newsletter for the latest web development tips.")
+                            }
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -311,6 +311,6 @@ struct AsideTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

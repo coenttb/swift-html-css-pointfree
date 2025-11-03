@@ -5,29 +5,29 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "TableHead Element Tests",
-  .snapshots(record: .missing)
+    "TableHead Element Tests",
+    .snapshots(record: .missing)
 )
 struct TableHeadTests {
-  @Test("Basic thead renders correctly")
-  func basicTheadRendersCorrectly() {
-    assertInlineSnapshot(
-      of: TableHead {
-        TableRow {
-          TableHeader {
-            HTMLText("Name")
-          }
-          TableHeader {
-            HTMLText("Age")
-          }
-          TableHeader {
-            HTMLText("City")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic thead renders correctly")
+    func basicTheadRendersCorrectly() {
+        assertInlineSnapshot(
+            of: TableHead {
+                TableRow {
+                    TableHeader {
+                        HTMLText("Name")
+                    }
+                    TableHeader {
+                        HTMLText("Age")
+                    }
+                    TableHeader {
+                        HTMLText("City")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <thead>
         <tr>
@@ -40,45 +40,45 @@ struct TableHeadTests {
         </tr>
       </thead>
       """
+        }
     }
-  }
 
-  @Test("Thead with multiple rows renders correctly")
-  func theadWithMultipleRowsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: TableHead {
-        TableRow {
-          TableHeader(
-            colspan: 2,
-            scope: "colgroup"
-          ) {
-            HTMLText("Personal Information")
-          }
-          TableHeader(
-            colspan: 2,
-            scope: "colgroup"
-          ) {
-            HTMLText("Contact Details")
-          }
-        }
-        TableRow {
-          TableHeader(scope: "col") {
-            HTMLText("First Name")
-          }
-          TableHeader(scope: "col") {
-            HTMLText("Last Name")
-          }
-          TableHeader(scope: "col") {
-            HTMLText("Email")
-          }
-          TableHeader(scope: "col") {
-            HTMLText("Phone")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Thead with multiple rows renders correctly")
+    func theadWithMultipleRowsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: TableHead {
+                TableRow {
+                    TableHeader(
+                        colspan: 2,
+                        scope: "colgroup"
+                    ) {
+                        HTMLText("Personal Information")
+                    }
+                    TableHeader(
+                        colspan: 2,
+                        scope: "colgroup"
+                    ) {
+                        HTMLText("Contact Details")
+                    }
+                }
+                TableRow {
+                    TableHeader(scope: "col") {
+                        HTMLText("First Name")
+                    }
+                    TableHeader(scope: "col") {
+                        HTMLText("Last Name")
+                    }
+                    TableHeader(scope: "col") {
+                        HTMLText("Email")
+                    }
+                    TableHeader(scope: "col") {
+                        HTMLText("Phone")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <thead>
         <tr>
@@ -99,31 +99,31 @@ struct TableHeadTests {
         </tr>
       </thead>
       """
-    }
-  }
-
-  @Test("Thead with styling classes renders correctly")
-  func theadWithStylingClassesRendersCorrectly() {
-    assertInlineSnapshot(
-      of: TableHead {
-        TableRow {
-          TableHeader(scope: "col") {
-            HTMLText("Product Name")
-          }
-          TableHeader(scope: "col") {
-            HTMLText("Price")
-          }
-          TableHeader(scope: "col") {
-            HTMLText("Category")
-          }
-          TableHeader(scope: "col") {
-            HTMLText("Actions")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Thead with styling classes renders correctly")
+    func theadWithStylingClassesRendersCorrectly() {
+        assertInlineSnapshot(
+            of: TableHead {
+                TableRow {
+                    TableHeader(scope: "col") {
+                        HTMLText("Product Name")
+                    }
+                    TableHeader(scope: "col") {
+                        HTMLText("Price")
+                    }
+                    TableHeader(scope: "col") {
+                        HTMLText("Category")
+                    }
+                    TableHeader(scope: "col") {
+                        HTMLText("Actions")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <thead>
         <tr>
@@ -138,66 +138,66 @@ struct TableHeadTests {
         </tr>
       </thead>
       """
+        }
     }
-  }
 
-  @Test("Thead within complete table renders correctly")
-  func theadWithinCompleteTableRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Table {
-        Caption {
-          HTMLText("Employee Information")
-        }
-        TableHead {
-          TableRow {
-            TableHeader(scope: "col") {
-              HTMLText("ID")
-            }
-            TableHeader(scope: "col") {
-              HTMLText("Name")
-            }
-            TableHeader(scope: "col") {
-              HTMLText("Department")
-            }
-            TableHeader(scope: "col") {
-              HTMLText("Salary")
-            }
-          }
-        }
-        TableBody {
-          TableRow {
-            TableDataCell(headers: "emp-id") {
-              HTMLText("001")
-            }
-            TableDataCell(headers: "emp-name") {
-              HTMLText("John Doe")
-            }
-            TableDataCell(headers: "emp-dept") {
-              HTMLText("Engineering")
-            }
-            TableDataCell(headers: "emp-salary") {
-              HTMLText("$75,000")
-            }
-          }
-          TableRow {
-            TableDataCell(headers: "emp-id") {
-              HTMLText("002")
-            }
-            TableDataCell(headers: "emp-name") {
-              HTMLText("Jane Smith")
-            }
-            TableDataCell(headers: "emp-dept") {
-              HTMLText("Marketing")
-            }
-            TableDataCell(headers: "emp-salary") {
-              HTMLText("$65,000")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Thead within complete table renders correctly")
+    func theadWithinCompleteTableRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Table {
+                Caption {
+                    HTMLText("Employee Information")
+                }
+                TableHead {
+                    TableRow {
+                        TableHeader(scope: "col") {
+                            HTMLText("ID")
+                        }
+                        TableHeader(scope: "col") {
+                            HTMLText("Name")
+                        }
+                        TableHeader(scope: "col") {
+                            HTMLText("Department")
+                        }
+                        TableHeader(scope: "col") {
+                            HTMLText("Salary")
+                        }
+                    }
+                }
+                TableBody {
+                    TableRow {
+                        TableDataCell(headers: "emp-id") {
+                            HTMLText("001")
+                        }
+                        TableDataCell(headers: "emp-name") {
+                            HTMLText("John Doe")
+                        }
+                        TableDataCell(headers: "emp-dept") {
+                            HTMLText("Engineering")
+                        }
+                        TableDataCell(headers: "emp-salary") {
+                            HTMLText("$75,000")
+                        }
+                    }
+                    TableRow {
+                        TableDataCell(headers: "emp-id") {
+                            HTMLText("002")
+                        }
+                        TableDataCell(headers: "emp-name") {
+                            HTMLText("Jane Smith")
+                        }
+                        TableDataCell(headers: "emp-dept") {
+                            HTMLText("Marketing")
+                        }
+                        TableDataCell(headers: "emp-salary") {
+                            HTMLText("$65,000")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <table>
         <caption>Employee Information
@@ -238,132 +238,132 @@ struct TableHeadTests {
         </tbody>
       </table>
       """
-    }
-  }
-
-  @Test("TableHead within HTMLDocument renders correctly")
-  func tableHeadWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Article {
-          H2 {
-            HTMLText("Quarterly Sales Report")
-          }
-          Paragraph {
-            HTMLText(
-              "The following table shows our sales performance across different regions for Q1 2024:"
-            )
-          }
-          Table {
-            Caption {
-              StrongImportance {
-                HTMLText("Q1 2024 Sales by Region")
-              }
-              //                            BR()
-              Small {
-                HTMLText("All figures in USD thousands")
-              }
-            }
-            TableHead {
-              TableRow {
-                TableHeader(scope: "col") {
-                  HTMLText("Region")
-                }
-                TableHeader(
-                  colspan: "3",
-                  scope: "colgroup"
-                ) {
-                  HTMLText("Sales Metrics")
-                }
-                TableHeader(rowspan: 2, scope: "col") {
-                  HTMLText("Growth %")
-                }
-              }
-              TableRow {
-                TableHeader(scope: "col") {
-                  HTMLText("Q1 Total")
-                }
-                TableHeader(scope: "col") {
-                  HTMLText("January")
-                }
-                TableHeader(scope: "col") {
-                  HTMLText("February")
-                }
-                TableHeader(scope: "col") {
-                  HTMLText("March")
-                }
-              }
-            }
-            TableBody {
-              TableRow {
-                TableHeader(scope: "row") {
-                  HTMLText("North America")
-                }
-                TableDataCell {
-                  HTMLText("1,250")
-                }
-                TableDataCell {
-                  HTMLText("400")
-                }
-                TableDataCell {
-                  HTMLText("425")
-                }
-                TableDataCell {
-                  HTMLText("425")
-                }
-                TableDataCell {
-                  HTMLText("+12.5%")
-                }
-              }
-              TableRow {
-                TableHeader(scope: "row") {
-                  HTMLText("Europe")
-                }
-                TableDataCell {
-                  HTMLText("980")
-                }
-                TableDataCell {
-                  HTMLText("320")
-                }
-                TableDataCell {
-                  HTMLText("330")
-                }
-                TableDataCell {
-                  HTMLText("330")
-                }
-                TableDataCell {
-                  HTMLText("+8.7%")
-                }
-              }
-            }
-            TableFoot {
-              TableRow {
-                TableHeader(scope: "row") {
-                  HTMLText("Total")
-                }
-                TableDataCell {
-                  HTMLText("2,230")
-                }
-                TableDataCell {
-                  HTMLText("720")
-                }
-                TableDataCell {
-                  HTMLText("755")
-                }
-                TableDataCell {
-                  HTMLText("755")
-                }
-                TableDataCell {
-                  HTMLText("+10.6%")
-                }
-              }
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("TableHead within HTMLDocument renders correctly")
+    func tableHeadWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Article {
+                    H2 {
+                        HTMLText("Quarterly Sales Report")
+                    }
+                    Paragraph {
+                        HTMLText(
+                            "The following table shows our sales performance across different regions for Q1 2024:"
+                        )
+                    }
+                    Table {
+                        Caption {
+                            StrongImportance {
+                                HTMLText("Q1 2024 Sales by Region")
+                            }
+                            //                            BR()
+                            Small {
+                                HTMLText("All figures in USD thousands")
+                            }
+                        }
+                        TableHead {
+                            TableRow {
+                                TableHeader(scope: "col") {
+                                    HTMLText("Region")
+                                }
+                                TableHeader(
+                                    colspan: "3",
+                                    scope: "colgroup"
+                                ) {
+                                    HTMLText("Sales Metrics")
+                                }
+                                TableHeader(rowspan: 2, scope: "col") {
+                                    HTMLText("Growth %")
+                                }
+                            }
+                            TableRow {
+                                TableHeader(scope: "col") {
+                                    HTMLText("Q1 Total")
+                                }
+                                TableHeader(scope: "col") {
+                                    HTMLText("January")
+                                }
+                                TableHeader(scope: "col") {
+                                    HTMLText("February")
+                                }
+                                TableHeader(scope: "col") {
+                                    HTMLText("March")
+                                }
+                            }
+                        }
+                        TableBody {
+                            TableRow {
+                                TableHeader(scope: "row") {
+                                    HTMLText("North America")
+                                }
+                                TableDataCell {
+                                    HTMLText("1,250")
+                                }
+                                TableDataCell {
+                                    HTMLText("400")
+                                }
+                                TableDataCell {
+                                    HTMLText("425")
+                                }
+                                TableDataCell {
+                                    HTMLText("425")
+                                }
+                                TableDataCell {
+                                    HTMLText("+12.5%")
+                                }
+                            }
+                            TableRow {
+                                TableHeader(scope: "row") {
+                                    HTMLText("Europe")
+                                }
+                                TableDataCell {
+                                    HTMLText("980")
+                                }
+                                TableDataCell {
+                                    HTMLText("320")
+                                }
+                                TableDataCell {
+                                    HTMLText("330")
+                                }
+                                TableDataCell {
+                                    HTMLText("330")
+                                }
+                                TableDataCell {
+                                    HTMLText("+8.7%")
+                                }
+                            }
+                        }
+                        TableFoot {
+                            TableRow {
+                                TableHeader(scope: "row") {
+                                    HTMLText("Total")
+                                }
+                                TableDataCell {
+                                    HTMLText("2,230")
+                                }
+                                TableDataCell {
+                                    HTMLText("720")
+                                }
+                                TableDataCell {
+                                    HTMLText("755")
+                                }
+                                TableDataCell {
+                                    HTMLText("755")
+                                }
+                                TableDataCell {
+                                    HTMLText("+10.6%")
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -451,6 +451,6 @@ struct TableHeadTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

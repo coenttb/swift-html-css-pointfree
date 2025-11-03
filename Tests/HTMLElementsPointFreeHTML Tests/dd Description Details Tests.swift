@@ -5,46 +5,46 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Description Details Element Tests",
-  .snapshots(record: .missing)
+    "Description Details Element Tests",
+    .snapshots(record: .missing)
 )
 struct DescriptionDetailsTests {
-  @Test("Basic description details renders correctly")
-  func basicDescriptionDetailsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionDetails {
-        HTMLText("A markup language for creating web pages.")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic description details renders correctly")
+    func basicDescriptionDetailsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionDetails {
+                HTMLText("A markup language for creating web pages.")
+            },
+            as: .html
+        ) {
+            """
 
       <dd>A markup language for creating web pages.
       </dd>
       """
+        }
     }
-  }
 
-  @Test("Description details within description list renders correctly")
-  func descriptionDetailsWithinDescriptionListRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("HTML")
-        }
-        DescriptionDetails {
-          HTMLText("HyperText Markup Language")
-        }
-        DescriptionTerm {
-          HTMLText("CSS")
-        }
-        DescriptionDetails {
-          HTMLText("Cascading Style Sheets")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description details within description list renders correctly")
+    func descriptionDetailsWithinDescriptionListRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("HTML")
+                }
+                DescriptionDetails {
+                    HTMLText("HyperText Markup Language")
+                }
+                DescriptionTerm {
+                    HTMLText("CSS")
+                }
+                DescriptionDetails {
+                    HTMLText("Cascading Style Sheets")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>HTML
@@ -57,27 +57,27 @@ struct DescriptionDetailsTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Description details with complex content renders correctly")
-  func descriptionDetailsWithComplexContentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionDetails {
-        Paragraph {
-          HTMLText("JavaScript is a ")
-          StrongImportance {
-            HTMLText("dynamic")
-          }
-          HTMLText(" programming language.")
-        }
-        Paragraph {
-          HTMLText("It's commonly used for web development.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description details with complex content renders correctly")
+    func descriptionDetailsWithComplexContentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionDetails {
+                Paragraph {
+                    HTMLText("JavaScript is a ")
+                    StrongImportance {
+                        HTMLText("dynamic")
+                    }
+                    HTMLText(" programming language.")
+                }
+                Paragraph {
+                    HTMLText("It's commonly used for web development.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dd>
         <p>JavaScript is a <strong>dynamic</strong> programming language.
@@ -86,29 +86,29 @@ struct DescriptionDetailsTests {
         </p>
       </dd>
       """
+        }
     }
-  }
 
-  @Test("Multiple description details for single term renders correctly")
-  func multipleDescriptionDetailsForSingleTermRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("Web Browser")
-        }
-        DescriptionDetails {
-          HTMLText("Chrome - Google's web browser")
-        }
-        DescriptionDetails {
-          HTMLText("Firefox - Mozilla's web browser")
-        }
-        DescriptionDetails {
-          HTMLText("Safari - Apple's web browser")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Multiple description details for single term renders correctly")
+    func multipleDescriptionDetailsForSingleTermRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("Web Browser")
+                }
+                DescriptionDetails {
+                    HTMLText("Chrome - Google's web browser")
+                }
+                DescriptionDetails {
+                    HTMLText("Firefox - Mozilla's web browser")
+                }
+                DescriptionDetails {
+                    HTMLText("Safari - Apple's web browser")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>Web Browser
@@ -121,27 +121,27 @@ struct DescriptionDetailsTests {
         </dd>
       </dl>
       """
+        }
     }
-  }
 
-  @Test("Description details with links renders correctly")
-  func descriptionDetailsWithLinksRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DescriptionList {
-        DescriptionTerm {
-          HTMLText("Swift")
-        }
-        DescriptionDetails {
-          HTMLText("A programming language developed by Apple. Learn more at ")
-          Anchor(href: "https://swift.org") {
-            HTMLText("swift.org")
-          }
-          HTMLText(".")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Description details with links renders correctly")
+    func descriptionDetailsWithLinksRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DescriptionList {
+                DescriptionTerm {
+                    HTMLText("Swift")
+                }
+                DescriptionDetails {
+                    HTMLText("A programming language developed by Apple. Learn more at ")
+                    Anchor(href: "https://swift.org") {
+                        HTMLText("swift.org")
+                    }
+                    HTMLText(".")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <dl>
         <dt>Swift
@@ -150,27 +150,27 @@ struct DescriptionDetailsTests {
         </dd>
       </dl>
       """
-    }
-  }
-
-  @Test("Description details within HTMLDocument renders correctly")
-  func descriptionDetailsWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        DescriptionList {
-          DescriptionTerm {
-            HTMLText("API")
-          }
-          DescriptionDetails {
-            HTMLText(
-              "Application Programming Interface - a set of protocols and tools for building software applications."
-            )
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Description details within HTMLDocument renders correctly")
+    func descriptionDetailsWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                DescriptionList {
+                    DescriptionTerm {
+                        HTMLText("API")
+                    }
+                    DescriptionDetails {
+                        HTMLText(
+                            "Application Programming Interface - a set of protocols and tools for building software applications."
+                        )
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -188,6 +188,6 @@ struct DescriptionDetailsTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

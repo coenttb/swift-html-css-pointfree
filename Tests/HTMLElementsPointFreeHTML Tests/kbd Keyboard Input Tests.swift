@@ -5,102 +5,102 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "KeyboardInput Element Tests",
-  .snapshots(record: .missing)
+    "KeyboardInput Element Tests",
+    .snapshots(record: .missing)
 )
 struct KeyboardInputTests {
-  @Test("Basic kbd renders correctly")
-  func basicKbdRendersCorrectly() {
-    assertInlineSnapshot(
-      of: KeyboardInput {
-        HTMLText("Ctrl")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic kbd renders correctly")
+    func basicKbdRendersCorrectly() {
+        assertInlineSnapshot(
+            of: KeyboardInput {
+                HTMLText("Ctrl")
+            },
+            as: .html
+        ) {
+            """
       <kbd>Ctrl</kbd>
       """
+        }
     }
-  }
 
-  @Test("Kbd for keyboard shortcuts renders correctly")
-  func kbdForKeyboardShortcutsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Paragraph {
-        HTMLText("Press ")
-        KeyboardInput {
-          HTMLText("Ctrl")
-        }
-        HTMLText(" + ")
-        KeyboardInput {
-          HTMLText("C")
-        }
-        HTMLText(" to copy.")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Kbd for keyboard shortcuts renders correctly")
+    func kbdForKeyboardShortcutsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Paragraph {
+                HTMLText("Press ")
+                KeyboardInput {
+                    HTMLText("Ctrl")
+                }
+                HTMLText(" + ")
+                KeyboardInput {
+                    HTMLText("C")
+                }
+                HTMLText(" to copy.")
+            },
+            as: .html
+        ) {
+            """
 
       <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
       </p>
       """
+        }
     }
-  }
 
-  @Test("Kbd for complex key combinations renders correctly")
-  func kbdForComplexKeyCombinationsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Paragraph {
-        HTMLText("To save the file, use ")
-        KeyboardInput {
-          HTMLText("Ctrl")
-        }
-        HTMLText(" + ")
-        KeyboardInput {
-          HTMLText("Shift")
-        }
-        HTMLText(" + ")
-        KeyboardInput {
-          HTMLText("S")
-        }
-        HTMLText(".")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Kbd for complex key combinations renders correctly")
+    func kbdForComplexKeyCombinationsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Paragraph {
+                HTMLText("To save the file, use ")
+                KeyboardInput {
+                    HTMLText("Ctrl")
+                }
+                HTMLText(" + ")
+                KeyboardInput {
+                    HTMLText("Shift")
+                }
+                HTMLText(" + ")
+                KeyboardInput {
+                    HTMLText("S")
+                }
+                HTMLText(".")
+            },
+            as: .html
+        ) {
+            """
 
       <p>To save the file, use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd>.
       </p>
       """
+        }
     }
-  }
 
-  @Test("Kbd for function keys renders correctly")
-  func kbdForFunctionKeysRendersCorrectly() {
-    assertInlineSnapshot(
-      of: UnorderedList {
-        ListItem {
-          KeyboardInput {
-            HTMLText("F1")
-          }
-          HTMLText(" - Help")
-        }
-        ListItem {
-          KeyboardInput {
-            HTMLText("F5")
-          }
-          HTMLText(" - Refresh")
-        }
-        ListItem {
-          KeyboardInput {
-            HTMLText("F12")
-          }
-          HTMLText(" - Developer Tools")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Kbd for function keys renders correctly")
+    func kbdForFunctionKeysRendersCorrectly() {
+        assertInlineSnapshot(
+            of: UnorderedList {
+                ListItem {
+                    KeyboardInput {
+                        HTMLText("F1")
+                    }
+                    HTMLText(" - Help")
+                }
+                ListItem {
+                    KeyboardInput {
+                        HTMLText("F5")
+                    }
+                    HTMLText(" - Refresh")
+                }
+                ListItem {
+                    KeyboardInput {
+                        HTMLText("F12")
+                    }
+                    HTMLText(" - Developer Tools")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <ul>
         <li><kbd>F1</kbd> - Help
@@ -111,34 +111,34 @@ struct KeyboardInputTests {
         </li>
       </ul>
       """
+        }
     }
-  }
 
-  @Test("Kbd for system commands renders correctly")
-  func kbdForSystemCommandsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        H3 {
-          HTMLText("Terminal Commands")
-        }
-        Paragraph {
-          HTMLText("Type ")
-          KeyboardInput {
-            HTMLText("ls -la")
-          }
-          HTMLText(" to list all files.")
-        }
-        Paragraph {
-          HTMLText("Use ")
-          KeyboardInput {
-            HTMLText("cd /home/user")
-          }
-          HTMLText(" to change directory.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Kbd for system commands renders correctly")
+    func kbdForSystemCommandsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                H3 {
+                    HTMLText("Terminal Commands")
+                }
+                Paragraph {
+                    HTMLText("Type ")
+                    KeyboardInput {
+                        HTMLText("ls -la")
+                    }
+                    HTMLText(" to list all files.")
+                }
+                Paragraph {
+                    HTMLText("Use ")
+                    KeyboardInput {
+                        HTMLText("cd /home/user")
+                    }
+                    HTMLText(" to change directory.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <div>
         <h3>Terminal Commands
@@ -149,69 +149,69 @@ struct KeyboardInputTests {
         </p>
       </div>
       """
-    }
-  }
-
-  @Test("KeyboardInput within HTMLDocument renders correctly")
-  func keyboardInputWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Article {
-          H2 {
-            HTMLText("Keyboard Shortcuts")
-          }
-          Section {
-            H3 {
-              HTMLText("Text Editing")
-            }
-            UnorderedList {
-              ListItem {
-                KeyboardInput {
-                  HTMLText("Ctrl")
-                }
-                HTMLText(" + ")
-                KeyboardInput {
-                  HTMLText("Z")
-                }
-                HTMLText(" - Undo")
-              }
-              ListItem {
-                KeyboardInput {
-                  HTMLText("Ctrl")
-                }
-                HTMLText(" + ")
-                KeyboardInput {
-                  HTMLText("Y")
-                }
-                HTMLText(" - Redo")
-              }
-            }
-          }
-          Section {
-            H3 {
-              HTMLText("Navigation")
-            }
-            Paragraph {
-              HTMLText("Press ")
-              KeyboardInput {
-                HTMLText("Tab")
-              }
-              HTMLText(" to move to the next field, or ")
-              KeyboardInput {
-                HTMLText("Shift")
-              }
-              HTMLText(" + ")
-              KeyboardInput {
-                HTMLText("Tab")
-              }
-              HTMLText(" to move backward.")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("KeyboardInput within HTMLDocument renders correctly")
+    func keyboardInputWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Article {
+                    H2 {
+                        HTMLText("Keyboard Shortcuts")
+                    }
+                    Section {
+                        H3 {
+                            HTMLText("Text Editing")
+                        }
+                        UnorderedList {
+                            ListItem {
+                                KeyboardInput {
+                                    HTMLText("Ctrl")
+                                }
+                                HTMLText(" + ")
+                                KeyboardInput {
+                                    HTMLText("Z")
+                                }
+                                HTMLText(" - Undo")
+                            }
+                            ListItem {
+                                KeyboardInput {
+                                    HTMLText("Ctrl")
+                                }
+                                HTMLText(" + ")
+                                KeyboardInput {
+                                    HTMLText("Y")
+                                }
+                                HTMLText(" - Redo")
+                            }
+                        }
+                    }
+                    Section {
+                        H3 {
+                            HTMLText("Navigation")
+                        }
+                        Paragraph {
+                            HTMLText("Press ")
+                            KeyboardInput {
+                                HTMLText("Tab")
+                            }
+                            HTMLText(" to move to the next field, or ")
+                            KeyboardInput {
+                                HTMLText("Shift")
+                            }
+                            HTMLText(" + ")
+                            KeyboardInput {
+                                HTMLText("Tab")
+                            }
+                            HTMLText(" to move backward.")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -243,6 +243,6 @@ struct KeyboardInputTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

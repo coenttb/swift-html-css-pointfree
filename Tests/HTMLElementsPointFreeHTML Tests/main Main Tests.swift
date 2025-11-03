@@ -5,24 +5,24 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Main Element Tests",
-  .snapshots(record: .missing)
+    "Main Element Tests",
+    .snapshots(record: .missing)
 )
 struct MainTests {
-  @Test("Basic main renders correctly")
-  func basicMainRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Main {
-        H1 {
-          HTMLText("Welcome")
-        }
-        Paragraph {
-          HTMLText("This is the main content of the page.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic main renders correctly")
+    func basicMainRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Main {
+                H1 {
+                    HTMLText("Welcome")
+                }
+                Paragraph {
+                    HTMLText("This is the main content of the page.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <main>
         <h1>Welcome
@@ -31,35 +31,35 @@ struct MainTests {
         </p>
       </main>
       """
-    }
-  }
-
-  @Test("Main with article content renders correctly")
-  func mainWithArticleContentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Main {
-        Article {
-          Header {
-            H1 {
-              HTMLText("Blog Post Title")
-            }
-            Paragraph {
-              HTMLText("Published on January 15, 2024")
-            }
-          }
-          Paragraph {
-            HTMLText("This is the main content of the blog post.")
-          }
-          Footer {
-            Paragraph {
-              HTMLText("Tags: web development, HTML")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Main with article content renders correctly")
+    func mainWithArticleContentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Main {
+                Article {
+                    Header {
+                        H1 {
+                            HTMLText("Blog Post Title")
+                        }
+                        Paragraph {
+                            HTMLText("Published on January 15, 2024")
+                        }
+                    }
+                    Paragraph {
+                        HTMLText("This is the main content of the blog post.")
+                    }
+                    Footer {
+                        Paragraph {
+                            HTMLText("Tags: web development, HTML")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <main>
         <article>
@@ -78,41 +78,41 @@ struct MainTests {
         </article>
       </main>
       """
+        }
     }
-  }
 
-  @Test("Main with multiple sections renders correctly")
-  func mainWithMultipleSectionsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Main {
-        Section {
-          H2 {
-            HTMLText("Overview")
-          }
-          Paragraph {
-            HTMLText("This section provides an overview.")
-          }
-        }
-        Section {
-          H2 {
-            HTMLText("Details")
-          }
-          Paragraph {
-            HTMLText("This section contains detailed information.")
-          }
-        }
-        Section {
-          H2 {
-            HTMLText("Conclusion")
-          }
-          Paragraph {
-            HTMLText("This section concludes the content.")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Main with multiple sections renders correctly")
+    func mainWithMultipleSectionsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Main {
+                Section {
+                    H2 {
+                        HTMLText("Overview")
+                    }
+                    Paragraph {
+                        HTMLText("This section provides an overview.")
+                    }
+                }
+                Section {
+                    H2 {
+                        HTMLText("Details")
+                    }
+                    Paragraph {
+                        HTMLText("This section contains detailed information.")
+                    }
+                }
+                Section {
+                    H2 {
+                        HTMLText("Conclusion")
+                    }
+                    Paragraph {
+                        HTMLText("This section concludes the content.")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <main>
         <section>
@@ -135,33 +135,33 @@ struct MainTests {
         </section>
       </main>
       """
-    }
-  }
-
-  @Test("Main with aside content renders correctly")
-  func mainWithAsideContentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Main {
-        Article {
-          H1 {
-            HTMLText("Main Article")
-          }
-          Paragraph {
-            HTMLText("This is the primary content of the article.")
-          }
-          Aside {
-            H2 {
-              HTMLText("Related Information")
-            }
-            Paragraph {
-              HTMLText("This is tangentially related content.")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Main with aside content renders correctly")
+    func mainWithAsideContentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Main {
+                Article {
+                    H1 {
+                        HTMLText("Main Article")
+                    }
+                    Paragraph {
+                        HTMLText("This is the primary content of the article.")
+                    }
+                    Aside {
+                        H2 {
+                            HTMLText("Related Information")
+                        }
+                        Paragraph {
+                            HTMLText("This is tangentially related content.")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <main>
         <article>
@@ -178,51 +178,51 @@ struct MainTests {
         </article>
       </main>
       """
+        }
     }
-  }
 
-  @Test("Main within HTMLDocument renders correctly")
-  func mainWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Header {
-          H1 {
-            HTMLText("Site Title")
-          }
-          NavigationSection {
-            UnorderedList {
-              ListItem {
-                Anchor(href: "/") {
-                  HTMLText("Home")
+    @Test("Main within HTMLDocument renders correctly")
+    func mainWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Header {
+                    H1 {
+                        HTMLText("Site Title")
+                    }
+                    NavigationSection {
+                        UnorderedList {
+                            ListItem {
+                                Anchor(href: "/") {
+                                    HTMLText("Home")
+                                }
+                            }
+                            ListItem {
+                                Anchor(href: "/about") {
+                                    HTMLText("About")
+                                }
+                            }
+                        }
+                    }
                 }
-              }
-              ListItem {
-                Anchor(href: "/about") {
-                  HTMLText("About")
+                Main {
+                    Article {
+                        H1 {
+                            HTMLText("Page Title")
+                        }
+                        Paragraph {
+                            HTMLText("This is the main content area of the webpage.")
+                        }
+                    }
                 }
-              }
-            }
-          }
-        }
-        Main {
-          Article {
-            H1 {
-              HTMLText("Page Title")
-            }
-            Paragraph {
-              HTMLText("This is the main content area of the webpage.")
-            }
-          }
-        }
-        Footer {
-          Paragraph {
-            HTMLText("© 2024 Website Name")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+                Footer {
+                    Paragraph {
+                        HTMLText("© 2024 Website Name")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -258,6 +258,6 @@ struct MainTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

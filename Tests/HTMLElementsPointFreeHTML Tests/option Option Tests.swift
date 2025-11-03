@@ -5,144 +5,144 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Option Element Tests",
-  .snapshots(record: .missing)
+    "Option Element Tests",
+    .snapshots(record: .missing)
 )
 struct OptionTests {
-  //    @Test("Basic option renders correctly")
-  //    func basicOptionRendersCorrectly() {
-  //        assertInlineSnapshot(
-  //            of: Option {
-  //                HTMLText("Default Option")
-  //            },
-  //            as: .html
-  //        ) {
-  //            """
-  //            <option selected disabled label>Default Option</option>
-  //            """
-  //        }
-  //    }
+    //    @Test("Basic option renders correctly")
+    //    func basicOptionRendersCorrectly() {
+    //        assertInlineSnapshot(
+    //            of: Option {
+    //                HTMLText("Default Option")
+    //            },
+    //            as: .html
+    //        ) {
+    //            """
+    //            <option selected disabled label>Default Option</option>
+    //            """
+    //        }
+    //    }
 
-  @Test("Option with value renders correctly")
-  func optionWithValueRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Option(value: "us") {
-        HTMLText("United States")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Option with value renders correctly")
+    func optionWithValueRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Option(value: "us") {
+                HTMLText("United States")
+            },
+            as: .html
+        ) {
+            """
 
       <option value="us">United States
       </option>
       """
+        }
     }
-  }
 
-  @Test("Option with selected attribute renders correctly")
-  func optionWithSelectedAttributeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Option(
-        selected: true,
-        value: "default"
-      ) {
-        HTMLText("Default Selection")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Option with selected attribute renders correctly")
+    func optionWithSelectedAttributeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Option(
+                selected: true,
+                value: "default"
+            ) {
+                HTMLText("Default Selection")
+            },
+            as: .html
+        ) {
+            """
 
       <option value="default" selected>Default Selection
       </option>
       """
+        }
     }
-  }
 
-  @Test("Option with disabled attribute renders correctly")
-  func optionWithDisabledAttributeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Option(
-        disabled: true,
-        value: "unavailable"
-      ) {
-        HTMLText("Unavailable Option")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Option with disabled attribute renders correctly")
+    func optionWithDisabledAttributeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Option(
+                disabled: true,
+                value: "unavailable"
+            ) {
+                HTMLText("Unavailable Option")
+            },
+            as: .html
+        ) {
+            """
 
       <option value="unavailable" disabled>Unavailable Option
       </option>
       """
+        }
     }
-  }
 
-  @Test("Option with label attribute renders correctly")
-  func optionWithLabelAttributeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Option(
-        label: "New York State",
-        value: "ny"
-      ) {
-        HTMLText("NY")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Option with label attribute renders correctly")
+    func optionWithLabelAttributeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Option(
+                label: "New York State",
+                value: "ny"
+            ) {
+                HTMLText("NY")
+            },
+            as: .html
+        ) {
+            """
 
       <option value="ny" label="New York State">NY
       </option>
       """
+        }
     }
-  }
 
-  @Test("Option with all attributes renders correctly")
-  func optionWithAllAttributesRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Option(
-        disabled: false,
-        label: "Premium Plan - Best Value",
-        selected: true,
-        value: "premium"
-      ) {
-        HTMLText("Premium ($19.99/month)")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Option with all attributes renders correctly")
+    func optionWithAllAttributesRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Option(
+                disabled: false,
+                label: "Premium Plan - Best Value",
+                selected: true,
+                value: "premium"
+            ) {
+                HTMLText("Premium ($19.99/month)")
+            },
+            as: .html
+        ) {
+            """
 
       <option value="premium" selected label="Premium Plan - Best Value">Premium ($19.99/month)
       </option>
       """
+        }
     }
-  }
 
-  @Test("Options in select context render correctly")
-  func optionsInSelectContextRenderCorrectly() {
-    assertInlineSnapshot(
-      of: Select(name: "country") {
-        Option(value: "") {
-          HTMLText("Select a country")
-        }
-        Option(
-          selected: true,
-          value: "us"
+    @Test("Options in select context render correctly")
+    func optionsInSelectContextRenderCorrectly() {
+        assertInlineSnapshot(
+            of: Select(name: "country") {
+                Option(value: "") {
+                    HTMLText("Select a country")
+                }
+                Option(
+                    selected: true,
+                    value: "us"
+                ) {
+                    HTMLText("United States")
+                }
+                Option(value: "uk") {
+                    HTMLText("United Kingdom")
+                }
+                Option(
+                    disabled: true,
+                    value: "fr"
+                ) {
+                    HTMLText("France (Unavailable)")
+                }
+            },
+            as: .html
         ) {
-          HTMLText("United States")
-        }
-        Option(value: "uk") {
-          HTMLText("United Kingdom")
-        }
-        Option(
-          disabled: true,
-          value: "fr"
-        ) {
-          HTMLText("France (Unavailable)")
-        }
-      },
-      as: .html
-    ) {
-      """
+            """
       <select name="country">
       <option value>Select a country
       </option>
@@ -153,118 +153,118 @@ struct OptionTests {
       <option value="fr" disabled>France (Unavailable)
       </option></select>
       """
-    }
-  }
-
-  @Test("Option within HTMLDocument renders correctly")
-  func optionWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Form {
-          H2 {
-            HTMLText("Event Registration")
-          }
-          FieldSet {
-            Legend {
-              HTMLText("Event Selection")
-            }
-            Paragraph {
-              Label {
-                HTMLText("Choose an event: ")
-                Select(
-                  name: "event",
-                  required: true
-                ) {
-                  Option(value: "") {
-                    HTMLText("Please select an event")
-                  }
-                  Option(
-                    label: "JavaScript Workshop - Beginner Level",
-                    value: "workshop-js"
-                  ) {
-                    HTMLText("JS Workshop (Beginner)")
-                  }
-                  Option(
-                    label: "Swift Development Workshop - Intermediate Level",
-                    value: "workshop-swift"
-                  ) {
-                    HTMLText("Swift Workshop (Intermediate)")
-                  }
-                  Option(
-                    label: "Annual Tech Conference - All Levels",
-                    value: "conference"
-                  ) {
-                    HTMLText("Tech Conference")
-                  }
-                  Option(
-                    disabled: true,
-                    label: "Web Development Webinar - Sold Out",
-                    value: "webinar"
-                  ) {
-                    HTMLText("Webinar (Sold Out)")
-                  }
-                }
-              }
-            }
-            Paragraph {
-              Label {
-                HTMLText("Session Time: ")
-                Select(name: "session") {
-                  Option(
-                    selected: true,
-                    value: "morning"
-                  ) {
-                    HTMLText("Morning Session (9:00 AM)")
-                  }
-                  Option(value: "afternoon") {
-                    HTMLText("Afternoon Session (2:00 PM)")
-                  }
-                  Option(value: "evening") {
-                    HTMLText("Evening Session (6:00 PM)")
-                  }
-                }
-              }
-            }
-            Paragraph {
-              Label {
-                HTMLText("Experience Level: ")
-                Select(name: "level") {
-                  OptionGroup(label: "Programming Experience") {
-                    Option(value: "beginner") {
-                      HTMLText("Beginner (0-1 years)")
-                    }
-                    Option(
-                      selected: true,
-                      value: "intermediate"
-                    ) {
-                      HTMLText("Intermediate (2-5 years)")
-                    }
-                    Option(value: "advanced") {
-                      HTMLText("Advanced (5+ years)")
-                    }
-                  }
-                  OptionGroup(label: "Other") {
-                    Option(value: "student") {
-                      HTMLText("Student")
-                    }
-                    Option(value: "educator") {
-                      HTMLText("Educator/Teacher")
-                    }
-                  }
-                }
-              }
-            }
-          }
-          Paragraph {
-            Button(type: .submit) {
-              HTMLText("Register")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Option within HTMLDocument renders correctly")
+    func optionWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Form {
+                    H2 {
+                        HTMLText("Event Registration")
+                    }
+                    FieldSet {
+                        Legend {
+                            HTMLText("Event Selection")
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Choose an event: ")
+                                Select(
+                                    name: "event",
+                                    required: true
+                                ) {
+                                    Option(value: "") {
+                                        HTMLText("Please select an event")
+                                    }
+                                    Option(
+                                        label: "JavaScript Workshop - Beginner Level",
+                                        value: "workshop-js"
+                                    ) {
+                                        HTMLText("JS Workshop (Beginner)")
+                                    }
+                                    Option(
+                                        label: "Swift Development Workshop - Intermediate Level",
+                                        value: "workshop-swift"
+                                    ) {
+                                        HTMLText("Swift Workshop (Intermediate)")
+                                    }
+                                    Option(
+                                        label: "Annual Tech Conference - All Levels",
+                                        value: "conference"
+                                    ) {
+                                        HTMLText("Tech Conference")
+                                    }
+                                    Option(
+                                        disabled: true,
+                                        label: "Web Development Webinar - Sold Out",
+                                        value: "webinar"
+                                    ) {
+                                        HTMLText("Webinar (Sold Out)")
+                                    }
+                                }
+                            }
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Session Time: ")
+                                Select(name: "session") {
+                                    Option(
+                                        selected: true,
+                                        value: "morning"
+                                    ) {
+                                        HTMLText("Morning Session (9:00 AM)")
+                                    }
+                                    Option(value: "afternoon") {
+                                        HTMLText("Afternoon Session (2:00 PM)")
+                                    }
+                                    Option(value: "evening") {
+                                        HTMLText("Evening Session (6:00 PM)")
+                                    }
+                                }
+                            }
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Experience Level: ")
+                                Select(name: "level") {
+                                    OptionGroup(label: "Programming Experience") {
+                                        Option(value: "beginner") {
+                                            HTMLText("Beginner (0-1 years)")
+                                        }
+                                        Option(
+                                            selected: true,
+                                            value: "intermediate"
+                                        ) {
+                                            HTMLText("Intermediate (2-5 years)")
+                                        }
+                                        Option(value: "advanced") {
+                                            HTMLText("Advanced (5+ years)")
+                                        }
+                                    }
+                                    OptionGroup(label: "Other") {
+                                        Option(value: "student") {
+                                            HTMLText("Student")
+                                        }
+                                        Option(value: "educator") {
+                                            HTMLText("Educator/Teacher")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    Paragraph {
+                        Button(type: .submit) {
+                            HTMLText("Register")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -322,6 +322,6 @@ struct OptionTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

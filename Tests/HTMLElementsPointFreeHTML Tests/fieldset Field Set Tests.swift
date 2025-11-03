@@ -5,59 +5,59 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "FieldSet Element Tests",
-  .snapshots(record: .missing)
+    "FieldSet Element Tests",
+    .snapshots(record: .missing)
 )
 struct FieldSetTests {
-  @Test("Basic fieldset renders correctly")
-  func basicFieldsetRendersCorrectly() {
-    assertInlineSnapshot(
-      of: FieldSet {
-        Legend {
-          HTMLText("Personal Information")
-        }
-        Label {
-          HTMLText("Name: ")
-          Input(
-            name: "name",
-            type: .text(.init()),
-          )
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic fieldset renders correctly")
+    func basicFieldsetRendersCorrectly() {
+        assertInlineSnapshot(
+            of: FieldSet {
+                Legend {
+                    HTMLText("Personal Information")
+                }
+                Label {
+                    HTMLText("Name: ")
+                    Input(
+                        name: "name",
+                        type: .text(.init())
+                    )
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <fieldset>
         <legend>Personal Information
         </legend><label>Name: <input type="text" name="name"></label>
       </fieldset>
       """
+        }
     }
-  }
 
-  @Test("Fieldset with name renders correctly")
-  func fieldsetWithNameRendersCorrectly() {
-    assertInlineSnapshot(
-      of: FieldSet(
-        name: "user-details"
-      ) {
-        Legend {
-          HTMLText("User Details")
-        }
-        Paragraph {
-          Label {
-            HTMLText("Email: ")
-            Input(
-              name: "email",
-              type: .email(.init())
-            )
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Fieldset with name renders correctly")
+    func fieldsetWithNameRendersCorrectly() {
+        assertInlineSnapshot(
+            of: FieldSet(
+                name: "user-details"
+            ) {
+                Legend {
+                    HTMLText("User Details")
+                }
+                Paragraph {
+                    Label {
+                        HTMLText("Email: ")
+                        Input(
+                            name: "email",
+                            type: .email(.init())
+                        )
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <fieldset name="user-details">
         <legend>User Details
@@ -66,76 +66,76 @@ struct FieldSetTests {
         </p>
       </fieldset>
       """
+        }
     }
-  }
 
-  @Test("Fieldset with disabled attribute renders correctly")
-  func fieldsetWithDisabledAttributeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: FieldSet(
-        disabled: true
-      ) {
-        Legend {
-          HTMLText("Disabled Section")
-        }
-        Label {
-          HTMLText("Username: ")
-          Input(
-            name: "username",
-            type: .text(.init()),
-          )
-        }
-        Label {
-          HTMLText("Password: ")
-          Input(
-            name: "password",
-            type: .password(.init())
-          )
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Fieldset with disabled attribute renders correctly")
+    func fieldsetWithDisabledAttributeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: FieldSet(
+                disabled: true
+            ) {
+                Legend {
+                    HTMLText("Disabled Section")
+                }
+                Label {
+                    HTMLText("Username: ")
+                    Input(
+                        name: "username",
+                        type: .text(.init())
+                    )
+                }
+                Label {
+                    HTMLText("Password: ")
+                    Input(
+                        name: "password",
+                        type: .password(.init())
+                    )
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <fieldset disabled>
         <legend>Disabled Section
         </legend><label>Username: <input type="text" name="username"></label><label>Password: <input type="password" name="password"></label>
       </fieldset>
       """
+        }
     }
-  }
 
-  @Test("Fieldset with form association renders correctly")
-  func fieldsetWithFormAssociationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: FieldSet(
-        form: "contact-form",
-        name: "contact-info"
-      ) {
-        Legend {
-          HTMLText("Contact Information")
-        }
-        Paragraph {
-          Label {
-            HTMLText("Phone: ")
-            Input(
-              name: "phone",
-              type: .tel(.init())
-            )
-          }
-        }
-        Paragraph {
-          Label {
-            HTMLText("Address: ")
-            Textarea(name: "address") {
-              HTMLText("Enter your address")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Fieldset with form association renders correctly")
+    func fieldsetWithFormAssociationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: FieldSet(
+                form: "contact-form",
+                name: "contact-info"
+            ) {
+                Legend {
+                    HTMLText("Contact Information")
+                }
+                Paragraph {
+                    Label {
+                        HTMLText("Phone: ")
+                        Input(
+                            name: "phone",
+                            type: .tel(.init())
+                        )
+                    }
+                }
+                Paragraph {
+                    Label {
+                        HTMLText("Address: ")
+                        Textarea(name: "address") {
+                            HTMLText("Enter your address")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <fieldset name="contact-info" form="contact-form">
         <legend>Contact Information
@@ -146,50 +146,50 @@ struct FieldSetTests {
         </p>
       </fieldset>
       """
+        }
     }
-  }
 
-  @Test("Nested fieldsets render correctly")
-  func nestedFieldsetsRenderCorrectly() {
-    assertInlineSnapshot(
-      of: FieldSet(
-        name: "shipping"
-      ) {
-        Legend {
-          HTMLText("Shipping Information")
-        }
-        FieldSet(
-          name: "billing-address"
+    @Test("Nested fieldsets render correctly")
+    func nestedFieldsetsRenderCorrectly() {
+        assertInlineSnapshot(
+            of: FieldSet(
+                name: "shipping"
+            ) {
+                Legend {
+                    HTMLText("Shipping Information")
+                }
+                FieldSet(
+                    name: "billing-address"
+                ) {
+                    Legend {
+                        HTMLText("Billing Address")
+                    }
+                    Label {
+                        HTMLText("Street: ")
+                        Input(
+                            name: "billing-street",
+                            type: .text(.init())
+                        )
+                    }
+                }
+                FieldSet(
+                    name: "shipping-address"
+                ) {
+                    Legend {
+                        HTMLText("Shipping Address")
+                    }
+                    Label {
+                        HTMLText("Street: ")
+                        Input(
+                            name: "shipping-street",
+                            type: .text(.init())
+                        )
+                    }
+                }
+            },
+            as: .html
         ) {
-          Legend {
-            HTMLText("Billing Address")
-          }
-          Label {
-            HTMLText("Street: ")
-            Input(
-              name: "billing-street",
-              type: .text(.init())
-            )
-          }
-        }
-        FieldSet(
-          name: "shipping-address"
-        ) {
-          Legend {
-            HTMLText("Shipping Address")
-          }
-          Label {
-            HTMLText("Street: ")
-            Input(
-              name: "shipping-street",
-              type: .text(.init())
-            )
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+            """
 
       <fieldset name="shipping">
         <legend>Shipping Information
@@ -204,88 +204,88 @@ struct FieldSetTests {
         </fieldset>
       </fieldset>
       """
-    }
-  }
-
-  @Test("FieldSet within HTMLDocument renders correctly")
-  func fieldSetWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Form(action: "/register", method: .post) {
-          H2 {
-            HTMLText("User Registration")
-          }
-          FieldSet(
-            name: "personal-info"
-          ) {
-            Legend {
-              HTMLText("Personal Information")
-            }
-            Paragraph {
-              Label {
-                HTMLText("First Name: ")
-                Input(
-                  name: "firstName",
-                  type: .text(.init())
-                )
-              }
-            }
-            Paragraph {
-              Label {
-                HTMLText("Last Name: ")
-                Input(
-                  name: "lastName",
-                  type: .text(.init())
-                )
-              }
-            }
-            Paragraph {
-              Label {
-                HTMLText("Email: ")
-                Input(
-                  name: "email",
-                  type: .email(.init())
-                )
-              }
-            }
-          }
-          FieldSet(
-            name: "preferences"
-          ) {
-            Legend {
-              HTMLText("Preferences")
-            }
-            Paragraph {
-              Label {
-                Input(
-                  name: "newsletter",
-                  type: .checkbox(.init())
-                )
-                HTMLText(" Subscribe to newsletter")
-              }
-            }
-            Paragraph {
-              Label {
-                Input(
-                  name: "notifications",
-                  type: .checkbox(.init()),
-                )
-                HTMLText(" Receive notifications")
-              }
-            }
-          }
-          Paragraph {
-            Button(
-              type: .submit
-            ) {
-              HTMLText("Register")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("FieldSet within HTMLDocument renders correctly")
+    func fieldSetWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Form(action: "/register", method: .post) {
+                    H2 {
+                        HTMLText("User Registration")
+                    }
+                    FieldSet(
+                        name: "personal-info"
+                    ) {
+                        Legend {
+                            HTMLText("Personal Information")
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("First Name: ")
+                                Input(
+                                    name: "firstName",
+                                    type: .text(.init())
+                                )
+                            }
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Last Name: ")
+                                Input(
+                                    name: "lastName",
+                                    type: .text(.init())
+                                )
+                            }
+                        }
+                        Paragraph {
+                            Label {
+                                HTMLText("Email: ")
+                                Input(
+                                    name: "email",
+                                    type: .email(.init())
+                                )
+                            }
+                        }
+                    }
+                    FieldSet(
+                        name: "preferences"
+                    ) {
+                        Legend {
+                            HTMLText("Preferences")
+                        }
+                        Paragraph {
+                            Label {
+                                Input(
+                                    name: "newsletter",
+                                    type: .checkbox(.init())
+                                )
+                                HTMLText(" Subscribe to newsletter")
+                            }
+                        }
+                        Paragraph {
+                            Label {
+                                Input(
+                                    name: "notifications",
+                                    type: .checkbox(.init())
+                                )
+                                HTMLText(" Receive notifications")
+                            }
+                        }
+                    }
+                    Paragraph {
+                        Button(
+                            type: .submit
+                        ) {
+                            HTMLText("Register")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -321,6 +321,6 @@ struct FieldSetTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

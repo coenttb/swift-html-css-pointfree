@@ -5,40 +5,40 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Disclosure Summary Element Tests",
-  .snapshots(record: .missing)
+    "Disclosure Summary Element Tests",
+    .snapshots(record: .missing)
 )
 struct DisclosureSummaryTests {
-  @Test("Basic disclosure summary renders correctly")
-  func basicDisclosureSummaryRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DisclosureSummary {
-        HTMLText("Click to expand")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic disclosure summary renders correctly")
+    func basicDisclosureSummaryRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DisclosureSummary {
+                HTMLText("Click to expand")
+            },
+            as: .html
+        ) {
+            """
 
       <summary>Click to expand
       </summary>
       """
+        }
     }
-  }
 
-  @Test("Disclosure summary within details renders correctly")
-  func disclosureSummaryWithinDetailsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Details {
-        DisclosureSummary {
-          HTMLText("Show FAQ")
-        }
-        Paragraph {
-          HTMLText("Here are the frequently asked questions.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Disclosure summary within details renders correctly")
+    func disclosureSummaryWithinDetailsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Details {
+                DisclosureSummary {
+                    HTMLText("Show FAQ")
+                }
+                Paragraph {
+                    HTMLText("Here are the frequently asked questions.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <details>
         <summary>Show FAQ
@@ -47,48 +47,48 @@ struct DisclosureSummaryTests {
         </p>
       </details>
       """
-    }
-  }
-
-  @Test("Disclosure summary with emphasis renders correctly")
-  func disclosureSummaryWithEmphasisRendersCorrectly() {
-    assertInlineSnapshot(
-      of: DisclosureSummary {
-        StrongImportance {
-          HTMLText("Important Information")
         }
-        HTMLText(" - Click to read")
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Disclosure summary with emphasis renders correctly")
+    func disclosureSummaryWithEmphasisRendersCorrectly() {
+        assertInlineSnapshot(
+            of: DisclosureSummary {
+                StrongImportance {
+                    HTMLText("Important Information")
+                }
+                HTMLText(" - Click to read")
+            },
+            as: .html
+        ) {
+            """
 
       <summary><strong>Important Information</strong> - Click to read
       </summary>
       """
+        }
     }
-  }
 
-  @Test("Disclosure summary with icon renders correctly")
-  func disclosureSummaryWithIconRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Details {
-        DisclosureSummary {
-          HTMLText("▶ ")
-          HTMLText("Settings")
-        }
-        UnorderedList {
-          ListItem {
-            HTMLText("Theme: Dark")
-          }
-          ListItem {
-            HTMLText("Language: English")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Disclosure summary with icon renders correctly")
+    func disclosureSummaryWithIconRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Details {
+                DisclosureSummary {
+                    HTMLText("▶ ")
+                    HTMLText("Settings")
+                }
+                UnorderedList {
+                    ListItem {
+                        HTMLText("Theme: Dark")
+                    }
+                    ListItem {
+                        HTMLText("Language: English")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <details>
         <summary>▶ Settings
@@ -101,27 +101,27 @@ struct DisclosureSummaryTests {
         </ul>
       </details>
       """
+        }
     }
-  }
 
-  @Test("Disclosure summary with link renders correctly")
-  func disclosureSummaryWithLinkRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Details {
-        DisclosureSummary {
-          HTMLText("Documentation (")
-          Anchor(href: "https://docs.example.com") {
-            HTMLText("external link")
-          }
-          HTMLText(")")
-        }
-        Paragraph {
-          HTMLText("Click the link above to view full documentation.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Disclosure summary with link renders correctly")
+    func disclosureSummaryWithLinkRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Details {
+                DisclosureSummary {
+                    HTMLText("Documentation (")
+                    Anchor(href: "https://docs.example.com") {
+                        HTMLText("external link")
+                    }
+                    HTMLText(")")
+                }
+                Paragraph {
+                    HTMLText("Click the link above to view full documentation.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <details>
         <summary>Documentation (<a href="https://docs.example.com">external link</a>)
@@ -130,26 +130,26 @@ struct DisclosureSummaryTests {
         </p>
       </details>
       """
+        }
     }
-  }
 
-  @Test("Disclosure summary with code renders correctly")
-  func disclosureSummaryWithCodeRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Details {
-        DisclosureSummary {
-          Code {
-            HTMLText("console.log()")
-          }
-          HTMLText(" function details")
-        }
-        Paragraph {
-          HTMLText("The console.log() function outputs a message to the web console.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Disclosure summary with code renders correctly")
+    func disclosureSummaryWithCodeRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Details {
+                DisclosureSummary {
+                    Code {
+                        HTMLText("console.log()")
+                    }
+                    HTMLText(" function details")
+                }
+                Paragraph {
+                    HTMLText("The console.log() function outputs a message to the web console.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <details>
         <summary><code>console.log()</code> function details
@@ -158,41 +158,41 @@ struct DisclosureSummaryTests {
         </p>
       </details>
       """
+        }
     }
-  }
 
-  @Test("Multiple disclosure summaries in accordion renders correctly")
-  func multipleDisclosureSummariesInAccordionRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        Details(name: .init("help")) {
-          DisclosureSummary {
-            HTMLText("Getting Started")
-          }
-          Paragraph {
-            HTMLText("Learn the basics of using our platform.")
-          }
-        }
-        Details(name: .init("help")) {
-          DisclosureSummary {
-            HTMLText("Advanced Features")
-          }
-          Paragraph {
-            HTMLText("Explore advanced functionality and customization options.")
-          }
-        }
-        Details(name: .init("help")) {
-          DisclosureSummary {
-            HTMLText("Troubleshooting")
-          }
-          Paragraph {
-            HTMLText("Common issues and their solutions.")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Multiple disclosure summaries in accordion renders correctly")
+    func multipleDisclosureSummariesInAccordionRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                Details(name: .init("help")) {
+                    DisclosureSummary {
+                        HTMLText("Getting Started")
+                    }
+                    Paragraph {
+                        HTMLText("Learn the basics of using our platform.")
+                    }
+                }
+                Details(name: .init("help")) {
+                    DisclosureSummary {
+                        HTMLText("Advanced Features")
+                    }
+                    Paragraph {
+                        HTMLText("Explore advanced functionality and customization options.")
+                    }
+                }
+                Details(name: .init("help")) {
+                    DisclosureSummary {
+                        HTMLText("Troubleshooting")
+                    }
+                    Paragraph {
+                        HTMLText("Common issues and their solutions.")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <div>
         <details name="help">
@@ -215,25 +215,25 @@ struct DisclosureSummaryTests {
         </details>
       </div>
       """
-    }
-  }
-
-  @Test("Disclosure summary within HTMLDocument renders correctly")
-  func disclosureSummaryWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Details(open: .init()) {
-          DisclosureSummary {
-            HTMLText("Terms and Conditions")
-          }
-          Paragraph {
-            HTMLText("By using this service, you agree to our terms.")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Disclosure summary within HTMLDocument renders correctly")
+    func disclosureSummaryWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Details(open: .init()) {
+                    DisclosureSummary {
+                        HTMLText("Terms and Conditions")
+                    }
+                    Paragraph {
+                        HTMLText("By using this service, you agree to our terms.")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -251,6 +251,6 @@ struct DisclosureSummaryTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

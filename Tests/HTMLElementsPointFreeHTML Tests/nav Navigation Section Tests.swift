@@ -5,30 +5,30 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "NavigationSection Element Tests",
-  .snapshots(record: .missing)
+    "NavigationSection Element Tests",
+    .snapshots(record: .missing)
 )
 struct NavigationSectionTests {
-  @Test("Basic nav renders correctly")
-  func basicNavRendersCorrectly() {
-    assertInlineSnapshot(
-      of: NavigationSection {
-        UnorderedList {
-          ListItem {
-            Anchor(href: "/") {
-              HTMLText("Home")
-            }
-          }
-          ListItem {
-            Anchor(href: "/about") {
-              HTMLText("About")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic nav renders correctly")
+    func basicNavRendersCorrectly() {
+        assertInlineSnapshot(
+            of: NavigationSection {
+                UnorderedList {
+                    ListItem {
+                        Anchor(href: "/") {
+                            HTMLText("Home")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/about") {
+                            HTMLText("About")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <nav>
         <ul>
@@ -39,32 +39,32 @@ struct NavigationSectionTests {
         </ul>
       </nav>
       """
-    }
-  }
-
-  @Test("Nav with breadcrumb navigation renders correctly")
-  func navWithBreadcrumbNavigationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: NavigationSection {
-        OrderedList {
-          ListItem {
-            Anchor(href: "/") {
-              HTMLText("Home")
-            }
-          }
-          ListItem {
-            Anchor(href: "/products") {
-              HTMLText("Products")
-            }
-          }
-          ListItem {
-            HTMLText("Laptops")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Nav with breadcrumb navigation renders correctly")
+    func navWithBreadcrumbNavigationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: NavigationSection {
+                OrderedList {
+                    ListItem {
+                        Anchor(href: "/") {
+                            HTMLText("Home")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/products") {
+                            HTMLText("Products")
+                        }
+                    }
+                    ListItem {
+                        HTMLText("Laptops")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <nav>
         <ol>
@@ -77,39 +77,39 @@ struct NavigationSectionTests {
         </ol>
       </nav>
       """
-    }
-  }
-
-  @Test("Nav with primary navigation renders correctly")
-  func navWithPrimaryNavigationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: NavigationSection {
-        UnorderedList {
-          ListItem {
-            Anchor(href: "/") {
-              HTMLText("Home")
-            }
-          }
-          ListItem {
-            Anchor(href: "/services") {
-              HTMLText("Services")
-            }
-          }
-          ListItem {
-            Anchor(href: "/portfolio") {
-              HTMLText("Portfolio")
-            }
-          }
-          ListItem {
-            Anchor(href: "/contact") {
-              HTMLText("Contact")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Nav with primary navigation renders correctly")
+    func navWithPrimaryNavigationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: NavigationSection {
+                UnorderedList {
+                    ListItem {
+                        Anchor(href: "/") {
+                            HTMLText("Home")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/services") {
+                            HTMLText("Services")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/portfolio") {
+                            HTMLText("Portfolio")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/contact") {
+                            HTMLText("Contact")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <nav>
         <ul>
@@ -124,41 +124,41 @@ struct NavigationSectionTests {
         </ul>
       </nav>
       """
-    }
-  }
-
-  @Test("Nav with nested navigation renders correctly")
-  func navWithNestedNavigationRendersCorrectly() {
-    assertInlineSnapshot(
-      of: NavigationSection {
-        UnorderedList {
-          ListItem {
-            Anchor(href: "/products") {
-              HTMLText("Products")
-            }
-            UnorderedList {
-              ListItem {
-                Anchor(href: "/products/laptops") {
-                  HTMLText("Laptops")
-                }
-              }
-              ListItem {
-                Anchor(href: "/products/desktops") {
-                  HTMLText("Desktops")
-                }
-              }
-            }
-          }
-          ListItem {
-            Anchor(href: "/support") {
-              HTMLText("Support")
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Nav with nested navigation renders correctly")
+    func navWithNestedNavigationRendersCorrectly() {
+        assertInlineSnapshot(
+            of: NavigationSection {
+                UnorderedList {
+                    ListItem {
+                        Anchor(href: "/products") {
+                            HTMLText("Products")
+                        }
+                        UnorderedList {
+                            ListItem {
+                                Anchor(href: "/products/laptops") {
+                                    HTMLText("Laptops")
+                                }
+                            }
+                            ListItem {
+                                Anchor(href: "/products/desktops") {
+                                    HTMLText("Desktops")
+                                }
+                            }
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "/support") {
+                            HTMLText("Support")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <nav>
         <ul>
@@ -175,42 +175,42 @@ struct NavigationSectionTests {
         </ul>
       </nav>
       """
+        }
     }
-  }
 
-  @Test("Nav with table of contents renders correctly")
-  func navWithTableOfContentsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: NavigationSection {
-        H2 {
-          HTMLText("Table of Contents")
-        }
-        OrderedList {
-          ListItem {
-            Anchor(href: "#introduction") {
-              HTMLText("Introduction")
-            }
-          }
-          ListItem {
-            Anchor(href: "#methodology") {
-              HTMLText("Methodology")
-            }
-          }
-          ListItem {
-            Anchor(href: "#results") {
-              HTMLText("Results")
-            }
-          }
-          ListItem {
-            Anchor(href: "#conclusion") {
-              HTMLText("Conclusion")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Nav with table of contents renders correctly")
+    func navWithTableOfContentsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: NavigationSection {
+                H2 {
+                    HTMLText("Table of Contents")
+                }
+                OrderedList {
+                    ListItem {
+                        Anchor(href: "#introduction") {
+                            HTMLText("Introduction")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "#methodology") {
+                            HTMLText("Methodology")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "#results") {
+                            HTMLText("Results")
+                        }
+                    }
+                    ListItem {
+                        Anchor(href: "#conclusion") {
+                            HTMLText("Conclusion")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <nav>
         <h2>Table of Contents
@@ -227,58 +227,58 @@ struct NavigationSectionTests {
         </ol>
       </nav>
       """
+        }
     }
-  }
 
-  @Test("NavigationSection within HTMLDocument renders correctly")
-  func navigationSectionWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        Header {
-          ContentDivision {
-            Anchor(href: "/") {
-              HTMLText("Company Logo")
-            }
-          }
-          NavigationSection {
-            UnorderedList {
-              ListItem {
-                Anchor(href: "/") {
-                  HTMLText("Home")
+    @Test("NavigationSection within HTMLDocument renders correctly")
+    func navigationSectionWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                Header {
+                    ContentDivision {
+                        Anchor(href: "/") {
+                            HTMLText("Company Logo")
+                        }
+                    }
+                    NavigationSection {
+                        UnorderedList {
+                            ListItem {
+                                Anchor(href: "/") {
+                                    HTMLText("Home")
+                                }
+                            }
+                            ListItem {
+                                Anchor(href: "/about") {
+                                    HTMLText("About")
+                                }
+                            }
+                            ListItem {
+                                Anchor(href: "/services") {
+                                    HTMLText("Services")
+                                }
+                            }
+                            ListItem {
+                                Anchor(href: "/contact") {
+                                    HTMLText("Contact")
+                                }
+                            }
+                        }
+                    }
                 }
-              }
-              ListItem {
-                Anchor(href: "/about") {
-                  HTMLText("About")
+                Main {
+                    Article {
+                        H1 {
+                            HTMLText("Page Content")
+                        }
+                        Paragraph {
+                            HTMLText("This is the main content of the page.")
+                        }
+                    }
                 }
-              }
-              ListItem {
-                Anchor(href: "/services") {
-                  HTMLText("Services")
-                }
-              }
-              ListItem {
-                Anchor(href: "/contact") {
-                  HTMLText("Contact")
-                }
-              }
-            }
-          }
-        }
-        Main {
-          Article {
-            H1 {
-              HTMLText("Page Content")
-            }
-            Paragraph {
-              HTMLText("This is the main content of the page.")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -314,6 +314,6 @@ struct NavigationSectionTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

@@ -5,34 +5,34 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "Table Element Tests",
-  .snapshots(record: .missing)
+    "Table Element Tests",
+    .snapshots(record: .missing)
 )
 struct TableTests {
-  @Test("Basic table renders correctly")
-  func basicTableRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Table {
-        TableRow {
-          TableHeader {
-            HTMLText("Name")
-          }
-          TableHeader {
-            HTMLText("Age")
-          }
-        }
-        TableRow {
-          TableDataCell {
-            HTMLText("John")
-          }
-          TableDataCell {
-            HTMLText("30")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic table renders correctly")
+    func basicTableRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Table {
+                TableRow {
+                    TableHeader {
+                        HTMLText("Name")
+                    }
+                    TableHeader {
+                        HTMLText("Age")
+                    }
+                }
+                TableRow {
+                    TableDataCell {
+                        HTMLText("John")
+                    }
+                    TableDataCell {
+                        HTMLText("30")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <table>
         <tr>
@@ -49,36 +49,36 @@ struct TableTests {
         </tr>
       </table>
       """
+        }
     }
-  }
 
-  @Test("Table with caption renders correctly")
-  func tableWithCaptionRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Table {
-        Caption {
-          HTMLText("Employee Information")
-        }
-        TableRow {
-          TableHeader {
-            HTMLText("Name")
-          }
-          TableHeader {
-            HTMLText("Department")
-          }
-        }
-        TableRow {
-          TableDataCell {
-            HTMLText("Alice")
-          }
-          TableDataCell {
-            HTMLText("Engineering")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Table with caption renders correctly")
+    func tableWithCaptionRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Table {
+                Caption {
+                    HTMLText("Employee Information")
+                }
+                TableRow {
+                    TableHeader {
+                        HTMLText("Name")
+                    }
+                    TableHeader {
+                        HTMLText("Department")
+                    }
+                }
+                TableRow {
+                    TableDataCell {
+                        HTMLText("Alice")
+                    }
+                    TableDataCell {
+                        HTMLText("Engineering")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <table>
         <caption>Employee Information
@@ -97,55 +97,55 @@ struct TableTests {
         </tr>
       </table>
       """
+        }
     }
-  }
 
-  @Test("Table with thead, tbody, and tfoot renders correctly")
-  func tableWithTheadTbodyAndTfootRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Table {
-        TableHead {
-          TableRow {
-            TableHeader {
-              HTMLText("Product")
-            }
-            TableHeader {
-              HTMLText("Price")
-            }
-          }
-        }
-        TableBody {
-          TableRow {
-            TableDataCell {
-              HTMLText("Laptop")
-            }
-            TableDataCell {
-              HTMLText("$999")
-            }
-          }
-          TableRow {
-            TableDataCell {
-              HTMLText("Mouse")
-            }
-            TableDataCell {
-              HTMLText("$25")
-            }
-          }
-        }
-        TableFoot {
-          TableRow {
-            TableDataCell {
-              HTMLText("Total")
-            }
-            TableDataCell {
-              HTMLText("$1024")
-            }
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Table with thead, tbody, and tfoot renders correctly")
+    func tableWithTheadTbodyAndTfootRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Table {
+                TableHead {
+                    TableRow {
+                        TableHeader {
+                            HTMLText("Product")
+                        }
+                        TableHeader {
+                            HTMLText("Price")
+                        }
+                    }
+                }
+                TableBody {
+                    TableRow {
+                        TableDataCell {
+                            HTMLText("Laptop")
+                        }
+                        TableDataCell {
+                            HTMLText("$999")
+                        }
+                    }
+                    TableRow {
+                        TableDataCell {
+                            HTMLText("Mouse")
+                        }
+                        TableDataCell {
+                            HTMLText("$25")
+                        }
+                    }
+                }
+                TableFoot {
+                    TableRow {
+                        TableDataCell {
+                            HTMLText("Total")
+                        }
+                        TableDataCell {
+                            HTMLText("$1024")
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <table>
         <thead>
@@ -180,47 +180,47 @@ struct TableTests {
         </tfoot>
       </table>
       """
+        }
     }
-  }
 
-  @Test("Table with colgroup renders correctly")
-  func tableWithColgroupRendersCorrectly() {
-    assertInlineSnapshot(
-      of: Table {
-        TableColumnGroup {
-          TableColumn(span: 2) {
-            HTMLEmpty()
-          }
-          TableColumn {
-            HTMLEmpty()
-          }
-        }
-        TableRow {
-          TableHeader {
-            HTMLText("First Name")
-          }
-          TableHeader {
-            HTMLText("Last Name")
-          }
-          TableHeader {
-            HTMLText("Age")
-          }
-        }
-        TableRow {
-          TableDataCell {
-            HTMLText("John")
-          }
-          TableDataCell {
-            HTMLText("Doe")
-          }
-          TableDataCell {
-            HTMLText("30")
-          }
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("Table with colgroup renders correctly")
+    func tableWithColgroupRendersCorrectly() {
+        assertInlineSnapshot(
+            of: Table {
+                TableColumnGroup {
+                    TableColumn(span: 2) {
+                        HTMLEmpty()
+                    }
+                    TableColumn {
+                        HTMLEmpty()
+                    }
+                }
+                TableRow {
+                    TableHeader {
+                        HTMLText("First Name")
+                    }
+                    TableHeader {
+                        HTMLText("Last Name")
+                    }
+                    TableHeader {
+                        HTMLText("Age")
+                    }
+                }
+                TableRow {
+                    TableDataCell {
+                        HTMLText("John")
+                    }
+                    TableDataCell {
+                        HTMLText("Doe")
+                    }
+                    TableDataCell {
+                        HTMLText("30")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <table>
         <colgroup>
@@ -245,55 +245,55 @@ struct TableTests {
         </tr>
       </table>
       """
-    }
-  }
-
-  @Test("Table within HTMLDocument renders correctly")
-  func tableWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        ContentDivision {
-          H2 {
-            HTMLText("Sales Report")
-          }
-          Table {
-            Caption {
-              HTMLText("Q1 2024 Sales Data")
-            }
-            TableHead {
-              TableRow {
-                TableHeader(scope: "col") {
-                  HTMLText("Month")
-                }
-                TableHeader(scope: "col") {
-                  HTMLText("Revenue")
-                }
-              }
-            }
-            TableBody {
-              TableRow {
-                TableDataCell {
-                  HTMLText("January")
-                }
-                TableDataCell {
-                  HTMLText("$10,000")
-                }
-              }
-              TableRow {
-                TableDataCell {
-                  HTMLText("February")
-                }
-                TableDataCell {
-                  HTMLText("$12,000")
-                }
-              }
-            }
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Table within HTMLDocument renders correctly")
+    func tableWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                ContentDivision {
+                    H2 {
+                        HTMLText("Sales Report")
+                    }
+                    Table {
+                        Caption {
+                            HTMLText("Q1 2024 Sales Data")
+                        }
+                        TableHead {
+                            TableRow {
+                                TableHeader(scope: "col") {
+                                    HTMLText("Month")
+                                }
+                                TableHeader(scope: "col") {
+                                    HTMLText("Revenue")
+                                }
+                            }
+                        }
+                        TableBody {
+                            TableRow {
+                                TableDataCell {
+                                    HTMLText("January")
+                                }
+                                TableDataCell {
+                                    HTMLText("$10,000")
+                                }
+                            }
+                            TableRow {
+                                TableDataCell {
+                                    HTMLText("February")
+                                }
+                                TableDataCell {
+                                    HTMLText("$12,000")
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -335,6 +335,6 @@ struct TableTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }

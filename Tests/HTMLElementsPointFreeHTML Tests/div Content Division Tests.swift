@@ -5,56 +5,56 @@ import PointFreeHTMLTestSupport
 import Testing
 
 @Suite(
-  "ContentDivision Element Tests",
-  .snapshots(record: .missing)
+    "ContentDivision Element Tests",
+    .snapshots(record: .missing)
 )
 struct ContentDivisionTests {
-  @Test("Basic div renders correctly")
-  func basicDivRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        HTMLText("Hello, World!")
-      },
-      as: .html
-    ) {
-      """
+    @Test("Basic div renders correctly")
+    func basicDivRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                HTMLText("Hello, World!")
+            },
+            as: .html
+        ) {
+            """
 
       <div>Hello, World!
       </div>
       """
+        }
     }
-  }
 
-  @Test("Empty div renders correctly")
-  func emptyDivRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        HTMLEmpty()
-      },
-      as: .html
-    ) {
-      """
+    @Test("Empty div renders correctly")
+    func emptyDivRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                HTMLEmpty()
+            },
+            as: .html
+        ) {
+            """
 
       <div>
       </div>
       """
+        }
     }
-  }
 
-  @Test("DIV with nested elements renders correctly")
-  func divWithNestedElementsRendersCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        H1 {
-          HTMLText("Title")
-        }
-        Paragraph {
-          HTMLText("This is a paragraph inside a div.")
-        }
-      },
-      as: .html
-    ) {
-      """
+    @Test("DIV with nested elements renders correctly")
+    func divWithNestedElementsRendersCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                H1 {
+                    HTMLText("Title")
+                }
+                Paragraph {
+                    HTMLText("This is a paragraph inside a div.")
+                }
+            },
+            as: .html
+        ) {
+            """
 
       <div>
         <h1>Title
@@ -63,49 +63,49 @@ struct ContentDivisionTests {
         </p>
       </div>
       """
-    }
-  }
-
-  @Test("Nested divs render correctly")
-  func nestedDivsRenderCorrectly() {
-    assertInlineSnapshot(
-      of: ContentDivision {
-        ContentDivision {
-          HTMLText("Inner div")
         }
-        HTMLText("Outer div content")
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("Nested divs render correctly")
+    func nestedDivsRenderCorrectly() {
+        assertInlineSnapshot(
+            of: ContentDivision {
+                ContentDivision {
+                    HTMLText("Inner div")
+                }
+                HTMLText("Outer div content")
+            },
+            as: .html
+        ) {
+            """
 
       <div>
         <div>Inner div
         </div>Outer div content
       </div>
       """
-    }
-  }
-
-  @Test("ContentDivision within HTMLDocument renders correctly")
-  func contentDivisionWithinHTMLDocumentRendersCorrectly() {
-    assertInlineSnapshot(
-      of: HTMLDocument {
-        ContentDivision {
-          ContentDivision {
-            HTMLText("Header")
-          }
-          ContentDivision {
-            HTMLText("Main content")
-          }
-          ContentDivision {
-            HTMLText("Footer")
-          }
         }
-      },
-      as: .html
-    ) {
-      """
+    }
+
+    @Test("ContentDivision within HTMLDocument renders correctly")
+    func contentDivisionWithinHTMLDocumentRendersCorrectly() {
+        assertInlineSnapshot(
+            of: HTMLDocument {
+                ContentDivision {
+                    ContentDivision {
+                        HTMLText("Header")
+                    }
+                    ContentDivision {
+                        HTMLText("Main content")
+                    }
+                    ContentDivision {
+                        HTMLText("Footer")
+                    }
+                }
+            },
+            as: .html
+        ) {
+            """
       <!doctype html>
       <html>
         <head>
@@ -125,6 +125,6 @@ struct ContentDivisionTests {
         </body>
       </html>
       """
+        }
     }
-  }
 }
