@@ -1,5 +1,5 @@
-import HTMLElementTypes
 import HTMLElementsPointFreeHTML
+import HTMLElementTypes
 import InlineSnapshotTesting
 import PointFreeHTMLTestSupport
 import Testing
