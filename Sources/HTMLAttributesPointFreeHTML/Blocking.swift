@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the blocking attribute on an element
-  @discardableResult
-  package func blocking(
-    _ value: Blocking?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Blocking.attribute, value?.description)
-  }
+    /// Sets the blocking attribute on an element
+    @discardableResult
+    package func blocking(
+        _ value: Blocking?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Blocking.attribute, value?.description)
+    }
 }

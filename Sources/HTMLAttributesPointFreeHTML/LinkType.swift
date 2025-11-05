@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the type attribute on a link element
-  @discardableResult
-  package func type(
-    _ value: LinkType?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(LinkType.attribute, value?.description)
-  }
+    /// Sets the type attribute on a link element
+    @discardableResult
+    package func type(
+        _ value: LinkType?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(LinkType.attribute, value?.description)
+    }
 }

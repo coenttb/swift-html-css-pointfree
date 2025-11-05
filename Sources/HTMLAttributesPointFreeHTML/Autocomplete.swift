@@ -10,10 +10,10 @@ import PointFreeHTML
 
 extension HTML {
 
-  @discardableResult
-  package func autocomplete(
-    _ value: Autocomplete?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Autocomplete.attribute, value?.description)
-  }
+    @discardableResult
+    package func autocomplete(
+        _ value: Autocomplete?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Autocomplete.attribute, value?.description)
+    }
 }

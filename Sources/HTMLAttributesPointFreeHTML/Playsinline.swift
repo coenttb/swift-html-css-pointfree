@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the playsinline attribute on an element
-  @discardableResult
-  package func playsinline(
-    _ value: HTMLAttributeTypes.Playsinline?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(HTMLAttributeTypes.Playsinline.attribute, value?.description)
-  }
+    /// Sets the playsinline attribute on an element
+    @discardableResult
+    package func playsinline(
+        _ value: HTMLAttributeTypes.Playsinline?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(HTMLAttributeTypes.Playsinline.attribute, value?.description)
+    }
 }

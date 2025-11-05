@@ -8,7 +8,7 @@
 import PointFreeHTML
 
 extension String: @retroactive PointFreeHTML.HTML {
-  public var body: HTMLText {
-    HTMLText(self)
-  }
+    public var body: HTMLText {
+        HTMLText(self)
+    }
 }

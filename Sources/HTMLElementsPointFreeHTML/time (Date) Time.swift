@@ -9,10 +9,10 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Time {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-      .dateTime(self.datetime)
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .dateTime(self.datetime)
+    }
 }

@@ -9,14 +9,14 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the inert attribute, making the element and all its descendants non-interactive
-  public var inert: _HTMLAttributes<Self> {
-    self.attribute(Inert.attribute)
-  }
+    /// Sets the inert attribute, making the element and all its descendants non-interactive
+    public var inert: _HTMLAttributes<Self> {
+        self.attribute(Inert.attribute)
+    }
 
-  /// Conditionally adds the disabled attribute to the element
-  @HTMLBuilder
-  package func inert(_ value: Inert?) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    /// Conditionally adds the disabled attribute to the element
+    @HTMLBuilder
+    package func inert(_ value: Inert?) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

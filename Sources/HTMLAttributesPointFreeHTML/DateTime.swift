@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the datetime attribute on an element
-  @discardableResult
-  package func dateTime(
-    _ value: DateTime?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(DateTime.attribute, value?.description)
-  }
+    /// Sets the datetime attribute on an element
+    @discardableResult
+    package func dateTime(
+        _ value: DateTime?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(DateTime.attribute, value?.description)
+    }
 }

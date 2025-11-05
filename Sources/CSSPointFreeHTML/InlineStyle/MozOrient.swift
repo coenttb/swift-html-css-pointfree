@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func mozOrient(
-    _ mozOrient: CSSPropertyTypes.MozOrient?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(mozOrient, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func mozOrient(
+        _ mozOrient: CSSPropertyTypes.MozOrient?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(mozOrient, media: media, selector: selector, pseudo: pseudo)
+    }
 }

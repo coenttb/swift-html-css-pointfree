@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the spellcheck attribute using a Spellcheck enum value
-  @discardableResult
-  package func spellcheck(
-    _ attribute: Spellcheck?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Spellcheck.attribute, attribute?.description)
-  }
+    /// Sets the spellcheck attribute using a Spellcheck enum value
+    @discardableResult
+    package func spellcheck(
+        _ attribute: Spellcheck?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Spellcheck.attribute, attribute?.description)
+    }
 }

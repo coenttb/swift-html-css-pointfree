@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the direction attribute on an element
-  @discardableResult
-  package func direction(
-    _ value: Direction?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Direction.attribute, value?.description)
-  }
+    /// Sets the direction attribute on an element
+    @discardableResult
+    package func direction(
+        _ value: Direction?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Direction.attribute, value?.description)
+    }
 }

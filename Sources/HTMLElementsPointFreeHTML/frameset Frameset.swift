@@ -9,11 +9,11 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Frameset {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-      .cols(self.cols)
-      .rows(self.rows)
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .cols(self.cols)
+            .rows(self.rows)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func container(
-    _ container: CSSPropertyTypes.Container?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(container, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func container(
+        _ container: CSSPropertyTypes.Container?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(container, media: media, selector: selector, pseudo: pseudo)
+    }
 }

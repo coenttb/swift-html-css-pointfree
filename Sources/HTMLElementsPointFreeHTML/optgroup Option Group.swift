@@ -9,11 +9,11 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.OptionGroup {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-      .disabled(self.disabled)
-      .label(self.label)
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .disabled(self.disabled)
+            .label(self.label)
+    }
 }

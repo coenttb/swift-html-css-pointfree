@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func backgroundBlendMode(
-    _ backgroundBlendMode: CSSPropertyTypes.BackgroundBlendMode?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(backgroundBlendMode, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func backgroundBlendMode(
+        _ backgroundBlendMode: CSSPropertyTypes.BackgroundBlendMode?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(backgroundBlendMode, media: media, selector: selector, pseudo: pseudo)
+    }
 }

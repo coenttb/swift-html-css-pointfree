@@ -9,10 +9,10 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Dialog {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-      .open(self.open)
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .open(self.open)
+    }
 }

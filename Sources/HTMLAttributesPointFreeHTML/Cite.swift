@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the cite attribute on an element
-  @discardableResult
-  package func cite(
-    _ value: Cite?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Cite.attribute, value?.description)
-  }
+    /// Sets the cite attribute on an element
+    @discardableResult
+    package func cite(
+        _ value: Cite?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Cite.attribute, value?.description)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func shapeRendering(
-    _ shapeRendering: CSSPropertyTypes.ShapeRendering?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(shapeRendering, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func shapeRendering(
+        _ shapeRendering: CSSPropertyTypes.ShapeRendering?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(shapeRendering, media: media, selector: selector, pseudo: pseudo)
+    }
 }

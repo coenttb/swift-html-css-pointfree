@@ -9,13 +9,13 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Add an action attribute to specify the URL for form submission
-  @discardableResult
-  public func action(
-    _ value: Action?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Action.attribute, value?.description)
-  }
+    /// Add an action attribute to specify the URL for form submission
+    @discardableResult
+    public func action(
+        _ value: Action?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Action.attribute, value?.description)
+    }
 }
 
 // extension HTML {

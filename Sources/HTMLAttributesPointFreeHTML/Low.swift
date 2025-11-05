@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the low attribute on an element
-  @discardableResult
-  package func low(
-    _ value: Low?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Low.attribute, value?.description)
-  }
+    /// Sets the low attribute on an element
+    @discardableResult
+    package func low(
+        _ value: Low?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Low.attribute, value?.description)
+    }
 }

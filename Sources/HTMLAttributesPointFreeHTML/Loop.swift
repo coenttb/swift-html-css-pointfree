@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the loop attribute on an element
-  @discardableResult
-  package func loop(
-    _ value: Loop?
-  ) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    /// Sets the loop attribute on an element
+    @discardableResult
+    package func loop(
+        _ value: Loop?
+    ) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func animationDelay(
-    _ animationDelay: CSSPropertyTypes.AnimationDelay?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(animationDelay, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func animationDelay(
+        _ animationDelay: CSSPropertyTypes.AnimationDelay?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(animationDelay, media: media, selector: selector, pseudo: pseudo)
+    }
 }

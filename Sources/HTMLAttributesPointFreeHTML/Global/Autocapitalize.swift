@@ -9,10 +9,10 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func autocapitalize(
-    _ value: Autocapitalize?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Autocapitalize.attribute, value?.description)
-  }
+    @discardableResult
+    public func autocapitalize(
+        _ value: Autocapitalize?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Autocapitalize.attribute, value?.description)
+    }
 }

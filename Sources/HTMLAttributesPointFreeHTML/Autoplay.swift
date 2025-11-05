@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the autoplay attribute on an element
-  @discardableResult
-  package func autoplay(
-    _ value: Autoplay?
-  ) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    /// Sets the autoplay attribute on an element
+    @discardableResult
+    package func autoplay(
+        _ value: Autoplay?
+    ) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

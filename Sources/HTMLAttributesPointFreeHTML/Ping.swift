@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the ping attribute on an element
-  @discardableResult
-  package func ping(
-    _ value: Ping?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Ping.attribute, value?.description)
-  }
+    /// Sets the ping attribute on an element
+    @discardableResult
+    package func ping(
+        _ value: Ping?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Ping.attribute, value?.description)
+    }
 }

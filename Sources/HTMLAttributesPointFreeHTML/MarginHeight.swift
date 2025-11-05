@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the maxlength attribute on an element
-  @discardableResult
-  package func marginHeight(
-    _ value: MarginHeight?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(MarginHeight.attribute, value?.description)
-  }
+    /// Sets the maxlength attribute on an element
+    @discardableResult
+    package func marginHeight(
+        _ value: MarginHeight?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(MarginHeight.attribute, value?.description)
+    }
 }

@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the default attribute on an element
-  @discardableResult
-  package func `default`(
-    _ value: Default?
-  ) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    /// Sets the default attribute on an element
+    @discardableResult
+    package func `default`(
+        _ value: Default?
+    ) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

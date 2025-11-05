@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the allow attribute on an element
-  @discardableResult
-  package func allow(
-    _ value: Allow?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute("allow", value?.description)
-  }
+    /// Sets the allow attribute on an element
+    @discardableResult
+    package func allow(
+        _ value: Allow?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute("allow", value?.description)
+    }
 }

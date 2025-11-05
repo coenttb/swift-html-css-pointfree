@@ -9,11 +9,11 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.ProgressIndicator {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-      .max(self.max)
-      .value(self.value)
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .max(self.max)
+            .value(self.value)
+    }
 }

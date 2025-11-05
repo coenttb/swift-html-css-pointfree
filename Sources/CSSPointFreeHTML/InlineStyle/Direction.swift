@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func direction(
-    _ direction: CSSPropertyTypes.Direction?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(direction, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func direction(
+        _ direction: CSSPropertyTypes.Direction?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(direction, media: media, selector: selector, pseudo: pseudo)
+    }
 }

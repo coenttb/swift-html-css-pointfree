@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the optimum attribute on an element
-  @discardableResult
-  package func optimum(
-    _ value: Optimum?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Optimum.attribute, value?.description)
-  }
+    /// Sets the optimum attribute on an element
+    @discardableResult
+    package func optimum(
+        _ value: Optimum?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Optimum.attribute, value?.description)
+    }
 }

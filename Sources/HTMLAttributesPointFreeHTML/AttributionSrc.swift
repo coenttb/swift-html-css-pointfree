@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the attributionsrc attribute on an element
-  @discardableResult
-  package func attributionSrc(
-    _ value: AttributionSrc?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(AttributionSrc.attribute, value?.description)
-  }
+    /// Sets the attributionsrc attribute on an element
+    @discardableResult
+    package func attributionSrc(
+        _ value: AttributionSrc?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(AttributionSrc.attribute, value?.description)
+    }
 }

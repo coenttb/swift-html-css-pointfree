@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the as attribute on an element
-  @discardableResult
-  package func `as`(
-    _ value: As?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(As.attribute, value?.rawValue)
-  }
+    /// Sets the as attribute on an element
+    @discardableResult
+    package func `as`(
+        _ value: As?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(As.attribute, value?.rawValue)
+    }
 }

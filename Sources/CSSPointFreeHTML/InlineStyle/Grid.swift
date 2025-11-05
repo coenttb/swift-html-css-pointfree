@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func grid(
-    _ grid: CSSPropertyTypes.Grid?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(grid, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func grid(
+        _ grid: CSSPropertyTypes.Grid?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(grid, media: media, selector: selector, pseudo: pseudo)
+    }
 }

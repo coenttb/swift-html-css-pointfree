@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func aspectRatio(
-    _ aspectRatio: CSSPropertyTypes.AspectRatio?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(aspectRatio, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func aspectRatio(
+        _ aspectRatio: CSSPropertyTypes.AspectRatio?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(aspectRatio, media: media, selector: selector, pseudo: pseudo)
+    }
 }

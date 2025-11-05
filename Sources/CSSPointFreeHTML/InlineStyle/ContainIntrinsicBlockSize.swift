@@ -9,13 +9,18 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func containIntrinsicBlockSize(
-    _ containIntrinsicBlockSize: CSSPropertyTypes.ContainIntrinsicBlockSize?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(containIntrinsicBlockSize, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func containIntrinsicBlockSize(
+        _ containIntrinsicBlockSize: CSSPropertyTypes.ContainIntrinsicBlockSize?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(
+            containIntrinsicBlockSize,
+            media: media,
+            selector: selector,
+            pseudo: pseudo
+        )
+    }
 }

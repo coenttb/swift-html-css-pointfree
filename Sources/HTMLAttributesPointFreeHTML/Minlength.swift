@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the minlength attribute on an element
-  @discardableResult
-  package func minlength(
-    _ value: Minlength?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Minlength.attribute, value?.description)
-  }
+    /// Sets the minlength attribute on an element
+    @discardableResult
+    package func minlength(
+        _ value: Minlength?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Minlength.attribute, value?.description)
+    }
 }

@@ -10,10 +10,10 @@ import PointFreeHTML
 
 extension HTML {
 
-  @discardableResult
-  package func capture(
-    _ value: Capture?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Capture.attribute, value?.description)
-  }
+    @discardableResult
+    package func capture(
+        _ value: Capture?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Capture.attribute, value?.description)
+    }
 }

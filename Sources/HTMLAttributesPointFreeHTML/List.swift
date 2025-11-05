@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the list attribute on an element
-  @discardableResult
-  package func list(
-    _ value: List?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(List.attribute, value?.description)
-  }
+    /// Sets the list attribute on an element
+    @discardableResult
+    package func list(
+        _ value: List?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(List.attribute, value?.description)
+    }
 }

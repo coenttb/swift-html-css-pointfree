@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func columnGap(
-    _ columnGap: CSSPropertyTypes.ColumnGap?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(columnGap, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func columnGap(
+        _ columnGap: CSSPropertyTypes.ColumnGap?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(columnGap, media: media, selector: selector, pseudo: pseudo)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func anchorName(
-    _ anchorName: CSSPropertyTypes.AnchorName?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(anchorName, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func anchorName(
+        _ anchorName: CSSPropertyTypes.AnchorName?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(anchorName, media: media, selector: selector, pseudo: pseudo)
+    }
 }

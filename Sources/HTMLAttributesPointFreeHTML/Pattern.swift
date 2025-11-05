@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the pattern attribute on an element
-  @discardableResult
-  package func pattern(
-    _ value: Pattern?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Pattern.attribute, value?.description)
-  }
+    /// Sets the pattern attribute on an element
+    @discardableResult
+    package func pattern(
+        _ value: Pattern?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Pattern.attribute, value?.description)
+    }
 }

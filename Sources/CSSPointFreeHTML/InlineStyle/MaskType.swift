@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func maskType(
-    _ maskType: CSSPropertyTypes.MaskType?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(maskType, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func maskType(
+        _ maskType: CSSPropertyTypes.MaskType?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(maskType, media: media, selector: selector, pseudo: pseudo)
+    }
 }

@@ -9,16 +9,16 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  public var autofocus: _HTMLAttributes<Self> {
-    self.attribute(Autofocus.attribute)
-  }
+    public var autofocus: _HTMLAttributes<Self> {
+        self.attribute(Autofocus.attribute)
+    }
 }
 
 extension HTML {
-  @discardableResult
-  public func autofocus(
-    _ value: Autofocus?
-  ) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    @discardableResult
+    public func autofocus(
+        _ value: Autofocus?
+    ) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

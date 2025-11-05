@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the text direction for an HTML element
-  @discardableResult
-  public func dir(
-    _ value: Dir
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Dir.attribute, value.description)
-  }
+    /// Sets the text direction for an HTML element
+    @discardableResult
+    public func dir(
+        _ value: Dir
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Dir.attribute, value.description)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func clipPath(
-    _ clipPath: CSSPropertyTypes.ClipPath?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(clipPath, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func clipPath(
+        _ clipPath: CSSPropertyTypes.ClipPath?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(clipPath, media: media, selector: selector, pseudo: pseudo)
+    }
 }

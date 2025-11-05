@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func font(
-    _ font: CSSPropertyTypes.Font?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(font, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func font(
+        _ font: CSSPropertyTypes.Font?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(font, media: media, selector: selector, pseudo: pseudo)
+    }
 }

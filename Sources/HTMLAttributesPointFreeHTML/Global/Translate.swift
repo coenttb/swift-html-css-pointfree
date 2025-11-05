@@ -9,11 +9,11 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets the translate attribute using a Translate enum value
-  @discardableResult
-  public func translate(
-    _ attribute: Translate
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Translate.attribute, attribute.description)
-  }
+    /// Sets the translate attribute using a Translate enum value
+    @discardableResult
+    public func translate(
+        _ attribute: Translate
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Translate.attribute, attribute.description)
+    }
 }

@@ -10,16 +10,16 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Adds the readonly attribute to the element
-  package var readonly: _HTMLAttributes<Self> {
-    self.attribute(Readonly.attribute)
-  }
+    /// Adds the readonly attribute to the element
+    package var readonly: _HTMLAttributes<Self> {
+        self.attribute(Readonly.attribute)
+    }
 
-  /// Conditionally adds the readonly attribute to the element
-  @HTMLBuilder
-  package func readonly(
-    _ value: Readonly?
-  ) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    /// Conditionally adds the readonly attribute to the element
+    @HTMLBuilder
+    package func readonly(
+        _ value: Readonly?
+    ) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func webkitTapHighlightColor(
-    _ webkitTapHighlightColor: CSSPropertyTypes.WebkitTapHighlightColor?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(webkitTapHighlightColor, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func webkitTapHighlightColor(
+        _ webkitTapHighlightColor: CSSPropertyTypes.WebkitTapHighlightColor?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(webkitTapHighlightColor, media: media, selector: selector, pseudo: pseudo)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func viewTransitionName(
-    _ viewTransitionName: CSSPropertyTypes.ViewTransitionName?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(viewTransitionName, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func viewTransitionName(
+        _ viewTransitionName: CSSPropertyTypes.ViewTransitionName?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(viewTransitionName, media: media, selector: selector, pseudo: pseudo)
+    }
 }

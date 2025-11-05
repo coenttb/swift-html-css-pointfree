@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func whiteSpaceCollapse(
-    _ whiteSpaceCollapse: CSSPropertyTypes.WhiteSpaceCollapse?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(whiteSpaceCollapse, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func whiteSpaceCollapse(
+        _ whiteSpaceCollapse: CSSPropertyTypes.WhiteSpaceCollapse?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(whiteSpaceCollapse, media: media, selector: selector, pseudo: pseudo)
+    }
 }

@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func mozUserFocus(
-    _ mozUserFocus: CSSPropertyTypes.MozUserFocus?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(mozUserFocus, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func mozUserFocus(
+        _ mozUserFocus: CSSPropertyTypes.MozUserFocus?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(mozUserFocus, media: media, selector: selector, pseudo: pseudo)
+    }
 }

@@ -11,9 +11,9 @@ import HTMLElementTypes
 // extension HTMLElementTypes.Address: HTMLElementNoAttributes {}
 
 extension HTMLElementTypes.Address {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+    }
 }

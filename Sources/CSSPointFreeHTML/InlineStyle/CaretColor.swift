@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func caretColor(
-    _ caretColor: CSSPropertyTypes.CaretColor?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(caretColor, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func caretColor(
+        _ caretColor: CSSPropertyTypes.CaretColor?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(caretColor, media: media, selector: selector, pseudo: pseudo)
+    }
 }

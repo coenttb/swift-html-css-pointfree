@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the popovertargetaction attribute on an element
-  @discardableResult
-  package func popoverTargetAction(
-    _ value: PopoverTargetAction?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(PopoverTargetAction.attribute, value?.description)
-  }
+    /// Sets the popovertargetaction attribute on an element
+    @discardableResult
+    package func popoverTargetAction(
+        _ value: PopoverTargetAction?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(PopoverTargetAction.attribute, value?.description)
+    }
 }

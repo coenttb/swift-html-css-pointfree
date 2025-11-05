@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the disableremoteplayback attribute on an element
-  @discardableResult
-  package func download(
-    _ value: Download?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Download.attribute, value?.description)
-  }
+    /// Sets the disableremoteplayback attribute on an element
+    @discardableResult
+    package func download(
+        _ value: Download?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Download.attribute, value?.description)
+    }
 }

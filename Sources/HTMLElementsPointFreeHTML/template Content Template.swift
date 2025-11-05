@@ -9,12 +9,12 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.ContentTemplate {
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { content() }
-      .shadowRootMode(shadowrootmode)
-      .shadowRootClonable(shadowrootclonable)
-      .shadowRootDelegatesFocus(shadowrootdelegatesfocus)
-  }
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { content() }
+            .shadowRootMode(shadowrootmode)
+            .shadowRootClonable(shadowrootclonable)
+            .shadowRootDelegatesFocus(shadowrootdelegatesfocus)
+    }
 }

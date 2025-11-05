@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the width attribute on an element
-  @discardableResult
-  package func width(
-    _ value: Width?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Width.attribute, value?.description)
-  }
+    /// Sets the width attribute on an element
+    @discardableResult
+    package func width(
+        _ value: Width?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Width.attribute, value?.description)
+    }
 }

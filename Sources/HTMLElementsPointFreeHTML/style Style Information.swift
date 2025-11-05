@@ -9,13 +9,13 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Style {
-  public func callAsFunction(@HTMLBuilder _ content: () -> some PointFreeHTML.HTML)
-    -> some PointFreeHTML.HTML
-  {
-    HTMLElement(tag: Self.tag) { content() }
-      .media(media)
-      .blocking(blocking)
-      .nonce(nonce)
-      .title(title)
-  }
+    public func callAsFunction(@HTMLBuilder _ content: () -> some PointFreeHTML.HTML)
+        -> some PointFreeHTML.HTML
+    {
+        HTMLElement(tag: Self.tag) { content() }
+            .media(media)
+            .blocking(blocking)
+            .nonce(nonce)
+            .title(title)
+    }
 }

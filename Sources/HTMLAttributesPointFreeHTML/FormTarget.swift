@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the formtarget attribute on an element
-  @discardableResult
-  package func formTarget(
-    _ value: FormTarget?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(FormTarget.attribute, value?.description)
-  }
+    /// Sets the formtarget attribute on an element
+    @discardableResult
+    package func formTarget(
+        _ value: FormTarget?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(FormTarget.attribute, value?.description)
+    }
 }

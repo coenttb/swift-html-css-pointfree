@@ -9,20 +9,20 @@ import HTMLAttributesPointFreeHTML
 import HTMLElementTypes
 
 extension HTMLElementTypes.Base {
-  @HTMLBuilder
-  public func callAsFunction(
-    @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
-  ) -> some PointFreeHTML.HTML {
-    let element = HTMLElement(tag: Self.tag) { content() }
-    switch self.configuration {
-    case .href(let href):
-      element.href(href)
-    case .target(let target):
-      element.target(target)
-    case .both(let href, let target):
-      element
-        .href(href)
-        .target(target)
+    @HTMLBuilder
+    public func callAsFunction(
+        @HTMLBuilder _ content: () -> some PointFreeHTML.HTML
+    ) -> some PointFreeHTML.HTML {
+        let element = HTMLElement(tag: Self.tag) { content() }
+        switch self.configuration {
+        case .href(let href):
+            element.href(href)
+        case .target(let target):
+            element.target(target)
+        case .both(let href, let target):
+            element
+                .href(href)
+                .target(target)
+        }
     }
-  }
 }

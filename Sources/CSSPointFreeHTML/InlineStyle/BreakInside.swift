@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func breakInside(
-    _ breakInside: CSSPropertyTypes.BreakInside?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(breakInside, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func breakInside(
+        _ breakInside: CSSPropertyTypes.BreakInside?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(breakInside, media: media, selector: selector, pseudo: pseudo)
+    }
 }

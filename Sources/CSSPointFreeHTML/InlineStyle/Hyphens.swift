@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func hyphens(
-    _ hyphens: CSSPropertyTypes.Hyphens?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(hyphens, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func hyphens(
+        _ hyphens: CSSPropertyTypes.Hyphens?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(hyphens, media: media, selector: selector, pseudo: pseudo)
+    }
 }

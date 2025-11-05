@@ -9,17 +9,17 @@ import HTMLAttributeTypes
 import PointFreeHTML
 
 extension HTML {
-  /// Sets whether an element is draggable
-  @discardableResult
-  public func draggable(
-    _ value: Draggable
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Draggable.attribute, value.description)
-  }
+    /// Sets whether an element is draggable
+    @discardableResult
+    public func draggable(
+        _ value: Draggable
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Draggable.attribute, value.description)
+    }
 
-  /// Shorthand to set draggable="true"
-  public var draggable: _HTMLAttributes<Self> {
-    self.draggable(.true)
-  }
+    /// Shorthand to set draggable="true"
+    public var draggable: _HTMLAttributes<Self> {
+        self.draggable(.true)
+    }
 }
 //

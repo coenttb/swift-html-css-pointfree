@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func backgroundRepeat(
-    _ backgroundRepeat: CSSPropertyTypes.BackgroundRepeat?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(backgroundRepeat, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func backgroundRepeat(
+        _ backgroundRepeat: CSSPropertyTypes.BackgroundRepeat?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(backgroundRepeat, media: media, selector: selector, pseudo: pseudo)
+    }
 }

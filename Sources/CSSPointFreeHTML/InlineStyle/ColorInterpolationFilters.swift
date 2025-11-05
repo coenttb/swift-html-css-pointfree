@@ -9,13 +9,18 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func colorInterpolationFilters(
-    _ colorInterpolationFilters: CSSPropertyTypes.ColorInterpolationFilters?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(colorInterpolationFilters, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func colorInterpolationFilters(
+        _ colorInterpolationFilters: CSSPropertyTypes.ColorInterpolationFilters?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(
+            colorInterpolationFilters,
+            media: media,
+            selector: selector,
+            pseudo: pseudo
+        )
+    }
 }

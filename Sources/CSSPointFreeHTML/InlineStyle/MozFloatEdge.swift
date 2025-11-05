@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func mozFloatEdge(
-    _ mozFloatEdge: CSSPropertyTypes.MozFloatEdge?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(mozFloatEdge, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func mozFloatEdge(
+        _ mozFloatEdge: CSSPropertyTypes.MozFloatEdge?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(mozFloatEdge, media: media, selector: selector, pseudo: pseudo)
+    }
 }

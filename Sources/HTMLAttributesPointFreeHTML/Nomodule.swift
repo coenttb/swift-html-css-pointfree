@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the nomodule attribute on an element
-  @discardableResult
-  package func nomodule(
-    _ value: Nomodule?
-  ) -> some PointFreeHTML.HTML {
-    self.attribute(boolean: value)
-  }
+    /// Sets the nomodule attribute on an element
+    @discardableResult
+    package func nomodule(
+        _ value: Nomodule?
+    ) -> some PointFreeHTML.HTML {
+        self.attribute(boolean: value)
+    }
 }

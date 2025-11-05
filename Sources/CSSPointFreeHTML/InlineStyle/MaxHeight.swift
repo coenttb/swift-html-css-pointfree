@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func maxHeight(
-    _ maxHeight: CSSPropertyTypes.MaxHeight?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(maxHeight, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func maxHeight(
+        _ maxHeight: CSSPropertyTypes.MaxHeight?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(maxHeight, media: media, selector: selector, pseudo: pseudo)
+    }
 }

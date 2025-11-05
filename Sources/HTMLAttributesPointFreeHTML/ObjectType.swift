@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the type attribute on an object element
-  @discardableResult
-  package func type(
-    _ value: ObjectType?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(ObjectType.attribute, value?.description)
-  }
+    /// Sets the type attribute on an object element
+    @discardableResult
+    package func type(
+        _ value: ObjectType?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(ObjectType.attribute, value?.description)
+    }
 }

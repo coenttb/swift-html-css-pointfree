@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the face attribute on an element
-  @discardableResult
-  package func face(
-    _ value: Face?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Face.attribute, value?.description)
-  }
+    /// Sets the face attribute on an element
+    @discardableResult
+    package func face(
+        _ value: Face?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Face.attribute, value?.description)
+    }
 }

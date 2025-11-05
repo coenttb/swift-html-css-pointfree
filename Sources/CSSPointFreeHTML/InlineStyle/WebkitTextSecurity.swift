@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func webkitTextSecurity(
-    _ webkitTextSecurity: CSSPropertyTypes.WebkitTextSecurity?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(webkitTextSecurity, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func webkitTextSecurity(
+        _ webkitTextSecurity: CSSPropertyTypes.WebkitTextSecurity?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(webkitTextSecurity, media: media, selector: selector, pseudo: pseudo)
+    }
 }

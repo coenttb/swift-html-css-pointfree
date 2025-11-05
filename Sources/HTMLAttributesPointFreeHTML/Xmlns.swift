@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the xmlns attribute on an element
-  @discardableResult
-  package func xmlns(
-    _ value: Xmlns?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(Xmlns.attribute, value?.description)
-  }
+    /// Sets the xmlns attribute on an element
+    @discardableResult
+    package func xmlns(
+        _ value: Xmlns?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(Xmlns.attribute, value?.description)
+    }
 }

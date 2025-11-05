@@ -10,12 +10,12 @@ import HTMLElementTypes
 import PointFreeHTML
 
 extension HTMLElementTypes.Track: PointFreeHTML.HTML {
-  public var body: some PointFreeHTML.HTML {
-    HTMLElement(tag: Self.tag) { HTMLEmpty() }
-      .default(self.default)
-      .kind(self.kind)
-      .label(self.label)
-      .src(self.src)
-      .srcLang(self.srclang)
-  }
+    public var body: some PointFreeHTML.HTML {
+        HTMLElement(tag: Self.tag) { HTMLEmpty() }
+            .default(self.default)
+            .kind(self.kind)
+            .label(self.label)
+            .src(self.src)
+            .srcLang(self.srclang)
+    }
 }

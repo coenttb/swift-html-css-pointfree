@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the srcset attribute on an image element
-  @discardableResult
-  package func srcset(
-    _ value: ImageSrcSet?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(ImageSrcSet.attribute, value?.description)
-  }
+    /// Sets the srcset attribute on an image element
+    @discardableResult
+    package func srcset(
+        _ value: ImageSrcSet?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(ImageSrcSet.attribute, value?.description)
+    }
 }

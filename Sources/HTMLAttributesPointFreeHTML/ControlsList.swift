@@ -10,11 +10,11 @@ import PointFreeHTML
 
 extension HTML {
 
-  /// Sets the controlslist attribute on an element
-  @discardableResult
-  package func controlsList(
-    _ value: ControlsList?
-  ) -> _HTMLAttributes<Self> {
-    self.attribute(ControlsList.attribute, value?.description)
-  }
+    /// Sets the controlslist attribute on an element
+    @discardableResult
+    package func controlsList(
+        _ value: ControlsList?
+    ) -> _HTMLAttributes<Self> {
+        self.attribute(ControlsList.attribute, value?.description)
+    }
 }

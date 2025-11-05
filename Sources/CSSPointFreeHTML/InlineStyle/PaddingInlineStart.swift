@@ -9,13 +9,13 @@ import CSSTypes
 import PointFreeHTML
 
 extension HTML {
-  @discardableResult
-  public func paddingInlineStart(
-    _ paddingInlineStart: CSSPropertyTypes.PaddingInlineStart?,
-    media: CSSAtRuleTypes.Media? = nil,
-    selector: Selector? = nil,
-    pseudo: Pseudo? = nil
-  ) -> HTMLInlineStyle<Self> {
-    self.inlineStyle(paddingInlineStart, media: media, selector: selector, pseudo: pseudo)
-  }
+    @discardableResult
+    public func paddingInlineStart(
+        _ paddingInlineStart: CSSPropertyTypes.PaddingInlineStart?,
+        media: CSSAtRuleTypes.Media? = nil,
+        selector: Selector? = nil,
+        pseudo: Pseudo? = nil
+    ) -> HTMLInlineStyle<Self> {
+        self.inlineStyle(paddingInlineStart, media: media, selector: selector, pseudo: pseudo)
+    }
 }
